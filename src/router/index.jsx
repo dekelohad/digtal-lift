@@ -34,7 +34,7 @@ import Team from "../page/team";
 import SingleTeam from "../page/team/SingleTeam.jsx";
 import CommingSoon from "../page/utility/CommingSoon.jsx";
 import Faq from "../page/utility/Faq.jsx";
-import TestimonialPage from "../page/utility/Testimonial.jsx";
+import TestimonialsPage from "../pages/testimonials";
 
 export const router = createBrowserRouter([
 	{
@@ -61,12 +61,10 @@ export const router = createBrowserRouter([
 						path: "/faq",
 						element: <Faq />,
 					},
-
 					{
-						path: "/testimonial",
-						element: <TestimonialPage />,
+						path: "/testimonials",
+						element: <TestimonialsPage />,
 					},
-
 					{
 						path: "/pricing",
 						element: <Pricing />,
