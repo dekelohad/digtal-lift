@@ -16,8 +16,8 @@ const testimonialsData = [
 		id: crypto.randomUUID(),
 		rating: 5,
 		content:
-			"Aximo has been a game-changer for our startup. Their team guided us through the development of a custom software solution perfectly suited us.",
-		author: "Willium Joe",
+			"Digital Lift has been a game-changer for our startup. Their team guided us through the development of a custom software solution perfectly suited us.",
+			author: "Willium Joe",
 		designation: "VP of Marketing",
 		img: Thumb2Img,
 	},

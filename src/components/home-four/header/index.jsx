@@ -91,7 +91,7 @@ function Header() {
 						</DesktopNav>
 					</div>
 					<HeaderButton setShowSideMenu={setShowSideMenu} />
-					<MobileNavbar menuItemsData={menuItemsData} title="Aximo" />
+					<MobileNavbar menuItemsData={menuItemsData} title="Digital Lift" />
 				</nav>
 			</div>
 
