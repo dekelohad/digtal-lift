@@ -12,17 +12,18 @@ function HeroContent() {
 				<FadeInStaggerTwoChildren>
 					<h1>
 						<span className="aximo-title-animation">
-							A creative
+							Digital Growth
 							<img src={StarImg} alt="StarImg" />
 						</span>{" "}
-						design studio
+						Agency
 					</h1>
 				</FadeInStaggerTwoChildren>
 				<FadeInStaggerTwoChildren>
 					<p>
-						{`We're a creative design studio specializing in meeting the needs of the new generation.
-								We offer innovative and cutting-edge design solutions to help our clients stand out in
-								today's fast-paced.`}
+						We transform leads into buyers and clients into evangelists. Our proven strategies fuel unstoppable growth for ambitious brands.
+					</p>
+					<p className="mt-4">
+						Ready to dominate your market?
 					</p>
 				</FadeInStaggerTwoChildren>
 				<FadeInStaggerTwoChildren>

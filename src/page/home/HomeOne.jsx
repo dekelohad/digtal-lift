@@ -7,6 +7,7 @@ import Teams from "../../components/home-one/teams";
 import Testimonial from "../../components/home-one/testimonial";
 import WhyChooseUs from "../../components/home-one/why-choose-us";
 import ClientsSection from "../../components/home-one/clients";
+import { ServiceIcons } from '../../components/icons/ServiceIcons';
 
 // Teams images
 import Team1Img from "../../assets/images/team/team1.png";
@@ -17,31 +18,45 @@ import Team4Img from "../../assets/images/team/team4.png";
 const servicesData = [
 	{
 		id: crypto.randomUUID(),
-		title: "UI/UX Design",
+		title: "Paid Search Marketing",
 		description:
-			"Focusing on user interface (UI) and user experience (UX) design enhance the usability and accessibility of digital products & app.",
-		icon: "icon-design-tools",
+			"Turn search traffic into revenue with smart PPC campaigns. Our data-driven approach ensures every ad dollar works to capture high-intent buyers.",
+		icon: ServiceIcons.search,
 	},
 	{
 		id: crypto.randomUUID(),
-		title: "Graphic Design",
+		title: "Search Engine Optimization",
 		description:
-			"Creating visual elements such as logos, branding materials, page layout techniques, brochures, & other marketing collateral.",
-		icon: "icon-branding",
+			"Dominate organic search results with powerful SEO strategies. We optimize every aspect of your online presence to attract ready-to-buy customers.",
+		icon: ServiceIcons.seo,
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "Local Lead Generation",
+		description:
+			"Transform your local presence into a lead-generating machine. Our proven strategies target and capture your ideal customers in your service area.",
+		icon: ServiceIcons.target,
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "Google Business Profile",
+		description:
+			"Own your local market with an optimized Google presence. We enhance your visibility to ensure nearby customers find and choose your business first.",
+		icon: ServiceIcons.location,
 	},
 	{
 		id: crypto.randomUUID(),
 		title: "Web Design",
 		description:
-			"Designing and developing websites to ensure they are visually look and appealing, user-friendly, and functional your website.",
-		icon: "icon-web",
+			"Transform your online presence with stunning, conversion-focused designs. We create beautiful websites that engage visitors and drive results.",
+		icon: ServiceIcons.webDesign,
 	},
 	{
 		id: crypto.randomUUID(),
-		title: "Motion Graphics",
+		title: "Web Development",
 		description:
-			"Creating animate graphics, videos for various purposes, including marketing and entertainment. To help sell a product or service.",
-		icon: "icon-design-thinking",
+			"Build powerful, scalable websites that perform. Our expert developers create custom solutions that elevate your brand and drive growth.",
+		icon: ServiceIcons.webDev,
 	},
 ];
 
