@@ -63,9 +63,9 @@ const servicesData = [
 const teamsData = [
 	{
 		id: crypto.randomUUID(),
-		name: "Michael Chen",
+		name: "Jonathan Dekel",
 		designation: "Chief Executive Officer",
-		img: Team1Img,
+		img: "https://ohaddekel.dev/profileImage.jpg",
 	},
 	{
 		id: crypto.randomUUID(),
