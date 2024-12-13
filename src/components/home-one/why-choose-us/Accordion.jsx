@@ -11,12 +11,12 @@ function Accordion() {
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseOne"
 					>
-						01/ Project idea
+						01/ Discovery & Vision
 					</button>
 				</h3>
 				<div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#aximo-accordion">
 					<div className="accordion-body">
-						The process starts with a detailed discussion with the client to understand their idea & goals.
+					We begin by diving deep into your goals, challenges, and aspirations. Through collaborative sessions, we uncover the unique opportunities that will set your project apart.
 					</div>
 				</div>
 			</FadeInStaggerTwoChildren>
@@ -28,12 +28,12 @@ function Accordion() {
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseTwo"
 					>
-						02/ Brainstorming
+						02/ Strategic Innovation
 					</button>
 				</h3>
 				<div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#aximo-accordion">
 					<div className="accordion-body">
-						rainstorming is a group creativity technique in which members attempt to find a conclusion.
+					Our expert team combines creative thinking with strategic planning to develop innovative solutions. We challenge conventions and explore cutting-edge possibilities to ensure your project stands out.
 					</div>
 				</div>
 			</FadeInStaggerTwoChildren>
@@ -45,12 +45,12 @@ function Accordion() {
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseThree"
 					>
-						03/ Launch
+						03/ Flawless Execution
 					</button>
 				</h3>
 				<div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#aximo-accordion">
 					<div className="accordion-body">
-						The completed design assets or final product are delivered with necessary documentation.
+					With precision and passion, we bring your vision to life. Our rigorous quality assurance process ensures every detail is perfect before launch, setting the stage for your digital success.
 					</div>
 				</div>
 			</FadeInStaggerTwoChildren>

@@ -1,23 +1,27 @@
 import Star2Img from "../../../assets/images/v1/star2.png";
+
 function Content() {
 	return (
 		<div className="aximo-default-content">
 			<h2>
 				<span className="aximo-title-animation">
-					Our high-quality
+					 Transforming Ideas
 					<span className="aximo-title-icon">
 						<img src={Star2Img} alt="Star2Img" />
 					</span>
 				</span>{" "}
-				working processes
+				 into Digital Excellence
 			</h2>
 			<p>
-				We focus at every stage on effective communication and collaboration between the client and ensuring
-				that the final design meets the client s objectives and expectations.
+				We don't just deliver projects – we craft digital experiences that leave a
+				lasting impression. Our proven methodology combines innovation,
+				precision, and creativity to transform your vision into remarkable
+				reality.
 			</p>
 			<p>
-				It is important to note that these are simplified steps, and the actual work process may vary depending
-				on the complexity of the project.
+				From concept to completion, every project is handled with meticulous
+				attention to detail and a commitment to exceeding expectations. Our
+				success is measured by your success.
 			</p>
 		</div>
 	);
