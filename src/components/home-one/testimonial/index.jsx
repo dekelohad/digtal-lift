@@ -1,4 +1,4 @@
-import Star2Img from "../../../assets/images/v1/star2.png";
+import { FaTrophy } from 'react-icons/fa';
 import Thumb1Img from "../../../assets/images/v1/t_thumb1.png";
 import Thumb2Img from "../../../assets/images/v1/t_thumb2.png";
 import Thumb3Img from "../../../assets/images/v1/t_thumb3.png";
@@ -54,16 +54,99 @@ function Testimonial() {
 		<div className="section aximo-section-padding3">
 			<div className="container">
 				<div className="aximo-section-title center">
-					<h2>
-						Real Success
-						<span className="aximo-title-animation">
-							Stories
-							<span className="aximo-title-icon">
-								<img src={Star2Img} alt="Star2Img" />
-							</span>
-						</span>
+					<h2 style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
+						<div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "20px", whiteSpace: "nowrap" }}>
+							<FaTrophy
+								className="animated-icon reverse-spin"
+								style={{
+									fontSize: "50px",
+									color: "#FFA500",
+									filter: "drop-shadow(0 0 20px rgba(255, 165, 0, 0.8))",
+									marginBottom: "-10px"
+								}}
+							/>
+							<span>Real Success</span>
+							<FaTrophy
+								className="animated-icon"
+								style={{
+									fontSize: "50px",
+									color: "#FFA500",
+									filter: "drop-shadow(0 0 20px rgba(255, 165, 0, 0.8))",
+									marginBottom: "-10px"
+								}}
+							/>
+						</div>
+						<div style={{ 
+							fontSize: "inherit", 
+							marginTop: "-10px",
+							textAlign: "center"
+						}}>
+								Stories
+						</div>
 					</h2>
 				</div>
+				<style jsx>{`
+					@keyframes float {
+						0% {
+							transform: translateY(0) rotate(0deg);
+						}
+						25% {
+							transform: translateY(-6px) rotate(5deg);
+						}
+						50% {
+							transform: translateY(0) rotate(0deg);
+						}
+						75% {
+							transform: translateY(6px) rotate(-5deg);
+						}
+						100% {
+							transform: translateY(0) rotate(0deg);
+						}
+					}
+
+					@keyframes pulse {
+						0% {
+							transform: scale(1);
+						}
+						50% {
+							transform: scale(1.2);
+						}
+						100% {
+							transform: scale(1);
+						}
+					}
+
+					@keyframes sparkle {
+						0% {
+							filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+						}
+						25% {
+							filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9));
+						}
+						50% {
+							filter: drop-shadow(0 0 30px rgba(255, 165, 0, 1));
+						}
+						75% {
+							filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9));
+						}
+						100% {
+							filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+						}
+					}
+
+					.animated-icon {
+						animation: float 3s ease-in-out infinite, 
+								 pulse 2s ease-in-out infinite,
+								 sparkle 2s ease-in-out infinite;
+						transform-origin: center center;
+					}
+
+					.reverse-spin {
+						animation: float 3s ease-in-out infinite reverse, 
+								 pulse 2s ease-in-out infinite,
+								 sparkle 2s ease-in-out infinite;
+					}
+				`}</style>
 				<div className="row">
 					{testimonialsData.map((testimonial, index) => (
 						<FadeInStagger index={index} className="col-lg-6" key={testimonial.id}>
