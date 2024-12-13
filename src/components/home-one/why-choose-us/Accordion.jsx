@@ -11,12 +11,14 @@ function Accordion() {
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseOne"
 					>
-						01/ Discovery & Vision
+						01/ Dominate Local Search
 					</button>
 				</h3>
 				<div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#aximo-accordion">
 					<div className="accordion-body">
-					We begin by diving deep into your goals, challenges, and aspirations. Through collaborative sessions, we uncover the unique opportunities that will set your project apart.
+					We make your business impossible to miss. When potential clients search for your services, 
+						you'll be right there at the top. Our proven systems ensure your phone rings with qualified 
+						buyers who need your services now, not time-wasters.
 					</div>
 				</div>
 			</FadeInStaggerTwoChildren>
@@ -28,12 +30,14 @@ function Accordion() {
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseTwo"
 					>
-						02/ Strategic Innovation
+						02/ Automate Client Acquisition
 					</button>
 				</h3>
 				<div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#aximo-accordion">
 					<div className="accordion-body">
-					Our expert team combines creative thinking with strategic planning to develop innovative solutions. We challenge conventions and explore cutting-edge possibilities to ensure your project stands out.
+					Your lead generation on autopilot. Our 24/7 systems capture, qualify, and convert prospects 
+						into paying clients while you sleep. Watch your calendar fill up with high-value appointments 
+						without lifting a finger.
 					</div>
 				</div>
 			</FadeInStaggerTwoChildren>
@@ -45,12 +49,14 @@ function Accordion() {
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseThree"
 					>
-						03/ Flawless Execution
+						03/ Multiply Your Results
 					</button>
 				</h3>
 				<div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#aximo-accordion">
 					<div className="accordion-body">
-					With precision and passion, we bring your vision to life. Our rigorous quality assurance process ensures every detail is perfect before launch, setting the stage for your digital success.
+					As your phone starts ringing more, we amplify what works. Using real data, we optimize and 
+						scale your campaigns to bring even more qualified leads. Your business grows while our 
+						systems do the heavy lifting.
 					</div>
 				</div>
 			</FadeInStaggerTwoChildren>
