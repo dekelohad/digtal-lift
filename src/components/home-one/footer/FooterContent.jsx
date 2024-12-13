@@ -4,18 +4,23 @@ function FooterContent() {
 	return (
 		<div className="aximo-default-content light position-relative">
 			<h2>
-				<span className="aximo-title-animation">
-					Lets start a
-					<span className="aximo-title-icon">
-						<img src={Star2Img} alt="Star2Img" />
-					</span>
-				</span>
-				<br />
-				project together
+				<div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+					<div style={{ display: "flex", alignItems: "center" }}>
+						<span className="aximo-title-animation">
+							TransformYour
+							<span className="aximo-title-icon" style={{ marginLeft: "10px" }}>
+								<img src={Star2Img} alt="Star2Img" />
+							</span>
+						</span>
+					</div>
+					<div>Vision Into Digital</div>
+					<div>Reality</div>
+				</div>
 			</h2>
 			<p>
-				We work closely with our clients to understand their objectives, target audience, and unique needs. We
-				use our creative skills to translate these requirements and practical design solutions.
+			Ready to dominate your market? We turn ambitious goals into extraordinary results. Our expert team combines 
+				cutting-edge technology with creative innovation to deliver solutions that exceed expectations. Your success story 
+				starts with a conversation.
 			</p>
 			<div className="aximo-info-wrap">
 				<div className="aximo-info">
@@ -30,34 +35,10 @@ function FooterContent() {
 					<ul>
 						<li>Send us an email:</li>
 						<li>
-							<a href="mailto:info@mthemeus.com">info@mthemeus.com</a>
+						<a href="mailto:info@digitalLift.com" target="_blank" rel="noopener noreferrer">info@digitalLift.com</a>
 						</li>
 					</ul>
 				</div>
-			</div>
-			<div className="aximo-social-icon social-large">
-				<ul>
-					<li>
-						<a href="https://twitter.com/" target="_blank">
-							<i className="icon-twitter"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://facebook.com/" target="_blank">
-							<i className="icon-facebook"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/" target="_blank">
-							<i className="icon-instagram"></i>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/" target="_blank">
-							<i className="icon-linkedin"></i>
-						</a>
-					</li>
-				</ul>
 			</div>
 			<div className="aximo-hero-shape aximo-footer-shape">
 				<img src={Shape1Img} alt="Shape1Img" />
