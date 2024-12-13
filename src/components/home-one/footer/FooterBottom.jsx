@@ -3,8 +3,35 @@ import { FaPhone } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 
+const FooterLink = ({ to, children }) => (
+	<Link 
+		to={to} 
+		style={{ 
+			color: "#e0e0e0", 
+			textDecoration: "none", 
+			fontSize: "15px",
+			transition: "all 0.3s ease",
+			display: "inline-block",
+			position: "relative",
+			padding: "2px 0"
+		}}
+		onMouseEnter={(e) => {
+			e.currentTarget.style.color = "#CCFF00";
+			e.currentTarget.style.transform = "translateX(10px)";
+		}}
+		onMouseLeave={(e) => {
+			e.currentTarget.style.color = "#e0e0e0";
+			e.currentTarget.style.transform = "translateX(0)";
+		}}
+	>
+		{children}
+	</Link>
+);
+
 function FooterBottom() {
 	const currentYear = new Date().getFullYear();
+	const phoneNumber = "+1 (123) 456-7890";
+	const email = "info@digitalLift.com";
 
 	return (
 		<div className="footer-wrapper">
@@ -47,7 +74,7 @@ function FooterBottom() {
 							</span>
 						</Link>
 						<p style={{ color: "#e0e0e0", fontSize: "15px", lineHeight: "1.8" }}>
-							Empowering businesses with cutting-edge digital solutions. We help you grow your online presence and reach your target audience effectively.
+							Ready to make your phone ring non-stop? We turn websites into 24/7 client-generating machines. Our proven systems deliver a consistent flow of premium leads while you sleep. From startups to industry giants, we've helped businesses 10X their growth through digital dominance.
 						</p>
 					</div>
 				</div>
@@ -57,19 +84,19 @@ function FooterBottom() {
 					<h4 style={{ color: "#fff", fontSize: "18px", marginBottom: "25px", fontWeight: "600" }}>Quick Links</h4>
 					<ul style={{ listStyle: "none", padding: 0 }}>
 						<li className="mb-2">
-							<Link to="/" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Home</Link>
+							<FooterLink to="/">Home</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/about-us" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>About</Link>
+							<FooterLink to="/about-us">About</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/testimonials" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Testimonials</Link>
+							<FooterLink to="/testimonials">Testimonials</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/blog" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Blog</Link>
+							<FooterLink to="/blog">Blog</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/contact-us" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Contact</Link>
+							<FooterLink to="/contact-us">Contact</FooterLink>
 						</li>
 					</ul>
 				</div>
@@ -79,22 +106,22 @@ function FooterBottom() {
 					<h4 style={{ color: "#fff", fontSize: "18px", marginBottom: "25px", fontWeight: "600" }}>Our Services</h4>
 					<ul style={{ listStyle: "none", padding: 0 }}>
 						<li className="mb-2">
-							<Link to="/local-lead-generation" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Local Lead Generation</Link>
+							<FooterLink to="/local-lead-generation">Local Lead Generation</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/paid-search-marketing" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Paid Search Marketing</Link>
+							<FooterLink to="/search-engine-optimization">Search Engine Optimization</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/search-engine-optimization" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>SEO</Link>
+							<FooterLink to="/paid-search-marketing">Paid Search Marketing</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/google-my-business" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Google My Business</Link>
+							<FooterLink to="/google-business-profile">Google Business Profile</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/web-design" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Web Design</Link>
+							<FooterLink to="/web-design">Web Design</FooterLink>
 						</li>
 						<li className="mb-2">
-							<Link to="/web-development" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>Web Development</Link>
+							<FooterLink to="/web-development">Web Development</FooterLink>
 						</li>
 					</ul>
 				</div>
@@ -105,11 +132,35 @@ function FooterBottom() {
 					<ul style={{ listStyle: "none", padding: 0 }}>
 						<li className="mb-3" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
 							<FaPhone style={{ color: "#CCFF00" }} />
-							<a href="tel:+1234567890" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>+1 (234) 567-890</a>
+							<a 
+								href={`tel:${phoneNumber}`} 
+								style={{ 
+									color: "#e0e0e0", 
+									textDecoration: "none", 
+									fontSize: "15px",
+									transition: "all 0.3s ease"
+								}}
+								onMouseEnter={(e) => e.currentTarget.style.color = "#CCFF00"}
+								onMouseLeave={(e) => e.currentTarget.style.color = "#e0e0e0"}
+							>
+								{phoneNumber}
+							</a>
 						</li>
 						<li className="mb-3" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
 							<FaEnvelope style={{ color: "#CCFF00" }} />
-							<a href="mailto:info@digitallift.com" style={{ color: "#e0e0e0", textDecoration: "none", fontSize: "15px" }}>info@digitallift.com</a>
+							<a 
+								href={`mailto:${email}`} 
+								style={{ 
+									color: "#e0e0e0", 
+									textDecoration: "none", 
+									fontSize: "15px",
+									transition: "all 0.3s ease"
+								}}
+								onMouseEnter={(e) => e.currentTarget.style.color = "#CCFF00"}
+								onMouseLeave={(e) => e.currentTarget.style.color = "#e0e0e0"}
+							>
+								{email}
+							</a>
 						</li>
 						<li style={{ display: "flex", alignItems: "start", gap: "10px" }}>
 							<FaLocationDot style={{ color: "#CCFF00", marginTop: "4px" }} />
@@ -128,7 +179,7 @@ function FooterBottom() {
 				<div className="col-12">
 					<div className="text-center">
 						<p style={{ color: "#e0e0e0", fontSize: "14px", margin: 0 }}>
-							&copy; Copyright {currentYear}, All Rights Reserved
+							© Copyright {currentYear} Digital Lift, All Rights Reserved
 						</p>
 					</div>
 				</div>
