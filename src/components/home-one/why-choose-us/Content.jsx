@@ -97,35 +97,6 @@ function Content() {
 				qualified clients to your business. No more guessing - just predictable growth and 
 				a calendar full of high-value opportunities.
 			</p>
-
-			<div className="process-steps">
-				<div className="step">
-					<h3>01/ Dominate Local Search</h3>
-					<p>
-						We make your business impossible to miss. When potential clients search for your services, 
-						you'll be right there at the top. Our proven systems ensure your phone rings with qualified 
-						buyers who need your services now, not time-wasters.
-					</p>
-				</div>
-
-				<div className="step">
-					<h3>02/ Automate Client Acquisition</h3>
-					<p>
-						Your lead generation on autopilot. Our 24/7 systems capture, qualify, and convert prospects 
-						into paying clients while you sleep. Watch your calendar fill up with high-value appointments 
-						without lifting a finger.
-					</p>
-				</div>
-
-				<div className="step">
-					<h3>03/ Multiply Your Results</h3>
-					<p>
-						As your phone starts ringing more, we amplify what works. Using real data, we optimize and 
-						scale your campaigns to bring even more qualified leads. Your business grows while our 
-						systems do the heavy lifting.
-					</p>
-				</div>
-			</div>
 		</div>
 	);
 }
