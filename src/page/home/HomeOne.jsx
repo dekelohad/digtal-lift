@@ -63,26 +63,26 @@ const servicesData = [
 const teamsData = [
 	{
 		id: crypto.randomUUID(),
-		name: "Andrew Mark",
-		designation: "Creative Director",
+		name: "Michael Chen",
+		designation: "Chief Executive Officer",
 		img: Team1Img,
 	},
 	{
 		id: crypto.randomUUID(),
-		name: "Jack Taylor",
-		designation: "Senior Designer",
+		name: "Robert Anderson",
+		designation: "Head of Marketing",
 		img: Team2Img,
 	},
 	{
 		id: crypto.randomUUID(),
-		name: "Martine Joy",
-		designation: "Project Manager",
+		name: "David Kim",
+		designation: "Director of Operations",
 		img: Team3Img,
 	},
 	{
 		id: crypto.randomUUID(),
-		name: "Adam Straw",
-		designation: "Web Developer",
+		name: "James Mitchell",
+		designation: "Chief Technology Officer",
 		img: Team4Img,
 	},
 ];

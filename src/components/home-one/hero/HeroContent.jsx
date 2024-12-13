@@ -13,7 +13,6 @@ function HeroContent() {
 					<h1>
 						<span className="aximo-title-animation">
 							Digital Growth
-							<img src={StarImg} alt="StarImg" />
 						</span>{" "}
 						Agency
 					</h1>
@@ -40,7 +39,7 @@ function HeroContent() {
 							</div>
 						</div>
 						<div className="aximo-hero-user-data">
-							<p>Believed by more than a thousand people</p>
+							<p>Trusted by more than a thousand people</p>
 						</div>
 					</div>
 				</FadeInStaggerTwoChildren>
