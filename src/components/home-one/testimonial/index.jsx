@@ -10,41 +10,41 @@ const testimonialsData = [
 	{
 		id: crypto.randomUUID(),
 		rating: 5,
-		title: "Super customer service!",
+		title: "Our Phone Hasn't Stopped Ringing!",
 		description:
-			"Excellent customer service and I was really impressed and happy with my purchase especially as it was a last minute order which got to me in time, and when it arrived I was very happy with the design and size and so was the recipient.",
-		author: "William Jack",
-		designation: "Founder@XYZ",
+			"Digital Lift completely transformed our lead generation game. Within weeks of implementing their strategy, our inquiry volume exploded! We went from struggling to find clients to having our phone ring non-stop with qualified leads. Their targeted approach helped us achieve a staggering 300% increase in daily inquiries. Best investment we've ever made!",
+		author: "James Mitchell",
+		designation: "CEO, Elite Business Solutions",
 		img: Thumb1Img,
 	},
 	{
 		id: crypto.randomUUID(),
-		rating: 4,
-		title: "Exceptional creativity and vision",
+		rating: 5,
+		title: "Revolutionary Digital Marketing Results",
 		description:
-			"Working Mthemeus was a game-changer for our brand. Their exceptional creativity & vision breathed new life into our visual. The logo they perfectly captures our essence & has become instantly recognizable. We couldn't be happier the results!",
-		author: "Smith Align",
-		designation: "Businessman",
+			"Working with Digital Lift was the best decision for our startup. They completely revolutionized our digital marketing strategy. Their data-driven approach and creative campaigns resulted in a 200% increase in qualified leads. Their team's dedication to our success was evident in every interaction.",
+		author: "Michael Rodriguez",
+		designation: "Founder, InnovateX Solutions",
 		img: Thumb2Img,
 	},
 	{
 		id: crypto.randomUUID(),
 		rating: 5,
-		title: "Innovative and professional",
+		title: "Exceptional Web Development Expertise",
 		description:
-			"I can't say enough good things about them. Their team is not only incredibly talented but also highly professional. They listened to our ideas and brought to life in ways we couldn't have imagined. Their innovative approach and dedication to our project.",
-		author: "Smith Align",
-		designation: "Milano Joe",
+			"Digital Lift's technical prowess is unmatched. They developed our complex web application with remarkable efficiency. The final product exceeded our expectations in terms of performance, scalability, and user experience. Their team's problem-solving abilities and attention to detail are extraordinary.",
+		author: "Robert Turner",
+		designation: "CTO, FutureTech Systems",
 		img: Thumb3Img,
 	},
 	{
 		id: crypto.randomUUID(),
-		rating: 4,
-		title: "Transformed our brand",
+		rating: 5,
+		title: "From Struggling to Market Leader",
 		description:
-			"Our partnership with Mthemeus transformed our brand from ordinary to extraordinary. Their branding expertise and design work elevated our marketing materials to a whole new level. Our customers have taken notice, and boost in brand recognition.",
-		author: "Danial Mark",
-		designation: "Marketing Director",
+			"Digital Lift revolutionized our entire business approach. In just 6 months, we went from barely visible to dominating our market. Their strategic digital makeover doubled our client base and increased our revenue by 400%. The most impressive part? They created a system that consistently brings in high-value clients while we sleep. Their work didn't just transform our business - it transformed our lives!",
+		author: "David Anderson",
+		designation: "CEO, Anderson & Partners",
 		img: Thumb4Img,
 	},
 ];
@@ -55,9 +55,9 @@ function Testimonial() {
 			<div className="container">
 				<div className="aximo-section-title center">
 					<h2>
-						Clients are always
+						Real Success
 						<span className="aximo-title-animation">
-							satisfied with us
+							Stories
 							<span className="aximo-title-icon">
 								<img src={Star2Img} alt="Star2Img" />
 							</span>
