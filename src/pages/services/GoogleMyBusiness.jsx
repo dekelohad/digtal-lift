@@ -1,51 +1,74 @@
-import { FaGoogle, FaMapMarkedAlt, FaStar } from "react-icons/fa";
+import { useEffect } from "react";
 import ServicePage from "../../components/services/ServicePage";
 
 function GoogleMyBusiness() {
-	const pageData = {
-		title: "Google My Business Optimization",
-		subtitle: "Dominate Local Search and Attract More Local Customers",
-		description: "Transform your Google Business Profile into a powerful marketing tool. Our optimization services help you stand out in local searches, attract more customers, and build a strong local presence that drives real business results.",
-		features: [
-			{
-				icon: <FaGoogle size={20} style={{ color: '#000' }} />,
-				title: "Complete Profile Optimization",
-				description: "Expert optimization of your business profile with compelling descriptions, accurate information, and strategic keywords to maximize visibility."
-			},
-			{
-				icon: <FaMapMarkedAlt size={20} style={{ color: '#000' }} />,
-				title: "Local Search Dominance",
-				description: "Strategic optimization to appear in the 'Local Pack' and Maps results for relevant searches in your service area."
-			},
-			{
-				icon: <FaStar size={20} style={{ color: '#000' }} />,
-				title: "Review Management",
-				description: "Proactive review management strategy to build trust, improve ratings, and engage with customer feedback effectively."
-			}
-		],
-		benefits: [
-			{
-				title: "Enhanced Local Visibility",
-				description: "Stand out in local search results and attract more nearby customers actively looking for your services."
-			},
-			{
-				title: "Improved Customer Trust",
-				description: "Build credibility with a complete, verified business profile and positive customer reviews."
-			},
-			{
-				title: "Better Customer Engagement",
-				description: "Connect with customers through Q&A, posts, and direct messaging to drive more conversions."
-			},
-			{
-				title: "Competitive Advantage",
-				description: "Stay ahead of local competitors with an optimized and actively managed business profile."
-			}
-		],
-		ctaText: "Boost Your Local Presence",
-		backgroundImage: "/src/assets/images/services/gmb-hero.jpg"
-	};
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
-	return <ServicePage {...pageData} />;
+	const features = [
+		{
+			title: "Profile Optimization",
+			description: "Complete optimization of your Google Business Profile with engaging content, photos, and business information",
+			icon: "⭐"
+		},
+		{
+			title: "Review Management",
+			description: "Strategic review acquisition and professional response management to build trust and credibility",
+			icon: "💬"
+		},
+		{
+			title: "Local SEO",
+			description: "Local keyword optimization and citation building to improve your local search visibility",
+			icon: "📍"
+		},
+		{
+			title: "Post Management",
+			description: "Regular updates with engaging posts about products, offers, and events to keep your profile active",
+			icon: "📢"
+		},
+		{
+			title: "Photo Optimization",
+			description: "Professional photo management to showcase your business and improve engagement",
+			icon: "📸"
+		},
+		{
+			title: "Performance Tracking",
+			description: "Detailed insights and analytics to measure profile performance and customer engagement",
+			icon: "📊"
+		}
+	];
+
+	const benefits = [
+		{
+			title: "Increased Local Visibility",
+			description: "Stand out in local search results and Google Maps to attract nearby customers"
+		},
+		{
+			title: "Better Customer Engagement",
+			description: "Connect with customers through reviews, posts, and direct messaging"
+		},
+		{
+			title: "Enhanced Credibility",
+			description: "Build trust with potential customers through a professionally managed online presence"
+		},
+		{
+			title: "More Foot Traffic",
+			description: "Drive more in-store visits with accurate business information and engaging content"
+		}
+	];
+
+	return (
+		<ServicePage
+			title="Google Business Profile Management"
+			subtitle="Dominate Local Search & Attract Nearby Customers"
+			description="Maximize your local presence with our expert Google Business Profile management services. We help you stand out in local search results, engage with customers, and drive more foot traffic to your business."
+			features={features}
+			benefits={benefits}
+			ctaText="Boost Local Presence"
+			backgroundImage="https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?q=80&w=2670&auto=format&fit=crop"
+		/>
+	);
 }
 
 export default GoogleMyBusiness; 
