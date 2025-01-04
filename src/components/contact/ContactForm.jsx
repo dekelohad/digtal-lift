@@ -1,8 +1,6 @@
 import { useForm } from "react-hook-form";
-import ContactThumb from "../../assets/images/contact/contact-thumb.png";
-import Star2Img from "../../assets/images/v1/star2.png";
-import FadeInRight from "../animation/FadeInRight";
 import Field from "../common/Field";
+
 function ContactForm() {
 	const {
 		register,
@@ -15,29 +13,8 @@ function ContactForm() {
 	return (
 		<div className="section aximo-section-padding">
 			<div className="container">
-				<div className="row">
+				<div className="row justify-content-center">
 					<div className="col-lg-8">
-						<div className="aximo-section-title">
-							<h2>
-								<span className="aximo-title-animation">
-									Contact us for a
-									<span className="aximo-title-icon">
-										<img src={Star2Img} alt="Star" />
-									</span>
-								</span>
-								personal experience
-							</h2>
-						</div>
-					</div>
-				</div>
-
-				<div className="row">
-					<div className="col-lg-5 order-lg-2">
-						<FadeInRight className="aximo-contact-thumb ">
-							<img src={ContactThumb} alt="Contact Thumb" />
-						</FadeInRight>
-					</div>
-					<div className="col-lg-7">
 						<div className="aximo-main-form">
 							<form onSubmit={handleSubmit(submitForm)}>
 								<div className="aximo-main-field">
