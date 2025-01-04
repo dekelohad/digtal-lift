@@ -17,7 +17,7 @@ function ServicePage({
 			<div 
 				className="hero-section" 
 				style={{
-					backgroundImage: \`url(\${backgroundImage})\`,
+					backgroundImage: `url(${backgroundImage})`,
 					backgroundSize: 'cover',
 					backgroundPosition: 'center',
 					minHeight: '80vh',

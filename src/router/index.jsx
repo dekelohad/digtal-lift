@@ -35,6 +35,7 @@ import SingleTeam from "../page/team/SingleTeam.jsx";
 import CommingSoon from "../page/utility/CommingSoon.jsx";
 import Faq from "../page/utility/Faq.jsx";
 import TestimonialsPage from "../pages/testimonials";
+import LocalLeadGeneration from "../pages/services/LocalLeadGeneration";
 
 export const router = createBrowserRouter([
 	{
@@ -110,6 +111,10 @@ export const router = createBrowserRouter([
 						element: <SinglePortfolio />,
 					},
 					{
+						path: "/local-lead-generation",
+						element: <LocalLeadGeneration />,
+					},
+					{
 						path: "*",
 						element: <ErrorPage />,
 					},
@@ -118,12 +123,12 @@ export const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <LayoutTwo />,
-				children: [
-					{
-						path: "/home-two",
-						element: <HomeTwo />,
-					},
-				],
+					children: [
+						{
+							path: "/home-two",
+							element: <HomeTwo />,
+						},
+					],
 			},
 			{
 				path: "/",
