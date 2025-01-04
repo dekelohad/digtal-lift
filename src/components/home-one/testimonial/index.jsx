@@ -37,6 +37,25 @@ function Testimonial() {
 	return (
 		<div className="section aximo-section-padding3">
 			<div className="container">
+				<div className="infinite-scroll-wrapper" style={{ 
+					overflow: "hidden", 
+					marginBottom: "40px",
+					background: "linear-gradient(90deg, #000 0%, #111 100%)",
+					padding: "15px 0",
+					borderRadius: "8px",
+					cursor: "default"
+				}}>
+					<div className="scroll-text" style={{ 
+						whiteSpace: "nowrap", 
+						display: "flex"
+					}}>
+						<div className="scroll-item">INNOVATE FEARLESSLY <span className="star">★</span> TRANSFORM DIGITALLY <span className="star">★</span> DOMINATE MARKETS <span className="star">★</span>&nbsp;</div>
+						<div className="scroll-item">INNOVATE FEARLESSLY <span className="star">★</span> TRANSFORM DIGITALLY <span className="star">★</span> DOMINATE MARKETS <span className="star">★</span>&nbsp;</div>
+						<div className="scroll-item">INNOVATE FEARLESSLY <span className="star">★</span> TRANSFORM DIGITALLY <span className="star">★</span> DOMINATE MARKETS <span className="star">★</span>&nbsp;</div>
+						<div className="scroll-item">INNOVATE FEARLESSLY <span className="star">★</span> TRANSFORM DIGITALLY <span className="star">★</span> DOMINATE MARKETS <span className="star">★</span>&nbsp;</div>
+					</div>
+				</div>
+
 				<div className="aximo-section-title center">
 					<h2 style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
 						<div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "20px", whiteSpace: "nowrap" }}>
@@ -230,6 +249,54 @@ function Testimonial() {
 						50% { filter: drop-shadow(0 0 30px rgba(255, 165, 0, 1)); }
 						75% { filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9)); }
 						100% { filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8)); }
+					}
+
+					.scroll-text {
+						animation: scroll 30s linear infinite;
+						font-size: 1.1rem;
+						font-weight: 700;
+						letter-spacing: 1px;
+						color: white;
+					}
+
+					.scroll-item {
+						padding: 0 20px;
+						transition: all 0.3s ease;
+					}
+
+					.scroll-item:hover {
+						color: #c5f32c;
+						transform: scale(1.05);
+					}
+
+					.star {
+						color: #FFA500;
+						display: inline-block;
+						animation: twinkle 1s ease-in-out infinite;
+					}
+
+					@keyframes twinkle {
+						0%, 100% { opacity: 1; }
+						50% { opacity: 0.5; }
+					}
+
+					@keyframes scroll {
+						0% {
+							transform: translateX(0);
+						}
+						100% {
+							transform: translateX(-50%);
+						}
+					}
+
+					@media (max-width: 768px) {
+						.scroll-text {
+							font-size: 0.9rem;
+						}
+					}
+
+					.infinite-scroll-wrapper:hover .scroll-text {
+						animation-play-state: paused;
 					}
 				`}</style>
 			</div>
