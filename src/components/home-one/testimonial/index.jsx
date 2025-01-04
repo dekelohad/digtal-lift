@@ -1,52 +1,36 @@
-import { FaTrophy } from 'react-icons/fa';
-import Thumb1Img from "../../../assets/images/v1/t_thumb1.png";
-import Thumb2Img from "../../../assets/images/v1/t_thumb2.png";
-import Thumb3Img from "../../../assets/images/v1/t_thumb3.png";
-import Thumb4Img from "../../../assets/images/v1/t_thumb4.png";
-import FadeInStagger from "../../animation/FadeInStagger";
-import TestimonialCard from "./TestimonialCard";
+import { FaTrophy } from "react-icons/fa";
 
 const testimonialsData = [
 	{
-		id: crypto.randomUUID(),
+		id: 1,
+		name: "Mike Johnson",
+		role: "Owner, Johnson Roofing LLC",
+		image: "https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=500&auto=format&fit=crop",
 		rating: 5,
-		title: "Our Phone Hasn't Stopped Ringing!",
-		description:
-			"Digital Lift completely transformed our lead generation game. Within weeks of implementing their strategy, our inquiry volume exploded! We went from struggling to find clients to having our phone ring non-stop with qualified leads. Their targeted approach helped us achieve a staggering 300% increase in daily inquiries. Best investment we've ever made!",
-		author: "James Mitchell",
-		designation: "CEO, Elite Business Solutions",
-		img: Thumb1Img,
+		date: "2 weeks ago",
+		text: "Digital Lift transformed our business. Within the first month, we got 47 qualified leads and closed 18 high-ticket roofing jobs. Their lead qualification system is incredible - no more time wasted on tire kickers. Now we're getting 3-4 quality calls daily from homeowners ready to move forward. Best marketing investment we've made.",
+		verified: true
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 2,
+		name: "Sarah Williams",
+		role: "Director, Williams Plumbing Services",
+		image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=500&auto=format&fit=crop",
 		rating: 5,
-		title: "Revolutionary Digital Marketing Results",
-		description:
-			"Working with Digital Lift was the best decision for our startup. They completely revolutionized our digital marketing strategy. Their data-driven approach and creative campaigns resulted in a 200% increase in qualified leads. Their team's dedication to our success was evident in every interaction.",
-		author: "Michael Rodriguez",
-		designation: "Founder, InnovateX Solutions",
-		img: Thumb2Img,
+		date: "1 month ago",
+		text: "Finally found an agency that delivers real results. We were spending thousands on ads with another company but barely getting any calls. Digital Lift completely turned this around. Now we're getting 15-20 qualified leads per week, and their pre-qualification system means these are serious customers ready to book. Our revenue has increased by 140% in just 3 months.",
+		verified: true
 	},
 	{
-		id: crypto.randomUUID(),
+		id: 3,
+		name: "David Martinez",
+		role: "CEO, Elite HVAC Solutions",
+		image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=500&auto=format&fit=crop",
 		rating: 5,
-		title: "Exceptional Web Development Expertise",
-		description:
-			"Digital Lift's technical prowess is unmatched. They developed our complex web application with remarkable efficiency. The final product exceeded our expectations in terms of performance, scalability, and user experience. Their team's problem-solving abilities and attention to detail are extraordinary.",
-		author: "Robert Turner",
-		designation: "CTO, FutureTech Systems",
-		img: Thumb3Img,
-	},
-	{
-		id: crypto.randomUUID(),
-		rating: 5,
-		title: "From Struggling to Market Leader",
-		description:
-			"Digital Lift revolutionized our entire business approach. In just 6 months, we went from barely visible to dominating our market. Their strategic digital makeover doubled our client base and increased our revenue by 400%. The most impressive part? They created a system that consistently brings in high-value clients while we sleep. Their work didn't just transform our business - it transformed our lives!",
-		author: "David Anderson",
-		designation: "CEO, Anderson & Partners",
-		img: Thumb4Img,
-	},
+		date: "2 months ago",
+		text: "The ROI with Digital Lift has been incredible. They've helped us generate over $380K in new business in just 4 months. What sets them apart is the quality of leads - these are pre-qualified customers actively looking for our services. Their system ensures we only get calls from people ready to move forward. Highly recommend if you want quality leads that actually convert.",
+		verified: true
+	}
 ];
 
 function Testimonial() {
@@ -81,56 +65,135 @@ function Testimonial() {
 							marginTop: "-10px",
 							textAlign: "center"
 						}}>
-								Stories
+							Stories
 						</div>
 					</h2>
 				</div>
+				<div className="row">
+					{testimonialsData.map((testimonial) => (
+						<div className="col-lg-4 mb-4" key={testimonial.id}>
+							<div style={{
+								background: "#fff",
+								borderRadius: "8px",
+								padding: "25px",
+								height: "100%",
+								boxShadow: "0 2px 15px rgba(0,0,0,0.08)",
+								transition: "transform 0.3s ease, opacity 0.3s ease",
+								cursor: "default",
+								position: "relative",
+								opacity: 0,
+								animation: "fadeIn 0.5s forwards"
+							}}>
+								<div style={{
+									display: "flex",
+									alignItems: "center",
+									marginBottom: "15px"
+								}}>
+									<img 
+										src={testimonial.image} 
+										alt={testimonial.name}
+										loading="lazy"
+										style={{
+											width: "50px",
+											height: "50px",
+											borderRadius: "50%",
+											marginRight: "15px",
+											objectFit: "cover"
+										}}
+									/>
+									<div>
+										<h4 style={{
+											fontSize: "1.1rem",
+											fontWeight: "600",
+											marginBottom: "2px"
+										}}>
+											{testimonial.name}
+										</h4>
+										<p style={{
+											fontSize: "0.9rem",
+											color: "#666",
+											marginBottom: "0"
+										}}>
+											{testimonial.role}
+										</p>
+									</div>
+								</div>
+								
+								<div style={{
+									display: "flex",
+									alignItems: "center",
+									marginBottom: "15px"
+								}}>
+									<div style={{
+										display: "flex",
+										marginRight: "10px"
+									}}>
+										{"★".repeat(testimonial.rating).split("").map((star, index) => (
+											<span key={index} style={{ color: "#fbbc05" }}>
+												{star}
+											</span>
+										))}
+									</div>
+									<img 
+										src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+										alt="Google"
+										loading="lazy"
+										style={{
+											height: "20px",
+											marginRight: "8px"
+										}}
+									/>
+									<span style={{
+										fontSize: "0.85rem",
+										color: "#666"
+									}}>
+										{testimonial.date}
+									</span>
+								</div>
+
+								<p style={{
+									fontSize: "0.95rem",
+									lineHeight: "1.6",
+									color: "#333",
+									marginBottom: "15px"
+								}}>
+									{testimonial.text}
+								</p>
+
+								{testimonial.verified && (
+									<div style={{
+										display: "flex",
+										alignItems: "center",
+										fontSize: "0.85rem",
+										color: "#34a853"
+									}}>
+										<svg 
+											viewBox="0 0 24 24" 
+											style={{
+												width: "16px",
+												height: "16px",
+												marginRight: "4px",
+												fill: "currentColor"
+											}}
+										>
+											<path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+										</svg>
+										Verified Review
+									</div>
+								)}
+							</div>
+						</div>
+					))}
+				</div>
 				<style jsx>{`
-					@keyframes float {
-						0% {
-							transform: translateY(0) rotate(0deg);
+					@keyframes fadeIn {
+						from {
+							opacity: 0;
+							transform: translateY(20px);
 						}
-						25% {
-							transform: translateY(-6px) rotate(5deg);
-						}
-						50% {
-							transform: translateY(0) rotate(0deg);
-						}
-						75% {
-							transform: translateY(6px) rotate(-5deg);
-						}
-						100% {
-							transform: translateY(0) rotate(0deg);
-						}
-					}
-
-					@keyframes pulse {
-						0% {
-							transform: scale(1);
-						}
-						50% {
-							transform: scale(1.2);
-						}
-						100% {
-							transform: scale(1);
-						}
-					}
-
-					@keyframes sparkle {
-						0% {
-							filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
-						}
-						25% {
-							filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9));
-						}
-						50% {
-							filter: drop-shadow(0 0 30px rgba(255, 165, 0, 1));
-						}
-						75% {
-							filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9));
-						}
-						100% {
-							filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8));
+						to {
+							opacity: 1;
+							transform: translateY(0);
 						}
 					}
 
@@ -146,14 +209,29 @@ function Testimonial() {
 								 pulse 2s ease-in-out infinite,
 								 sparkle 2s ease-in-out infinite;
 					}
+
+					@keyframes float {
+						0% { transform: translateY(0) rotate(0deg); }
+						25% { transform: translateY(-6px) rotate(5deg); }
+						50% { transform: translateY(0) rotate(0deg); }
+						75% { transform: translateY(6px) rotate(-5deg); }
+						100% { transform: translateY(0) rotate(0deg); }
+					}
+
+					@keyframes pulse {
+						0% { transform: scale(1); }
+						50% { transform: scale(1.2); }
+						100% { transform: scale(1); }
+					}
+
+					@keyframes sparkle {
+						0% { filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8)); }
+						25% { filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9)); }
+						50% { filter: drop-shadow(0 0 30px rgba(255, 165, 0, 1)); }
+						75% { filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9)); }
+						100% { filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8)); }
+					}
 				`}</style>
-				<div className="row">
-					{testimonialsData.map((testimonial, index) => (
-						<FadeInStagger index={index} className="col-lg-6" key={testimonial.id}>
-							<TestimonialCard testimonial={testimonial} />
-						</FadeInStagger>
-					))}
-				</div>
 			</div>
 		</div>
 	);
