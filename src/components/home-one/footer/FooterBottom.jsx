@@ -31,7 +31,7 @@ const FooterLink = ({ to, children }) => (
 function FooterBottom() {
 	const currentYear = new Date().getFullYear();
 	const phoneNumber = "+1 (123) 456-7890";
-	const email = "info@digitalLift.com";
+	const email = "info@digitallift.com";
 
 	return (
 		<div className="footer-wrapper">
