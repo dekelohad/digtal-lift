@@ -3538,23 +3538,19 @@ h1.post__title {
 }
 .aximo-hero-shape {
 	right: 10%;
-	bottom: 0;
+	bottom: 15px;
 	position: absolute;
 	animation: float-left-right 6s ease-in-out infinite;
 }
+
+.aximo-hero-shape img {
+	max-width: 150px;
+	height: auto;
+}
+
 @media (max-width: 991px) {
 	.aximo-hero-shape {
 		display: none;
-	}
-}
-@media (max-width: 1400px) {
-	.aximo-hero-shape img {
-		width: 250px;
-	}
-}
-@media (max-width: 1199px) {
-	.aximo-hero-shape img {
-		width: 170px;
 	}
 }
 
