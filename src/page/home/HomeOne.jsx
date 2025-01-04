@@ -69,21 +69,21 @@ const teamsData = [
 	},
 	{
 		id: crypto.randomUUID(),
-		name: "Robert Anderson",
-		designation: "Head of Marketing",
-		img: Team2Img,
-	},
-	{
-		id: crypto.randomUUID(),
-		name: "David Kim",
-		designation: "Director of Operations",
-		img: Team3Img,
-	},
-	{
-		id: crypto.randomUUID(),
-		name: "James Mitchell",
+		name: "David Mitchell",
 		designation: "Chief Technology Officer",
-		img: Team4Img,
+		img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=500&auto=format&fit=crop",
+	},
+	{
+		id: crypto.randomUUID(),
+		name: "James Wilson",
+		designation: "Head of Client Success",
+		img: "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?q=80&w=500&auto=format&fit=crop",
+	},
+	{
+		id: crypto.randomUUID(),
+		name: "Mark Anderson",
+		designation: "Lead Generation Strategist",
+		img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=500&auto=format&fit=crop",
 	},
 ];
 
