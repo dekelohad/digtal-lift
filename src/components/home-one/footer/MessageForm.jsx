@@ -3,18 +3,45 @@ import { useForm } from "react-hook-form";
 import Field from "../../common/Field";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import emailjs from '@emailjs/browser';
 
 function MessageForm() {
 	const [isSubmitted, setIsSubmitted] = useState(false);
+	const [isLoading, setIsLoading] = useState(false);
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset
 	} = useForm();
 
-	const submitForm = (formData) => {
-		console.log("Submit Form Data = ", formData);
-		setIsSubmitted(true);
+	const submitForm = async (formData) => {
+		try {
+			setIsLoading(true);
+			const templateParams = {
+				to_name: "Digital Lift",
+				from_name: formData.name,
+				email: formData.email,
+				phone: formData.phone || 'Not provided',
+				message: formData.message,
+				reply_to: formData.email
+			};
+
+			await emailjs.send(
+				'service_sswkev6',
+				'template_vpbk2x2',
+				templateParams,
+				'hYbjDz-pUlQEBgZoa'
+			);
+
+			setIsSubmitted(true);
+			reset();
+		} catch (error) {
+			console.error('Error sending email:', error);
+			alert('There was an error sending your message. Please try again.');
+		} finally {
+			setIsLoading(false);
+		}
 	};
 
 	if (isSubmitted) {
@@ -60,6 +87,7 @@ function MessageForm() {
 						name="name"
 						id="name"
 						placeholder="Your Name"
+						disabled={isLoading}
 					/>
 				</Field>
 			</div>
@@ -77,6 +105,7 @@ function MessageForm() {
 						name="email"
 						id="email"
 						placeholder="Your email address"
+						disabled={isLoading}
 					/>
 				</Field>
 			</div>
@@ -91,7 +120,8 @@ function MessageForm() {
 				<input 
 					{...register("phone")}
 					type="text" 
-					placeholder="+088-234-6849" 
+					placeholder="+088-234-6849"
+					disabled={isLoading}
 				/>
 			</div>
 			<div className="aximo-form-field">
@@ -100,11 +130,20 @@ function MessageForm() {
 						{...register("message", { required: "Message is required." })}
 						name="message" 
 						placeholder="Write your message here..."
+						disabled={isLoading}
 					></textarea>
 				</Field>
 			</div>
-			<button id="aximo-submit-btn" type="submit">
-				Send message{" "}
+			<button 
+				id="aximo-submit-btn" 
+				type="submit"
+				disabled={isLoading}
+				style={{
+					opacity: isLoading ? 0.7 : 1,
+					cursor: isLoading ? 'not-allowed' : 'pointer'
+				}}
+			>
+				{isLoading ? 'Sending...' : 'Send message'}{" "}
 				<span>
 					<img src={ArrowRight3Img} alt="ArrowRight3Img" />
 				</span>
