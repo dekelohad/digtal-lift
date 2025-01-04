@@ -30,7 +30,6 @@ function Header() {
 							<NavItem url="about-us">About</NavItem>
 							<NavItem url="testimonials">Testimonials</NavItem>
 							<NavItem url="blog">Blog</NavItem>
-							<NavItem url="contact-us">Contact Us</NavItem>
 						</DesktopNav>
 					</div>
 					<HeaderButton />

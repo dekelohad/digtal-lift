@@ -44,9 +44,5 @@ export const menuItemsData = [
 	{
 		title: "Blog",
 		url: "blog",
-	},
-	{
-		title: "Contact Us",
-		url: "contact-us",
-	},
+	}
 ];
