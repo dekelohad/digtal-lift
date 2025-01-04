@@ -6,117 +6,40 @@ function Story() {
 		<div className="section" style={{ padding: "60px 0 90px" }}>
 			<div className="container">
 				<div className="aximo-section-title center title-description">
-					<h2 style={{
-						position: "relative",
-						fontFamily: "'Anybody', sans-serif",
-						textAlign: "center",
-						maxWidth: "1200px",
-						margin: "0 auto"
-					}}>
-						<div style={{
-							fontSize: "5.5rem",
-							fontWeight: "900",
-							lineHeight: "0.85",
-							color: "#000",
-							letterSpacing: "-3px",
-							textTransform: "uppercase",
-							marginBottom: "10px",
-							opacity: 0,
-							animation: "slideIn 0.8s ease-out forwards"
-						}}>
-							Quality
-						</div>
-						<div style={{
-							fontSize: "6.5rem",
-							fontWeight: "900",
-							lineHeight: "0.85",
-							color: "#000",
-							letterSpacing: "-3px",
-							textTransform: "uppercase",
-							marginBottom: "10px",
-								opacity: 0,
-								animation: "slideIn 0.8s ease-out forwards 0.2s"
-						}}>
-							Calls
-						</div>
-						<div style={{
-							fontSize: "6.5rem",
-							fontWeight: "900",
-							lineHeight: "0.85",
-							color: "#000",
-							letterSpacing: "-3px",
-							textTransform: "uppercase",
-							marginBottom: "0",
-							opacity: 0,
-							animation: "slideIn 0.8s ease-out forwards 0.4s"
-						}}>
-							Daily
-						</div>
-						<div style={{
-							fontSize: "2.4rem",
-							color: "#222",
-							fontWeight: "600",
-							letterSpacing: "4px",
-							marginTop: "25px",
-							textTransform: "uppercase",
-							opacity: 0,
-							animation: "fadeInUp 0.8s ease-out forwards 0.8s"
-						}}>
-							From Ready-To-Buy Customers
-						</div>
-					</h2>
-					<p style={{
-						fontSize: "1.6rem",
-						lineHeight: "1.6",
-						color: "#333",
-						maxWidth: "900px",
-						margin: "50px auto 0",
-						fontWeight: "500",
-						textAlign: "center",
-						padding: "0 25px",
-						letterSpacing: "0.2px",
-						opacity: 0,
-						animation: "fadeInUp 1s ease-out forwards 1s"
-					}}>
-						<span style={{
-							display: "block",
-							fontSize: "2.2rem",
-							fontWeight: "700",
-							color: "#000",
-							margin: "0 0 25px 0",
-							letterSpacing: "-0.5px",
-							lineHeight: "1.3",
-							opacity: 0,
-							animation: "fadeInScale 0.8s ease-out forwards 1.2s"
-						}}>
-							Every call is a potential high-ticket job.
-						</span>
-						<span style={{
-							display: "block",
-							fontSize: "1.8rem",
-							fontWeight: "600",
-							color: "#222",
-							marginBottom: "25px",
-							lineHeight: "1.5",
-							letterSpacing: "-0.3px",
-							opacity: 0,
-							animation: "fadeInScale 0.8s ease-out forwards 1.4s"
-						}}>
-							No more wasting time with tire-kickers or price shoppers. Our systems pre-qualify every lead, ensuring you only talk to serious buyers ready to move forward with your services.
-						</span>
-						<span style={{
-							display: "block",
-							fontSize: "1.7rem",
-							fontWeight: "500",
-							color: "#333",
-							letterSpacing: "0px",
-							lineHeight: "1.6",
-							opacity: 0,
-							animation: "fadeInScale 0.8s ease-out forwards 1.6s"
-						}}>
-							Experience the power of consistent, quality lead flow. While others struggle to find customers, you'll have a steady stream of pre-qualified buyers calling you every day, ready to book your premium services.
-						</span>
+					<h2 className="title" style={{ 
+						fontSize: "3.5rem", 
+						fontWeight: "700",
+						marginBottom: "2rem",
+						background: "linear-gradient(135deg, #000 0%, #333 100%)",
+						WebkitBackgroundClip: "text",
+						WebkitTextFillColor: "transparent"
+					}}>Our Core Vision</h2>
+
+					<p className="text" style={{ fontSize: "1.2rem", lineHeight: "1.8", marginBottom: "3rem" }}>
+						Transforming businesses through innovative lead generation and digital dominance. We envision a world where every ambitious business can achieve exponential growth through strategic digital presence and consistent high-quality lead flow.
 					</p>
+
+					<p className="text" style={{ fontSize: "1.2rem", lineHeight: "1.8", marginBottom: "4rem" }}>
+						Our team consists of elite digital marketers, lead generation specialists, and growth strategists. We've mastered the art and science of making phones ring with qualified prospects, helping businesses scale predictably and profitably.
+					</p>
+
+					<h2 className="title" style={{ 
+						fontSize: "3.5rem", 
+						fontWeight: "700",
+						marginBottom: "2rem",
+						background: "linear-gradient(135deg, #000 0%, #333 100%)",
+						WebkitBackgroundClip: "text",
+						WebkitTextFillColor: "transparent"
+					}}>Our Mission</h2>
+
+					<p className="text" style={{ fontSize: "1.2rem", lineHeight: "1.8", marginBottom: "3rem" }}>
+						To revolutionize how businesses acquire customers by creating automated lead generation systems that deliver consistent results. We're committed to helping businesses escape the feast-and-famine cycle and achieve predictable growth.
+					</p>
+
+					<p className="text" style={{ fontSize: "1.2rem", lineHeight: "1.8" }}>
+						We specialize in turning websites into 24/7 lead generation machines. Our focus is on quality over quantity - delivering pre-qualified prospects who are ready to become high-value clients. Every strategy we implement is measured by one metric: how many new customers it brings to your business.
+					</p>
+
 					<style jsx>{`
 						@keyframes slideIn {
 							from {
