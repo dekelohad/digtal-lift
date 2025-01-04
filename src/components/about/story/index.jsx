@@ -8,17 +8,15 @@ function Story() {
 				<div className="aximo-section-title center title-description">
 					<h2>
 						<span className="aximo-title-animation">
-							We think our story is
+							From Leads to Revenue
 							<span className="aximo-title-icon">
 								<img src={Star2Img} alt="star" />
 							</span>
 						</span>
-						worth sharing with you
+						 Your Growth Partner
 					</h2>
 					<p>
-						Established in 2008, we began as a small but ambitious team. We understood the importance of
-						creative and tech-savvy solutions to help businesses succeed in the ever-changing digital
-						landscape.
+						Digital Lift was born from a game-changing realization: while most agencies chase vanity metrics, businesses need one thing - a constantly ringing phone with qualified buyers on the line. We've cracked the code on predictable lead generation, transforming websites into 24/7 client-acquisition machines that deliver pre-qualified customers directly to your business.
 					</p>
 				</div>
 

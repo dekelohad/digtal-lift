@@ -2,27 +2,21 @@ function StoryContent() {
 	return (
 		<div className="row">
 			<div className="col-lg-6">
-				<h3>Our core vision</h3>
+				<h3>Our Core Vision</h3>
 				<p>
-					Empowering businesses to create impactful and visually stunning brand experiences that captivate
-					audiences and drive success in the digital age.{" "}
+					Transforming businesses through innovative lead generation and digital dominance. We envision a world where every ambitious business can achieve exponential growth through strategic digital presence and consistent high-quality lead flow.
 				</p>
 				<p>
-					Our team consists of experienced designers, developers. We have a wide variety of skills and
-					backgrounds, allowing us to tackle projects of all sizes and complexities. We believe in the power
-					of imagination and innovation.
+					Our team consists of elite digital marketers, lead generation specialists, and growth strategists. We've mastered the art and science of making phones ring with qualified prospects, helping businesses scale predictably and profitably.
 				</p>
 			</div>
 			<div className="col-lg-6">
-				<h3>Our main mission</h3>
+				<h3>Our Mission</h3>
 				<p>
-					Our mission is to collaborate with businesses of all sizes, from startups to established brands, to
-					provide innovative and creative design solutions.{" "}
+					To revolutionize how businesses acquire customers by creating automated lead generation systems that deliver consistent results. We're committed to helping businesses escape the feast-and-famine cycle and achieve predictable growth.
 				</p>
 				<p>
-					We are committed to creating designs that inspire, connect & our clients in the marketplace. Our
-					focus is on understanding. Our clients' unique needs and delivery designs that not only meet but
-					exceed their expectations.
+					We specialize in turning websites into 24/7 lead generation machines. Our focus is on quality over quantity - delivering pre-qualified prospects who are ready to become high-value clients. Every strategy we implement is measured by one metric: how many new customers it brings to your business.
 				</p>
 			</div>
 		</div>
