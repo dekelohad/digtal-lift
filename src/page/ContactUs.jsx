@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import BreadCrumb from "../components/common/Breadcrumb";
-import ContactForm from "../components/contact/ContactForm";
 import ContactInfo from "../components/contact/ContactInfo";
 import TwoColumnFaq from "../components/contact/TwoColumnFaq";
 import { FadeInStaggerTwo, FadeInStaggerTwoChildren } from "../components/animation/FadeInStaggerTwo";
@@ -24,16 +23,16 @@ function ContactUs() {
 			
 			{/* Hero Section */}
 			<div className="section" style={{ 
-				padding: "60px 0", 
+				padding: "30px 0", 
 				background: "var(--dark-bg)",
-				marginBottom: "20px"
+				marginBottom: "0"
 			}}>
 				<div className="container">
 					<div className="row justify-content-center text-center">
 						<div className="col-lg-8 col-md-10 col-11">
 							<h1 style={{ 
 								fontSize: "clamp(32px, 5vw, 48px)", 
-								marginBottom: "20px",
+								marginBottom: "15px",
 								color: "#BBFF00",
 								lineHeight: "1.2"
 							}}>
@@ -42,7 +41,7 @@ function ContactUs() {
 							<p style={{ 
 								fontSize: "clamp(16px, 3vw, 18px)", 
 								color: "#e0e0e0", 
-								marginBottom: "30px",
+								marginBottom: "20px",
 								lineHeight: "1.6",
 								padding: "0 15px"
 							}}>
@@ -55,9 +54,9 @@ function ContactUs() {
 
 			{/* Calendar Booking Section */}
 			<div className="section" style={{ 
-				padding: "40px 0", 
+				padding: "20px 0", 
 				background: "#000",
-				marginBottom: "20px"
+				marginBottom: "0"
 			}}>
 				<div className="container">
 					<div className="row justify-content-center">
@@ -78,8 +77,8 @@ function ContactUs() {
 
 			{/* Map Section */}
 			<div className="section" style={{ 
-				padding: "40px 0",
-				margin: "20px 0",
+				padding: "20px 0",
+				margin: "0",
 				background: "#000"
 			}}>
 				<div className="container">
@@ -106,7 +105,6 @@ function ContactUs() {
 				</div>
 			</div>
 
-			<ContactForm />
 			<TwoColumnFaq />
 		</>
 	);

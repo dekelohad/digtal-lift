@@ -54,16 +54,16 @@ function ContactInfo() {
 
 	return (
 		<div className="section" style={{ 
-			padding: "60px 0",
+			padding: "20px 0",
 			background: "#000",
-			marginBottom: "20px"
+			marginBottom: "0"
 		}}>
 			<div className="container">
 				<div className="row justify-content-center">
-					<div className="col-12 text-center mb-5">
+					<div className="col-12 text-center mb-4">
 						<h2 style={{
 							fontSize: "clamp(32px, 5vw, 48px)",
-							marginBottom: "20px",
+							marginBottom: "15px",
 							color: "#BBFF00",
 							lineHeight: "1.2"
 						}}>
@@ -73,7 +73,7 @@ function ContactInfo() {
 							fontSize: "clamp(16px, 3vw, 18px)",
 							color: "#e0e0e0",
 							maxWidth: "800px",
-							margin: "0 auto",
+							margin: "0 auto 20px",
 							lineHeight: "1.6"
 						}}>
 							Choose your preferred way to connect with us and take the first step towards your digital success
