@@ -49,7 +49,7 @@ function ContactInfo() {
 							</div>
 							<div className="aximo-contact-info-data">
 								<span>Office address</span>
-								<p>4132 Thornridge City, New York.</p>
+								<p>11801 Domain Blvd, Suite W350<br />Austin, TX 78758</p>
 							</div>
 						</div>
 					</FadeInStaggerTwoChildren>

@@ -165,9 +165,8 @@ function FooterBottom() {
 						<li style={{ display: "flex", alignItems: "start", gap: "10px" }}>
 							<FaLocationDot style={{ color: "#CCFF00", marginTop: "4px" }} />
 							<span style={{ color: "#e0e0e0", fontSize: "15px", lineHeight: "1.6" }}>
-								123 Business Street,<br />
-								Suite 100,<br />
-								San Francisco, CA 94111
+								11801 Domain Blvd, Suite W350<br />
+								Austin, TX 78758
 							</span>
 						</li>
 					</ul>
