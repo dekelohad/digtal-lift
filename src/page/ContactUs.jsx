@@ -7,7 +7,7 @@ function ContactUs() {
 	return (
 		<>
 			<BreadCrumb title="Contact Us" />
-			<ContactForm />
+			{/* <ContactForm /> */}
 			<ContactInfo />
 			<TwoColumnFaq />
 		</>
