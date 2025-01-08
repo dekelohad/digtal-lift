@@ -1,0 +1,61 @@
+.breadcrumb-container {
+    padding: 0.75rem 2rem;
+    background: rgba(18, 18, 18, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.breadcrumbs {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: ">";
+    margin-left: 0.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.breadcrumbs a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #CCFF00;
+    text-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
+}
+
+.breadcrumbs span {
+    color: #CCFF00;
+    text-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+    .breadcrumb-container {
+        padding: 0.75rem 1rem;
+    }
+
+    .breadcrumbs li {
+        font-size: 0.8rem;
+    }
+} 
