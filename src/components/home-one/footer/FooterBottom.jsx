@@ -46,9 +46,6 @@ function FooterBottom() {
 							<FooterLink to="/testimonials">Testimonials</FooterLink>
 						</li>
 						<li className="footer-item">
-							<FooterLink to="/blog">Blog</FooterLink>
-						</li>
-						<li className="footer-item">
 							<FooterLink to="/contact-us">Contact</FooterLink>
 						</li>
 					</ul>

@@ -20,7 +20,7 @@ export const menuItemsData = [
 				url: "search-engine-optimization",
 			},
 			{
-				title: "Google Business",
+				title: "Google Business Profile",
 				url: "google-my-business",
 			},
 			{
@@ -40,9 +40,5 @@ export const menuItemsData = [
 	{
 		title: "Testimonials",
 		url: "testimonials",
-	},
-	{
-		title: "Blog",
-		url: "blog",
 	}
 ];

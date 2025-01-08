@@ -18,7 +18,14 @@ import Team4Img from "../../assets/images/team/team4.png";
 const servicesData = [
 	{
 		id: crypto.randomUUID(),
-		title: "Paid Search Marketing",
+		title: "Local Lead Generation",
+		description:
+			"Transform your local presence into a lead-generating machine. Our proven strategies target and capture your ideal customers in your service area.",
+		icon: ServiceIcons.target,
+	},
+	{
+		id: crypto.randomUUID(),
+		title: "Pay-Per-Click",
 		description:
 			"Turn search traffic into revenue with smart PPC campaigns. Our data-driven approach ensures every ad dollar works to capture high-intent buyers.",
 		icon: ServiceIcons.search,
@@ -29,13 +36,6 @@ const servicesData = [
 		description:
 			"Dominate organic search results with powerful SEO strategies. We optimize every aspect of your online presence to attract ready-to-buy customers.",
 		icon: ServiceIcons.seo,
-	},
-	{
-		id: crypto.randomUUID(),
-		title: "Local Lead Generation",
-		description:
-			"Transform your local presence into a lead-generating machine. Our proven strategies target and capture your ideal customers in your service area.",
-		icon: ServiceIcons.target,
 	},
 	{
 		id: crypto.randomUUID(),

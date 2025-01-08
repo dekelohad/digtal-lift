@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../../assets/images/logo.png";
 import "./Navbar.css";
+import Logo from "../../assets/images/logo.png";
 
 function Navbar() {
     const location = useLocation();
@@ -40,13 +40,13 @@ function Navbar() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="dropdown-item" to="/search-engine-optimization">
-                                        Search Engine Optimization
+                                    <Link className="dropdown-item" to="/paid-search-marketing">
+                                        Pay-Per-Click
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link className="dropdown-item" to="/paid-search-marketing">
-                                        Paid Search Marketing
+                                    <Link className="dropdown-item" to="/search-engine-optimization">
+                                        Search Engine Optimization
                                     </Link>
                                 </li>
                                 <li>
@@ -76,12 +76,6 @@ function Navbar() {
                         <li className="nav-item">
                             <Link className={`nav-link ${location.pathname === "/testimonials" ? "active" : ""}`} to="/testimonials">
                                 Testimonials
-                            </Link>
-                        </li>
-                        
-                        <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname === "/blog" ? "active" : ""}`} to="/blog">
-                                Blog
                             </Link>
                         </li>
                         
