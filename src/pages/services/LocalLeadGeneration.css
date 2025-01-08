@@ -1,0 +1,316 @@
+.local-lead-page {
+    background: linear-gradient(to bottom, #000000, #111111);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-title {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.neon-text {
+    color: #CCFF00;
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.4),
+                 0 0 40px rgba(204, 255, 0, 0.2),
+                 0 0 60px rgba(204, 255, 0, 0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.neon-text::after {
+    content: '';
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #CCFF00;
+    box-shadow: 0 0 20px 2px #CCFF00;
+    transform: scaleX(0);
+    transform-origin: right;
+    animation: neonLine 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes neonLine {
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+.neon-icon {
+    color: #CCFF00;
+    filter: drop-shadow(0 0 8px rgba(204, 255, 0, 0.5));
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.process-box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.process-box:hover {
+    border-color: #CCFF00;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+}
+
+.neon-icon {
+    color: #CCFF00;
+    filter: drop-shadow(0 0 8px rgba(204, 255, 0, 0.5));
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.process-box:hover .neon-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(204, 255, 0, 0.7));
+}
+
+.process-description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.hero-description {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    line-height: 1.8;
+    margin: 3rem auto 6rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.lead-types-grid, .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 3rem 0 6rem;
+}
+
+.info-box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.info-box:hover {
+    border-color: #CCFF00;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.info-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #CCFF00;
+}
+
+.info-description {
+    color: #888;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.metrics-section {
+    margin-top: 6rem;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.metric-box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.metric-box:hover {
+    border-color: #CCFF00;
+    transform: translateY(-5px);
+}
+
+.metric-number {
+    display: block;
+    font-size: 48px;
+    font-weight: 700;
+    color: #CCFF00;
+    margin-bottom: 0.5rem;
+}
+
+.metric-label {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .lead-types-grid, .benefits-grid, .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-title {
+        font-size: 64px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+}
+
+/* Update the container padding for better spacing */
+.container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Add subtle animated background effect */
+.local-lead-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(204, 255, 0, 0.03) 0%, transparent 50%);
+    animation: pulseBackground 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes pulseBackground {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
+.testimonials-section {
+    margin: 6rem 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.testimonial-box:hover {
+    border-color: #CCFF00;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.testimonial-quote {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+.testimonial-author {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.author-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.author-business {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.testimonial-results {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+} 
