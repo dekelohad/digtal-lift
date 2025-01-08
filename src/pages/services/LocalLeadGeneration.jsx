@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaBullseye, FaRocket, FaChartLine, FaClipboardCheck } from "react-icons/fa";
 import "./LocalLeadGeneration.css";
+import BreadCrumb from "../../components/common/Breadcrumb";
 
 function LocalLeadGeneration() {
 	const processSteps = [
@@ -77,7 +78,8 @@ function LocalLeadGeneration() {
 
 	return (
 		<div className="local-lead-page">
-			<div className="container mx-auto px-6 pt-32">
+			<BreadCrumb title="Local Marketing" />
+			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
 					animate={{ opacity: 1 }}
