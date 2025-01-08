@@ -1,73 +1,134 @@
 import { useEffect } from "react";
-import ServicePage from "../../components/services/ServicePage";
+import { motion } from "framer-motion";
+import { FaPaintBrush, FaMobile, FaRocket, FaCode } from "react-icons/fa";
+import BreadCrumb from "../../components/common/Breadcrumb";
+import "./WebDesign.css";
 
 function WebDesign() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const features = [
+	const processSteps = [
 		{
-			title: "Custom Design",
-			description: "Unique, brand-aligned designs that capture your vision and engage your target audience",
-			icon: "🎨"
+			icon: <FaPaintBrush />,
+			description: "Create stunning, conversion-focused designs that capture your brand's essence. Our designs blend aesthetics with psychology to drive user engagement and actions."
 		},
 		{
-			title: "Responsive Design",
-			description: "Seamless experiences across all devices with mobile-first, responsive layouts",
-			icon: "📱"
+			icon: <FaMobile />,
+			description: "Build responsive websites that look perfect on every device. From mobile phones to large desktops, your site will provide a seamless experience everywhere."
 		},
 		{
-			title: "UI/UX Design",
-			description: "Intuitive user interfaces and engaging user experiences that drive conversions",
-			icon: "✨"
+			icon: <FaCode />,
+			description: "Develop with clean, optimized code that ensures fast loading speeds and smooth performance. We follow best practices for SEO and accessibility."
 		},
 		{
-			title: "Brand Integration",
-			description: "Cohesive visual design that perfectly aligns with your brand identity",
-			icon: "🎯"
-		},
-		{
-			title: "Performance Optimization",
-			description: "Fast-loading, optimized designs that provide excellent user experience",
-			icon: "⚡"
-		},
-		{
-			title: "Conversion Focus",
-			description: "Strategic design elements that guide visitors toward desired actions",
-			icon: "🎯"
+			icon: <FaRocket />,
+			description: "Launch with confidence using our comprehensive testing and optimization process. Your site will be ready to convert visitors into customers from day one."
 		}
 	];
 
-	const benefits = [
+	const testimonials = [
 		{
-			title: "Stand Out Online",
-			description: "Make a lasting first impression with a stunning, professional website design"
+			quote: "The new website completely transformed our online presence. The modern design and intuitive user experience have significantly increased our conversion rates. Our customers constantly praise how easy it is to navigate and find what they need.",
+			author: "Sarah Mitchell",
+			business: "Luxury Realty Group",
+			results: "286% increase in lead generation"
 		},
 		{
-			title: "Increase Conversions",
-			description: "Turn more visitors into customers with conversion-optimized designs"
-		},
-		{
-			title: "Build Trust",
-			description: "Establish credibility with a professional, modern web presence"
-		},
-		{
-			title: "Future-Proof Design",
-			description: "Stay ahead with cutting-edge design that scales with your business"
+			quote: "Their attention to detail and focus on user experience is exceptional. The website they designed not only looks stunning but has dramatically improved our online sales. The mobile experience is particularly impressive.",
+			author: "David Chen",
+			business: "Artisan Electronics",
+			results: "194% boost in mobile conversions"
 		}
 	];
 
 	return (
-		<ServicePage
-			title="Web Design"
-			subtitle="Create Stunning Digital Experiences"
-			description="Transform your online presence with our professional web design services. We create beautiful, functional websites that engage your audience, reflect your brand, and drive business results."
-			features={features}
-			benefits={benefits}
-			ctaText="Start Your Design Project"
-			backgroundImage="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=2655&auto=format&fit=crop"
-		/>
+		<div className="local-lead-page">
+			<BreadCrumb title="Web Design" />
+			<div className="container mx-auto px-6 pt-80">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1 }}
+					className="text-center"
+				>
+					<motion.h1 
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.2, duration: 0.8 }}
+						className="hero-title mx-auto"
+					>
+						<motion.span
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.3, duration: 0.8 }}
+							className="neon-text"
+						>
+							Web Design
+						</motion.span>
+						<motion.span
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.4, duration: 0.8 }}
+						>
+							& Development
+						</motion.span>
+					</motion.h1>
+
+					<motion.p
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.4, duration: 0.8 }}
+						className="hero-description mt-8 mb-20 mx-auto"
+					>
+						Transform your online presence with a stunning, high-performance website. We create modern, conversion-focused designs that turn visitors into customers and elevate your brand above the competition.
+					</motion.p>
+				</motion.div>
+
+				<div className="grid-container">
+					{processSteps.map((step, index) => (
+						<motion.div
+							key={index}
+							initial={{ y: 30, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.6 + index * 0.1, duration: 0.8 }}
+							className="process-box"
+						>
+							<div className="neon-icon">
+								{step.icon}
+							</div>
+							<p className="process-description">{step.description}</p>
+						</motion.div>
+					))}
+				</div>
+
+				<div className="testimonials-section">
+					<h2 className="section-title text-center">Success Stories</h2>
+					<div className="testimonials-grid">
+						{testimonials.map((testimonial, index) => (
+							<motion.div 
+								key={index}
+								className="testimonial-box"
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.2 + index * 0.1 }}
+							>
+								<div className="quote-icon">
+									<span className="neon-text">"</span>
+								</div>
+								<p className="testimonial-quote">{testimonial.quote}</p>
+								<div className="testimonial-author">
+									<h4 className="author-name">{testimonial.author}</h4>
+									<p className="author-business">{testimonial.business}</p>
+									<p className="testimonial-results neon-text">{testimonial.results}</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }
 
