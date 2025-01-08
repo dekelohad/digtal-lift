@@ -8,7 +8,7 @@ import BlogPage from "../page/blog/BlogPage.jsx";
 import HomeOne from "../page/home/HomeOne.jsx";
 import TestimonialsPage from "../pages/testimonials";
 import LocalLeadGeneration from "../pages/services/LocalLeadGeneration";
-import PaidSearchMarketing from "../pages/services/PaidSearchMarketing";
+import PaidSearchMarketing from "../page/service/PaidSearchMarketing";
 import SearchEngineOptimization from "../pages/services/SearchEngineOptimization";
 import GoogleMyBusiness from "../pages/services/GoogleMyBusiness";
 import WebDesign from "../pages/services/WebDesign";
