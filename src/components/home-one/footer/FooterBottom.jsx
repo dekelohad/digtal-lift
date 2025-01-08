@@ -61,13 +61,13 @@ function FooterBottom() {
 							<FooterLink to="/local-lead-generation">Local Lead Generation</FooterLink>
 						</li>
 						<li className="footer-item">
+							<FooterLink to="/paid-search-marketing">Pay-Per-Click</FooterLink>
+						</li>
+						<li className="footer-item">
 							<FooterLink to="/search-engine-optimization">Search Engine Optimization</FooterLink>
 						</li>
 						<li className="footer-item">
-							<FooterLink to="/paid-search-marketing">Paid Search Marketing</FooterLink>
-						</li>
-						<li className="footer-item">
-							<FooterLink to="/google-business-profile">Google Business Profile</FooterLink>
+							<FooterLink to="/google-my-business">Google Business</FooterLink>
 						</li>
 						<li className="footer-item">
 							<FooterLink to="/web-design">Web Design</FooterLink>

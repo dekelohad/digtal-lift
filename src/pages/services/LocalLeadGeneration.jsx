@@ -78,7 +78,7 @@ function LocalLeadGeneration() {
 
 	return (
 		<div className="local-lead-page">
-			<BreadCrumb title="Local Marketing" />
+			<BreadCrumb title="Local Lead Generation" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -93,7 +93,7 @@ function LocalLeadGeneration() {
 						className="hero-title mx-auto"
 					>
 						Drive Quality Leads with{" "}
-						<span className="neon-text">Local Marketing</span>
+						<span className="neon-text">Local Lead Generation</span>
 					</motion.h1>
 
 					<motion.p
