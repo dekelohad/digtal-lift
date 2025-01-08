@@ -1,73 +1,142 @@
 import { useEffect } from "react";
-import ServicePage from "../../components/services/ServicePage";
+import { motion } from "framer-motion";
+import { FaCode, FaBolt, FaShieldAlt, FaTools, FaDatabase, FaCloud } from "react-icons/fa";
+import BreadCrumb from "../../components/common/Breadcrumb";
+import "./WebDevelopment.css";
 
 function WebDevelopment() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const features = [
+	const processSteps = [
 		{
-			title: "Custom Development",
-			description: "Tailored web solutions built with modern technologies to meet your specific business needs",
-			icon: "💻"
+			icon: <FaCode />,
+			description: "Build scalable applications using cutting-edge technologies like React, Node.js, and Next.js. Our code is clean, maintainable, and future-proof."
 		},
 		{
-			title: "E-commerce Solutions",
-			description: "Powerful online stores with secure payment processing and inventory management",
-			icon: "🛍️"
+			icon: <FaBolt />,
+			description: "Optimize performance with advanced caching, lazy loading, and server-side rendering. Your application will load blazingly fast on any device."
 		},
 		{
-			title: "CMS Integration",
-			description: "User-friendly content management systems that make website updates easy",
-			icon: "📝"
+			icon: <FaDatabase />,
+			description: "Design efficient database architectures and APIs that handle complex data with ease. We ensure your data is secure, organized, and easily accessible."
 		},
 		{
-			title: "API Development",
-			description: "Custom API development and third-party integrations to extend functionality",
-			icon: "🔌"
+			icon: <FaShieldAlt />,
+			description: "Implement robust security measures and best practices to protect your application from vulnerabilities. Your users' data stays safe and private."
 		},
 		{
-			title: "Security & Performance",
-			description: "Robust security measures and optimized performance for peace of mind",
-			icon: "🔒"
+			icon: <FaTools />,
+			description: "Provide continuous maintenance, updates, and support to keep your application running smoothly. We're here to help you grow and scale."
 		},
 		{
-			title: "Maintenance & Support",
-			description: "Ongoing technical support and regular updates to keep your site running smoothly",
-			icon: "🛠️"
+			icon: <FaCloud />,
+			description: "Deploy your application to the cloud with automated CI/CD pipelines. Ensure high availability and seamless scaling across multiple regions."
 		}
 	];
 
-	const benefits = [
+	const testimonials = [
 		{
-			title: "Scalable Solutions",
-			description: "Future-proof development that grows with your business needs"
+			quote: "They transformed our legacy system into a modern, high-performance application. The new platform has dramatically improved our operational efficiency and user satisfaction. Their technical expertise and attention to detail were outstanding.",
+			author: "Michael Zhang",
+			business: "TechFlow Solutions",
+			results: "432% increase in processing speed"
 		},
 		{
-			title: "Technical Excellence",
-			description: "Clean, efficient code that ensures optimal performance and reliability"
-		},
-		{
-			title: "Custom Functionality",
-			description: "Tailored features and integrations that streamline your business operations"
-		},
-		{
-			title: "Ongoing Support",
-			description: "Regular maintenance and updates to keep your website secure and up-to-date"
+			quote: "The custom e-commerce platform they built has revolutionized our business. The integration with our existing systems was seamless, and the performance improvements have directly impacted our bottom line.",
+			author: "Emma Rodriguez",
+			business: "Global Commerce Inc",
+			results: "317% boost in transaction volume"
 		}
 	];
 
 	return (
-		<ServicePage
-			title="Web Development"
-			subtitle="Build Powerful Digital Solutions"
-			description="Transform your ideas into reality with our expert web development services. We build robust, scalable web applications that power your business and deliver exceptional user experiences."
-			features={features}
-			benefits={benefits}
-			ctaText="Start Your Development Project"
-			backgroundImage="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?q=80&w=2670&auto=format&fit=crop"
-		/>
+		<div className="web-dev-page">
+			<BreadCrumb title="Web Development" />
+			<div className="container mx-auto px-6 pt-80">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1 }}
+					className="text-center"
+				>
+					<motion.h1 
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.2, duration: 0.8 }}
+						className="hero-title mx-auto"
+					>
+						<motion.span
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.3, duration: 0.8 }}
+							className="neon-text"
+						>
+							Web Development
+						</motion.span>
+						<motion.span
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.4, duration: 0.8 }}
+						>
+							& Engineering
+						</motion.span>
+					</motion.h1>
+
+					<motion.p
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.4, duration: 0.8 }}
+						className="hero-description mt-8 mb-20 mx-auto"
+					>
+						Build powerful, scalable web applications that drive your business forward. Our expert developers combine cutting-edge technology with battle-tested practices to create solutions that perform and scale.
+					</motion.p>
+				</motion.div>
+
+				<div className="grid-container">
+					{processSteps.map((step, index) => (
+						<motion.div
+							key={index}
+							initial={{ y: 30, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.6 + index * 0.1, duration: 0.8 }}
+							className="process-box"
+						>
+							<div className="neon-icon">
+								{step.icon}
+							</div>
+							<p className="process-description">{step.description}</p>
+						</motion.div>
+					))}
+				</div>
+
+				<div className="testimonials-section">
+					<h2 className="section-title text-center">Success Stories</h2>
+					<div className="testimonials-grid">
+						{testimonials.map((testimonial, index) => (
+							<motion.div 
+								key={index}
+								className="testimonial-box"
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.2 + index * 0.1 }}
+							>
+								<div className="quote-icon">
+									<span className="neon-text">"</span>
+								</div>
+								<p className="testimonial-quote">{testimonial.quote}</p>
+								<div className="testimonial-author">
+									<h4 className="author-name">{testimonial.author}</h4>
+									<p className="author-business">{testimonial.business}</p>
+									<p className="testimonial-results neon-text">{testimonial.results}</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }
 
