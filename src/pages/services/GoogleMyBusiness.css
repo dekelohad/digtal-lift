@@ -1,0 +1,214 @@
+.local-lead-page {
+    background: linear-gradient(to bottom, #000000, #111111);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+    padding: 0 1rem;
+}
+
+.hero-description {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    line-height: 1.8;
+    margin: 3rem auto 6rem;
+    text-align: center;
+    opacity: 0.9;
+}
+
+.neon-text {
+    color: #CCFF00;
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.4),
+                 0 0 40px rgba(204, 255, 0, 0.2),
+                 0 0 60px rgba(204, 255, 0, 0.1);
+    position: relative;
+    display: inline-block;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin: 4rem 0;
+}
+
+.process-box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+}
+
+.process-box:hover {
+    border-color: #CCFF00;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.neon-icon {
+    color: #CCFF00;
+    filter: drop-shadow(0 0 8px rgba(204, 255, 0, 0.5));
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.process-box:hover .neon-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px rgba(204, 255, 0, 0.7));
+}
+
+.process-description {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.testimonials-section {
+    margin: 6rem 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-box:hover {
+    border-color: #CCFF00;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.testimonial-quote {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-style: italic;
+    flex-grow: 1;
+}
+
+.testimonial-author {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+    margin-top: auto;
+}
+
+.author-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.author-business {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.testimonial-results {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 42px;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 36px;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 32px;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+        margin: 2rem auto 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+        gap: 0.6rem;
+    }
+} 

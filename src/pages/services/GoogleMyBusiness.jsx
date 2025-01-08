@@ -1,73 +1,167 @@
 import { useEffect } from "react";
-import ServicePage from "../../components/services/ServicePage";
+import { motion } from "framer-motion";
+import { FaMapMarkedAlt, FaChartLine, FaStar, FaComments } from "react-icons/fa";
+import BreadCrumb from "../../components/common/Breadcrumb";
+import "./GoogleMyBusiness.css";
 
 function GoogleMyBusiness() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const features = [
+	const processSteps = [
 		{
-			title: "Profile Optimization",
-			description: "Complete optimization of your Google Business Profile with engaging content, photos, and business information",
-			icon: "⭐"
+			icon: <FaMapMarkedAlt />,
+			description: "Dominate local search with an optimized Google Business Profile. We enhance your visibility to capture high-intent local customers actively searching for your services."
 		},
 		{
-			title: "Review Management",
-			description: "Strategic review acquisition and professional response management to build trust and credibility",
-			icon: "💬"
+			icon: <FaStar />,
+			description: "Build trust with review management and response strategies. Turn happy customers into powerful advocates and handle feedback professionally to showcase your excellence."
 		},
 		{
-			title: "Local SEO",
-			description: "Local keyword optimization and citation building to improve your local search visibility",
-			icon: "📍"
+			icon: <FaComments />,
+			description: "Engage customers with strategic post updates and Q&A management. Keep your profile active and informative with content that drives engagement and conversions."
 		},
 		{
-			title: "Post Management",
-			description: "Regular updates with engaging posts about products, offers, and events to keep your profile active",
-			icon: "📢"
-		},
-		{
-			title: "Photo Optimization",
-			description: "Professional photo management to showcase your business and improve engagement",
-			icon: "📸"
-		},
-		{
-			title: "Performance Tracking",
-			description: "Detailed insights and analytics to measure profile performance and customer engagement",
-			icon: "📊"
+			icon: <FaChartLine />,
+			description: "Track performance with advanced analytics. Monitor customer actions, search queries, and engagement metrics to continuously optimize your local presence."
 		}
 	];
 
-	const benefits = [
+	const testimonials = [
 		{
-			title: "Increased Local Visibility",
-			description: "Stand out in local search results and Google Maps to attract nearby customers"
+			quote: "Our local visibility exploded after they optimized our Google Business Profile. We went from barely showing up in local searches to dominating the map pack. The increase in customer calls and direction requests has been incredible.",
+			author: "Michael Rodriguez",
+			business: "Premier Auto Service",
+			results: "312% increase in local visibility"
 		},
 		{
-			title: "Better Customer Engagement",
-			description: "Connect with customers through reviews, posts, and direct messaging"
-		},
-		{
-			title: "Enhanced Credibility",
-			description: "Build trust with potential customers through a professionally managed online presence"
-		},
-		{
-			title: "More Foot Traffic",
-			description: "Drive more in-store visits with accurate business information and engaging content"
+			quote: "They transformed our Google presence completely. Their review management strategy helped us build incredible social proof, and their posting strategy keeps our profile fresh and engaging. We're now the go-to choice in our area.",
+			author: "Jennifer Chen",
+			business: "Lotus Wellness Spa",
+			results: "275% more customer interactions"
 		}
 	];
 
 	return (
-		<ServicePage
-			title="Google Business Profile Management"
-			subtitle="Dominate Local Search & Attract Nearby Customers"
-			description="Maximize your local presence with our expert Google Business Profile management services. We help you stand out in local search results, engage with customers, and drive more foot traffic to your business."
-			features={features}
-			benefits={benefits}
-			ctaText="Boost Local Presence"
-			backgroundImage="https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?q=80&w=2670&auto=format&fit=crop"
-		/>
+		<div className="local-lead-page">
+			<BreadCrumb title="Google Business" />
+			<div className="container mx-auto px-6 pt-80">
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					transition={{ duration: 1 }}
+					className="text-center"
+				>
+					<motion.h1 
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.2, duration: 0.8 }}
+						className="hero-title mx-auto"
+					>
+						<motion.span
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.3, duration: 0.8 }}
+							className="neon-text"
+						>
+							Google Business
+						</motion.span>
+						<motion.span
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.4, duration: 0.8 }}
+						>
+							Profile Management
+						</motion.span>
+					</motion.h1>
+
+					<motion.p
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.4, duration: 0.8 }}
+						className="hero-description mt-8 mb-20 mx-auto"
+					>
+						Transform your local presence with a perfectly optimized Google Business Profile. We help you stand out in local search results, engage with customers effectively, and turn online visibility into real business growth.
+					</motion.p>
+				</motion.div>
+
+				<div className="grid-container">
+					{processSteps.map((step, index) => (
+						<motion.div
+							key={index}
+							initial={{ y: 30, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.6 + index * 0.1, duration: 0.8 }}
+							className="process-box"
+						>
+							<div className="neon-icon">
+								{step.icon}
+							</div>
+							<p className="process-description">{step.description}</p>
+						</motion.div>
+					))}
+				</div>
+
+				<div className="metrics-section">
+					<h2 className="section-title text-center">Key Benefits</h2>
+					<div className="metrics-grid">
+						<motion.div
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.2 }}
+						>
+							<span className="metric-number">78%</span>
+							<span className="metric-label">of Local Searches Result in Store Visits</span>
+						</motion.div>
+						<motion.div
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3 }}
+						>
+							<span className="metric-number">2.7x</span>
+							<span className="metric-label">More Likely to Be Considered Reputable</span>
+						</motion.div>
+						<motion.div
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4 }}
+						>
+							<span className="metric-number">70%</span>
+							<span className="metric-label">Higher Conversion Rate for Local Searches</span>
+						</motion.div>
+					</div>
+				</div>
+
+				<div className="testimonials-section">
+					<h2 className="section-title text-center">Success Stories</h2>
+					<div className="testimonials-grid">
+						{testimonials.map((testimonial, index) => (
+							<motion.div 
+								key={index}
+								className="testimonial-box"
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.2 + index * 0.1 }}
+							>
+								<div className="quote-icon">
+									<span className="neon-text">"</span>
+								</div>
+								<p className="testimonial-quote">{testimonial.quote}</p>
+								<div className="testimonial-author">
+									<h4 className="author-name">{testimonial.author}</h4>
+									<p className="author-business">{testimonial.business}</p>
+									<p className="testimonial-results neon-text">{testimonial.results}</p>
+								</div>
+							</motion.div>
+						))}
+					</div>
+				</div>
+			</div>
+		</div>
 	);
 }
 
