@@ -1,7 +1,4 @@
-import Call2Img from "../../assets/images/icon/call2.svg";
-import EmailImg from "../../assets/images/icon/email.svg";
-import MapImg from "../../assets/images/icon/map.svg";
-import { FaClock } from 'react-icons/fa';
+import { FaClock, FaEnvelope } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
@@ -9,7 +6,7 @@ function ContactInfo() {
 	const boxStyle = {
 		background: "#111",
 		backdropFilter: "blur(10px)",
-		borderRadius: "15px",
+		borderRadius: "12px",
 		padding: "25px",
 		display: "flex",
 		flexDirection: "column",
@@ -18,8 +15,8 @@ function ContactInfo() {
 		transition: "all 0.3s ease",
 		width: "100%",
 		height: "100%",
-		border: "1px solid rgba(187, 255, 0, 0.1)",
-		boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+		border: "1px solid #BBFF00",
+		boxShadow: "0 0 20px rgba(187, 255, 0, 0.15)",
 		position: "relative"
 	};
 
@@ -52,16 +49,16 @@ function ContactInfo() {
 	};
 
 	const hoverEffect = (e) => {
-		e.currentTarget.style.transform = "translateY(-5px)";
-		e.currentTarget.style.boxShadow = "0 8px 30px rgba(187, 255, 0, 0.2), 0 0 20px rgba(187, 255, 0, 0.15)";
-		e.currentTarget.style.border = "2px solid #BBFF00";
-		e.currentTarget.style.background = "linear-gradient(145deg, rgba(187, 255, 0, 0.08), rgba(0, 0, 0, 0.1))";
+		e.currentTarget.style.transform = "translateY(-2px)";
+		e.currentTarget.style.border = "1px solid #BBFF00";
+		e.currentTarget.style.boxShadow = "0 0 25px rgba(187, 255, 0, 0.2)";
+		e.currentTarget.style.background = "#111";
 	};
 
 	const removeHoverEffect = (e) => {
 		e.currentTarget.style.transform = "translateY(0)";
-		e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.3)";
-		e.currentTarget.style.border = "1px solid rgba(187, 255, 0, 0.1)";
+		e.currentTarget.style.border = "1px solid #BBFF00";
+		e.currentTarget.style.boxShadow = "0 0 20px rgba(187, 255, 0, 0.15)";
 		e.currentTarget.style.background = "#111";
 	};
 
@@ -135,7 +132,7 @@ function ContactInfo() {
 						>
 							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
 								<div style={{ marginBottom: "20px" }}>
-									<img src={EmailImg} alt="Email" style={iconStyle} />
+									<FaEnvelope style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Email us</h3>
 								<a 
@@ -160,25 +157,17 @@ function ContactInfo() {
 							</motion.div>
 
 							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
-								<h3 style={titleStyle}>Office Address</h3>
-								<div style={{ 
-									display: "flex",
-									alignItems: "center",
-									gap: "12px",
-									textAlign: "left"
-								}}>
-									<FaLocationDot style={{
-										color: "#BBFF00",
-										fontSize: "24px"
-									}} />
-									<p style={{ 
-										...textStyle, 
-										margin: 0
-									}}>
-										11801 Domain Blvd, Suite W350<br />
-										Austin, TX 78758
-									</p>
+								<div style={{ marginBottom: "20px" }}>
+									<FaLocationDot style={iconStyle} />
 								</div>
+								<h3 style={titleStyle}>Office Address</h3>
+								<p style={{ 
+									...textStyle, 
+									margin: 0
+								}}>
+									11801 Domain Blvd, Suite W350<br />
+									Austin, TX 78758
+								</p>
 							</motion.div>
 						</motion.div>
 					</div>
