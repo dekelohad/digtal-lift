@@ -1,7 +1,6 @@
 import About from "../../components/home-one/about";
 import AutoSlider from "../../components/home-one/auto-slider";
 import Hero from "../../components/home-one/hero";
-import Projects from "../../components/home-one/projects";
 import Services from "../../components/home-one/services";
 import Teams from "../../components/home-one/teams";
 import Testimonial from "../../components/home-one/testimonial";
@@ -93,7 +92,6 @@ function HomeOne() {
 			<Hero />
 			<Services services={servicesData} />
 			<About />
-			<Projects />
 			<WhyChooseUs />
 			{/* <ClientsSection /> */}
 			<Testimonial />
