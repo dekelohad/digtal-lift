@@ -105,7 +105,8 @@ function ContactInfo() {
 							fontSize: "clamp(32px, 5vw, 48px)",
 							marginBottom: "15px",
 							color: "#BBFF00",
-							lineHeight: "1.2"
+							lineHeight: "1.2",
+							padding: "0 20px"
 						}}>
 							Contact Information
 						</h2>
@@ -114,7 +115,8 @@ function ContactInfo() {
 							color: "#e0e0e0",
 							maxWidth: "800px",
 							margin: "0 auto 20px",
-							lineHeight: "1.6"
+							lineHeight: "1.6",
+							padding: "0 20px"
 						}}>
 							Get in touch with us through your preferred method of communication
 						</p>
@@ -124,20 +126,28 @@ function ContactInfo() {
 							variants={containerVariants}
 							initial="hidden"
 							animate="visible"
+							className="contact-grid"
 							style={{ 
 								display: "grid",
-								gridTemplateColumns: "repeat(3, 1fr)",
-								gap: "20px"
+								gap: "20px",
+								padding: "0 10px"
 							}}
 						>
-							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+							<motion.div variants={itemVariants} style={{
+								...boxStyle,
+								
+							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
 								<div style={{ marginBottom: "20px" }}>
 									<FaEnvelope style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Email us</h3>
 								<a 
 									href="mailto:info@digitalLift.com"
-									style={linkStyle}
+									style={{
+										...linkStyle,
+										wordBreak: "break-word",
+										padding: "0 10px"
+									}}
 									onMouseEnter={(e) => e.currentTarget.style.color = "#BBFF00"}
 									onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
 								>
@@ -145,25 +155,39 @@ function ContactInfo() {
 								</a>
 							</motion.div>
 
-							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+							<motion.div variants={itemVariants} style={{
+								...boxStyle,
+								minHeight: "250px",
+								padding: "25px 15px"
+							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
 								<div style={{ marginBottom: "20px" }}>
 									<FaClock style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Business Hours</h3>
-								<p style={{ ...textStyle, lineHeight: "1.5", margin: 0 }}>
+								<p style={{ 
+									...textStyle, 
+									lineHeight: "1.5", 
+									margin: 0,
+									padding: "0 10px"
+								}}>
 									Sunday - Saturday<br />
 									9:00 AM - 6:00 PM (CST)
 								</p>
 							</motion.div>
 
-							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+							<motion.div variants={itemVariants} style={{
+								...boxStyle,
+								minHeight: "250px",
+								padding: "25px 15px"
+							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
 								<div style={{ marginBottom: "20px" }}>
 									<FaLocationDot style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Office Address</h3>
 								<p style={{ 
 									...textStyle, 
-									margin: 0
+									margin: 0,
+									padding: "0 10px"
 								}}>
 									11801 Domain Blvd, Suite W350<br />
 									Austin, TX 78758

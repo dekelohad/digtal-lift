@@ -613,4 +613,14 @@
     .service-card-description {
         font-size: 1rem;
     }
+}
+
+.contact-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+@media (max-width: 991px) {
+    .contact-grid {
+        grid-template-columns: 1fr !important;
+    }
 } 
