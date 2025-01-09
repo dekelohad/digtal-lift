@@ -78,14 +78,14 @@ function FooterBottom() {
 					<h4 className="footer-heading">Contact Info</h4>
 					<ul className="footer-list">
 						<li className="contact-item">
-							<FaEnvelope className="contact-icon" />
+							<span className="contact-label">Email: </span>
 							<a href={`mailto:${email}`} className="contact-link">
 								{email}
 							</a>
 						</li>
 						<li className="contact-item">
-							<FaLocationDot className="contact-icon contact-icon-location" />
-							<span className="contact-text">
+							<span className="contact-label">Address: </span>
+							<span className="contact-link">
 								11801 Domain Blvd, Suite W350<br />
 								Austin, TX 78758
 							</span>

@@ -53,12 +53,12 @@ function Footer() {
 							<h3 className="footer-title">Contact Info</h3>
 							<div className="contact-info">
 								<div className="contact-item">
-									<FaEnvelope className="contact-icon" />
+									<span className="contact-label">Email: </span>
 									<a href="mailto:info@digitalLift.com" className="footer-link">info@digitalLift.com</a>
 								</div>
 								<div className="contact-item">
-									<FaMapMarkerAlt className="contact-icon" />
-									<span className="contact-text">
+									<span className="contact-label">Address: </span>
+									<span className="footer-link">
 										11801 Domain Blvd, Suite W350<br />
 										Austin, TX 78758
 									</span>

@@ -118,14 +118,14 @@
 }
 
 .contact-info {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
 }
 
 .contact-item {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .contact-item:hover {
@@ -146,6 +146,17 @@
 .contact-text {
     font-size: 1.25rem;
     line-height: 1.6;
+}
+
+.contact-label {
+    font-size: 1.25rem;
+    color: #BBFF00;
+    font-weight: 600;
+    display: block;
+}
+
+.contact-text, .footer-link {
+    padding-left: 0.25rem;
 }
 
 .copyright-area {
@@ -176,4 +187,24 @@
 
 .footer-link:hover {
     animation: glow 1.5s infinite;
+}
+
+@media (max-width: 768px) {
+    .contact-info,
+    .contact-label,
+    .contact-text,
+    .footer-link {
+        font-size: 1.1rem;
+    }
+    
+    .contact-item {
+        gap: 0.35rem;
+        margin-bottom: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-item {
+        padding: 0.5rem;
+    }
 } 
