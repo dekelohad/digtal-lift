@@ -45,7 +45,7 @@ function GoogleMyBusiness() {
 
 	return (
 		<div className="local-lead-page">
-			<BreadCrumb title="Google Business" />
+			<BreadCrumb title="Google My Business" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -65,7 +65,7 @@ function GoogleMyBusiness() {
 							transition={{ delay: 0.3, duration: 0.8 }}
 							className="neon-text"
 						>
-							Google Business
+							Google My Business
 						</motion.span>
 						<motion.span
 							initial={{ y: 20, opacity: 0 }}
