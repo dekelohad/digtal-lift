@@ -8,34 +8,35 @@ function About() {
 			<div className="container">
 				<div className="aximo-section-title" style={{ textAlign: "center" }}>
 					<h2 className="main-title" style={{ 
-						fontSize: "5.5rem",
+						fontSize: "clamp(40px, 5.5vw, 88px)",
 						fontWeight: "800",
-						lineHeight: "1",
+						lineHeight: "1.1",
 						marginBottom: "40px",
 						fontFamily: "'Anybody', sans-serif",
-						marginTop: "-20px"
+						marginTop: "-20px",
+						padding: "0 15px"
 					}}>
 						<div style={{ 
 							marginBottom: "10px",
-							whiteSpace: "nowrap"
+							whiteSpace: "normal",
+							wordWrap: "break-word"
 						}}>
 							We Make Your Phone
 						</div>
 						<div className="highlight-text" style={{ 
 							color: "#BBFF00",
 							position: "relative",
-							display: "inline-block",
-							marginTop: "0"
+							display: "inline-flex",
+							alignItems: "center",
+							gap: "20px",
+							marginTop: "10px"
 						}}>
 							Ring Non-Stop
 							<div className="phone-animation" style={{
-								position: "absolute",
-								right: "-100px",
-								top: "50%",
-								transform: "translateY(-50%)",
+								position: "relative",
 								width: "60px",
 								height: "60px",
-								marginTop: "8px"
+								flexShrink: 0
 							}}>
 								<div className="phone-icon"></div>
 								<div className="ring-wave"></div>
@@ -45,13 +46,14 @@ function About() {
 						</div>
 					</h2>
 					<p style={{
-						fontSize: "1.4rem",
+						fontSize: "clamp(16px, 2vw, 22px)",
 						lineHeight: "1.8",
 						color: "#555",
 						maxWidth: "900px",
 						margin: "0 auto 60px",
 						fontWeight: "500",
-						textAlign: "center"
+						textAlign: "center",
+						padding: "0 15px"
 					}}>
 						Stop wasting money on meaningless clicks. We deliver what matters:
 						<span style={{ 
@@ -59,7 +61,7 @@ function About() {
 							fontWeight: "800",
 							display: "block",
 							margin: "20px 0",
-							fontSize: "1.8rem",
+							fontSize: "clamp(20px, 2.5vw, 28px)",
 							letterSpacing: "0.2px",
 							lineHeight: "1.4"
 						}}>qualified buyers ready to become customers</span>
