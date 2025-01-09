@@ -1,51 +1,38 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaMapMarkedAlt, FaChartLine, FaStar, FaComments } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import BreadCrumb from "../../components/common/Breadcrumb";
+import GoogleMapsExample from "../../assets/images/portfolio/pi-attorney-tempe-3-pack.webp";
 import "./GoogleMyBusiness.css";
 
 function GoogleMyBusiness() {
+	const navigate = useNavigate();
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const processSteps = [
+	const services = [
 		{
-			icon: <FaMapMarkedAlt />,
-			description: "Dominate local search with an optimized Google Business Profile. We enhance your visibility to capture high-intent local customers actively searching for your services."
+			title: "Google My Business Setup Service",
+			description: "Our setup service helps business owners create & verify their business profile. This is designed for local business owners do not already have a Google Business Profile.",
+			path: "/google-my-business/setup"
 		},
 		{
-			icon: <FaStar />,
-			description: "Build trust with review management and response strategies. Turn happy customers into powerful advocates and handle feedback professionally to showcase your excellence."
+			title: "Google My Business Optimization Service",
+			description: "For business owners with an existing profile, our optimization services are designed to maximize your business's visibility by providing one-time optimizations to your profile.",
+			path: "/google-my-business/optimization"
 		},
 		{
-			icon: <FaComments />,
-			description: "Engage customers with strategic post updates and Q&A management. Keep your profile active and informative with content that drives engagement and conversions."
-		},
-		{
-			icon: <FaChartLine />,
-			description: "Track performance with advanced analytics. Monitor customer actions, search queries, and engagement metrics to continuously optimize your local presence."
-		}
-	];
-
-	const testimonials = [
-		{
-			quote: "Our local visibility exploded after they optimized our Google Business Profile. We went from barely showing up in local searches to dominating the map pack. The increase in customer calls and direction requests has been incredible.",
-			author: "Michael Rodriguez",
-			business: "Premier Auto Service",
-			results: "312% increase in local visibility"
-		},
-		{
-			quote: "They transformed our Google presence completely. Their review management strategy helped us build incredible social proof, and their posting strategy keeps our profile fresh and engaging. We're now the go-to choice in our area.",
-			author: "Jennifer Chen",
-			business: "Lotus Wellness Spa",
-			results: "275% more customer interactions"
+			title: "Google My Business Management Service",
+			description: "For ongoing optimizations and profile updates, our management services cover weekly updates, optimizations, and various uploads to make sure your profile is always up-to-date.",
+			path: "/google-my-business/management"
 		}
 	];
 
 	return (
 		<div className="local-lead-page">
-			<BreadCrumb title="Google My Business" />
+			<BreadCrumb title="Google Business Profile Services" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -58,6 +45,7 @@ function GoogleMyBusiness() {
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ delay: 0.2, duration: 0.8 }}
 						className="hero-title mx-auto"
+						style={{ color: "#BBFF00" }}
 					>
 						<motion.span
 							initial={{ y: 20, opacity: 0 }}
@@ -71,6 +59,7 @@ function GoogleMyBusiness() {
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.4, duration: 0.8 }}
+							className="neon-text"
 						>
 							Profile Management
 						</motion.span>
@@ -82,84 +71,58 @@ function GoogleMyBusiness() {
 						transition={{ delay: 0.4, duration: 0.8 }}
 						className="hero-description mt-8 mb-20 mx-auto"
 					>
-						Transform your local presence with a perfectly optimized Google Business Profile. We help you stand out in local search results, engage with customers effectively, and turn online visibility into real business growth.
+						Generate more visibility for your business with Google My Business (now called Google Business Profile). Our services focus on improving your business's rankings in Google's Local 3-Pack, Google Maps, and local organic results. Nearly all searches with local intent (such as those for products and services) display local results.
 					</motion.p>
-				</motion.div>
 
-				<div className="grid-container">
-					{processSteps.map((step, index) => (
-						<motion.div
-							key={index}
-							initial={{ y: 30, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
-							transition={{ delay: 0.6 + index * 0.1, duration: 0.8 }}
-							className="process-box"
-						>
-							<div className="neon-icon">
-								{step.icon}
-							</div>
-							<p className="process-description">{step.description}</p>
-						</motion.div>
-					))}
-				</div>
+					<motion.div
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.55, duration: 0.8 }}
+						className="google-maps-example mb-20"
+					>
+						<img 
+							src={GoogleMapsExample}
+							alt="Google Maps Search Results Example showing local business listings"
+							className="google-maps-image"
+						/>
+					</motion.div>
 
-				<div className="metrics-section">
-					<h2 className="section-title text-center">Key Benefits</h2>
-					<div className="metrics-grid">
-						<motion.div
-							className="metric-box"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.2 }}
-						>
-							<span className="metric-number">78%</span>
-							<span className="metric-label">of Local Searches Result in Store Visits</span>
-						</motion.div>
-						<motion.div
-							className="metric-box"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.3 }}
-						>
-							<span className="metric-number">2.7x</span>
-							<span className="metric-label">More Likely to Be Considered Reputable</span>
-						</motion.div>
-						<motion.div
-							className="metric-box"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.4 }}
-						>
-							<span className="metric-number">70%</span>
-							<span className="metric-label">Higher Conversion Rate for Local Searches</span>
-						</motion.div>
-					</div>
-				</div>
+					<motion.div
+						initial={{ y: 30, opacity: 0 }}
+						animate={{ y: 0, opacity: 1 }}
+						transition={{ delay: 0.6, duration: 0.8 }}
+						className="text-left mb-20"
+					>
+						<h2 className="section-title mb-8">About our Google Business Profile services</h2>
+						<p className="service-description mb-6">
+							We've optimized 100s of listings and have achieved over 10K+ rankings in Google for clients. Our successes have been a direct result of our services which include initial setup, optimization, and ongoing management. Our team of Local SEOs help support local business owners by improving the visibility of their business online.
+						</p>
+						<p className="service-description">
+							Our Google Business Profile services help business owners get the most from their profile. Regardless of your type of business or budget, we can likely help you generate more visibility, traffic, and revenue.
+						</p>
+					</motion.div>
 
-				<div className="testimonials-section">
-					<h2 className="section-title text-center">Success Stories</h2>
-					<div className="testimonials-grid">
-						{testimonials.map((testimonial, index) => (
-							<motion.div 
+					<div className="services-grid">
+						{services.map((service, index) => (
+							<motion.div
 								key={index}
-								className="testimonial-box"
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
+								transition={{ duration: 0.5, delay: index * 0.1 }}
+								className="service-card"
 							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
+								<h3 className="service-card-title">{service.title}</h3>
+								<p className="service-card-description">{service.description}</p>
+								<button 
+									className="learn-more-btn"
+									onClick={() => navigate(service.path)}
+								>
+									Learn more →
+								</button>
 							</motion.div>
 						))}
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);

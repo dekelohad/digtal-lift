@@ -11,6 +11,9 @@ import LocalLeadGeneration from "../pages/services/LocalLeadGeneration";
 import PaidSearchMarketing from "../pages/services/PaidSearchMarketing";
 import SearchEngineOptimization from "../pages/services/SearchEngineOptimization";
 import GoogleMyBusiness from "../pages/services/GoogleMyBusiness";
+import GoogleMyBusinessSetup from "../pages/services/GoogleMyBusinessSetup";
+import GoogleMyBusinessOptimization from "../pages/services/GoogleMyBusinessOptimization";
+import GoogleMyBusinessManagement from "../pages/services/GoogleMyBusinessManagement";
 import WebDesign from "../pages/services/WebDesign";
 import WebDevelopment from "../pages/services/WebDevelopment";
 
@@ -58,6 +61,18 @@ export const router = createBrowserRouter([
 					{
 						path: "/google-my-business",
 						element: <GoogleMyBusiness />,
+					},
+					{
+						path: "/google-my-business/setup",
+						element: <GoogleMyBusinessSetup />,
+					},
+					{
+						path: "/google-my-business/optimization",
+						element: <GoogleMyBusinessOptimization />,
+					},
+					{
+						path: "/google-my-business/management",
+						element: <GoogleMyBusinessManagement />,
 					},
 					{
 						path: "/web-design",
