@@ -508,7 +508,7 @@ function Testimonials() {
 								marginBottom: "2rem"
 							}}>
 								<h2 style={{
-									fontSize: "4.5rem",
+									fontSize: "clamp(2.5rem, 5vw, 4.5rem)",
 									fontWeight: "800",
 									lineHeight: "1.1",
 									margin: 0,
@@ -518,30 +518,37 @@ function Testimonials() {
 									color: "white"
 								}}>
 									<div>Appreciation from</div>
-									<div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+									<div style={{ 
+										display: "flex", 
+										alignItems: "center", 
+										justifyContent: "center",
+										flexWrap: "wrap",
+										gap: "10px"
+									}}>
 										<span>our</span>
 										<span style={{
 											background: "#c5f32c",
-											padding: "0 25px",
-											marginLeft: "15px",
+											padding: "0 20px",
 											color: "#000",
 											display: "inline-block",
 											transform: "rotate(-2deg)",
 											borderRadius: "4px",
-											fontWeight: "900"
+											fontWeight: "900",
+											fontSize: "clamp(2rem, 4.5vw, 4rem)"
 										}}>
 											loving clients
 										</span>
 									</div>
 								</h2>
 								<p style={{
-									fontSize: "1.1rem",
+									fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)",
 									color: "white",
 									maxWidth: "600px",
 									margin: "1rem auto 0",
 									lineHeight: "1.6",
 									fontWeight: "400",
-									opacity: 0.9
+									opacity: 0.9,
+									padding: "0 15px"
 								}}>
 									It's wonderful to hear that our clients appreciate our services! Client appreciation is valuable proof of the quality of our work.
 								</p>
