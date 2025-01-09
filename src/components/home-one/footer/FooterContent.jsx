@@ -53,17 +53,9 @@ function FooterContent() {
 			<div className="aximo-info-wrap">
 				<div className="aximo-info">
 					<ul>
-						<li>Give us a call:</li>
-						<li>
-							<a href="tel:(123) 456-7890">(123) 456-7890</a>
-						</li>
-					</ul>
-				</div>
-				<div className="aximo-info">
-					<ul>
 						<li>Send us an email:</li>
 						<li>
-							<a href="mailto:info@digitallift.com" target="_blank" rel="noopener noreferrer">info@digitallift.com</a>
+							<a href="mailto:info@digitalLift.com" target="_blank" rel="noopener noreferrer">info@digitalLift.com</a>
 						</li>
 					</ul>
 				</div>

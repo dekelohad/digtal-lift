@@ -62,8 +62,8 @@ function About() {
 							fontSize: "1.8rem",
 							letterSpacing: "0.2px",
 							lineHeight: "1.4"
-						}}>qualified buyers calling you, ready to become customers</span>
-						Our proven systems transform website visitors into valuable sales calls
+						}}>qualified buyers ready to become customers</span>
+						Our proven systems transform website visitors into valuable leads
 					</p>
 
 					<div className="stats-container" style={{

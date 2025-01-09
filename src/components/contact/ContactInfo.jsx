@@ -2,6 +2,7 @@ import Call2Img from "../../assets/images/icon/call2.svg";
 import EmailImg from "../../assets/images/icon/email.svg";
 import MapImg from "../../assets/images/icon/map.svg";
 import { FaClock } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 
 function ContactInfo() {
@@ -23,10 +24,11 @@ function ContactInfo() {
 	};
 
 	const iconStyle = {
-		width: "40px",
-		height: "40px",
+		width: "50px",
+		height: "50px",
 		color: "#BBFF00",
-		marginBottom: "15px"
+		marginBottom: "15px",
+		fontSize: "50px"
 	};
 
 	const titleStyle = {
@@ -38,13 +40,15 @@ function ContactInfo() {
 	const textStyle = {
 		color: "#fff",
 		textDecoration: "none",
-		fontSize: "18px",
+		fontSize: "1.5rem",
+		lineHeight: "1.6",
 		transition: "color 0.3s ease"
 	};
 
 	const linkStyle = {
 		...textStyle,
-		cursor: "pointer"
+		cursor: "pointer",
+		fontSize: "1.5rem"
 	};
 
 	const hoverEffect = (e) => {
@@ -125,53 +129,23 @@ function ContactInfo() {
 							animate="visible"
 							style={{ 
 								display: "grid",
-								gridTemplateColumns: "repeat(1, 1fr)",
-								gap: "12px",
-								"@media (min-width: 768px)": {
-									gridTemplateColumns: "repeat(2, 1fr)"
-								}
+								gridTemplateColumns: "repeat(3, 1fr)",
+								gap: "20px"
 							}}
 						>
-							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
-								<div style={{ marginBottom: "20px" }}>
-									<img src={Call2Img} alt="Call" style={iconStyle} />
-								</div>
-								<h3 style={titleStyle}>Call us</h3>
-								<a 
-									href="tel:+1 (123) 456-7890"
-									style={linkStyle}
-									onMouseEnter={(e) => e.currentTarget.style.color = "#BBFF00"}
-									onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
-								>
-									+1 (123) 456-7890
-								</a>
-							</motion.div>
-
 							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
 								<div style={{ marginBottom: "20px" }}>
 									<img src={EmailImg} alt="Email" style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Email us</h3>
 								<a 
-									href="mailto:info@digitallift.com"
+									href="mailto:info@digitalLift.com"
 									style={linkStyle}
 									onMouseEnter={(e) => e.currentTarget.style.color = "#BBFF00"}
 									onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
 								>
-									info@digitallift.com
+									info@digitalLift.com
 								</a>
-							</motion.div>
-
-							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
-								<div style={{ marginBottom: "20px" }}>
-									<img src={MapImg} alt="Location" style={iconStyle} />
-								</div>
-								<h3 style={titleStyle}>Office address</h3>
-								<p style={{ ...textStyle, lineHeight: "1.5", margin: 0 }}>
-									11801 Domain Blvd,<br />
-									Suite W350<br />
-									Austin, TX 78758
-								</p>
 							</motion.div>
 
 							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
@@ -184,20 +158,32 @@ function ContactInfo() {
 									9:00 AM - 6:00 PM (CST)
 								</p>
 							</motion.div>
+
+							<motion.div variants={itemVariants} style={boxStyle} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+								<h3 style={titleStyle}>Office Address</h3>
+								<div style={{ 
+									display: "flex",
+									alignItems: "center",
+									gap: "12px",
+									textAlign: "left"
+								}}>
+									<FaLocationDot style={{
+										color: "#BBFF00",
+										fontSize: "24px"
+									}} />
+									<p style={{ 
+										...textStyle, 
+										margin: 0
+									}}>
+										11801 Domain Blvd, Suite W350<br />
+										Austin, TX 78758
+									</p>
+								</div>
+							</motion.div>
 						</motion.div>
 					</div>
 				</div>
 			</div>
-
-			<style>
-				{`
-					@media (min-width: 768px) {
-						.container .row > div > div {
-							grid-template-columns: repeat(2, 1fr) !important;
-						}
-					}
-				`}
-			</style>
 		</div>
 	);
 }

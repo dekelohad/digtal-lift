@@ -53,12 +53,8 @@ function Footer() {
 							<h3 className="footer-title">Contact Info</h3>
 							<div className="contact-info">
 								<div className="contact-item">
-									<FaPhone className="contact-icon" />
-									<a href="tel:+1(123)456-7890" className="footer-link">+1 (123) 456-7890</a>
-								</div>
-								<div className="contact-item">
 									<FaEnvelope className="contact-icon" />
-									<a href="mailto:info@digitallift.com" className="footer-link">info@digitallift.com</a>
+									<a href="mailto:info@digitalLift.com" className="footer-link">info@digitalLift.com</a>
 								</div>
 								<div className="contact-item">
 									<FaMapMarkerAlt className="contact-icon" />

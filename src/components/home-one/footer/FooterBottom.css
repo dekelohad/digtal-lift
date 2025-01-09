@@ -49,19 +49,19 @@
 
 .footer-description {
     color: #e0e0e0;
-    font-size: 15px;
+    font-size: 1.25rem;
     line-height: 1.8;
     padding: 20px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .footer-heading {
     color: #fff;
-    font-size: 18px;
+    font-size: 1.75rem;
     margin-bottom: 25px;
     font-weight: 600;
     position: relative;
@@ -80,7 +80,7 @@
 .footer-bottom-link {
     color: #e0e0e0;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1.25rem;
     transition: all 0.3s ease;
     display: inline-block;
     position: relative;
@@ -142,7 +142,7 @@
 .contact-link {
     color: #e0e0e0;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
@@ -152,7 +152,7 @@
 
 .contact-text {
     color: #e0e0e0;
-    font-size: 15px;
+    font-size: 1.5rem;
     line-height: 1.6;
 }
 

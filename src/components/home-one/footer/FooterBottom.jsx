@@ -11,8 +11,7 @@ const FooterLink = ({ to, children }) => (
 
 function FooterBottom() {
 	const currentYear = new Date().getFullYear();
-	const phoneNumber = "+1 (123) 456-7890";
-	const email = "info@digitallift.com";
+	const email = "info@digitalLift.com";
 
 	return (
 		<div className="footer-wrapper">
@@ -78,12 +77,6 @@ function FooterBottom() {
 				<div className="col-lg-3 col-md-6">
 					<h4 className="footer-heading">Contact Info</h4>
 					<ul className="footer-list">
-						<li className="contact-item">
-							<FaPhone className="contact-icon" />
-							<a href={`tel:${phoneNumber}`} className="contact-link">
-								{phoneNumber}
-							</a>
-						</li>
 						<li className="contact-item">
 							<FaEnvelope className="contact-icon" />
 							<a href={`mailto:${email}`} className="contact-link">
