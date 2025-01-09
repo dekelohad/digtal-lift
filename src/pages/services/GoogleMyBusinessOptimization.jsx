@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import BreadCrumb from "../../components/common/Breadcrumb";
+import ImageModal from "../../components/common/ImageModal";
+import BeforeOptimization from "../../assets/images/portfolio/before-gmb-optimization-services-1.webp";
+import AfterOptimization from "../../assets/images/portfolio/after-gmb-optimization-services-2.webp";
 import "./GoogleMyBusiness.css";
 
 function GoogleMyBusinessOptimization() {
 	const [openIndex, setOpenIndex] = useState(null);
+	const [selectedImage, setSelectedImage] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -80,6 +84,45 @@ function GoogleMyBusinessOptimization() {
 						<p className="service-description">
 							Whether you're struggling to rank in your local market or want to maintain your competitive edge, our optimization service will ensure your profile is fully optimized for maximum visibility.
 						</p>
+
+						<div className="results-image-container">
+							<h3 className="subsection-title">Real Results from Our Optimization Service</h3>
+							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+								<div>
+									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Before Optimization</h4>
+									<img 
+										src={BeforeOptimization}
+										alt="Google My Business profile before optimization"
+										className="results-image"
+										onClick={() => setSelectedImage({
+											src: BeforeOptimization,
+											alt: "Google My Business profile before optimization"
+										})}
+										style={{ cursor: 'pointer' }}
+									/>
+								</div>
+								<div>
+									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>After Optimization</h4>
+									<img 
+										src={AfterOptimization}
+										alt="Google My Business profile after optimization"
+										className="results-image"
+										onClick={() => setSelectedImage({
+											src: AfterOptimization,
+											alt: "Google My Business profile after optimization"
+										})}
+										style={{ cursor: 'pointer' }}
+									/>
+								</div>
+							</div>
+						</div>
+
+						<ImageModal 
+							isOpen={!!selectedImage}
+							onClose={() => setSelectedImage(null)}
+							imageSrc={selectedImage?.src}
+							altText={selectedImage?.alt}
+						/>
 
 						<h3 className="subsection-title">What's included in our optimization service</h3>
 						<p className="service-description">

@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import BreadCrumb from "../../components/common/Breadcrumb";
+import ImageModal from "../../components/common/ImageModal";
+import PhaseIIOptimizations from "../../assets/images/portfolio/phase-ii-google-my-business-optimizations-3.webp";
 import "./GoogleMyBusiness.css";
 
 function GoogleMyBusinessSetup() {
 	const [openIndex, setOpenIndex] = useState(null);
+	const [selectedImage, setSelectedImage] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -80,6 +83,27 @@ function GoogleMyBusinessSetup() {
 						<p className="service-description">
 							We've created and set up 100s of Google My Business listings (now called Google Business Profile) and have achieved over 10K+ local keyword rankings between clients and personal projects. Our streamlined service allows you to focus on your business while we focus on what we do best – search engine optimization.
 						</p>
+
+						<div className="results-image-container">
+							<h3 className="subsection-title">Comprehensive Setup & Optimization</h3>
+							<img 
+								src={PhaseIIOptimizations}
+								alt="Phase II Google My Business optimizations showing improved performance"
+								className="results-image"
+								onClick={() => setSelectedImage({
+									src: PhaseIIOptimizations,
+									alt: "Phase II Google My Business optimizations showing improved performance"
+								})}
+								style={{ cursor: 'pointer' }}
+							/>
+						</div>
+
+						<ImageModal 
+							isOpen={!!selectedImage}
+							onClose={() => setSelectedImage(null)}
+							imageSrc={selectedImage?.src}
+							altText={selectedImage?.alt}
+						/>
 
 						<h3 className="subsection-title">What's included in our Google My Business setup service</h3>
 						<p className="service-description">

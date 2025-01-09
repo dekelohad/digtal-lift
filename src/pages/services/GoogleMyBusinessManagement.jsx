@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import BreadCrumb from "../../components/common/Breadcrumb";
+import ImageModal from "../../components/common/ImageModal";
+import InsightsSearches from "../../assets/images/portfolio/gmb-insightssearches-2.webp";
+import InsightsViews from "../../assets/images/portfolio/gmb-insightsviews.webp";
 import "./GoogleMyBusiness.css";
 
 function GoogleMyBusinessManagement() {
 	const [openIndex, setOpenIndex] = useState(null);
+	const [selectedImage, setSelectedImage] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -80,6 +84,45 @@ function GoogleMyBusinessManagement() {
 						<p className="service-description">
 							Let us handle the day-to-day management of your profile while you focus on running your business. Our team ensures your profile stays fresh, engaging, and optimized for maximum local visibility.
 						</p>
+
+						<div className="results-image-container">
+							<h3 className="subsection-title">Track Your Success with Detailed Insights</h3>
+							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+								<div>
+									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Profile Views Growth</h4>
+									<img 
+										src={InsightsViews}
+										alt="Google My Business profile views insights showing growth"
+										className="results-image"
+										onClick={() => setSelectedImage({
+											src: InsightsViews,
+											alt: "Google My Business profile views insights showing growth"
+										})}
+										style={{ cursor: 'pointer' }}
+									/>
+								</div>
+								<div>
+									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Search Performance</h4>
+									<img 
+										src={InsightsSearches}
+										alt="Google My Business search performance insights"
+										className="results-image"
+										onClick={() => setSelectedImage({
+											src: InsightsSearches,
+											alt: "Google My Business search performance insights"
+										})}
+										style={{ cursor: 'pointer' }}
+									/>
+								</div>
+							</div>
+						</div>
+
+						<ImageModal 
+							isOpen={!!selectedImage}
+							onClose={() => setSelectedImage(null)}
+							imageSrc={selectedImage?.src}
+							altText={selectedImage?.alt}
+						/>
 
 						<h3 className="subsection-title">What's included in our management service</h3>
 						<p className="service-description">
