@@ -195,90 +195,90 @@ function SearchEngineOptimization() {
 						</div>
 
 						<h2 className="section-title text-left mb-8">FAQs</h2>
-						<div className="accordion aximo-accordion-wrap" id="seo-accordion">
-							<div className="accordion-item">
-								<h3 className="accordion-header">
-									<button
-										className="accordion-button"
-										type="button"
-										data-bs-toggle="collapse"
-										data-bs-target="#faq-1"
-									>
-										What Does On-page Optimization Include?
-									</button>
-								</h3>
+						<div className="faq-container">
+							<div className="faq-item">
+								<button
+									className="faq-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#faq-1"
+								>
+									What Does On-page Optimization Include?
+									<span className="faq-icon">+</span>
+								</button>
+
 								<div
 									id="faq-1"
-									className="accordion-collapse collapse show"
+									className="faq-collapse collapse show"
 									data-bs-parent="#seo-accordion"
 								>
-									<div className="accordion-body">
+									<div className="faq-content">
 										Our optimizations include tracking setup and complete page-level optimization. This includes a deliverable audit, HTML optimization, schema markup, and several other on-page techniques that we like to keep a secret. Think of it as a winning recipe, and we don't want anyone else to know it 🙂
 									</div>
 								</div>
 							</div>
 
-							<div className="accordion-item">
-								<h3 className="accordion-header">
-									<button
-										className="accordion-button collapsed"
-										type="button"
-										data-bs-toggle="collapse"
-										data-bs-target="#faq-2"
-									>
-										Do You Provide Reporting?
-									</button>
-								</h3>
+							<div className="faq-item">
+								<button
+									className="faq-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#faq-2"
+								>
+									Do You Provide Reporting?
+									<span className="faq-icon">+</span>
+								</button>
+
 								<div
 									id="faq-2"
-									className="accordion-collapse collapse"
+									className="faq-collapse collapse"
 									data-bs-parent="#seo-accordion"
 								>
-									<div className="accordion-body">
+									<div className="faq-content">
 										Our on-page services are a one-time optimization where we audit and implement our recommendations. We provide you with a dashboard that details monthly reporting (including the impact of our efforts).
 									</div>
 								</div>
 							</div>
 
-							<div className="accordion-item">
-								<h3 className="accordion-header">
-									<button
-										className="accordion-button collapsed"
-										type="button"
-										data-bs-toggle="collapse"
-										data-bs-target="#faq-3"
-									>
-										How Long Does It Take To See Results?
-									</button>
-								</h3>
+							<div className="faq-item">
+								<button
+									className="faq-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#faq-3"
+								>
+									How Long Does It Take To See Results?
+									<span className="faq-icon">+</span>
+								</button>
+
 								<div
 									id="faq-3"
-									className="accordion-collapse collapse"
+									className="faq-collapse collapse"
 									data-bs-parent="#seo-accordion"
 								>
-									<div className="accordion-body">
+									<div className="faq-content">
 										Results are typically seen within 30 days after our on-page optimizations are made. This is in addition to a 30-day on-boarding process and an additional 30 days of implementation.
 									</div>
 								</div>
 							</div>
 
-							<div className="accordion-item">
-								<h3 className="accordion-header">
-									<button
-										className="accordion-button collapsed"
-										type="button"
-										data-bs-toggle="collapse"
-										data-bs-target="#faq-4"
-									>
-										Can You Guarantee Results?
-									</button>
-								</h3>
+							<div className="faq-item">
+								<button
+									className="faq-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target="#faq-4"
+								>
+									Can You Guarantee Results?
+									<span className="faq-icon">+</span>
+								</button>
+
 								<div
 									id="faq-4"
-									className="accordion-collapse collapse"
+									className="faq-collapse collapse"
 									data-bs-parent="#seo-accordion"
 								>
-									<div className="accordion-body">
+									<div className="faq-content">
 										I cannot guarantee results because I did not engineer Google's on-page algorithms. What I do guarantee is that I use a proven process that continues to generate positive results for a large number of clients.
 									</div>
 								</div>
