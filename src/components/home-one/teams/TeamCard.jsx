@@ -13,7 +13,8 @@ function TeamCard({ team }) {
 				overflow: "hidden",
 				borderRadius: "12px",
 				marginBottom: "20px",
-				position: "relative"
+				position: "relative",
+				boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
 			}}>
 				<img 
 					src={team.img} 
@@ -22,27 +23,37 @@ function TeamCard({ team }) {
 						width: "100%",
 						height: "100%",
 						objectFit: "cover",
-						objectPosition: "center top",
-						transition: "transform 0.3s ease"
+						objectPosition: "center top"
 					}}
 				/>
 			</div>
 			<div className="content" style={{
 				textAlign: "center",
-				padding: "0 10px"
+				padding: "0 10px",
+				background: "rgba(255, 255, 255, 0.95)",
+				borderRadius: "8px",
+				backdropFilter: "blur(5px)",
+				boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+				padding: "15px",
 			}}>
 				<h4 className="title" style={{
-					fontSize: "18px",
+					fontSize: "22px",
 					fontWeight: "700",
-					marginBottom: "8px",
+					marginBottom: "10px",
 					color: "#1a1d27",
-					letterSpacing: "0.2px"
+					letterSpacing: "0.3px",
+					textShadow: "0 1px 1px rgba(0,0,0,0.1)"
 				}}>{team.name}</h4>
 				<span className="designation" style={{
-					fontSize: "15px",
-					color: "#666",
-					fontWeight: "500",
-					letterSpacing: "0.3px"
+					fontSize: "16px",
+					color: "#444",
+					fontWeight: "600",
+					letterSpacing: "0.4px",
+					display: "block",
+					marginTop: "5px",
+					background: "linear-gradient(45deg, #BBFF00, #98CC00)",
+					WebkitBackgroundClip: "text",
+					WebkitTextFillColor: "transparent",
 				}}>{team.designation}</span>
 			</div>
 			<style jsx>{`
@@ -51,10 +62,10 @@ function TeamCard({ team }) {
 						aspectRatio: "1/1.1" !important;
 					}
 					.title {
-						fontSize: "16px" !important;
+						fontSize: "18px" !important;
 					}
 					.designation {
-						fontSize: "14px" !important;
+						fontSize: "15px" !important;
 					}
 				}
 			`}</style>
