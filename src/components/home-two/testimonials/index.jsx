@@ -493,7 +493,7 @@ function Testimonials() {
 
 			<div className="section testimonial-section" style={{ 
 				padding: "80px 0",
-				background: "#111",
+				background: "var(--dark-bg)",
 				color: "white",
 				marginTop: "-1px"
 			}}>

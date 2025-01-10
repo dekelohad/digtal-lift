@@ -7,16 +7,23 @@ function TestimonialsPage() {
     }, []);
 
     return (
-        <div>
+        <div style={{ 
+            backgroundColor: "var(--dark-bg)",
+            minHeight: "100vh",
+            display: "flex",
+            flexDirection: "column"
+        }}>
             {/* Hero Section */}
             <div style={{
                 padding: "120px 0 60px",
-                backgroundColor: "#f8f9fa",
-                borderBottom: "1px solid rgba(0,0,0,0.05)"
+                backgroundColor: "var(--dark-bg)",
+                flex: "1"
             }}>
             </div>
             {/* Featured Testimonials Section */}
-            <Testimonials />
+            <div style={{ backgroundColor: "var(--dark-bg)" }}>
+                <Testimonials />
+            </div>
         </div>
     );
 }
