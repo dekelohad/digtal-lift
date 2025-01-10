@@ -208,7 +208,7 @@ function SearchEngineOptimization() {
 						<h3 className="text-3xl text-white opacity-90 text-center mb-24">What makes our search engine optimization services so effective?</h3>
 						
 						<div className="stats-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-6xl mx-auto px-4">
-							<div className="stat-item bg-[#0c0c0c] p-8 rounded-lg border border-[#7dff00] hover:border-[#7dff00] transition-all duration-300">
+							<div className="stat-item bg-[#0c0c0c] p-8">
 								<div className="icon-wrapper mb-8">
 									<svg className="w-24 h-24 mx-auto" viewBox="0 0 24 24">
 										<path
@@ -225,7 +225,7 @@ function SearchEngineOptimization() {
 								</div>
 							</div>
 							
-							<div className="stat-item bg-[#0c0c0c] p-8 rounded-lg border border-[#7dff00] hover:border-[#7dff00] transition-all duration-300">
+							<div className="stat-item bg-[#0c0c0c] p-8">
 								<div className="icon-wrapper mb-8">
 									<svg className="w-24 h-24 mx-auto" viewBox="0 0 24 24">
 										<path
@@ -242,7 +242,7 @@ function SearchEngineOptimization() {
 								</div>
 							</div>
 							
-							<div className="stat-item bg-[#0c0c0c] p-8 rounded-lg border border-[#7dff00] hover:border-[#7dff00] transition-all duration-300">
+							<div className="stat-item bg-[#0c0c0c] p-8">
 								<div className="icon-wrapper mb-8">
 									<svg className="w-24 h-24 mx-auto" viewBox="0 0 24 24">
 										<path

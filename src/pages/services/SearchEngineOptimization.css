@@ -459,6 +459,12 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(125, 255, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(125, 255, 0, 0.4);
 }
 
 .faq-button {
