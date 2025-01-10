@@ -6,7 +6,10 @@ function About() {
 		<div className="section aximo-section-padding">
 			<div id="aximo-counter"></div>
 			<div className="container">
-				<div className="aximo-section-title" style={{ textAlign: "center" }}>
+				<div className="aximo-section-title" style={{ 
+					textAlign: "center",
+					marginTop: "100px"
+				}}>
 					<h2 className="main-title" style={{ 
 						fontSize: "clamp(40px, 5.5vw, 88px)",
 						fontWeight: "800",
@@ -48,7 +51,7 @@ function About() {
 					<p style={{
 						fontSize: "clamp(16px, 2vw, 22px)",
 						lineHeight: "1.8",
-						color: "#555",
+						color: "#fff",
 						maxWidth: "900px",
 						margin: "0 auto 60px",
 						fontWeight: "500",
@@ -57,7 +60,7 @@ function About() {
 					}}>
 						Stop wasting money on meaningless clicks. We deliver what matters:
 						<span style={{ 
-							color: "#222",
+							color: "#fff",
 							fontWeight: "800",
 							display: "block",
 							margin: "20px 0",
@@ -273,6 +276,7 @@ function About() {
 
 				.phone-animation {
 					position: relative;
+					z-index: 10;
 				}
 
 				.phone-icon {
@@ -285,6 +289,7 @@ function About() {
 					mask-position: center;
 					animation: phoneFloat 2s ease-in-out infinite;
 					filter: drop-shadow(0 0 15px rgba(187, 255, 0, 0.5));
+					z-index: 10;
 				}
 
 				.ring-wave {
@@ -298,6 +303,7 @@ function About() {
 					border-radius: 50%;
 					opacity: 0;
 					animation: ringWave 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+					z-index: 9;
 				}
 
 				.ring-wave:nth-child(2) {
@@ -305,7 +311,7 @@ function About() {
 				}
 
 				.ring-wave:nth-child(3) {
-					animation-delay: 1s;
+						animation-delay: 1s;
 				}
 
 				@keyframes phoneFloat {

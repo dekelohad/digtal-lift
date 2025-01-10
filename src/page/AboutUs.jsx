@@ -2,6 +2,7 @@ import Story from "../components/about/story";
 import BreadCrumb from "../components/common/Breadcrumb";
 import About from "../components/home-one/about";
 import Teams from "../components/home-one/teams";
+import "./AboutUs.css";
 // Teams images
 import Team1Img from "../assets/images/team/team1.png";
 import Team2Img from "../assets/images/team/team2.png";
@@ -37,12 +38,14 @@ const teamsData = [
 
 function AboutUs() {
 	return (
-		<>
-			<BreadCrumb title="About Us" />
+		<div className="about-us-page">
+			<div className="breadcrumb-wrapper">
+				<BreadCrumb />
+			</div>
 			<About />
 			<Story />
 			<Teams teams={teamsData} />
-		</>
+		</div>
 	);
 }
 

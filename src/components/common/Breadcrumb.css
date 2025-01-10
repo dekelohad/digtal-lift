@@ -1,10 +1,10 @@
 .breadcrumb-container {
     padding: 0.75rem 2rem;
-    background: rgba(18, 18, 18, 0.5);
-    backdrop-filter: blur(10px);
+    background: rgba(18, 18, 18, 1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     width: 100%;
     margin-bottom: 2rem;
+    z-index: 5;
 }
 
 .breadcrumbs {
