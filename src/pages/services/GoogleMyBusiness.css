@@ -397,10 +397,10 @@
 
 .subsection-title {
     color: #BBFF00;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin: 3rem 0 1.5rem;
-    text-shadow: 0 0 10px rgba(187, 255, 0, 0.2);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 3rem 0 2rem;
+    text-shadow: 0 0 20px rgba(187, 255, 0, 0.3);
     text-align: center;
 }
 
@@ -659,5 +659,12 @@
         font-size: 1.2rem;
         padding: 0 1rem;
         margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .subsection-title {
+        font-size: 1.8rem;
+        margin: 2.5rem 0 1.5rem;
     }
 } 
