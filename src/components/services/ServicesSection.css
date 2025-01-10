@@ -1,0 +1,111 @@
+.services-steps-section {
+  padding: 60px 0;
+  background: #000;
+  color: white;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.steps-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.step-item:hover,
+.step-item.active {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(204, 255, 0, 0.5);
+}
+
+.step-number {
+  color: #CCFF00;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+  min-width: 30px;
+}
+
+.step-title {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.step-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 30px;
+  align-self: start;
+  position: sticky;
+  top: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(204, 255, 0, 0.5) rgba(255, 255, 255, 0.1);
+}
+
+.step-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.step-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.step-content::-webkit-scrollbar-thumb {
+  background: rgba(204, 255, 0, 0.5);
+  border-radius: 4px;
+}
+
+.step-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(204, 255, 0, 0.7);
+}
+
+.step-content-title {
+  color: #CCFF00;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.step-content-description {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.step-content-description p {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .steps-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .step-content {
+    position: static;
+    max-height: none;
+  }
+} 

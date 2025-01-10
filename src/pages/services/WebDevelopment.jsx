@@ -1,13 +1,39 @@
-import { useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import { FaCode, FaBolt, FaShieldAlt, FaTools, FaDatabase, FaCloud } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
+import ServicesSection from "../../components/services/ServicesSection";
 import "./WebDevelopment.css";
 
 function WebDevelopment() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
+
+	const [activeService, setActiveService] = useState(1);
+
+	const services = [
+		{
+			id: 1,
+			title: "Comprehensive Website Design",
+			description: "Our web design services offer a comprehensive solution to establish your online presence successfully. Beginning with in-depth consultations, we delve into your business objectives and target audience to tailor a unique strategy. Our expert designers create customized visuals that reflect your brand's identity, and our developers ensure your website is both beautiful and functional."
+		},
+		{
+			id: 2,
+			title: "Strategic User Experience (UX) Design",
+			description: "We prioritize user experience in every aspect of our design process. Through careful planning and research, we create intuitive navigation structures and user flows that guide visitors effortlessly through your website. Our UX design focuses on maximizing engagement, reducing bounce rates, and converting visitors into customers."
+		},
+		{
+			id: 3,
+			title: "Mobile Optimization",
+			description: "In today's mobile-first world, we ensure your website performs flawlessly across all devices. Our responsive design approach guarantees that your site looks and functions perfectly on smartphones, tablets, and desktops. We optimize loading speeds and touch interactions to provide an exceptional mobile user experience."
+		},
+		{
+			id: 4,
+			title: "Ongoing Maintenance and Support",
+			description: "Our commitment doesn't end at launch. We provide continuous maintenance and support to ensure your website remains current and performs optimally. This includes regular updates, security monitoring, content updates, and technical support whenever you need it. We're your long-term partner in maintaining a strong online presence."
+		}
+	];
 
 	const faqs = [
 		{
@@ -114,7 +140,7 @@ function WebDevelopment() {
 					</motion.p>
 				</motion.div>
 
-				<div className="grid-container">
+				<div className="grid-container mb-20">
 					{processSteps.map((step, index) => (
 						<motion.div
 							key={index}
@@ -130,6 +156,8 @@ function WebDevelopment() {
 						</motion.div>
 					))}
 				</div>
+
+				<ServicesSection />
 
 				<div className="testimonials-section">
 					<h2 className="section-title text-center">Success Stories</h2>

@@ -283,4 +283,14 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 0.5rem;
     padding-top: 1rem;
+}
+
+.shadow-neon {
+    box-shadow: 0 0 15px rgba(204, 255, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.shadow-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
 } 
