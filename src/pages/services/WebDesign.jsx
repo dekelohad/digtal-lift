@@ -244,7 +244,7 @@ function WebDesign() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3 }}
 						>
-							<h3 className="metric-title">Strategic Approach</h3>
+							<h3 className="metric-title neon-text">Strategic Approach</h3>
 							<p className="metric-description">
 								Our web design services are effective due to our strategic approach. We prioritize user experience, align with your business goals, and create custom solutions that drive results.
 							</p>
@@ -256,7 +256,7 @@ function WebDesign() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.4 }}
 						>
-							<h3 className="metric-title">Expert Team</h3>
+							<h3 className="metric-title neon-text">Expert Team</h3>
 							<p className="metric-description">
 								Our effectiveness lies in our experienced team. With a diverse skill set and creative minds, we deliver high-quality web designs that captivate audiences and achieve business objectives.
 							</p>
@@ -268,7 +268,7 @@ function WebDesign() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.5 }}
 						>
-							<h3 className="metric-title">Continuous Improvement</h3>
+							<h3 className="metric-title neon-text">Continuous Improvement</h3>
 							<p className="metric-description">
 								We maintain effectiveness through ongoing enhancements, staying updated with industry trends and cutting-edge technologies to ensure your website remains competitive.
 							</p>
