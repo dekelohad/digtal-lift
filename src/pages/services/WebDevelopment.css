@@ -56,7 +56,8 @@
 
 .process-box {
     background: rgba(18, 18, 18, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #CCFF00;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 2.5rem;
@@ -66,9 +67,8 @@
 }
 
 .process-box:hover {
-    border-color: #CCFF00;
-    box-shadow: 0 0 20px rgba(204, 255, 0, 0.1);
     transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(204, 255, 0, 0.2);
 }
 
 .neon-icon {
