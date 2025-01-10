@@ -94,8 +94,11 @@
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: white;
+    color: #CCFF00;
     text-align: center;
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.4),
+                 0 0 40px rgba(204, 255, 0, 0.2),
+                 0 0 60px rgba(204, 255, 0, 0.1);
 }
 
 .testimonials-section {
@@ -213,4 +216,71 @@
         font-size: 28px;
         gap: 0.6rem;
     }
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid #CCFF00;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(204, 255, 0, 0.4);
+}
+
+.faq-button {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.faq-button:hover {
+    background: rgba(204, 255, 0, 0.1);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: #CCFF00;
+    transition: transform 0.3s ease;
+}
+
+.faq-button[aria-expanded="true"] .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-content {
+    padding: 0 1.5rem 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.faq-collapse {
+    transition: all 0.3s ease-out;
+}
+
+.faq-collapse.show {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 0.5rem;
+    padding-top: 1rem;
 } 

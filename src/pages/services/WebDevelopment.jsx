@@ -9,6 +9,33 @@ function WebDevelopment() {
 		window.scrollTo(0, 0);
 	}, []);
 
+	const faqs = [
+		{
+			question: "What technologies do you use for web development?",
+			answer: "We utilize modern, industry-leading technologies including React, Node.js, Next.js, and other cutting-edge frameworks. Our tech stack is carefully chosen based on your project's specific needs, ensuring optimal performance, scalability, and maintainability."
+		},
+		{
+			question: "How long does it take to build a website?",
+			answer: "The timeline varies depending on the project's complexity. A basic website might take 4-6 weeks, while more complex web applications can take 3-6 months. We provide detailed timelines during our initial consultation based on your specific requirements and features needed."
+		},
+		{
+			question: "Do you provide ongoing maintenance and support?",
+			answer: "Yes, we offer comprehensive maintenance and support packages. This includes regular updates, security patches, performance monitoring, and technical support. We ensure your website stays secure, up-to-date, and performs optimally."
+		},
+		{
+			question: "Will my website be mobile-friendly?",
+			answer: "Absolutely! We follow a mobile-first approach in our development process. All websites we build are fully responsive and optimized for all devices - from smartphones and tablets to desktop computers. This ensures an excellent user experience across all screen sizes."
+		},
+		{
+			question: "What about website security?",
+			answer: "Security is a top priority in our development process. We implement industry-standard security measures including SSL certificates, secure authentication systems, data encryption, and protection against common vulnerabilities. Regular security audits and updates are also part of our maintenance services."
+		},
+		{
+			question: "Can you help with hosting and domain setup?",
+			answer: "Yes, we provide complete hosting and domain management services. We can help you choose the best hosting solution for your needs, handle the technical setup, and ensure your website is properly deployed and maintained. We also assist with domain registration and DNS management if needed."
+		}
+	];
+
 	const processSteps = [
 		{
 			icon: <FaCode />,
@@ -125,6 +152,37 @@ function WebDevelopment() {
 									<p className="testimonial-results neon-text">{testimonial.results}</p>
 								</div>
 							</motion.div>
+						))}
+					</div>
+				</div>
+
+				<div className="container mx-auto px-6">
+					<div className="text-center max-w-4xl mx-auto mb-16">
+						<h2 className="section-title">Frequently Asked Questions</h2>
+					</div>
+					<div className="faq-container">
+						{faqs.map((faq, index) => (
+							<div key={index} className="faq-item">
+								<button
+									className="faq-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target={`#faq-${index}`}
+								>
+									{faq.question}
+									<span className="faq-icon">+</span>
+								</button>
+
+								<div
+									id={`faq-${index}`}
+									className="faq-collapse collapse"
+									data-bs-parent="#web-dev-accordion"
+								>
+									<div className="faq-content">
+										{faq.answer}
+									</div>
+								</div>
+							</div>
 						))}
 					</div>
 				</div>
