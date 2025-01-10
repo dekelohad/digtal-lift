@@ -166,15 +166,19 @@ function WebDesign() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8 }}
-						className="section-title neon-text mx-auto"
+						className="section-title neon-text mx-auto text-center"
 						style={{ 
 							textDecoration: 'none', 
 							borderBottom: 'none',
 							width: 'fit-content',
-							margin: '0 auto'
+							margin: '0 auto',
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center'
 						}}
 					>
-						What is included in our web design services?
+						<span>What is included in our</span>
+						<span>web design services?</span>
 					</motion.h2>
 
 					<div className="steps-container">
