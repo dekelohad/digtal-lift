@@ -79,6 +79,7 @@ function About() {
 						justifyContent: "space-between",
 						alignItems: "center",
 						margin: "0 auto",
+						marginBottom: "0",
 						maxWidth: "1200px"
 					}}>
 						<div style={{ flex: 1, textAlign: "center" }}>

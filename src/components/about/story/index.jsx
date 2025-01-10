@@ -18,12 +18,19 @@ function Story() {
 							initial={{ y: 30 }}
 							whileInView={{ y: 0 }}
 							transition={{ duration: 0.6, delay: 0.2 }}
+							style={{
+								display: 'flex',
+								justifyContent: 'center',
+								gap: '20px',
+								alignItems: 'center'
+							}}
 						>
 							<motion.span 
 								className="highlight-word"
 								initial={{ x: -30 }}
 								whileInView={{ x: 0 }}
 								transition={{ duration: 0.6, delay: 0.3 }}
+								style={{ marginBottom: 0, color: "#BBFF00" }}
 							>
 								QUALITY
 							</motion.span>
@@ -32,6 +39,7 @@ function Story() {
 								initial={{ x: -30 }}
 								whileInView={{ x: 0 }}
 								transition={{ duration: 0.6, delay: 0.4 }}
+								style={{ marginBottom: 0, color: "#BBFF00" }}
 							>
 								CALLS
 							</motion.span>
@@ -40,6 +48,7 @@ function Story() {
 								initial={{ x: -30 }}
 								whileInView={{ x: 0 }}
 								transition={{ duration: 0.6, delay: 0.5 }}
+								style={{ marginBottom: 0, color: "#BBFF00" }}
 							>
 								DAILY
 							</motion.span>
@@ -47,9 +56,9 @@ function Story() {
 
 						<motion.h3 
 							className="subtitle"
-							initial={{ y: 20, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.6, delay: 0.6 }}
+									initial={{ y: 20, opacity: 0 }}
+									whileInView={{ y: 0, opacity: 1 }}
+									transition={{ duration: 0.6, delay: 0.6 }}
 						>
 							FROM READY-TO-BUY CUSTOMERS
 						</motion.h3>
