@@ -544,18 +544,22 @@
 }
 
 .icon-wrapper svg {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     transition: all 0.3s ease;
 }
 
 .icon-wrapper svg path {
     fill: #CCFF00;
-    filter: drop-shadow(0 0 10px rgba(204, 255, 0, 0.6));
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .icon-wrapper svg {
+    transform: scale(1.2);
 }
 
 .stat-item:hover .icon-wrapper svg path {
-    filter: drop-shadow(0 0 20px rgba(204, 255, 0, 0.8));
+    fill: #e5ff4d;
 }
 
 .stat-item h4 {
