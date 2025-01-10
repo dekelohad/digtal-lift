@@ -93,12 +93,23 @@ function GoogleMyBusiness() {
 						transition={{ delay: 0.6, duration: 0.8 }}
 						className="text-left mb-20"
 					>
-						<h2 className="section-title mb-8">About our Google Business Profile services</h2>
+						<h2 className="section-title mb-8" style={{ color: "#BBFF00", textShadow: "0 0 20px rgba(187, 255, 0, 0.3)" }}>About our Google Business Profile services</h2>
 						<p className="service-description mb-6">
 							We've optimized 100s of listings and have achieved over 10K+ rankings in Google for clients. Our successes have been a direct result of our services which include initial setup, optimization, and ongoing management. Our team of Local SEOs help support local business owners by improving the visibility of their business online.
 						</p>
 						<p className="service-description">
 							Our Google Business Profile services help business owners get the most from their profile. Regardless of your type of business or budget, we can likely help you generate more visibility, traffic, and revenue.
+						</p>
+					</motion.div>
+
+					<motion.div
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5 }}
+					>
+						<h2 className="services-section-title">Our Services</h2>
+						<p className="services-section-subtitle">
+							Choose the service that best fits your business needs. Whether you're just starting out or looking to optimize your existing profile, we have a solution for you.
 						</p>
 					</motion.div>
 
