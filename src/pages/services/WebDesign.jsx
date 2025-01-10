@@ -103,15 +103,9 @@ function WebDesign() {
 							transition={{ delay: 0.3, duration: 0.8 }}
 							className="neon-text"
 						>
-							Comprehensive Web Design
+						Web Design
 						</motion.span>
-						<motion.span
-							initial={{ y: 20, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
-							transition={{ delay: 0.4, duration: 0.8 }}
-						>
-							Services for Small Businesses
-						</motion.span>
+				 
 					</motion.h1>
 
 					<motion.div
