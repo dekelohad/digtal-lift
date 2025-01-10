@@ -525,15 +525,16 @@
 
 .metric-box {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #BBFF00;
     border-radius: 20px;
     padding: 2rem;
     transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(187, 255, 0, 0.1);
 }
 
 .metric-box:hover {
-    border-color: #BBFF00;
     transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(187, 255, 0, 0.2);
 }
 
 .metric-title {
@@ -566,17 +567,20 @@
 }
 
 .stat-box {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid #BBFF00;
     border-radius: 20px;
     padding: 2.5rem;
     text-align: center;
     transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(187, 255, 0, 0.15);
+    backdrop-filter: blur(10px);
 }
 
 .stat-box:hover {
-    border-color: #BBFF00;
     transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(187, 255, 0, 0.3);
+    background: rgba(18, 18, 18, 0.7);
 }
 
 .stat-number {
@@ -584,7 +588,7 @@
     font-weight: 700;
     color: #BBFF00;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 20px rgba(187, 255, 0, 0.3);
+    text-shadow: 0 0 20px rgba(187, 255, 0, 0.4);
 }
 
 .stat-description {
