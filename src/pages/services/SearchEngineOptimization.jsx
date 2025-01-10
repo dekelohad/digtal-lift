@@ -2,35 +2,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { FaSearch, FaCode, FaLink, FaChartLine, FaBullseye, FaLightbulb, FaCogs } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
+import ServicesSection from "../../components/services/ServicesSection";
 import OnPageSEOCaseStudy from "../../assets/images/portfolio/on-page-seo-case-study.webp";
 import "./SearchEngineOptimization.css";
 
 function SearchEngineOptimization() {
 	const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-	const [activeStep, setActiveStep] = useState(1);
-
-	const serviceSteps = [
-		{
-			id: 1,
-			title: "Competition analysis",
-			description: "One of the first things we'll do for your business is provide you with a full competition audit. In the audit, we'll evaluate every significant element of your positioning in your market and compile a report of what's working and what isn't. We'll analyze the competitive landscape for where your web presence is positioned compared to businesses in your area and make recommendations for how you can outrank them in search."
-		},
-		{
-			id: 2,
-			title: "Full SEO audit",
-			description: "Digital Lift takes a comprehensive approach to helping our clients succeed in the digital landscape. Our process begins with a thorough SEO audit, encompassing both on-page and off-page aspects, aimed at assessing the current state of our client's web presence. This audit is the cornerstone of our strategy, as it provides us with valuable insights into their online ecosystem. We meticulously examine their website's technical structure, content quality, user experience, and keyword optimization to identify areas for improvement."
-		},
-		{
-			id: 3,
-			title: "Custom strategy creation and deployment",
-			description: "Our approach to consulting with new clients is driven by a commitment to delivering tailored solutions for optimizing their web presence through search. We understand that each business is unique, with distinct goals, target audiences, and market dynamics. That's why, during our initial consultations, we invest time in getting to know our clients' specific needs and objectives. We believe that an effective SEO strategy should align closely with a company's core mission and values."
-		},
-		{
-			id: 4,
-			title: "Revenue generation",
-			description: "The deployment of a meticulously crafted SEO strategy for our clients is more than just a digital optimization endeavor; it's a direct path to revenue generation. By securing high rankings in search results, our clients benefit from increased online visibility and exposure to a wider audience actively seeking their products or services. This heightened visibility not only attracts more organic traffic to their website but also translates into a greater number of calls and leads."
-		}
-	];
 
 	const testimonials = [
 		{
@@ -160,49 +137,31 @@ function SearchEngineOptimization() {
 							This resulted in an 80% increase in website conversions over the previous year.
 						</p>
 
-						<div className="services-steps-section my-20">
-							<motion.h2 
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ duration: 0.8 }}
-								className="section-title text-center mb-16 neon-text"
-							>
-								What is included in our search engine optimization services?
-							</motion.h2>
-
-							<div className="steps-container">
-								<div className="steps-navigation">
-									{serviceSteps.map((step) => (
-										<motion.div
-											key={step.id}
-											className={`step-item ${activeStep === step.id ? 'active' : ''}`}
-											onClick={() => setActiveStep(step.id)}
-											initial={{ opacity: 0, x: -20 }}
-											animate={{ opacity: 1, x: 0 }}
-											transition={{ delay: step.id * 0.1 }}
-										>
-											<div className="step-number">{step.id}.</div>
-											<div className="step-title">{step.title}</div>
-										</motion.div>
-									))}
-								</div>
-
-								<motion.div 
-									className="step-content"
-									key={activeStep}
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.5 }}
-								>
-									<h3 className="step-content-title">
-										{serviceSteps[activeStep - 1].title}
-									</h3>
-									<p className="step-content-description">
-										{serviceSteps[activeStep - 1].description}
-									</p>
-								</motion.div>
-							</div>
-						</div>
+						<ServicesSection 
+							title="What is included in our search engine optimization services?"
+							steps={[
+								{
+									id: 1,
+									title: "Competition Analysis",
+									description: "We begin with a thorough analysis of your market position and competitors. Our team conducts comprehensive research to identify your competitors' strengths and weaknesses, uncovering opportunities for your business to stand out. We examine their keyword strategies, content quality, backlink profiles, and overall online presence.\n\nThis analysis helps us understand what strategies are working in your industry and where there are gaps that we can exploit. We look at both direct and indirect competitors, analyzing their website structure, content strategy, and social media presence to build a complete picture of the competitive landscape.\n\nThe insights gained from this analysis form the foundation of our SEO strategy, ensuring that our recommendations are data-driven and tailored to your specific market conditions."
+								},
+								{
+									id: 2,
+									title: "Technical SEO Audit",
+									description: "Our technical SEO audit is a deep dive into your website's infrastructure and performance. We examine every aspect that could impact your search engine rankings, from site speed and mobile responsiveness to crawlability and indexation issues.\n\nWe analyze your website's technical structure, including URL architecture, XML sitemaps, robots.txt configuration, and internal linking structure. Our team identifies and prioritizes technical issues that could be holding back your search performance.\n\nThe audit also includes a detailed analysis of your site's loading speed, mobile usability, and Core Web Vitals - factors that directly impact both search rankings and user experience. We provide clear recommendations for improvements, prioritized by their potential impact on your search visibility."
+								},
+								{
+									id: 3,
+									title: "Content Strategy & Optimization",
+									description: "Content is the cornerstone of successful SEO. We develop a comprehensive content strategy that aligns with your business goals and target audience's search intent. Our approach combines data-driven keyword research with engaging, valuable content that converts.\n\nWe analyze your existing content, identifying gaps and opportunities for improvement. Our team conducts extensive keyword research to understand what your target audience is searching for and how they're searching for it. This research informs our content recommendations, ensuring that every piece of content serves a strategic purpose.\n\nOur optimization process includes improving existing content and creating new content that targets valuable keywords while maintaining natural, engaging writing that resonates with your audience. We focus on creating content that not only ranks well but also drives conversions."
+								},
+								{
+									id: 4,
+									title: "Link Building & Authority Building",
+									description: "Building your website's authority is crucial for long-term SEO success. Our link building strategy focuses on acquiring high-quality backlinks from relevant, authoritative websites in your industry. We use white-hat techniques that ensure sustainable growth in your site's authority.\n\nOur approach includes digital PR, content outreach, and relationship building with industry influencers and publications. We identify opportunities for guest posting, resource link building, and broken link building that can drive valuable referral traffic while boosting your search rankings.\n\nWe also focus on local SEO strategies, including citation building and local link acquisition, to improve your visibility in local search results. Our team monitors your backlink profile and competitors' links to identify new opportunities and ensure your link building efforts stay ahead of the competition."
+								}
+							]}
+						/>
 
 						<h2 className="section-title text-center mb-12 neon-text">Creating Success</h2>
 						<h3 className="text-3xl text-white opacity-90 text-center mb-24">What makes our search engine optimization services so effective?</h3>
