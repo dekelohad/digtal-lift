@@ -172,7 +172,13 @@ function WebDesign() {
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8 }}
-						className="section-title text-center mb-16"
+						className="section-title neon-text mx-auto"
+						style={{ 
+							textDecoration: 'none', 
+							borderBottom: 'none',
+							width: 'fit-content',
+							margin: '0 auto'
+						}}
 					>
 						What is included in our web design services?
 					</motion.h2>
@@ -213,14 +219,17 @@ function WebDesign() {
 
 				{/* Success Metrics Section */}
 				<div className="success-metrics-section my-20">
-					<motion.h2 
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						className="section-title text-center mb-16"
-					>
-						Creating Success
-					</motion.h2>
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							Creating Success
+						</motion.h2>
+					</div>
 					<motion.h3
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -271,14 +280,17 @@ function WebDesign() {
 
 				{/* Stats Section */}
 				<div className="stats-section my-20">
-					<motion.h2 
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						className="section-title text-center mb-16"
-					>
-						The proof is in the numbers
-					</motion.h2>
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							The proof is in the numbers
+						</motion.h2>
+					</div>
 					<motion.h3
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -329,14 +341,17 @@ function WebDesign() {
 
 				{/* FAQ Section */}
 				<div className="faq-section my-20">
-					<motion.h2 
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						className="section-title text-center mb-16"
-					>
-						FAQs about web design
-					</motion.h2>
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							Frequently Asked Questions
+						</motion.h2>
+					</div>
 
 					<div className="faq-container">
 						{faqs.map((faq) => (
@@ -371,7 +386,17 @@ function WebDesign() {
 				</div>
 
 				<div className="testimonials-section">
-					<h2 className="section-title text-center">Success Stories</h2>
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							Success Stories
+						</motion.h2>
+					</div>
 					<div className="testimonials-grid">
 						{testimonials.map((testimonial, index) => (
 							<motion.div 

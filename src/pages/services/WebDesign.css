@@ -45,6 +45,21 @@
                  0 0 60px rgba(204, 255, 0, 0.1);
     position: relative;
     display: inline-block;
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.neon-text::after {
+    display: none !important;
+}
+
+.section-title.neon-text {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.section-title.neon-text::after {
+    display: none !important;
 }
 
 .grid-container {
