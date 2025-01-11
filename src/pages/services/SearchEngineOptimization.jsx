@@ -1,40 +1,41 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
-import { FaSearch, FaCode, FaLink, FaChartLine, FaBullseye, FaLightbulb, FaCogs } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import OnPageSEOCaseStudy from "../../assets/images/portfolio/on-page-seo-case-study.webp";
 import "./SearchEngineOptimization.css";
 
+const Testimonials = [
+	{
+		quote: "Before their SEO expertise, our epoxy flooring business was invisible online. Now we dominate the commercial and residential flooring searches across Greater Boston. Their strategies helped us land major warehouse contracts and high-end garage projects. The leads coming in are exactly what we wanted – serious property owners ready to invest in quality flooring!",
+		author: "Mark Reynolds",
+		business: "Elite Epoxy Solutions",
+		results: "394% increase in commercial contracts"
+	},
+	{
+		quote: "In a city full of dentists, standing out seemed impossible. Their SEO expertise changed everything. Now when someone in Boston searches for 'best dentist near me', we're right at the top. The quality of leads is incredible - these are patients actively looking for our services.",
+		author: "Dr. Sarah Martinez",
+		business: "Bright Smile Dental Care",
+		results: "185% increase in high-value patients"
+	},
+	{
+		quote: "Competing with big chain gyms was killing us. These guys turned it around completely. Their local SEO strategies helped us dominate neighborhood searches. Now we're the go-to fitness destination for three different Boston districts. The best part? Our new members are pre-sold on our premium packages!",
+		author: "Chris Anderson",
+		business: "Elite Fitness Studio",
+		results: "312% growth in membership value"
+	},
+	{
+		quote: "In luxury real estate, digital presence is everything. Their SEO mastery has positioned us as THE luxury property experts in Boston. We're not just getting more leads - we're getting clients ready to invest in multi-million dollar properties. The ROI has been absolutely astronomical.",
+		author: "Jennifer Blake",
+		business: "Prestige Properties Boston",
+		results: "425% increase in luxury property inquiries"
+	}
+];
+
 function SearchEngineOptimization() {
 	const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
-	const testimonials = [
-		{
-			quote: "Before their SEO expertise, our epoxy flooring business was invisible online. Now we dominate the commercial and residential flooring searches across Greater Boston. Their strategies helped us land major warehouse contracts and high-end garage projects. The leads coming in are exactly what we wanted – serious property owners ready to invest in quality flooring!",
-			author: "Mark Reynolds",
-			business: "Elite Epoxy Solutions",
-			results: "394% increase in commercial contracts"
-		},
-		{
-			quote: "In a city full of dentists, standing out seemed impossible. Their SEO expertise changed everything. Now when someone in Boston searches for 'best dentist near me', we're right at the top. The quality of leads is incredible - these are patients actively looking for our services.",
-			author: "Dr. Sarah Martinez",
-			business: "Bright Smile Dental Care",
-			results: "185% increase in high-value patients"
-		},
-		{
-			quote: "Competing with big chain gyms was killing us. These guys turned it around completely. Their local SEO strategies helped us dominate neighborhood searches. Now we're the go-to fitness destination for three different Boston districts. The best part? Our new members are pre-sold on our premium packages!",
-			author: "Chris Anderson",
-			business: "Elite Fitness Studio",
-			results: "312% growth in membership value"
-		},
-		{
-			quote: "In luxury real estate, digital presence is everything. Their SEO mastery has positioned us as THE luxury property experts in Boston. We're not just getting more leads - we're getting clients ready to invest in multi-million dollar properties. The ROI has been absolutely astronomical.",
-			author: "Jennifer Blake",
-			business: "Prestige Properties Boston",
-			results: "425% increase in luxury property inquiries"
-		}
-	];
+ 
 
 	return (
 		<div className="local-lead-page">
@@ -392,7 +393,7 @@ function SearchEngineOptimization() {
 				<div className="testimonials-section mx-auto">
 					<h2 className="section-title text-center mb-16 neon-text mx-auto">Success Stories</h2>
 					<div className="testimonials-grid">
-						{testimonials.map((testimonial, index) => (
+						{Testimonials.map((testimonial, index) => (
 							<motion.div 
 								key={index}
 								className="testimonial-box"

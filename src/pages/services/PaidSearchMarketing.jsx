@@ -5,77 +5,57 @@ import BreadCrumb from "../../components/common/Breadcrumb";
 import WebDesignHero from "../../assets/images/portfolio/team.jpg";
 import ResponsiveDesign from "../../assets/images/portfolio/google-experts.png";
 import ServicesSection from "../../components/services/ServicesSection";
- 
 import "./PaidSearchMarketing.css";
+
+
+const FAQS = [
+    {
+        id: 1,
+        question: "What is paid search?",
+        answer: "Paid search is a digital marketing strategy that involves online ads that appear at the top of search engine results pages (SERPs). Paid search ads typically look similar to organic search listings but have a label that distinguishes them as ads."
+    },
+    {
+        id: 2,
+        question: "What are paid search management services?",
+        answer: "With paid search management services, you can expect a dedicated team of experts who will meticulously review and analyze your campaigns, ensuring that they align with your business objectives. Through continuous optimization, they will fine-tune your advertisements to maximize their effectiveness, reaching the right audience at the right time."
+    },
+    {
+        id: 3,
+        question: "How does paid search work?",
+        answer: "When it comes to paid search ads, Google Ads serves as a prime example of how the process works. Google Ads allows advertisers to bid on specific keywords they want their ads to appear for. When a user conducts a search on Google, the platform uses various factors such as keywords, ad settings, bids, and ad quality score to determine which ads to display."
+    },
+    {
+        id: 4,
+        question: "When should you use paid search?",
+        answer: "Paid search can indeed be a valuable addition to your marketing strategy for several reasons: Audience Research, Precise Targeting, Quick Results, Bottom-of-the-Funnel Leads, Supplementing Organic Search Results. By leveraging the advantages of paid search, businesses can effectively target their audience, generate qualified leads, achieve faster results, and enhance their overall online visibility and conversion rates."
+    }
+];
+
+
+const Testimonials = [
+    {
+        quote: "Digital Lift's PPC management has transformed our roofing business. Their strategic approach to Google Ads helped us target homeowners in need of roof repairs and replacements. The quality of leads and conversion rates have exceeded our expectations.",
+        author: "Michael Roberts",
+        business: "Roberts Premier Roofing",
+        results: "247% increase in qualified leads from Google Ads"
+    },
+    {
+        quote: "Working with Digital Lift on our paid search campaigns has been a game-changer. Their expertise in Google Ads and attention to detail helped us reach more homeowners looking for basement renovations and optimize our ad spend effectively.",
+        author: "James Wilson",
+        business: "Wilson Basement Remodeling",
+        results: "68% reduction in cost per acquisition"
+    }
+];
+
+
+
  
 function PaidSearchMarketing() {
-	const [activeStep, setActiveStep] = useState(1);
 	const [activeFaq, setActiveFaq] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
-	const serviceSteps = [
-		{
-			id: 1,
-			title: "PPC audit services",
-			description: "Digital Lift stands as a trusted partner in the realm of PPC advertising, offering comprehensive PPC audit services that are instrumental in elevating your digital marketing strategy. Our seasoned experts delve deep into your existing PPC campaigns, meticulously assessing factors like ad performance, budget allocation, keyword relevancy, and audience targeting. With a fine-tooth comb approach, we uncover inefficiencies, pinpoint missed opportunities, and craft a tailored roadmap for enhanced ROI.\n\nOur audits provide actionable insights that empower businesses to make data-driven decisions, reduce ad spend wastage, and maximize the impact of their PPC efforts. Partner with Digital Lift for a PPC audit that steers your campaigns towards profitability."
-		},
-		{
-			id: 2,
-			title: "Remarketing services",
-			description: "At Digital Lift, we specialize in helping you harness the full potential of remarketing, particularly through platforms like Google Ads. With Google Ads, you gain the ability to track the traffic to specific pages on your website and deliver targeted ads to those users who have visited those pages. Our team is dedicated to assisting you in setting up the necessary tracking mechanisms and creating captivating remarketing ads that effectively capture the attention and interest of your target audience."
-		},
-		{
-			id: 3,
-			title: "Geofencing ad services",
-			description: "Digital Lift is here to provide you with comprehensive support in harnessing the potential of geofencing, ensuring that your ad campaigns are optimized for maximum impact. Our team of experts will assist you in identifying the ideal outer limits for your geofences and seamlessly integrate them into your Google Ads strategy. Using this information, we will assist in setting up geofences that precisely align with your objectives, reaching the right people at the right time and maximizing the efficiency of your advertising efforts."
-		},
-		{
-			id: 4,
-			title: "Ad performance monitoring and evaluation",
-			description: "Digital Lift offers robust Google Ads performance monitoring to help businesses achieve peak revenue. We understand that effective campaign management goes beyond setup; it's about continuous optimization. Our team meticulously tracks key metrics, adjusts bidding strategies, and refines ad copy to ensure your campaigns are finely tuned for maximum impact. By keeping a vigilant eye on ad performance and making data-driven adjustments, we help you achieve optimal ROI. With Digital Lift, you can be confident that your Google Ads investments are consistently fine-tuned to drive revenue and deliver the results your business deserves."
-		}
-	];
-
-	const testimonials = [
-		{
-			quote: "Digital Lift's PPC management has transformed our roofing business. Their strategic approach to Google Ads helped us target homeowners in need of roof repairs and replacements. The quality of leads and conversion rates have exceeded our expectations.",
-			author: "Michael Roberts",
-			business: "Roberts Premier Roofing",
-			results: "247% increase in qualified leads from Google Ads"
-		},
-		{
-			quote: "Working with Digital Lift on our paid search campaigns has been a game-changer. Their expertise in Google Ads and attention to detail helped us reach more homeowners looking for basement renovations and optimize our ad spend effectively.",
-			author: "James Wilson",
-			business: "Wilson Basement Remodeling",
-			results: "68% reduction in cost per acquisition"
-		}
-	];
-
-	const faqs = [
-		{
-			id: 1,
-			question: "What is paid search?",
-			answer: "Paid search is a digital marketing strategy that involves online ads that appear at the top of search engine results pages (SERPs). Paid search ads typically look similar to organic search listings but have a label that distinguishes them as ads."
-		},
-		{
-			id: 2,
-			question: "What are paid search management services?",
-			answer: "With paid search management services, you can expect a dedicated team of experts who will meticulously review and analyze your campaigns, ensuring that they align with your business objectives. Through continuous optimization, they will fine-tune your advertisements to maximize their effectiveness, reaching the right audience at the right time."
-		},
-		{
-			id: 3,
-			question: "How does paid search work?",
-			answer: "When it comes to paid search ads, Google Ads serves as a prime example of how the process works. Google Ads allows advertisers to bid on specific keywords they want their ads to appear for. When a user conducts a search on Google, the platform uses various factors such as keywords, ad settings, bids, and ad quality score to determine which ads to display."
-		},
-		{
-			id: 4,
-			question: "When should you use paid search?",
-			answer: "Paid search can indeed be a valuable addition to your marketing strategy for several reasons: Audience Research, Precise Targeting, Quick Results, Bottom-of-the-Funnel Leads, Supplementing Organic Search Results. By leveraging the advantages of paid search, businesses can effectively target their audience, generate qualified leads, achieve faster results, and enhance their overall online visibility and conversion rates."
-		}
-	];
 
 	const toggleFaq = (id) => {
 		setActiveFaq(activeFaq === id ? null : id);
@@ -417,7 +397,7 @@ function PaidSearchMarketing() {
 					</div>
 
 					<div className="faq-container">
-						{faqs.map((faq) => (
+						{FAQS.map((faq) => (
 							<motion.div
 								key={faq.id}
 								className="faq-item"
@@ -462,7 +442,7 @@ function PaidSearchMarketing() {
 						</motion.h2>
 					</div>
 					<div className="testimonials-grid">
-						{testimonials.map((testimonial, index) => (
+						{Testimonials.map((testimonial, index) => (
 							<motion.div 
 								key={index}
 								className="testimonial-box"

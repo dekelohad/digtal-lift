@@ -7,24 +7,7 @@ import leadsImage from "../../assets/images/portfolio/get-leads.jpeg";
 import LeadGenerationImage from "../../assets/images/portfolio/lead-generation.jpeg";
 import LeadMagentImage from "../../assets/images/portfolio/lead-magent.jpeg";
 import TargetedLocalLeadGenerationImage from "../../assets/images/portfolio/target-local-lead.jpeg";
-
-
 import "./LocalLeadGeneration.css";
-
-const TESTIMONIALS = [
-	{
-		quote: "Our local customer base exploded after implementing their strategies. We went from struggling to get leads to having a consistent flow of high-quality local customers.",
-		author: "Sarah Johnson",
-		business: "Riverside Home Services",
-		results: "385% increase in local leads within 3 months"
-	},
-	{
-		quote: "The lead generation strategies transformed our business. We're now booking more concrete projects than ever before, and our service area has expanded significantly.",
-		author: "Mike Anderson",
-		business: "Anderson Concrete Solutions",
-		results: "Tripled project bookings in 6 months"
-	}
-];
 
 const FAQs = [
 	{
@@ -49,14 +32,27 @@ const FAQs = [
 	}
 ];
 
+const TESTIMONIALS = [
+	{
+		quote: "Our local customer base exploded after implementing their strategies. We went from struggling to get leads to having a consistent flow of high-quality local customers.",
+		author: "Sarah Johnson",
+		business: "Riverside Home Services",
+		results: "385% increase in local leads within 3 months"
+	},
+	{
+		quote: "The lead generation strategies transformed our business. We're now booking more concrete projects than ever before, and our service area has expanded significantly.",
+		author: "Mike Anderson",
+		business: "Anderson Concrete Solutions",
+		results: "Tripled project bookings in 6 months"
+	}
+];
+
 function LocalLeadGeneration() {
 	const [activeFaq, setActiveFaq] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
- 
 
 	const toggleFaq = (id) => {
 		setActiveFaq(activeFaq === id ? null : id);

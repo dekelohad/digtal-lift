@@ -9,6 +9,44 @@ import WebsiteRedesign from "../../assets/images/portfolio/website-redesig-and-o
 import CustomDesign from "../../assets/images/portfolio/custom-website-design.jpeg";
 import "./WebDesign.css";
 
+const FAQS = [
+	{
+		id: 1,
+		question: "How long does it take to design and launch a website with your services?",
+		answer: "The timeline for website design varies based on the project's complexity and your specific requirements. Typically, we aim to complete a website within 4 to 8 weeks. However, we can provide a more accurate estimate after discussing your project in detail."
+	},
+	{
+		id: 2,
+		question: "Can you redesign our existing website to improve its performance and aesthetics?",
+		answer: "Absolutely! We offer website redesign services to enhance the look, functionality, and user experience of your existing site. We'll work closely with you to understand your goals and implement improvements that align with your brand and objectives."
+	},
+	{
+		id: 3,
+		question: "Do your web design services include ongoing maintenance and updates?",
+		answer: "Yes, we offer ongoing maintenance and support packages to keep your website running smoothly. We provide regular updates, security checks, and content changes as needed, ensuring your website remains up-to-date, secure, and competitive."
+	},
+	{
+		id: 4,
+		question: "Can you optimize our website for search engines (SEO)?",
+		answer: "Yes, we offer SEO optimization as part of our web design services. We follow best practices to structure your website for search engines, optimize page load times, and ensure content is SEO-friendly. This helps improve your site's visibility in search engine results, driving more organic traffic to your site."
+	}
+];
+
+const TESTIMONIALS = [
+	{
+		quote: "The new website completely transformed our online presence. The modern design and intuitive user experience have significantly increased our conversion rates. Our customers constantly praise how easy it is to navigate and find what they need.",
+		author: "Sarah Mitchell",
+		business: "Luxury Realty Group",
+		results: "286% increase in lead generation"
+	},
+	{
+		quote: "Their attention to detail and focus on user experience is exceptional. The website they designed not only looks stunning but has dramatically improved our online sales. The mobile experience is particularly impressive.",
+		author: "David Chen",
+		business: "Artisan Electronics",
+		results: "194% boost in mobile conversions"
+	}
+];
+
 function WebDesign() {
 	const [activeFaq, setActiveFaq] = useState(null);
 
@@ -16,44 +54,8 @@ function WebDesign() {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const testimonials = [
-		{
-			quote: "The new website completely transformed our online presence. The modern design and intuitive user experience have significantly increased our conversion rates. Our customers constantly praise how easy it is to navigate and find what they need.",
-			author: "Sarah Mitchell",
-			business: "Luxury Realty Group",
-			results: "286% increase in lead generation"
-		},
-		{
-			quote: "Their attention to detail and focus on user experience is exceptional. The website they designed not only looks stunning but has dramatically improved our online sales. The mobile experience is particularly impressive.",
-			author: "David Chen",
-			business: "Artisan Electronics",
-			results: "194% boost in mobile conversions"
-		}
-	];
-
-	const faqs = [
-		{
-			id: 1,
-			question: "How long does it take to design and launch a website with your services?",
-			answer: "The timeline for website design varies based on the project's complexity and your specific requirements. Typically, we aim to complete a website within 4 to 8 weeks. However, we can provide a more accurate estimate after discussing your project in detail."
-		},
-		{
-			id: 2,
-			question: "Can you redesign our existing website to improve its performance and aesthetics?",
-			answer: "Absolutely! We offer website redesign services to enhance the look, functionality, and user experience of your existing site. We'll work closely with you to understand your goals and implement improvements that align with your brand and objectives."
-		},
-		{
-			id: 3,
-			question: "Do your web design services include ongoing maintenance and updates?",
-			answer: "Yes, we offer ongoing maintenance and support packages to keep your website running smoothly. We provide regular updates, security checks, and content changes as needed, ensuring your website remains up-to-date, secure, and competitive."
-		},
-		{
-			id: 4,
-			question: "Can you optimize our website for search engines (SEO)?",
-			answer: "Yes, we offer SEO optimization as part of our web design services. We follow best practices to structure your website for search engines, optimize page load times, and ensure content is SEO-friendly. This helps improve your site's visibility in search engine results, driving more organic traffic to your site."
-		}
-	];
-
+	 
+ 
 	const toggleFaq = (id) => {
 		setActiveFaq(activeFaq === id ? null : id);
 	};
@@ -415,7 +417,7 @@ function WebDesign() {
 					</div>
 
 					<div className="faq-container">
-						{faqs.map((faq) => (
+						{FAQS.map((faq) => (
 							<motion.div
 								key={faq.id}
 								className="faq-item"
@@ -459,7 +461,7 @@ function WebDesign() {
 						</motion.h2>
 					</div>
 					<div className="testimonials-grid">
-						{testimonials.map((testimonial, index) => (
+						{TESTIMONIALS.map((testimonial, index) => (
 							<motion.div 
 								key={index}
 								className="testimonial-box"
