@@ -153,6 +153,105 @@ function WebDesign() {
 					</motion.div>
 				</motion.div>
 
+				{/* Web Design Features Grid */}
+				<div className="success-metrics-section my-20">
+					<div className="text-center">
+						<motion.h2 
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ duration: 0.8 }}
+								className="section-title neon-text mx-auto"
+								style={{ textDecoration: 'none', borderBottom: 'none' }}
+							>
+								Web Design
+							</motion.h2>
+					</div>
+						
+					<motion.h3
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="section-subtitle text-center mb-16 text-white"
+						style={{ fontSize: '1.5rem', marginTop: '1rem' }}
+					>
+					We provide expert web design services tailored to your brand, delivering visually stunning, user-friendly websites that captivate audiences and drive business growth.
+					</motion.h3>
+
+					<div className="grid-container">
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3 }}
+						>
+							<h3 className="metric-title neon-text">Compelling Visual Designs</h3>
+							<p className="process-description">
+								Create engaging experiences that keep visitors interested and reflect your brand identity.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4 }}
+						>
+							<h3 className="metric-title neon-text">Enhanced User Experience</h3>
+							<p className="process-description">
+								Easy navigation and intuitive design that guides visitors through your website effortlessly.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.5 }}
+						>
+							<h3 className="metric-title neon-text">Built-in SEO</h3>
+							<p className="process-description">
+								Search engine optimization integrated from the ground up for higher visibility online.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.6 }}
+						>
+							<h3 className="metric-title neon-text">Mobile-Friendly Design</h3>
+							<p className="process-description">
+								Responsive layouts that adapt perfectly to all devices and screen sizes.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.7 }}
+						>
+							<h3 className="metric-title neon-text">Conversion-Focused Elements</h3>
+							<p className="process-description">
+								Strategic placement of elements designed to turn visitors into leads and customers.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.8 }}
+						>
+							<h3 className="metric-title neon-text">Ongoing Support</h3>
+							<p className="process-description">
+								Continuous maintenance and updates to ensure your website stays current and secure.
+							</p>
+						</motion.div>
+					</div>
+				</div>
+
 				<ServicesSection 
 					subtitle="What is included in our web design services?"
 					steps={[
@@ -189,7 +288,7 @@ function WebDesign() {
 							className="section-title neon-text mx-auto"
 							style={{ textDecoration: 'none', borderBottom: 'none' }}
 						>
-							Creating Success
+								Creating Success
 						</motion.h2>
 					</div>
 					<motion.h3
