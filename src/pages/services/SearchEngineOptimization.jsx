@@ -163,61 +163,68 @@ function SearchEngineOptimization() {
 							]}
 						/>
 
-						<h2 className="section-title text-center mb-12 neon-text">Creating Success</h2>
-						<h3 className="text-3xl text-white opacity-90 text-center mb-24">What makes our search engine optimization services so effective?</h3>
-						
-						<div className="stats-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-6xl mx-auto px-4">
-							<div className="stat-item bg-[#0c0c0c] p-8">
-								<div className="icon-wrapper mb-8">
-									<svg className="w-24 h-24 mx-auto" viewBox="0 0 24 24">
-										<path
-											d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
-											className="fill-[#CCFF00]"
-										/>
-									</svg>
-								</div>
-								<div className="text-center">
-									<h4 className="text-xl font-bold mb-4 text-white">Deep Understanding of Your Business Goals</h4>
-									<p className="text-gray-300">
-										At Digital Lift, we prioritize a deep understanding of our clients' business goals, because it's the compass that guides our strategies, ensuring their journey to success is purposeful and effective.
-									</p>
-								</div>
-							</div>
-							
-							<div className="stat-item bg-[#0c0c0c] p-8">
-								<div className="icon-wrapper mb-8">
-									<svg className="w-24 h-24 mx-auto" viewBox="0 0 24 24">
-										<path
-											d="M7 2v11h3v9l7-12h-4l4-8H7zm4 4h3l-2 4h2l-3 5v-5H9V4h2v2z"
-											className="fill-[#CCFF00]"
-										/>
-									</svg>
-								</div>
-								<div className="text-center">
-									<h4 className="text-xl font-bold mb-4 text-white">Tailored Strategies for Targeted Results</h4>
-									<p className="text-gray-300">
-										We tailor digital marketing strategies to achieve targeted results. By precision and customization, we ensure every effort aligns with our clients' objectives, driving success where it matters most.
-									</p>
-								</div>
-							</div>
-							
-							<div className="stat-item bg-[#0c0c0c] p-8">
-								<div className="icon-wrapper mb-8">
-									<svg className="w-24 h-24 mx-auto" viewBox="0 0 24 24">
-										<path
-											d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
-											className="fill-[#CCFF00]"
-										/>
-									</svg>
-								</div>
-								<div className="text-center">
-									<h4 className="text-xl font-bold mb-4 text-white">Relentless Application of the Fundamentals</h4>
-									<p className="text-gray-300">
-										The relentless application of SEO fundamentals forms the foundation for sustained revenue growth. Consistency in these principles ensures long-term success by consistently attracting and converting customers.
-									</p>
-								</div>
-							</div>
-						</div>
+			{/* Success Metrics Section */}
+			<div className="success-metrics-section my-20">
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							Creating Success
+						</motion.h2>
+					</div>
+					<motion.h3
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="section-subtitle text-center mb-16"
+					>
+						What makes our search engine optimization services so effective?
+					</motion.h3>
+
+					<div className="metrics-grid">
+						<motion.div 
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3 }}
+						>
+							<h3 className="metric-title neon-text">Deep Understanding of Your Business Goals</h3>
+							<p className="metric-description">
+							At Digital Lift, we prioritize a deep understanding of our clients' business goals, because it's the compass that guides our strategies, ensuring their journey to success is purposeful and effective.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4 }}
+						>
+							<h3 className="metric-title neon-text">Tailored Strategies for Targeted Results</h3>
+							<p className="metric-description">
+							We tailor digital marketing strategies to achieve targeted results. By precision and customization, we ensure every effort aligns with our clients' objectives, driving success where it matters most.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.5 }}
+						>
+							<h3 className="metric-title neon-text">Relentless Application of the Fundamentals</h3>
+							<p className="metric-description">
+							The relentless application of SEO fundamentals forms the foundation for sustained revenue growth. Consistency in these principles ensures long-term success by consistently attracting and converting customers.
+							</p>
+						</motion.div>
+					</div>
+				</div>
+
+ 
 
 						<h2 className="section-title text-center mb-12 neon-text">The proof is in the numbers</h2>
 						<h3 className="text-3xl text-white opacity-90 text-center mb-16">Why powerful SEO can bring in the numbers</h3>
