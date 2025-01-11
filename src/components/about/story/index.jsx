@@ -11,13 +11,13 @@ function Story() {
 						className="title-container"
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
-						transition={{ duration: 0.6 }}
+						transition={{ duration: 0.3 }}
 					>
 						<motion.h2 
 							className="main-title"
 							initial={{ y: 30 }}
 							whileInView={{ y: 0 }}
-							transition={{ duration: 0.6, delay: 0.2 }}
+							transition={{ duration: 0.3, delay: 0.1 }}
 							style={{
 								display: 'flex',
 								justifyContent: 'center',
@@ -29,7 +29,7 @@ function Story() {
 								className="highlight-word"
 								initial={{ x: -30 }}
 								whileInView={{ x: 0 }}
-								transition={{ duration: 0.6, delay: 0.3 }}
+								transition={{ duration: 0.3, delay: 0.2 }}
 								style={{ marginBottom: 0, color: "#BBFF00" }}
 							>
 								QUALITY
@@ -38,7 +38,7 @@ function Story() {
 								className="highlight-word"
 								initial={{ x: -30 }}
 								whileInView={{ x: 0 }}
-								transition={{ duration: 0.6, delay: 0.4 }}
+								transition={{ duration: 0.3, delay: 0.3 }}
 								style={{ marginBottom: 0, color: "#BBFF00" }}
 							>
 								CALLS
@@ -47,7 +47,7 @@ function Story() {
 								className="highlight-word"
 								initial={{ x: -30 }}
 								whileInView={{ x: 0 }}
-								transition={{ duration: 0.6, delay: 0.5 }}
+								transition={{ duration: 0.3, delay: 0.4 }}
 								style={{ marginBottom: 0, color: "#BBFF00" }}
 							>
 								DAILY
@@ -56,9 +56,9 @@ function Story() {
 
 						<motion.h3 
 							className="subtitle"
-									initial={{ y: 20, opacity: 0 }}
-									whileInView={{ y: 0, opacity: 1 }}
-									transition={{ duration: 0.6, delay: 0.6 }}
+							initial={{ y: 20, opacity: 0 }}
+							whileInView={{ y: 0, opacity: 1 }}
+							transition={{ duration: 0.3, delay: 0.5 }}
 						>
 							FROM READY-TO-BUY CUSTOMERS
 						</motion.h3>
@@ -67,7 +67,7 @@ function Story() {
 							className="highlight-box"
 							initial={{ scale: 0.9, opacity: 0 }}
 							whileInView={{ scale: 1, opacity: 1 }}
-							transition={{ duration: 0.6, delay: 0.7 }}
+							transition={{ duration: 0.3, delay: 0.6 }}
 						>
 							<FaPhoneVolume className="highlight-icon" />
 							<h4>Every call is a potential high-ticket job.</h4>
@@ -77,10 +77,9 @@ function Story() {
 					<div className="features-grid">
 						<motion.div 
 							className="feature-box"
-							initial={{ y: 20, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.6, delay: 0.8 }}
-							whileHover={{ scale: 1.02 }}
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0.5, delay: 0.7 }}
 						>
 							<FaUserCheck className="feature-icon" />
 							<div className="feature-content">
@@ -91,10 +90,9 @@ function Story() {
 
 						<motion.div 
 							className="feature-box"
-							initial={{ y: 20, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.6, delay: 0.9 }}
-							whileHover={{ scale: 1.02 }}
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0.5, delay: 1.3 }}
 						>
 							<FaChartLine className="feature-icon" />
 							<div className="feature-content">
@@ -105,10 +103,9 @@ function Story() {
 
 						<motion.div 
 							className="feature-box"
-							initial={{ y: 20, opacity: 0 }}
-							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.6, delay: 1.0 }}
-							whileHover={{ scale: 1.02 }}
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0.5, delay: 1.9 }}
 						>
 							<FaClock className="feature-icon" />
 							<div className="feature-content">
