@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
-import WebDesignHero from "../../assets/images/portfolio/get-leads.jpeg";
-import ResponsiveDesign from "../../assets/images/portfolio/lead-magent.jpeg";
-import WebsiteRedesign from "../../assets/images/portfolio/lead-generation.jpeg";
-import CustomDesign from "../../assets/images/portfolio/target-local-lead.jpeg";
+import ServicesSection from "../../components/services/ServicesSection";
+import leadsImage from "../../assets/images/portfolio/get-leads.jpeg";
 import "./LocalLeadGeneration.css";
 
 function LocalLeadGeneration() {
@@ -125,7 +123,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={WebDesignHero} alt="Lead Generation Solutions" className="section-image" />
+								<img src={leadsImage} alt="Lead Generation Solutions" className="section-image" />
 							</div>
 						</div>
 
@@ -140,7 +138,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={ResponsiveDesign} alt="Targeted Local Lead Generation" className="section-image" />
+								<img src={leadsImage} alt="Targeted Local Lead Generation" className="section-image" />
 							</div>
 						</div>
 
@@ -155,7 +153,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={WebsiteRedesign} alt="Lead Generation Solutions" className="section-image" />
+								<img src={leadsImage} alt="Lead Generation Solutions" className="section-image" />
 							</div>
 						</div>
 
@@ -171,127 +169,60 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={CustomDesign} alt="Targeted Local Lead Generation" className="section-image" />
+								<img src={leadsImage} alt="Targeted Local Lead Generation" className="section-image" />
 							</div>
 						</div>
 
 					</motion.div>
 				</motion.div>
 
-				<div className="services-steps-section my-20">
-					<motion.h2 
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						className="section-title neon-text mx-auto text-center"
-						style={{ 
-							textDecoration: 'none', 
-							borderBottom: 'none',
-							width: 'fit-content',
-							margin: '0 auto',
-							display: 'flex',
-							flexDirection: 'column',
-							alignItems: 'center'
-						}}
-					>
-						<span>What is included in our</span>
-						<span>local lead generation services?</span>
-					</motion.h2>
-
-					<div className="steps-container">
-						<div className="steps-navigation">
-							{serviceSteps.map((step) => (
-						<motion.div
-									key={step.id}
-									className={`step-item ${activeStep === step.id ? 'active' : ''}`}
-									onClick={() => setActiveStep(step.id)}
-									initial={{ opacity: 0, x: -20 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{ delay: step.id * 0.1 }}
-								>
-									<div className="step-number">{step.id}.</div>
-									<div className="step-title">{step.title}</div>
-						</motion.div>
-					))}
-				</div>
-
-				<motion.div 
-							className="step-content"
-							key={activeStep}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<h3 className="step-content-title">
-								{serviceSteps[activeStep - 1].title}
-							</h3>
-							<p className="step-content-description">
-								{serviceSteps[activeStep - 1].description}
-							</p>
-						</motion.div>
-					</div>
-				</div>
+				<ServicesSection 
+					subtitle="What is included in our local lead generation services?"
+					steps={[
+						{
+							id: 1,
+							title: "Targeted Lead Generation",
+							description: "Our local lead generation services employ sophisticated targeting techniques to pinpoint and engage with your most promising local prospects. By focusing on specific demographics, interests, and geographic locations, we ensure that your message reaches those most likely to convert, maximizing your return on investment and minimizing wasted resources."
+						},
+						{
+							id: 2,
+							title: "Customized Strategies",
+							description: "We recognize that each business has its own unique goals, challenges, and target audience. That's why our local lead generation services are fully tailored to meet your specific needs. Whether you're a small local business looking to increase foot traffic or a regional service provider aiming to expand your customer base, we'll develop a personalized strategy that aligns with your objectives."
+						},
+						{
+							id: 3,
+							title: "Comprehensive Campaign Management",
+							description: "Our local lead generation services encompass every aspect of campaign management, from initial strategy development to ongoing monitoring and optimization. We handle all the heavy lifting, including ad creation, audience targeting, budget management, and performance tracking, so you can focus on running your business."
+						},
+						{
+							id: 4,
+							title: "Ongoing Support and Reporting",
+							description: "We believe in full transparency and accountability, which is why we provide ongoing support and detailed reporting throughout your campaign. Our team is always available to answer any questions you may have and provide guidance on how to optimize your campaigns for better results. We also provide regular reports that give you a clear view of your campaign's performance."
+						}
+					]}
+				/>
 
 				{/* Success Metrics Section */}
-				<div className="success-metrics-section my-20">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
-						>
-							Creating Success
-						</motion.h2>
-					</div>
-					<motion.h3
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-						className="section-subtitle text-center mb-16"
-					>
-						What makes our local lead generation services so effective?
-					</motion.h3>
-
-					<div className="metrics-grid">
-						<motion.div 
-							className="metric-box"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.3 }}
-						>
-							<h3 className="metric-title neon-text">Targeted Approach</h3>
-							<p className="metric-description">
-								Our services focus on reaching potential customers in your specific local area, increasing the chances of conversions by delivering your message to those most likely to be interested.
-							</p>
-						</motion.div>
-
-						<motion.div 
-							className="metric-box"
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 0.4 }}
-						>
-							<h3 className="metric-title neon-text">Customized Strategies</h3>
-							<p className="metric-description">
-								We tailor our lead generation strategies to align with your business goals and target audience, ensuring that our efforts are aligned with your unique needs.
-							</p>
-						</motion.div>
-
-							<motion.div 
-							className="metric-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.5 }}
-						>
-							<h3 className="metric-title neon-text">Data-Driven Decisions</h3>
-							<p className="metric-description">
-								We analyze data and metrics to continually optimize your campaigns, making adjustments based on real-time insights to maximize performance and ROI.
-							</p>
-						</motion.div>
-					</div>
-				</div>
+				<ServicesSection 
+					subtitle="What makes our local lead generation services so effective?"
+					steps={[
+						{
+							id: 1,
+							title: "Targeted Approach",
+							description: "Our services focus on reaching potential customers in your specific local area, increasing the chances of conversions by delivering your message to those most likely to be interested."
+						},
+						{
+							id: 2,
+							title: "Customized Strategies",
+							description: "We tailor our lead generation strategies to align with your business goals and target audience, ensuring that our efforts are aligned with your unique needs."
+						},
+						{
+							id: 3,
+							title: "Data-Driven Decisions",
+							description: "We analyze data and metrics to continually optimize your campaigns, making adjustments based on real-time insights to maximize performance and ROI."
+						}
+					]}
+				/>
 
 				{/* Stats Section */}
 				<div className="stats-section my-20">

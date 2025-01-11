@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaChevronDown } from "react-icons/fa";
+import { FaCode, FaDatabase, FaServer, FaTools, FaChevronDown } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
+import ServicesSection from "../../components/services/ServicesSection";
 import WebDesignHero from "../../assets/images/portfolio/p_13.png";
 import ResponsiveDesign from "../../assets/images/portfolio/p_14.png";
 import WebsiteRedesign from "../../assets/images/portfolio/p_15.png";
@@ -161,59 +162,31 @@ function WebDesign() {
 					</motion.div>
 				</motion.div>
 
-				<div className="services-steps-section my-20">
-					<motion.h2 
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						className="section-title neon-text mx-auto text-center"
-						style={{ 
-							textDecoration: 'none', 
-							borderBottom: 'none',
-							width: 'fit-content',
-							margin: '0 auto',
-							display: 'flex',
-							flexDirection: 'column',
-							alignItems: 'center'
-						}}
-					>
-						<span>What is included in our</span>
-						<span>web design services?</span>
-					</motion.h2>
-
-					<div className="steps-container">
-						<div className="steps-navigation">
-							{serviceSteps.map((step) => (
-								<motion.div
-									key={step.id}
-									className={`step-item ${activeStep === step.id ? 'active' : ''}`}
-									onClick={() => setActiveStep(step.id)}
-									initial={{ opacity: 0, x: -20 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{ delay: step.id * 0.1 }}
-								>
-									<div className="step-number">{step.id}.</div>
-									<div className="step-title">{step.title}</div>
-								</motion.div>
-							))}
-						</div>
-
-						<motion.div 
-							className="step-content"
-							key={activeStep}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<h3 className="step-content-title">
-								{serviceSteps[activeStep - 1].title}
-							</h3>
-							<p className="step-content-description">
-								{serviceSteps[activeStep - 1].description}
-							</p>
-						</motion.div>
-					</div>
-				</div>
+				<ServicesSection 
+					subtitle="What is included in our web design services?"
+					steps={[
+						{
+							id: 1,
+							title: "Custom Website Design",
+							description: "Digital Lift creates unique, visually stunning websites that capture your brand's essence. Our designers combine modern aesthetics with user-centric principles to craft engaging interfaces that resonate with your target audience. Each design is tailored to reflect your brand identity while ensuring optimal user experience."
+						},
+						{
+							id: 2,
+							title: "Responsive Design",
+							description: "We ensure your website looks and functions flawlessly across all devices and screen sizes. Our responsive design approach guarantees that your site maintains its visual appeal and functionality whether viewed on desktop, tablet, or mobile devices, providing a consistent user experience across all platforms."
+						},
+						{
+							id: 3,
+							title: "UI/UX Design",
+							description: "Our UI/UX design process focuses on creating intuitive, user-friendly interfaces that guide visitors effortlessly through your website. We conduct thorough user research and implement proven design principles to ensure your site not only looks beautiful but also delivers an exceptional user experience."
+						},
+						{
+							id: 4,
+							title: "Brand Integration",
+							description: "Digital Lift seamlessly integrates your brand elements into the website design, ensuring consistency across all digital touchpoints. From color schemes and typography to imagery and messaging, we maintain your brand identity while enhancing its digital presence."
+						}
+					]}
+				/>
 
 				{/* Success Metrics Section */}
 				<div className="success-metrics-section my-20">

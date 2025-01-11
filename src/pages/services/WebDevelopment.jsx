@@ -158,27 +158,27 @@ function WebDevelopment() {
 				</div>
 
 				<ServicesSection 
-					title="What is included in our web development services?"
+					subtitle="What is included in our web development services?"
 					steps={[
 						{
 							id: 1,
 							title: "Full-Stack Development",
-							description: "Our full-stack development services cover both front-end and back-end development, ensuring a complete and robust web application. We utilize modern frameworks and technologies like React, Node.js, and Next.js to build scalable, high-performance applications.\n\nOn the front-end, we implement responsive user interfaces with clean, efficient code that ensures optimal performance across all devices. Our development team follows best practices for component architecture, state management, and code optimization.\n\nFor the back-end, we design and implement robust server architectures, RESTful APIs, and database systems that power your application. We ensure secure data handling, efficient query optimization, and scalable infrastructure that can grow with your business."
+							description: "Digital Lift excels in full-stack web development, crafting robust solutions that seamlessly integrate front-end and back-end technologies. Our expert developers leverage modern frameworks and best practices to build scalable, responsive web applications that deliver exceptional user experiences while maintaining robust server-side functionality."
 						},
 						{
 							id: 2,
 							title: "API Development & Integration",
-							description: "We specialize in creating and integrating APIs that connect your web application with various services and data sources. Our team develops RESTful and GraphQL APIs that are secure, well-documented, and optimized for performance.\n\nOur API development process includes thorough planning of endpoints, data structures, and authentication methods. We implement robust error handling, rate limiting, and caching strategies to ensure reliable and efficient API operations.\n\nWe also handle third-party API integrations, whether it's payment gateways, social media platforms, or business tools, ensuring seamless communication between your application and external services."
+							description: "We specialize in creating and integrating powerful APIs that enhance your web application's capabilities. Whether it's developing RESTful APIs, implementing GraphQL, or integrating third-party services, our team ensures smooth data flow and seamless connectivity across your digital ecosystem."
 						},
 						{
 							id: 3,
 							title: "Performance Optimization",
-							description: "We implement advanced performance optimization techniques to ensure your web application loads quickly and runs smoothly. This includes code splitting, lazy loading, and efficient caching strategies to minimize load times and improve user experience.\n\nOur team utilizes modern build tools and bundlers to optimize asset delivery, reduce bundle sizes, and implement efficient code-splitting strategies. We conduct regular performance audits and implement improvements for Core Web Vitals metrics.\n\nWe also implement server-side rendering (SSR) and static site generation (SSG) where appropriate, ensuring optimal performance and SEO benefits. Our optimization process includes database query optimization, API response caching, and CDN implementation."
+							description: "Our performance optimization services focus on maximizing your web application's speed and efficiency. We implement advanced caching strategies, optimize database queries, minimize load times, and ensure your application runs smoothly across all devices and platforms."
 						},
 						{
 							id: 4,
 							title: "DevOps & Deployment",
-							description: "Our DevOps services ensure smooth deployment and maintenance of your web application. We set up automated CI/CD pipelines, containerization with Docker, and orchestration with Kubernetes when needed.\n\nWe implement robust monitoring and logging systems to track application performance and quickly identify and resolve any issues. Our team sets up automated testing frameworks to ensure code quality and prevent regressions.\n\nOur deployment processes include proper environment configuration, security hardening, and scalability planning. We also provide documentation and training for your team to manage and maintain the application effectively."
+							description: "Digital Lift provides comprehensive DevOps solutions, including automated CI/CD pipelines, containerization, and cloud deployment strategies. We ensure your web applications are deployed efficiently, maintained securely, and scaled effectively to meet growing demands."
 						}
 					]}
 				/>

@@ -4,6 +4,7 @@ import { FaChevronDown } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import WebDesignHero from "../../assets/images/portfolio/team.jpg";
 import ResponsiveDesign from "../../assets/images/portfolio/google-experts.png";
+import ServicesSection from "../../components/services/ServicesSection";
  
 import "./PaidSearchMarketing.css";
  
@@ -244,60 +245,31 @@ function PaidSearchMarketing() {
 				</div>
 
 				{/* Services Steps Section */}
-                <div className="success-metrics-section my-20">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
-						>
-							what you get
-						</motion.h2>
-					</div>
-					<motion.h3
-						initial={{ opacity: 0, y: 20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.2 }}
-						className="section-subtitle text-center mb-16"
-					>
-						What is included in our paid search marketing services?
-					</motion.h3>
-
-					<div className="steps-container">
-						<div className="steps-navigation">
-							{serviceSteps.map((step) => (
-								<motion.div
-									key={step.id}
-									className={`step-item ${activeStep === step.id ? 'active' : ''}`}
-									onClick={() => setActiveStep(step.id)}
-									initial={{ opacity: 0, x: -20 }}
-									animate={{ opacity: 1, x: 0 }}
-									transition={{ delay: step.id * 0.1 }}
-								>
-									<div className="step-number">{step.id}.</div>
-									<div className="step-title">{step.title}</div>
-								</motion.div>
-							))}
-						</div>
-
-						<motion.div 
-							className="step-content"
-							key={activeStep}
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
-						>
-							<h3 className="step-content-title">
-								{serviceSteps[activeStep - 1].title}
-							</h3>
-							<p className="step-content-description">
-								{serviceSteps[activeStep - 1].description}
-							</p>
-						</motion.div>
-					</div>
-				</div>
+				<ServicesSection 
+					subtitle="What is included in our paid search marketing services?"
+					steps={[
+						{
+							id: 1,
+							title: "PPC audit services",
+							description: "Digital Lift stands as a trusted partner in the realm of PPC advertising, offering comprehensive PPC audit services that are instrumental in elevating your digital marketing strategy. Our seasoned experts delve deep into your existing PPC campaigns, meticulously assessing factors like ad performance, budget allocation, keyword relevancy, and audience targeting."
+						},
+						{
+							id: 2,
+							title: "Remarketing services",
+							description: "At Digital Lift, we specialize in helping you harness the full potential of remarketing, particularly through platforms like Google Ads. With Google Ads, you gain the ability to track the traffic to specific pages on your website and deliver targeted ads to those users who have visited those pages."
+						},
+						{
+							id: 3,
+							title: "Geofencing ad services",
+							description: "Digital Lift is here to provide you with comprehensive support in harnessing the potential of geofencing, ensuring that your ad campaigns are optimized for maximum impact. Our team of experts will assist you in identifying the ideal outer limits for your geofences and seamlessly integrate them into your Google Ads strategy."
+						},
+						{
+							id: 4,
+							title: "Ad performance monitoring",
+							description: "Digital Lift offers robust Google Ads performance monitoring to help businesses achieve peak revenue. We understand that effective campaign management goes beyond setup; it's about continuous optimization. Our team meticulously tracks key metrics, adjusts bidding strategies, and refines ad copy to ensure your campaigns are finely tuned for maximum impact."
+						}
+					]}
+				/>
 
 				{/* Success Metrics Section */}
 				<div className="success-metrics-section my-20">
