@@ -15,7 +15,7 @@ function GoogleMyBusinessOptimization() {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const optimizationFaqs = [
+	const FAQS = [
 		{
 			question: "How long does it take to see results from optimization?",
 			answer: "Results can vary depending on your market and competition. Generally, businesses start seeing improvements in visibility within 1-3 months after optimization, but significant results may take 3-6 months."
@@ -150,43 +150,39 @@ function GoogleMyBusinessOptimization() {
 							Each optimization is tailored to your specific business needs and market conditions. We focus on implementing strategies that will have the biggest impact on your local visibility and customer engagement.
 						</p>
 
-						<h3 className="subsection-title">Frequently asked questions</h3>
-						<div className="setup-faq-container">
-							{optimizationFaqs.map((faq, index) => (
-								<motion.div
-									key={index}
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.5, delay: index * 0.1 }}
-									className="faq-item"
-								>
-									<div
-										onClick={() => toggleAccordion(index)}
-										className="faq-header"
-									>
-										<h3 className="faq-question">{faq.question}</h3>
-										{openIndex === index ? 
-											<FaMinus style={{ color: "#BBFF00", fontSize: "16px" }} /> : 
-											<FaPlus style={{ color: "#BBFF00", fontSize: "16px" }} />
-										}
-									</div>
-									<AnimatePresence>
-										{openIndex === index && (
-											<motion.div
-												initial={{ height: 0, opacity: 0 }}
-												animate={{ height: "auto", opacity: 1 }}
-												exit={{ height: 0, opacity: 0 }}
-												transition={{ duration: 0.3 }}
-												className="faq-answer"
-											>
-												{faq.answer}
-											</motion.div>
-										)}
-									</AnimatePresence>
-								</motion.div>
-							))}
-						</div>
+				{/* FAQ Section */}
+				<div className="container mx-auto px-6">
+					<div className="text-center max-w-4xl mx-auto mb-16">
+						<h2 className="section-title">Frequently Asked Questions</h2>
 					</div>
+					<div className="faq-container">
+						{FAQS.map((faq, index) => (
+							<div key={index} className="faq-item">
+								<button
+									className="faq-button"
+									type="button"
+									data-bs-toggle="collapse"
+									data-bs-target={`#faq-${index}`}
+								>
+									{faq.question}
+									<span className="faq-icon">+</span>
+								</button>
+
+								<div
+									id={`faq-${index}`}
+									className="faq-collapse collapse"
+									data-bs-parent="#web-dev-accordion"
+								>
+									<div className="faq-content">
+										{faq.answer}
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>		
+
+			</div>
 				</motion.div>
 			</div>
 		</div>
