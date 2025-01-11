@@ -118,7 +118,7 @@ function LocalLeadGeneration() {
 							<div className="text-content">
 								<h2 className="section-title text-left mb-8">Lead Generation Solutions for Contractors</h2>
 								<p className="service-description mb-8">
-								Digital Lift provides targeted local lead generation services for contractors, designed to help you reach your ideal customers in your area. Whether you're just starting out or looking to expand your business, our team can assist you in getting the leads you need to grow. We specialize in driving leads for contractors who may not have their own website or marketing materials, ensuring that you can still reach your target market effectively. 
+								Digital Lift specializes in lead generation for contractors, offering comprehensive solutions to connect businesses with potential customers in their local area. Even if you don’t have a website or marketing materials, our team can help you from the ground up, driving real leads that translate into revenue. 
 								</p>
 								<p className="service-description mb-12">
 								Our proven strategies and techniques have helped numerous contractors boost their revenue and expand their businesses. Partner with Digital Lift and start generating quality leads for your contracting business today.
@@ -136,7 +136,7 @@ function LocalLeadGeneration() {
 								Digital Lift provides targeted local lead generation services for contractors, designed to help you reach your ideal customers in your area. Whether you're just starting out or looking to expand your business, our team can assist you in getting the leads you need to grow. We specialize in driving leads for contractors who may not have their own website or marketing materials, ensuring that you can still reach your target market effectively. 
 								</p>
 								<p className="service-description mb-12">
-									Our proven strategies and techniques have helped numerous contractors boost their revenue and expand their businesses. Partner with Digital Lift and start generating quality leads for your contracting business today.
+								We understand the unique challenges that contractors face in finding quality leads, which is why our approach is tailored to your specific market and needs. With our expertise, you can focus on delivering your services while we take care of bringing the right customers to you.
 								</p>
 							</div>
 							<div className="image-content">
