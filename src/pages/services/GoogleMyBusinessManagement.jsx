@@ -53,22 +53,30 @@ function GoogleMyBusinessManagement() {
 						className="hero-title mx-auto"
 						style={{ color: "#BBFF00" }}
 					>
-						<motion.span
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.3, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
 						>
-							Google Business Profile
-						</motion.span>
-						<motion.span
+							Google
+						</motion.div>
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.4, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
+						>
+							Business Profile
+						</motion.div>
+						<motion.div
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.5, duration: 0.8 }}
+							className="neon-text title-line"
 						>
 							Management Service
-						</motion.span>
+						</motion.div>
 					</motion.h1>
 
 					<div className="setup-content">
@@ -204,7 +212,7 @@ function GoogleMyBusinessManagement() {
 									</p>
 									<div className="testimonial-author">
 										<h4 className="author-name">James Sullivan</h4>
-										<p className="author-business">Sullivan Construction & Remodeling</p>
+										<p className="author-business">Sullivan Remodeling</p>
 										<p className="testimonial-results neon-text">Maintained top 3 position for 12+ months</p>
 									</div>
 								</motion.div>

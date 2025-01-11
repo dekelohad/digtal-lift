@@ -48,14 +48,22 @@ function GoogleMyBusiness() {
 						className="hero-title mx-auto"
 						style={{ color: "#BBFF00" }}
 					>
-						<motion.span
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.3, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
 						>
-							Google Business Profile
-						</motion.span> 
+							Google
+						</motion.div>
+						<motion.div
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.4, duration: 0.8 }}
+							className="neon-text title-line"
+						>
+							Business Profile
+						</motion.div>
 					</motion.h1>
 
 					<motion.p

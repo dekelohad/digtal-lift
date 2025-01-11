@@ -51,22 +51,30 @@ function GoogleMyBusinessSetup() {
 						className="hero-title mx-auto"
 						style={{ color: "#BBFF00" }}
 					>
-						<motion.span
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.3, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
 						>
-							Google Business Profile
-						</motion.span>
-						<motion.span
+							Google
+						</motion.div>
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.4, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
+						>
+							Business Profile
+						</motion.div>
+						<motion.div
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.5, duration: 0.8 }}
+							className="neon-text title-line"
 						>
 							Setup Service
-						</motion.span>
+						</motion.div>
 					</motion.h1>
 
 					<div className="setup-content">
@@ -183,7 +191,7 @@ function GoogleMyBusinessSetup() {
 									</p>
 									<div className="testimonial-author">
 										<h4 className="author-name">Robert Martinez</h4>
-										<p className="author-business">Martinez Plumbing Solutions</p>
+										<p className="author-business">Martinez Plumbing</p>
 										<p className="testimonial-results neon-text">Started ranking in local searches within 2 weeks of setup</p>
 									</div>
 								</motion.div>

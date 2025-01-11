@@ -9,11 +9,11 @@
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: clamp(24px, 4vw, 48px);
     font-weight: 700;
     line-height: 1.2;
-    letter-spacing: -1px;
-    max-width: 1200px;
+    letter-spacing: -0.5px;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
@@ -22,10 +22,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 0.3em;
     position: relative;
     z-index: 10;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
+}
+
+.hero-title .title-line {
+    width: 100%;
+    text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: block;
+    line-height: 1.1;
 }
 
 .hero-description {
@@ -99,24 +109,26 @@
 }
 
 .testimonials-section {
-    margin: 6rem 0;
+    margin: 4rem 0;
+    padding: 2rem 0;
 }
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    padding: 0 1rem;
 }
 
 .testimonial-box {
-    background: rgba(18, 18, 18, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 3rem;
-    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(187, 255, 0, 0.2);
+    border-radius: 16px;
+    padding: 2rem;
     position: relative;
-    height: 100%;
+    height: auto;
+    min-height: 300px;
     display: flex;
     flex-direction: column;
 }
@@ -135,35 +147,35 @@
 }
 
 .testimonial-quote {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    font-style: italic;
+    color: #fff;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
     flex-grow: 1;
 }
 
 .testimonial-author {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 1.5rem;
     margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(187, 255, 0, 0.2);
 }
 
 .author-name {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: white;
-    margin-bottom: 0.25rem;
+    color: #BBFF00;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 0.5rem;
 }
 
 .author-business {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 1rem;
+    color: #fff;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    margin-bottom: 0.75rem;
 }
 
 .testimonial-results {
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    color: #BBFF00;
+    font-weight: 500;
 }
 
 .service-description {
@@ -238,10 +250,22 @@
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 36px;
-        gap: 0.8rem;
+        font-size: clamp(22px, 3.5vw, 32px);
+        gap: 0.25em;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
     }
-    
+
+    .hero-title .title-line {
+        line-height: 1.1;
+    }
+
+    .hero-title .neon-text {
+        gap: 0.25em;
+        padding: 0.15em 0;
+    }
+
     .service-description {
         font-size: 1rem;
         padding: 0 20px;
@@ -293,10 +317,23 @@
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 28px;
-        gap: 0.6rem;
+        font-size: clamp(20px, 3.5vw, 28px);
+        gap: 0.2em;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        padding: 0 0.8rem;
+        letter-spacing: 0;
     }
-    
+
+    .hero-title .title-line {
+        line-height: 1.1;
+    }
+
+    .hero-title .neon-text {
+        gap: 0.2em;
+        padding: 0.1em 0;
+    }
+
     .google-maps-example {
         max-width: 100%;
     }
@@ -675,5 +712,37 @@
     .subsection-title {
         font-size: 1.8rem;
         margin: 2.5rem 0 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        padding: 0 0.5rem;
+    }
+    
+    .testimonial-box {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .testimonial-box {
+        padding: 1.25rem;
+    }
+    
+    .testimonial-quote {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .author-name {
+        font-size: 1rem;
+    }
+    
+    .author-business,
+    .testimonial-results {
+        font-size: 0.85rem;
     }
 } 

@@ -54,22 +54,30 @@ function GoogleMyBusinessOptimization() {
 						className="hero-title mx-auto"
 						style={{ color: "#BBFF00" }}
 					>
-						<motion.span
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.3, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
 						>
-						Google Business Profile
-						</motion.span>
-						<motion.span
+							Google
+						</motion.div>
+						<motion.div
 							initial={{ y: 20, opacity: 0 }}
 							animate={{ y: 0, opacity: 1 }}
 							transition={{ delay: 0.4, duration: 0.8 }}
-							className="neon-text"
+							className="neon-text title-line"
+						>
+							Business Profile
+						</motion.div>
+						<motion.div
+							initial={{ y: 20, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ delay: 0.5, duration: 0.8 }}
+							className="neon-text title-line"
 						>
 							Optimization Service
-						</motion.span>
+						</motion.div>
 					</motion.h1>
 
 					<div className="setup-content">
@@ -205,7 +213,7 @@ function GoogleMyBusinessOptimization() {
 									</p>
 									<div className="testimonial-author">
 										<h4 className="author-name">Thomas Anderson</h4>
-										<p className="author-business">Anderson Roofing & Construction</p>
+										<p className="author-business">Anderson Roofing</p>
 										<p className="testimonial-results neon-text">300% increase in profile views after 3 months</p>
 									</div>
 								</motion.div>
@@ -224,7 +232,7 @@ function GoogleMyBusinessOptimization() {
 									</p>
 									<div className="testimonial-author">
 										<h4 className="author-name">Michael Reynolds</h4>
-										<p className="author-business">Reynolds Electrical Services</p>
+										<p className="author-business">Reynolds Electrical</p>
 										<p className="testimonial-results neon-text">85% improvement in local search visibility</p>
 									</div>
 								</motion.div>
