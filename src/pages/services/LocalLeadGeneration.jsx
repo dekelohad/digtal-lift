@@ -4,76 +4,59 @@ import { FaChevronDown } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import leadsImage from "../../assets/images/portfolio/get-leads.jpeg";
+import LeadGenerationImage from "../../assets/images/portfolio/lead-generation.jpeg";
+import LeadMagentImage from "../../assets/images/portfolio/lead-magent.jpeg";
+import TargetedLocalLeadGenerationImage from "../../assets/images/portfolio/target-local-lead.jpeg";
+
+
 import "./LocalLeadGeneration.css";
 
+const TESTIMONIALS = [
+	{
+		quote: "Our local customer base exploded after implementing their strategies. We went from struggling to get leads to having a consistent flow of high-quality local customers.",
+		author: "Sarah Johnson",
+		business: "Riverside Home Services",
+		results: "385% increase in local leads within 3 months"
+	},
+	{
+		quote: "The lead generation strategies transformed our business. We're now booking more concrete projects than ever before, and our service area has expanded significantly.",
+		author: "Mike Anderson",
+		business: "Anderson Concrete Solutions",
+		results: "Tripled project bookings in 6 months"
+	}
+];
+
+const FAQs = [
+	{
+		id: 1,
+		question: "How quickly can I expect to see results from your local lead generation services?",
+		answer: "Results vary based on factors such as your industry and campaign scope, but many clients see an increase in leads within the first few weeks of starting their campaign."
+	},
+	{
+		id: 2,
+		question: "What sets your local lead generation services apart from others?",
+		answer: "Our services are tailored to your specific needs and market, ensuring that you get the most out of your lead generation efforts. We focus on quality leads that drive real results for your business."
+	},
+	{
+		id: 3,
+		question: "Do I need a website to benefit from your local lead generation services?",
+		answer: "No, we can help you generate leads even if you don't have a website. Our strategies are designed to reach your target audience through various channels, including social media and local directories."
+	},
+	{
+		id: 4,
+		question: "How do you measure the success of your local lead generation campaigns?",
+		answer: "We use a variety of metrics, such as lead volume, conversion rates, and return on investment, to measure the success of our campaigns. We provide regular reports to keep you informed of your campaign's performance."
+	}
+];
+
 function LocalLeadGeneration() {
-	const [activeStep, setActiveStep] = useState(1);
 	const [activeFaq, setActiveFaq] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 
-	const serviceSteps = [
-		{
-			id: 1,
-			title: "Targeted Lead Generation",
-			description: "Our local lead generation services employ sophisticated targeting techniques to pinpoint and engage with your most promising local prospects. By focusing on specific demographics, interests, and geographic locations, we ensure that your message reaches those most likely to convert, maximizing your return on investment and minimizing wasted resources. Our data-driven approach allows us to continually refine and optimize your campaigns for optimal performance, delivering a steady stream of high-quality leads to your business."
-		},
-		{
-			id: 2,
-			title: "Customized Strategies",
-			description: "We recognize that each business has its own unique goals, challenges, and target audience. That's why our local lead generation services are fully tailored to meet your specific needs. Whether you're a small local business looking to increase foot traffic or a regional service provider aiming to expand your customer base, we'll develop a personalized strategy that aligns with your objectives. Our team of experts will work closely with you to understand your business inside and out, ensuring that our strategies are perfectly aligned with your brand identity and marketing goals."
-		},
-		{
-			id: 3,
-			title: "Comprehensive Campaign Management",
-			description: "Our local lead generation services encompass every aspect of campaign management, from initial strategy development to ongoing monitoring and optimization. We handle all the heavy lifting, including ad creation, audience targeting, budget management, and performance tracking, so you can focus on running your business. Our team of experienced professionals is dedicated to ensuring that your campaigns run smoothly and efficiently, making adjustments on the fly to maximize results. With our comprehensive campaign management services, you can rest easy knowing that your lead generation efforts are in good hands."
-		},
-		{
-			id: 4,
-			title: "Ongoing Support and Reporting",
-			description: "We believe in full transparency and accountability, which is why we provide ongoing support and detailed reporting throughout your campaign. Our team is always available to answer any questions you may have and provide guidance on how to optimize your campaigns for better results. We also provide regular reports that give you a clear view of your campaign's performance, including key metrics such as lead volume, conversion rates, and return on investment. With our support and reporting services, you'll always be in the loop and able to make informed decisions about your lead generation strategy."
-		}
-	];
-
-	const testimonials = [
-		{
-			quote: "Our local customer base exploded after implementing their strategies. We went from struggling to get leads to having a consistent flow of high-quality local customers.",
-			author: "Sarah Johnson",
-			business: "Riverside Home Services",
-			results: "385% increase in local leads within 3 months"
-		},
-		{
-			quote: "The lead generation strategies transformed our business. We're now booking more concrete projects than ever before, and our service area has expanded significantly.",
-			author: "Mike Anderson",
-			business: "Anderson Concrete Solutions",
-			results: "Tripled project bookings in 6 months"
-		}
-	];
-
-	const faqs = [
-		{
-			id: 1,
-			question: "How quickly can I expect to see results from your local lead generation services?",
-			answer: "Results vary based on factors such as your industry and campaign scope, but many clients see an increase in leads within the first few weeks of starting their campaign."
-		},
-		{
-			id: 2,
-			question: "What sets your local lead generation services apart from others?",
-			answer: "Our services are tailored to your specific needs and market, ensuring that you get the most out of your lead generation efforts. We focus on quality leads that drive real results for your business."
-		},
-		{
-			id: 3,
-			question: "Do I need a website to benefit from your local lead generation services?",
-			answer: "No, we can help you generate leads even if you don't have a website. Our strategies are designed to reach your target audience through various channels, including social media and local directories."
-		},
-		{
-			id: 4,
-			question: "How do you measure the success of your local lead generation campaigns?",
-			answer: "We use a variety of metrics, such as lead volume, conversion rates, and return on investment, to measure the success of our campaigns. We provide regular reports to keep you informed of your campaign's performance."
-		}
-	];
+ 
 
 	const toggleFaq = (id) => {
 		setActiveFaq(activeFaq === id ? null : id);
@@ -138,7 +121,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={leadsImage} alt="Targeted Local Lead Generation" className="section-image" />
+								<img src={LeadMagentImage} alt="Targeted Local Lead Generation" className="section-image" />
 							</div>
 						</div>
 
@@ -153,7 +136,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={leadsImage} alt="Lead Generation Solutions" className="section-image" />
+								<img src={LeadGenerationImage} alt="Lead Generation Solutions" className="section-image" />
 							</div>
 						</div>
 
@@ -169,7 +152,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={leadsImage} alt="Targeted Local Lead Generation" className="section-image" />
+								<img src={TargetedLocalLeadGenerationImage} alt="Targeted Local Lead Generation" className="section-image" />
 							</div>
 						</div>
 
@@ -306,7 +289,7 @@ function LocalLeadGeneration() {
 					</div>
 
 					<div className="faq-container">
-						{faqs.map((faq) => (
+						{FAQs.map((faq) => (
 							<motion.div 
 								key={faq.id}
 								className="faq-item"
@@ -351,7 +334,7 @@ function LocalLeadGeneration() {
 						</motion.h2>
 					</div>
 						<div className="testimonials-grid">
-							{testimonials.map((testimonial, index) => (
+							{TESTIMONIALS.map((testimonial, index) => (
 								<motion.div 
 									key={index}
 									className="testimonial-box"
