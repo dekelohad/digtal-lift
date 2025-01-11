@@ -9,7 +9,7 @@
 }
 
 .hero-title {
-    font-size: 48px;
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -1px;
@@ -26,16 +26,21 @@
     position: relative;
     z-index: 10;
     padding: 0 1rem;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .hero-description {
-    font-size: 22px;
+    font-size: clamp(1rem, 2vw, 1.375rem);
     color: rgba(255, 255, 255, 0.9);
     max-width: 800px;
     line-height: 1.8;
-    margin: 3rem auto 6rem;
+    margin: 2rem auto 4rem;
     text-align: center;
     opacity: 0.9;
+    padding: 0 1rem;
 }
 
 .neon-text {
@@ -356,6 +361,17 @@
     .feature-list li {
         font-size: 1rem;
     }
+    
+    .hero-title {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        padding: 0 1.5rem;
+    }
+
+    .hero-description {
+        margin: 1.5rem auto 3rem;
+        padding: 0 1.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -375,5 +391,15 @@
     
     .tech-box {
         padding: 1.5rem;
+    }
+    
+    .hero-title {
+        padding: 0 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero-description {
+        padding: 0 1rem;
+        margin: 1rem auto 2rem;
     }
 } 
