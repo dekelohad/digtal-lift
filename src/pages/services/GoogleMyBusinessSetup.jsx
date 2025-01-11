@@ -167,6 +167,60 @@ function GoogleMyBusinessSetup() {
 								</motion.div>
 							))}
 						</div>
+
+						{/* Success Stories Section */}
+						<div className="testimonials-section">
+							<div className="text-center">
+								<motion.h2 
+									initial={{ opacity: 0, y: 20 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.8 }}
+									className="section-title neon-text mx-auto"
+									style={{ textDecoration: 'none', borderBottom: 'none' }}
+								>
+									Success Stories
+								</motion.h2>
+							</div>
+							<div className="testimonials-grid">
+								<motion.div 
+									className="testimonial-box"
+									initial={{ opacity: 0, y: 20 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ delay: 0.2 }}
+								>
+									<div className="quote-icon">
+										<span className="neon-text">"</span>
+									</div>
+									<p className="testimonial-quote">
+										Digital Lift's setup service was exactly what our new plumbing business needed. Within weeks of getting our profile properly set up and verified, we started appearing in local searches. The step-by-step guidance made the whole process seamless.
+									</p>
+									<div className="testimonial-author">
+										<h4 className="author-name">Robert Martinez</h4>
+										<p className="author-business">Martinez Plumbing Solutions</p>
+										<p className="testimonial-results neon-text">Started ranking in local searches within 2 weeks of setup</p>
+									</div>
+								</motion.div>
+
+								<motion.div 
+									className="testimonial-box"
+									initial={{ opacity: 0, y: 20 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ delay: 0.3 }}
+								>
+									<div className="quote-icon">
+										<span className="neon-text">"</span>
+									</div>
+									<p className="testimonial-quote">
+										As a new HVAC contractor, I wasn't sure where to start with online presence. Digital Lift set up our Google Business Profile perfectly - complete with service areas, high-quality photos, and all the right categories. We got our first customer through Google Maps just days after verification.
+									</p>
+									<div className="testimonial-author">
+										<h4 className="author-name">David Wilson</h4>
+										<p className="author-business">Wilson Heating & Cooling</p>
+										<p className="testimonial-results neon-text">Profile verified and optimized in under 48 hours</p>
+									</div>
+								</motion.div>
+							</div>
+						</div>
 					</div>
 				</motion.div>
 			</div>
