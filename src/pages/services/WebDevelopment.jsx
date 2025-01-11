@@ -1,36 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
-import { FaCode, FaBolt, FaShieldAlt, FaTools, FaDatabase, FaCloud } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws, FaDocker } from "react-icons/fa";
+import { SiTailwindcss, SiPostgresql } from "react-icons/si";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import "./WebDevelopment.css";
-
-const PROCESS_STEPS = [
-	{
-		icon: <FaCode />,
-		description: "Build scalable applications using cutting-edge technologies like React, Node.js, and Next.js. Our code is clean, maintainable, and future-proof."
-	},
-	{
-		icon: <FaBolt />,
-		description: "Optimize performance with advanced caching, lazy loading, and server-side rendering. Your application will load blazingly fast on any device."
-	},
-	{
-		icon: <FaDatabase />,
-		description: "Design efficient database architectures and APIs that handle complex data with ease. We ensure your data is secure, organized, and easily accessible."
-	},
-	{
-		icon: <FaShieldAlt />,
-		description: "Implement robust security measures and best practices to protect your application from vulnerabilities. Your users' data stays safe and private."
-	},
-	{
-		icon: <FaTools />,
-		description: "Provide continuous maintenance, updates, and support to keep your application running smoothly. We're here to help you grow and scale."
-	},
-	{
-		icon: <FaCloud />,
-		description: "Deploy your application to the cloud with automated CI/CD pipelines. Ensure high availability and seamless scaling across multiple regions."
-	}
-];
 
 const FAQS = [
 	{
@@ -74,7 +48,70 @@ const TESTIMONIALS = [
 	}
 ];
 
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2,
+			delayChildren: 0.3
+		}
+	}
+};
+
+const item = {
+	hidden: { y: 20, opacity: 0 },
+	show: { 
+		y: 0, 
+		opacity: 1,
+		transition: {
+			duration: 0.8,
+			ease: "easeOut"
+		}
+	}
+};
+
+const FAQItem = ({ faq, isOpen, onToggle }) => (
+	<motion.div 
+		className="faq-box"
+		initial={{ opacity: 0, y: 20 }}
+		animate={{ opacity: 1, y: 0 }}
+		whileHover={{ 
+			backgroundColor: "rgba(255, 255, 255, 0.05)",
+			backdropFilter: "blur(10px)",
+		}}
+	>
+		<motion.div 
+			className="faq-header cursor-pointer flex justify-between items-center"
+			onClick={onToggle}
+		>
+			<h3 className="faq-question text-xl font-semibold">{faq.question}</h3>
+			<motion.span
+				animate={{ rotate: isOpen ? 180 : 0 }}
+				transition={{ duration: 0.3 }}
+				className="text-2xl"
+			>
+				↓
+			</motion.span>
+		</motion.div>
+		<motion.div
+			initial={false}
+			animate={{ 
+				height: isOpen ? "auto" : 0,
+				opacity: isOpen ? 1 : 0,
+				marginTop: isOpen ? "1rem" : "0"
+			}}
+			transition={{ duration: 0.3, ease: "easeInOut" }}
+			style={{ overflow: "hidden" }}
+		>
+			<p className="faq-answer text-gray-300">{faq.answer}</p>
+		</motion.div>
+	</motion.div>
+);
+
 function WebDevelopment() {
+	const [openFAQIndex, setOpenFAQIndex] = useState(0);
+	
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -82,24 +119,30 @@ function WebDevelopment() {
 	return (
 		<div className="web-dev-page">
 			<BreadCrumb title="Web Development" />
-			<div className="container mx-auto px-6 pt-80">
+			<div className="container mx-auto px-4 pt-80">
 				<motion.div
-					initial={{ opacity: 0 }}
-					animate={{ opacity: 1 }}
-					transition={{ duration: 1 }}
+					initial={{ opacity: 0, scale: 0.9 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ duration: 0.8, ease: "easeOut" }}
 					className="text-center"
 				>
 					<motion.h1 
-						initial={{ y: 30, opacity: 0 }}
+						initial={{ y: 50, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
-						transition={{ delay: 0.2, duration: 0.8 }}
-						className="hero-title mx-auto"
+						transition={{ 
+							delay: 0.2, 
+							duration: 1,
+							type: "spring",
+							stiffness: 100 
+						}}
+						className="hero-title"
 					>
-						<motion.span
-							initial={{ y: 20, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
-							transition={{ delay: 0.3, duration: 0.8 }}
+						<motion.span 
 							className="neon-text"
+							whileHover={{ 
+								scale: 1.05,
+								textShadow: "0 0 8px rgb(255,255,255)"
+							}}
 						>
 							Web Development
 						</motion.span>
@@ -109,28 +152,94 @@ function WebDevelopment() {
 						initial={{ y: 30, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ delay: 0.4, duration: 0.8 }}
-						className="hero-description mt-8 mb-20 mx-auto"
+						className="hero-description"
 					>
-						Build powerful, scalable web applications that drive your business forward. Our expert developers combine cutting-edge technology with battle-tested practices to create solutions that perform and scale.
+						We use battle-tested technologies that power some of the world's most successful websites
 					</motion.p>
 				</motion.div>
 
-				<div className="grid-container mb-20">
-					{PROCESS_STEPS.map((step, index) => (
-						<motion.div
-							key={index}
-							initial={{ y: 30, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
-							transition={{ delay: 0.6 + index * 0.1, duration: 0.8 }}
-							className="process-box"
+				<motion.div 
+					className="web-solutions-section"
+					initial={{ opacity: 0, y: 100 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 1, ease: "easeOut" }}
+				>
+					<div className="solutions-grid">
+						<motion.div 
+							className="solutions-content"
+							initial={{ x: -50, opacity: 0 }}
+							whileInView={{ x: 0, opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.2, duration: 0.8 }}
 						>
-							<div className="neon-icon">
-								{step.icon}
-							</div>
-							<p className="process-description">{step.description}</p>
+							<h2 className="solutions-title">Web Solutions</h2>
+							<motion.ul 
+								className="feature-list"
+								variants={container}
+								initial="hidden"
+								whileInView="show"
+								viewport={{ once: true }}
+							>
+								{["Load in under 2 seconds for optimal user experience",
+									"Scale automatically to handle millions of users",
+									"Convert visitors into customers with data-driven UX",
+									"Integrate seamlessly with your existing systems",
+									"Maintain 99.9% uptime with robust infrastructure"].map((feature, index) => (
+									<motion.li 
+										key={index}
+										variants={item}
+									>
+										{feature}
+									</motion.li>
+								))}
+							</motion.ul>
 						</motion.div>
-					))}
-				</div>
+						<motion.div 
+							initial={{ x: 50, opacity: 0 }}
+							whileInView={{ x: 0, opacity: 1 }}
+							viewport={{ once: true }}
+							transition={{ delay: 0.4, duration: 0.8 }}
+						>
+							<motion.div 
+								className="code-window"
+								whileHover={{ 
+									scale: 1.02,
+									boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+								}}
+								transition={{ duration: 0.2 }}
+							>
+								<div className="code-header">
+									<span className="dot red"></span>
+									<span className="dot yellow"></span>
+									<span className="dot green"></span>
+								</div>
+								<div className="code-content">
+									<pre>
+										<code>
+											{`// High-performance React components
+const App = () => {
+  const [data, setData] = useState([]);
+  
+  useEffect(() => {
+    // Optimized data fetching
+    fetchData();
+  }, []);
+
+  return (
+    <Layout>
+      <Header />
+      <Main data={data} />
+    </Layout>
+  );
+};`}
+										</code>
+									</pre>
+								</div>
+							</motion.div>
+						</motion.div>
+					</div>
+				</motion.div>
 
 				<ServicesSection 
 					subtitle="What is included in our web development services?"
@@ -158,57 +267,241 @@ function WebDevelopment() {
 					]}
 				/>
 
+				<motion.div 
+					className="tech-stack-section"
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.8 }}
+				>
+					<h2 className="section-title">
+						<motion.span 
+							className="gradient-text"
+							whileHover={{ 
+								scale: 1.1,
+								textShadow: "0 0 8px rgba(255,255,255,0.5)"
+							}}
+						>
+							Our
+						</motion.span> Tech Stack
+					</h2>
+					<div className="tech-categories">
+						<motion.div 
+							className="tech-category"
+							initial={{ opacity: 0, x: -30 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.2, duration: 0.8 }}
+						>
+							<h3 className="category-title">Frontend</h3>
+							<div className="tech-boxes">
+								<motion.div 
+									className="tech-box"
+									whileHover={{ 
+										scale: 1.05,
+										backgroundColor: "rgba(255, 255, 255, 0.1)",
+										backdropFilter: "blur(10px)",
+										boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+										border: "1px solid rgba(255, 255, 255, 0.18)",
+										transition: { duration: 0.3, ease: "easeOut" }
+									}}
+								>
+									<FaReact className="tech-icon" style={{ color: '#61DAFB' }} />
+									<h4 className="tech-name">React</h4>
+									<p className="tech-description">Modern UI library for building interactive interfaces</p>
+								</motion.div>
+								<motion.div 
+									className="tech-box"
+									whileHover={{ 
+										scale: 1.05,
+										backgroundColor: "rgba(255, 255, 255, 0.1)",
+										backdropFilter: "blur(10px)",
+										boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+										border: "1px solid rgba(255, 255, 255, 0.18)",
+										transition: { duration: 0.3, ease: "easeOut" }
+									}}
+								>
+									<SiTailwindcss className="tech-icon" style={{ color: '#38B2AC' }} />
+									<h4 className="tech-name">Tailwind CSS</h4>
+									<p className="tech-description">Utility-first CSS framework for rapid UI development</p>
+								</motion.div>
+							</div>
+						</motion.div>
+
+						<motion.div 
+							className="tech-category"
+							initial={{ opacity: 0, y: 30 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4, duration: 0.8 }}
+						>
+							<h3 className="category-title">Backend</h3>
+							<div className="tech-boxes">
+								<motion.div 
+									className="tech-box"
+									whileHover={{ 
+										scale: 1.05,
+										backgroundColor: "rgba(255, 255, 255, 0.1)",
+										backdropFilter: "blur(10px)",
+										boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+										border: "1px solid rgba(255, 255, 255, 0.18)",
+										transition: { duration: 0.3, ease: "easeOut" }
+									}}
+								>
+									<FaNodeJs className="tech-icon" style={{ color: '#68A063' }} />
+									<h4 className="tech-name">Node.js</h4>
+									<p className="tech-description">JavaScript runtime for scalable server applications</p>
+								</motion.div>
+								<motion.div 
+									className="tech-box"
+									whileHover={{ 
+										scale: 1.05,
+										backgroundColor: "rgba(255, 255, 255, 0.1)",
+										backdropFilter: "blur(10px)",
+										boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+										border: "1px solid rgba(255, 255, 255, 0.18)",
+										transition: { duration: 0.3, ease: "easeOut" }
+									}}
+								>
+									<SiPostgresql className="tech-icon" style={{ color: '#336791' }} />
+									<h4 className="tech-name">PostgreSQL</h4>
+									<p className="tech-description">Advanced open-source database</p>
+								</motion.div>
+							</div>
+						</motion.div>
+
+						<motion.div 
+							className="tech-category"
+							initial={{ opacity: 0, x: 30 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ delay: 0.6, duration: 0.8 }}
+						>
+							<h3 className="category-title">DevOps</h3>
+							<div className="tech-boxes">
+								<motion.div 
+									className="tech-box"
+									whileHover={{ 
+										scale: 1.05,
+										backgroundColor: "rgba(255, 255, 255, 0.1)",
+										backdropFilter: "blur(10px)",
+										boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+										border: "1px solid rgba(255, 255, 255, 0.18)",
+										transition: { duration: 0.3, ease: "easeOut" }
+									}}
+								>
+									<FaAws className="tech-icon" style={{ color: '#FF9900' }} />
+									<h4 className="tech-name">AWS</h4>
+									<p className="tech-description">Cloud infrastructure and services</p>
+								</motion.div>
+								<motion.div 
+									className="tech-box"
+									whileHover={{ 
+										scale: 1.05,
+										backgroundColor: "rgba(255, 255, 255, 0.1)",
+										backdropFilter: "blur(10px)",
+										boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+										border: "1px solid rgba(255, 255, 255, 0.18)",
+										transition: { duration: 0.3, ease: "easeOut" }
+									}}
+								>
+									<FaDocker className="tech-icon" style={{ color: '#2496ED' }} />
+									<h4 className="tech-name">Docker</h4>
+									<p className="tech-description">Container platform for easy deployment</p>
+								</motion.div>
+							</div>
+						</motion.div>
+					</div>
+				</motion.div>
+
+				<motion.div 
+					className="success-stories-section"
+					initial={{ opacity: 0, y: 50 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.8 }}
+				>
+					<h2 className="section-title">Success Stories</h2>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+						{TESTIMONIALS.map((testimonial, index) => (
+							<motion.div
+								key={index}
+								className="success-story-card"
+								initial={{ opacity: 0, y: 30 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: index * 0.2, duration: 0.8 }}
+							>
+								<p className="success-quote">{testimonial.quote}</p>
+								<h4 className="success-author">{testimonial.author}</h4>
+								<p className="success-company">{testimonial.business}</p>
+								<span className="success-metric">{testimonial.results}</span>
+							</motion.div>
+						))}
+					</div>
+				</motion.div>
+
 				<div className="container mx-auto px-6">
 					<div className="text-center max-w-4xl mx-auto mb-16">
-						<h2 className="section-title">Frequently Asked Questions</h2>
+						<motion.h2 
+							className="section-title"
+							initial={{ y: 30, opacity: 0 }}
+							animate={{ y: 0, opacity: 1 }}
+							transition={{ duration: 0.8 }}
+						>
+							<motion.span 
+								className="gradient-text"
+								whileHover={{ 
+									scale: 1.1,
+									textShadow: "0 0 8px rgba(255,255,255,0.5)"
+								}}
+							>
+								Frequently Asked Questions
+							</motion.span>
+						</motion.h2>
 					</div>
 					<div className="faq-container">
 						{FAQS.map((faq, index) => (
-							<div key={index} className="faq-item">
-								<button
+							<motion.div 
+								key={index} 
+								className="faq-item"
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: index * 0.1, duration: 0.5 }}
+							>
+								<motion.button
 									className="faq-button"
 									type="button"
 									data-bs-toggle="collapse"
 									data-bs-target={`#faq-${index}`}
+									onClick={() => setOpenFAQIndex(openFAQIndex === index ? -1 : index)}
+									whileHover={{ 
+										backgroundColor: "rgba(255, 255, 255, 0.05)",
+										transition: { duration: 0.2 }
+									}}
 								>
 									{faq.question}
-									<span className="faq-icon">+</span>
-								</button>
+									<motion.span 
+										className="faq-icon"
+										animate={{ 
+											rotate: openFAQIndex === index ? 45 : 0,
+											color: openFAQIndex === index ? "#00ff88" : "#ffffff"
+										}}
+										transition={{ duration: 0.3 }}
+									>
+										+
+									</motion.span>
+								</motion.button>
 
-								<div
-									id={`faq-${index}`}
-									className="faq-collapse collapse"
-									data-bs-parent="#web-dev-accordion"
+								<motion.div
+									className={`faq-collapse ${openFAQIndex === index ? 'show' : ''}`}
+									initial={false}
+									animate={{ 
+										height: openFAQIndex === index ? "auto" : 0,
+										opacity: openFAQIndex === index ? 1 : 0
+									}}
+									transition={{ duration: 0.3, ease: "easeInOut" }}
+									style={{ overflow: "hidden" }}
 								>
 									<div className="faq-content">
 										{faq.answer}
 									</div>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-
-				<div className="testimonials-section">
-					<h2 className="section-title text-center">Success Stories</h2>
-					<div className="testimonials-grid">
-						{TESTIMONIALS.map((testimonial, index) => (
-							<motion.div 
-								key={index}
-								className="testimonial-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
-							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
+								</motion.div>
 							</motion.div>
 						))}
 					</div>
@@ -218,4 +511,4 @@ function WebDevelopment() {
 	);
 }
 
-export default WebDevelopment; 
+export default WebDevelopment;
