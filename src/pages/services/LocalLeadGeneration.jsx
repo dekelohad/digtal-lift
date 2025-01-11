@@ -121,7 +121,7 @@ function LocalLeadGeneration() {
 								Digital Lift specializes in lead generation for contractors, offering comprehensive solutions to connect businesses with potential customers in their local area. Even if you don’t have a website or marketing materials, our team can help you from the ground up, driving real leads that translate into revenue. 
 								</p>
 								<p className="service-description mb-12 mt-4">
-								Our proven strategies and techniques have helped numerous contractors boost their revenue and expand their businesses. Partner with Digital Lift and start generating quality leads for your contracting business today.
+								We understand the unique challenges that contractors face in finding quality leads, which is why our approach is tailored to your specific market and needs. With our expertise, you can focus on delivering your services while we take care of bringing the right customers to you.
 								</p>
 							</div>
 							<div className="image-content">
@@ -136,7 +136,7 @@ function LocalLeadGeneration() {
 								Digital Lift provides targeted local lead generation services for contractors, designed to help you reach your ideal customers in your area. Whether you're just starting out or looking to expand your business, our team can assist you in getting the leads you need to grow. We specialize in driving leads for contractors who may not have their own website or marketing materials, ensuring that you can still reach your target market effectively. 
 								</p>
 								<p className="service-description mb-12 mt-4">
-								We understand the unique challenges that contractors face in finding quality leads, which is why our approach is tailored to your specific market and needs. With our expertise, you can focus on delivering your services while we take care of bringing the right customers to you.
+								Our proven strategies and techniques have helped numerous contractors boost their revenue and expand their businesses. Partner with Dalton Digital and start generating quality leads for your contracting business today.	
 								</p>
 							</div>
 							<div className="image-content">
@@ -144,7 +144,7 @@ function LocalLeadGeneration() {
 							</div>
 						</div>
 
-						<div className="content-section reverse">
+						<div className="content-section">
 							<div className="text-content">
 								<h2 className="section-title text-left mb-8">Efficient Lead Generation Strategies for Contractors</h2>
 								<p className="service-description mb-8">
@@ -155,7 +155,7 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={WebsiteRedesign} alt="Efficient Lead Generation Strategies" className="section-image" />
+								<img src={WebsiteRedesign} alt="Lead Generation Solutions" className="section-image" />
 							</div>
 						</div>
 
@@ -171,9 +171,10 @@ function LocalLeadGeneration() {
 								</p>
 							</div>
 							<div className="image-content">
-								<img src={CustomDesign} alt="Efficient Lead Generation Strategies" className="section-image" />
+								<img src={CustomDesign} alt="Targeted Local Lead Generation" className="section-image" />
 							</div>
 						</div>
+
 					</motion.div>
 				</motion.div>
 
