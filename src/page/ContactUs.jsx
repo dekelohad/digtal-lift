@@ -16,8 +16,10 @@ function ContactUs() {
 	}, []);
 
 	return (
-		<>
-			<BreadCrumb title="Contact Us" />
+		<div className="contact-us-page">
+			<div className="breadcrumb-wrapper">
+				<BreadCrumb title="Contact Us" />
+			</div>
 			<ContactInfo />
 			
 			{/* Hero Section */}
@@ -75,7 +77,7 @@ function ContactUs() {
 			</div>
 
 			<TwoColumnFaq />
-		</>
+		</div>
 	);
 }
 

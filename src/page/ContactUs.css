@@ -1,0 +1,15 @@
+.contact-us-page {
+    background: linear-gradient(to bottom, #000000, #111111);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.breadcrumb-wrapper {
+    padding-top: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(187, 255, 0, 0.1);
+} 

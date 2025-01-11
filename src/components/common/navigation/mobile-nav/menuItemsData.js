@@ -12,7 +12,7 @@ export const menuItemsData = [
 				url: "local-lead-generation",
 			},
 			{
-				title: "Pay-Per-Click",
+				title: "Paid Search Marketing",
 				url: "paid-search-marketing",
 			},
 			{
