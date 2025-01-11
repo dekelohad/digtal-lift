@@ -1,11 +1,33 @@
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ImageModal from "../../components/common/ImageModal";
 import BeforeOptimization from "../../assets/images/portfolio/before-gmb-optimization-services-1.webp";
 import AfterOptimization from "../../assets/images/portfolio/after-gmb-optimization-services-2.webp";
 import "./GoogleMyBusiness.css";
+
+const FAQS = [
+	{
+		question: "How long does it take to see results from optimization?",
+		answer: "Results can vary depending on your market and competition. Generally, businesses start seeing improvements in visibility within 1-3 months after optimization, but significant results may take 3-6 months."
+	},
+	{
+		question: "What makes your optimization service different?",
+		answer: "Our optimization service is data-driven and comprehensive. We analyze your competitors, identify gaps in your current profile, and implement proven strategies that have worked for hundreds of our clients. We also provide detailed reports and recommendations for ongoing improvements."
+	},
+	{
+		question: "Do you guarantee rankings?",
+		answer: "While we can't guarantee specific rankings (as Google's algorithms are constantly changing), we guarantee that we'll implement all optimization best practices and provide detailed recommendations for maintaining and improving your profile's performance."
+	},
+	{
+		question: "What happens after the optimization is complete?",
+		answer: "After the initial optimization, we provide a detailed report of all changes made and recommendations for maintaining your profile's performance. We also offer ongoing management services if you'd like continuous support and optimization."
+	},
+	{
+		question: "Will optimization help if I'm in a competitive market?",
+		answer: "Yes! Optimization is especially important in competitive markets. While it may take longer to see results, proper optimization ensures you're competing on an even playing field and maximizing your profile's potential."
+	}
+];
 
 function GoogleMyBusinessOptimization() {
 	const [openIndex, setOpenIndex] = useState(null);
@@ -14,33 +36,6 @@ function GoogleMyBusinessOptimization() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
-	const FAQS = [
-		{
-			question: "How long does it take to see results from optimization?",
-			answer: "Results can vary depending on your market and competition. Generally, businesses start seeing improvements in visibility within 1-3 months after optimization, but significant results may take 3-6 months."
-		},
-		{
-			question: "What makes your optimization service different?",
-			answer: "Our optimization service is data-driven and comprehensive. We analyze your competitors, identify gaps in your current profile, and implement proven strategies that have worked for hundreds of our clients. We also provide detailed reports and recommendations for ongoing improvements."
-		},
-		{
-			question: "Do you guarantee rankings?",
-			answer: "While we can't guarantee specific rankings (as Google's algorithms are constantly changing), we guarantee that we'll implement all optimization best practices and provide detailed recommendations for maintaining and improving your profile's performance."
-		},
-		{
-			question: "What happens after the optimization is complete?",
-			answer: "After the initial optimization, we provide a detailed report of all changes made and recommendations for maintaining your profile's performance. We also offer ongoing management services if you'd like continuous support and optimization."
-		},
-		{
-			question: "Will optimization help if I'm in a competitive market?",
-			answer: "Yes! Optimization is especially important in competitive markets. While it may take longer to see results, proper optimization ensures you're competing on an even playing field and maximizing your profile's potential."
-		}
-	];
-
-	const toggleAccordion = (index) => {
-		setOpenIndex(openIndex === index ? null : index);
-	};
 
 	return (
 		<div className="local-lead-page">
