@@ -165,44 +165,22 @@ function LocalLeadGeneration() {
 						{
 							id: 1,
 							title: "Targeted Lead Generation",
-							description: "Our local lead generation services employ sophisticated targeting techniques to pinpoint and engage with your most promising local prospects. By focusing on specific demographics, interests, and geographic locations, we ensure that your message reaches those most likely to convert, maximizing your return on investment and minimizing wasted resources."
+							description: "Our local lead generation services employ sophisticated targeting techniques to pinpoint and engage with your most promising local prospects. By focusing on specific demographics, interests, and geographic locations, we ensure that your message reaches those most likely to convert, maximizing your return on investment and minimizing wasted resources.Our data-driven approach allows us to continually refine and optimize your campaigns for optimal performance, delivering a steady stream of high-quality leads to your business."
 						},
 						{
 							id: 2,
 							title: "Customized Strategies",
-							description: "We recognize that each business has its own unique goals, challenges, and target audience. That's why our local lead generation services are fully tailored to meet your specific needs. Whether you're a small local business looking to increase foot traffic or a regional service provider aiming to expand your customer base, we'll develop a personalized strategy that aligns with your objectives."
+							description: "We recognize that each business has its own unique goals, challenges, and target audience. That's why our local lead generation services are fully tailored to meet your specific needs. Whether you're a small local business looking to increase foot traffic or a regional service provider aiming to expand your customer base, we'll develop a personalized strategy that aligns with your objectives. Our team of experts will work closely with you to understand your business inside and out, ensuring that our strategies are perfectly aligned with your brand identity and marketing goals."
 						},
 						{
 							id: 3,
 							title: "Comprehensive Campaign Management",
-							description: "Our local lead generation services encompass every aspect of campaign management, from initial strategy development to ongoing monitoring and optimization. We handle all the heavy lifting, including ad creation, audience targeting, budget management, and performance tracking, so you can focus on running your business."
+							description: "Our local lead generation services encompass every aspect of campaign management, from initial strategy development to ongoing monitoring and optimization. We handle all the heavy lifting, including ad creation, audience targeting, budget management, and performance tracking, so you can focus on running your business. Our team of experienced professionals is dedicated to ensuring that your campaigns run smoothly and efficiently, making adjustments on the fly to maximize results. With our comprehensive campaign management services, you can rest easy knowing that your lead generation efforts are in good hands."
 						},
 						{
 							id: 4,
 							title: "Ongoing Support and Reporting",
-							description: "We believe in full transparency and accountability, which is why we provide ongoing support and detailed reporting throughout your campaign. Our team is always available to answer any questions you may have and provide guidance on how to optimize your campaigns for better results. We also provide regular reports that give you a clear view of your campaign's performance."
-						}
-					]}
-				/>
-
-				{/* Success Metrics Section */}
-				<ServicesSection 
-					subtitle="What makes our local lead generation services so effective?"
-					steps={[
-						{
-							id: 1,
-							title: "Targeted Approach",
-							description: "Our services focus on reaching potential customers in your specific local area, increasing the chances of conversions by delivering your message to those most likely to be interested."
-						},
-						{
-							id: 2,
-							title: "Customized Strategies",
-							description: "We tailor our lead generation strategies to align with your business goals and target audience, ensuring that our efforts are aligned with your unique needs."
-						},
-						{
-							id: 3,
-							title: "Data-Driven Decisions",
-							description: "We analyze data and metrics to continually optimize your campaigns, making adjustments based on real-time insights to maximize performance and ROI."
+							description: "We believe in full transparency and accountability, which is why we provide ongoing support and detailed reporting throughout your campaign. Our team is always available to answer any questions you may have and provide guidance on how to optimize your campaigns for better results. We also provide regular reports that give you a clear view of your campaign's performance, including key metrics such as lead volume, conversion rates, and return on investment. With our support and reporting services, you’ll always be in the loop and able to make informed decisions about your lead generation strategy."
 						}
 					]}
 				/>
