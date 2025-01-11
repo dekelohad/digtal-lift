@@ -20,7 +20,7 @@ function Header() {
 							<NavItem dropdown title="Services">
 								<Dropdown>
 									<DropdownItem url="local-lead-generation">Local Lead Generation</DropdownItem>
-									<DropdownItem url="paid-search-marketing">Pay-Per-Click</DropdownItem>
+									<DropdownItem url="paid-search-marketing">Paid Search Marketing</DropdownItem>
 									<DropdownItem url="search-engine-optimization">Search Engine Optimization</DropdownItem>
 									<DropdownItem url="google-my-business">Google Business</DropdownItem>
 									<DropdownItem url="web-design">Web Design</DropdownItem>

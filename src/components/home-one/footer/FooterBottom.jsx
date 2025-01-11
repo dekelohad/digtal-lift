@@ -57,7 +57,7 @@ function FooterBottom() {
 							<FooterLink to="/local-lead-generation">Local Lead Generation</FooterLink>
 						</li>
 						<li className="footer-item">
-							<FooterLink to="/paid-search-marketing">Pay-Per-Click</FooterLink>
+							<FooterLink to="/paid-search-marketing">Paid Search Marketing</FooterLink>
 						</li>
 						<li className="footer-item">
 							<FooterLink to="/search-engine-optimization">Search Engine Optimization</FooterLink>

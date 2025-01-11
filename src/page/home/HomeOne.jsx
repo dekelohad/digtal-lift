@@ -24,7 +24,7 @@ const servicesData = [
 	},
 	{
 		id: crypto.randomUUID(),
-		title: "Pay-Per-Click",
+		title: "Paid Search Marketing",
 		description:
 			"Turn search traffic into revenue with smart PPC campaigns. Our data-driven approach ensures every ad dollar works to capture high-intent buyers.",
 		icon: ServiceIcons.search,

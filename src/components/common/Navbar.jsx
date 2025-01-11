@@ -41,7 +41,7 @@ function Navbar() {
                                 </li>
                                 <li>
                                     <Link className="dropdown-item" to="/paid-search-marketing">
-                                        Pay-Per-Click
+                                        Paid Search Marketing
                                     </Link>
                                 </li>
                                 <li>
