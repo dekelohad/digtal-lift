@@ -7,7 +7,7 @@ import ResponsiveDesign from "../../assets/images/portfolio/lead-magent.jpeg";
 import WebsiteRedesign from "../../assets/images/portfolio/lead-generation.jpeg";
 import CustomDesign from "../../assets/images/portfolio/target-local-lead.jpeg";
 import "./LocalLeadGeneration.css";
- 
+
 function LocalLeadGeneration() {
 	const [activeStep, setActiveStep] = useState(1);
 	const [activeFaq, setActiveFaq] = useState(null);
@@ -201,7 +201,7 @@ function LocalLeadGeneration() {
 					<div className="steps-container">
 						<div className="steps-navigation">
 							{serviceSteps.map((step) => (
-								<motion.div
+						<motion.div
 									key={step.id}
 									className={`step-item ${activeStep === step.id ? 'active' : ''}`}
 									onClick={() => setActiveStep(step.id)}
@@ -211,11 +211,11 @@ function LocalLeadGeneration() {
 								>
 									<div className="step-number">{step.id}.</div>
 									<div className="step-title">{step.title}</div>
-								</motion.div>
-							))}
-						</div>
+						</motion.div>
+					))}
+				</div>
 
-						<motion.div 
+				<motion.div 
 							className="step-content"
 							key={activeStep}
 							initial={{ opacity: 0, y: 20 }}
@@ -279,9 +279,9 @@ function LocalLeadGeneration() {
 							</p>
 						</motion.div>
 
-						<motion.div 
+							<motion.div 
 							className="metric-box"
-							initial={{ opacity: 0, y: 20 }}
+								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: 0.5 }}
 						>
@@ -356,7 +356,7 @@ function LocalLeadGeneration() {
 								<br />
 								(Source: WebFX)
 							</p>
-						</motion.div>
+							</motion.div>
 					</div>
 				</div>
 
@@ -376,7 +376,7 @@ function LocalLeadGeneration() {
 
 					<div className="faq-container">
 						{faqs.map((faq) => (
-							<motion.div
+							<motion.div 
 								key={faq.id}
 								className="faq-item"
 								initial={{ opacity: 0, y: 20 }}
@@ -404,7 +404,7 @@ function LocalLeadGeneration() {
 							</motion.div>
 						))}
 					</div>
-				</div>
+							</div>
 
 				{/* Success Stories Section - Now as the final section */}
 				<div className="testimonials-section">
@@ -419,28 +419,28 @@ function LocalLeadGeneration() {
 							Success Stories
 						</motion.h2>
 					</div>
-					<div className="testimonials-grid">
-						{testimonials.map((testimonial, index) => (
-							<motion.div 
-								key={index}
-								className="testimonial-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
-							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
-							</motion.div>
-						))}
+						<div className="testimonials-grid">
+							{testimonials.map((testimonial, index) => (
+								<motion.div 
+									key={index}
+									className="testimonial-box"
+									initial={{ opacity: 0, y: 20 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ delay: 0.2 + index * 0.1 }}
+								>
+									<div className="quote-icon">
+										<span className="neon-text">"</span>
+									</div>
+									<p className="testimonial-quote">{testimonial.quote}</p>
+									<div className="testimonial-author">
+										<h4 className="author-name">{testimonial.author}</h4>
+										<p className="author-business">{testimonial.business}</p>
+										<p className="testimonial-results neon-text">{testimonial.results}</p>
+									</div>
+								</motion.div>
+							))}
+						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	);

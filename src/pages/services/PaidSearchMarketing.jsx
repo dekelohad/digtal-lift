@@ -244,25 +244,26 @@ function PaidSearchMarketing() {
 				</div>
 
 				{/* Services Steps Section */}
-				<div className="services-steps-section my-20">
-					<motion.h2 
+                <div className="success-metrics-section my-20">
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							what you get
+						</motion.h2>
+					</div>
+					<motion.h3
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}
-						className="section-title neon-text mx-auto text-center"
-						style={{ 
-							textDecoration: 'none', 
-							borderBottom: 'none',
-							width: 'fit-content',
-							margin: '0 auto',
-							display: 'flex',
-							flexDirection: 'column',
-							alignItems: 'center'
-						}}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="section-subtitle text-center mb-16"
 					>
-						<span>What is included in our</span>
-						<span>paid search marketing services?</span>
-					</motion.h2>
+						What is included in our paid search marketing services?
+					</motion.h3>
 
 					<div className="steps-container">
 						<div className="steps-navigation">
