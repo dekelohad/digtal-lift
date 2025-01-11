@@ -1,44 +1,20 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaCode, FaDatabase, FaServer, FaTools, FaChevronDown } from "react-icons/fa";
+import {  FaChevronDown } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
-import WebDesignHero from "../../assets/images/portfolio/p_13.png";
-import ResponsiveDesign from "../../assets/images/portfolio/p_14.png";
-import WebsiteRedesign from "../../assets/images/portfolio/p_15.png";
-import CustomDesign from "../../assets/images/portfolio/p_12.png";
+import WebDesignHero from "../../assets/images/portfolio/Professional-Website-Design.jpeg";
+import ResponsiveDesign from "../../assets/images/portfolio/Responsive-web-development.jpeg";
+import WebsiteRedesign from "../../assets/images/portfolio/website-redesig-and-optimization.jpeg";
+import CustomDesign from "../../assets/images/portfolio/custom-website-design.jpeg";
 import "./WebDesign.css";
 
 function WebDesign() {
-	const [activeStep, setActiveStep] = useState(1);
 	const [activeFaq, setActiveFaq] = useState(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
-	const serviceSteps = [
-		{
-			id: 1,
-			title: "Comprehensive Website Design",
-			description: "Our web design services offer a comprehensive solution to establish your online presence successfully. Beginning with in-depth consultations, we delve into your business objectives and target audience to tailor a unique strategy. Our expert designers create customized visuals that reflect your brand's identity, and our developers ensure responsive functionality for all devices.\n\nWe prioritize user experience, crafting intuitive navigation and clear calls-to-action. What sets us apart is our commitment to continuous support. Beyond design delivery, we provide ongoing maintenance, ensuring your website remains secure, updated, and competitive, leaving you with a captivating, user-friendly, and enduring online platform."
-		},
-		{
-			id: 2,
-			title: "Strategic User Experience (UX) Design",
-			description: "Our web design services place a strong emphasis on strategic user experience (UX) design. We meticulously plan and create interfaces that prioritize user satisfaction. Our intuitive navigation, clear calls-to-action, and user-friendly layouts guarantee a seamless browsing experience. We understand that a visually appealing website is not enough; it must also be highly functional.\n\nWith us, you'll receive a design that not only looks great but also offers visitors a satisfying journey through your online presence. Your website will effectively engage and convert users, ultimately boosting your online success."
-		},
-		{
-			id: 3,
-			title: "Mobile Optimization",
-			description: "In today's mobile-driven landscape, mobile optimization is a core component of our web design services. We ensure that your website not only looks great but also functions flawlessly across all devices. Our responsive design techniques guarantee that visitors on smartphones, tablets, and desktops will have a consistent and enjoyable experience.\n\nWith mobile traffic continually on the rise, you can trust us to keep your website accessible and engaging for a diverse audience. Your online presence will be fully optimized for mobile users, contributing to your business's growth and success."
-		},
-		{
-			id: 4,
-			title: "Ongoing Maintenance and Support",
-			description: "Our commitment to your online success goes beyond web design. Our web design services include ongoing maintenance and support. After your website's launch, we provide regular updates, security checks, and ensure it stays current with the latest technologies and trends. This continuous support ensures that your online presence remains fresh, secure, and competitive.\n\nWith us, you won't have to worry about the technical aspects; you can focus on your business while we take care of your website's well-being. Count on our team for consistent, reliable support to keep your online platform thriving."
-		}
-	];
 
 	const testimonials = [
 		{
@@ -121,7 +97,7 @@ function WebDesign() {
 								<p className="service-description mb-8">
 									Elevate your small business with Digital Lift's professional website design services. Our team of experienced designers and developers works closely with you to create a visually appealing, user-friendly, and conversion-focused website that represents your brand with precision. We believe that a well-crafted website is a powerful tool for attracting and retaining customers.
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 									By combining creativity with functionality, we ensure that your website not only looks great but also performs flawlessly across all devices. Whether you need a brand-new website or want to revamp your existing one, our experts are here to turn your vision into a digital reality that drives growth and engagement.
 								</p>
 							</div>
@@ -136,12 +112,27 @@ function WebDesign() {
 								<p className="service-description mb-8">
 									In today's mobile-first world, it's essential to have a website that adapts seamlessly to various screen sizes and devices. Digital Lift specializes in responsive web development, ensuring that your website looks and functions flawlessly on desktops, tablets, and smartphones. Our skilled developers use the latest technologies and best practices to create a responsive design that enhances the user experience and helps you reach a broader audience.
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 									With mobile traffic on the rise, a responsive website is no longer an option but a necessity. Trust us to make your website responsive, providing your visitors with a consistent and enjoyable browsing experience across all platforms.
 								</p>
 							</div>
 							<div className="image-content">
 								<img src={ResponsiveDesign} alt="Responsive Web Design Across Devices" className="section-image" />
+							</div>
+						</div>
+
+						<div className="content-section">
+							<div className="text-content">
+								<h2 className="section-title text-left mb-8">Website Redesign and Optimization</h2>
+								<p className="service-description mb-8">
+								Is your current website falling short of expectations or in need of a modern makeover? Dalton Digital’s website redesign and optimization services can breathe new life into your online presence. We analyze your existing website’s performance, identifying areas for improvement in terms of design, functionality, and user experience. Our team then meticulously redesigns and optimizes your website, focusing on aesthetics, navigation, and speed. The result is a refreshed and highly efficient website that not only looks great but also drives better engagement and conversions.
+								</p>
+								<p className="service-description mb-12 mt-4">
+								Whether you want to enhance your site’s aesthetics, improve user experience, or boost its search engine rankings, our experts have you covered. Let us transform your website into a powerful digital asset that yields tangible results.
+								</p>
+							</div>
+							<div className="image-content">
+								<img src={WebsiteRedesign} alt="Professional Web Design Workspace" className="section-image" />
 							</div>
 						</div>
 
@@ -151,7 +142,7 @@ function WebDesign() {
 								<p className="service-description mb-8">
 									At Digital Lift, we recognize that every business is unique, and your website should reflect that individuality. Our custom website design services are crafted to align with your brand's identity and goals. We start by understanding your business, target audience, and objectives, allowing us to create a bespoke online presence that stands out in a crowded digital landscape.
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 									Our talented designers and developers work collaboratively to produce a visually stunning and highly functional website that captures the essence of your brand. With our custom solutions, you'll leave a lasting impression on your visitors and establish a strong online presence that resonates with your audience.
 								</p>
 							</div>
