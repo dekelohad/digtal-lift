@@ -52,7 +52,6 @@
     font-size: 1.25rem;
     line-height: 1.8;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.02);
     border-radius: 10px;
     text-align: left;
     max-width: 800px;
@@ -116,15 +115,9 @@
     margin-bottom: 20px;
     padding: 12px;
     border-radius: 8px;
-    transition: all 0.3s ease;
-    background: rgba(255, 255, 255, 0.02);
+   
 }
-
-.contact-item:hover {
-    background: rgba(187, 255, 0, 0.05);
-    transform: translateX(5px);
-}
-
+ 
 .contact-icon {
     color: #BBFF00;
     transition: all 0.3s ease;
@@ -134,16 +127,11 @@
     margin-top: 4px;
 }
 
-.contact-item:hover .contact-icon {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 8px rgba(187, 255, 0, 0.6));
-}
-
 .contact-link {
     color: #e0e0e0;
     text-decoration: none;
     font-size: 1.25rem;
-    transition: all 0.3s ease;
+  
 }
 
 .contact-link:hover {
