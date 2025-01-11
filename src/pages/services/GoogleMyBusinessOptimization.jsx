@@ -39,7 +39,7 @@ function GoogleMyBusinessOptimization() {
 
 	return (
 		<div className="local-lead-page">
-			<BreadCrumb title="Google My Business Optimization" />
+			<BreadCrumb title="Google Business Profile Optimization" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -60,7 +60,7 @@ function GoogleMyBusinessOptimization() {
 							transition={{ delay: 0.3, duration: 0.8 }}
 							className="neon-text"
 						>
-							Google My Business
+						Google Business Profile
 						</motion.span>
 						<motion.span
 							initial={{ y: 20, opacity: 0 }}
@@ -74,7 +74,7 @@ function GoogleMyBusinessOptimization() {
 
 					<div className="setup-content">
 						<p className="service-description">
-							Our Google My Business optimization service is designed to maximize your business profile's visibility and performance in local search results. We implement proven strategies that have helped hundreds of businesses improve their local rankings.
+							Our Google Business Profile optimization service is designed to maximize your business profile's visibility and performance in local search results. We implement proven strategies that have helped hundreds of businesses improve their local rankings.
 						</p>
 						<p className="service-description">
 							Whether you're struggling to rank in your local market or want to maintain your competitive edge, our optimization service will ensure your profile is fully optimized for maximum visibility.
@@ -87,11 +87,11 @@ function GoogleMyBusinessOptimization() {
 									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Before Optimization</h4>
 									<img 
 										src={BeforeOptimization}
-										alt="Google My Business profile before optimization"
+										alt="Google Business Profile profile before optimization"
 										className="results-image"
 										onClick={() => setSelectedImage({
 											src: BeforeOptimization,
-											alt: "Google My Business profile before optimization"
+											alt: "Google Business Profile profile before optimization"
 										})}
 										style={{ cursor: 'pointer' }}
 									/>
@@ -100,11 +100,11 @@ function GoogleMyBusinessOptimization() {
 									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>After Optimization</h4>
 									<img 
 										src={AfterOptimization}
-										alt="Google My Business profile after optimization"
+										alt="Google Business Profile profile after optimization"
 										className="results-image"
 										onClick={() => setSelectedImage({
 											src: AfterOptimization,
-											alt: "Google My Business profile after optimization"
+											alt: "Google Business Profile profile after optimization"
 										})}
 										style={{ cursor: 'pointer' }}
 									/>

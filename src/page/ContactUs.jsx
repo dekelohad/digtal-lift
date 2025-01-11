@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import BreadCrumb from "../components/common/Breadcrumb";
 import ContactInfo from "../components/contact/ContactInfo";
 import TwoColumnFaq from "../components/contact/TwoColumnFaq";
-import { FadeInStaggerTwo, FadeInStaggerTwoChildren } from "../components/animation/FadeInStaggerTwo";
-
+ 
 function ContactUs() {
 	useEffect(() => {
 		const script = document.createElement('script');

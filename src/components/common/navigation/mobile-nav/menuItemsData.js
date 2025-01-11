@@ -21,7 +21,7 @@ export const menuItemsData = [
 			},
 			{
 				title: "Google Business Profile",
-				url: "google-my-business",
+				url: "google-business-profile",
 			},
 			{
 				title: "Web Design",

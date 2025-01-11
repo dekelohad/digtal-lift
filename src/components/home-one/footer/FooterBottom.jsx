@@ -63,7 +63,7 @@ function FooterBottom() {
 							<FooterLink to="/search-engine-optimization">Search Engine Optimization</FooterLink>
 						</li>
 						<li className="footer-item">
-							<FooterLink to="/google-my-business">Google Business</FooterLink>
+							<FooterLink to="/google-business-profile">Google Business Profile</FooterLink>
 						</li>
 						<li className="footer-item">
 							<FooterLink to="/web-design">Web Design</FooterLink>

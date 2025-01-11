@@ -8,15 +8,15 @@ import "./GoogleMyBusiness.css";
 const FAQS = [
 	{
 		question: "How long does it take to set up my business profile?",
-		answer: "Our Google My Business setup service includes an onboarding process, which in addition to audits and action items takes 30-45 days to complete."
+		answer: "Our Google Business Profiles setup service includes an onboarding process, which in addition to audits and action items takes 30-45 days to complete."
 	},
 	{
 		question: "Can I just set up the profile myself?",
-		answer: "Absolutely! In fact, I have a complete guide on how to setup Google My Business profile for those who want to take the DIY route. However, knowing exactly what is needed to generate visibility and grow your business with SEO can take some time to understand. And that's why we want to help… so you can focus on operations and high level strategy!"
+		answer: "Absolutely! In fact, I have a complete guide on how to setup Google Business Profile profile for those who want to take the DIY route. However, knowing exactly what is needed to generate visibility and grow your business with SEO can take some time to understand. And that's why we want to help… so you can focus on operations and high level strategy!"
 	},
 	{
 		question: "Will setting up my profile get results?",
-		answer: "Depending on your niche, you may or may not see results during the setup process. Ultimately, our goal is to get results. However, there are many limitations with our Google My Business setup services. For example, if you're a personal injury attorney that's just getting started in a large metro area, you're likely up against other law firms that have been around for decades. This means competitors have already gotten a significant head start on generating Google reviews, website optimizations, and likely have already created a well-known brand. If this is the case, we can still certainly help, provide recommendations on how to focus on easier keywords, and complete the setup of your business profile."
+		answer: "Depending on your niche, you may or may not see results during the setup process. Ultimately, our goal is to get results. However, there are many limitations with our Google Business Profile setup services. For example, if you're a personal injury attorney that's just getting started in a large metro area, you're likely up against other law firms that have been around for decades. This means competitors have already gotten a significant head start on generating Google reviews, website optimizations, and likely have already created a well-known brand. If this is the case, we can still certainly help, provide recommendations on how to focus on easier keywords, and complete the setup of your business profile."
 	},
 	{
 		question: "Who approves what gets published on my business profile?",
@@ -36,7 +36,7 @@ function GoogleMyBusinessSetup() {
 	}, []);
 	return (
 		<div className="local-lead-page">
-			<BreadCrumb title="Google My Business Setup" />
+			<BreadCrumb title="Google Business Profile Setup" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -57,7 +57,7 @@ function GoogleMyBusinessSetup() {
 							transition={{ delay: 0.3, duration: 0.8 }}
 							className="neon-text"
 						>
-							Google My Business
+							Google Business Profile
 						</motion.span>
 						<motion.span
 							initial={{ y: 20, opacity: 0 }}
@@ -71,21 +71,21 @@ function GoogleMyBusinessSetup() {
 
 					<div className="setup-content">
 						<p className="service-description">
-							Our Google My Business setup service offers local businesses the ability to create and optimize their Google Business Profile without having to go through the process themselves.
+							Our Google Business Profile setup service offers local businesses the ability to create and optimize their Google Business Profile without having to go through the process themselves.
 						</p>
 						<p className="service-description">
-							We've created and set up 100s of Google My Business listings (now called Google Business Profile) and have achieved over 10K+ local keyword rankings between clients and personal projects. Our streamlined service allows you to focus on your business while we focus on what we do best – search engine optimization.
+							We've created and set up 100s of Google Business Profile listings (now called Google Business Profile) and have achieved over 10K+ local keyword rankings between clients and personal projects. Our streamlined service allows you to focus on your business while we focus on what we do best – search engine optimization.
 						</p>
 
 						<div className="results-image-container">
 							<h3 className="subsection-title">Comprehensive Setup & Optimization</h3>
 							<img 
 								src={PhaseIIOptimizations}
-								alt="Phase II Google My Business optimizations showing improved performance"
+								alt="Phase II Google Business Profile optimizations showing improved performance"
 								className="results-image"
 								onClick={() => setSelectedImage({
 									src: PhaseIIOptimizations,
-									alt: "Phase II Google My Business optimizations showing improved performance"
+									alt: "Phase II Google Business Profile optimizations showing improved performance"
 								})}
 								style={{ cursor: 'pointer' }}
 							/>
@@ -98,7 +98,7 @@ function GoogleMyBusinessSetup() {
 							altText={selectedImage?.alt}
 						/>
 
-						<h3 className="subsection-title">What's included in our Google My Business setup service</h3>
+						<h3 className="subsection-title">What's included in our Google Business Profile setup service</h3>
 						<p className="service-description">
 							Our setup service walks through our optimization process from A-Z and includes the following:
 						</p>
@@ -121,7 +121,7 @@ function GoogleMyBusinessSetup() {
 							<li>Actionable review generation strategy</li>
 						</ul>
 						<p className="service-description">
-							Google My Business optimization is at the core of every Local SEO strategy. Our setup service has been used to increase local visibility, call volume, in-store visits, and revenue for 100s of local businesses.
+							Google Business Profile optimization is at the core of every Local SEO strategy. Our setup service has been used to increase local visibility, call volume, in-store visits, and revenue for 100s of local businesses.
 						</p>
 
 					<div className="container mx-auto px-6">

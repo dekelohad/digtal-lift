@@ -8,7 +8,7 @@ function ServiceCard({ service: { title, description, icon, id } }) {
 			"Paid Search Marketing": "/paid-search-marketing",
 			"Search Engine Optimization": "/search-engine-optimization",
 			"Local Lead Generation": "/local-lead-generation",
-			"Google Business Profile": "/google-my-business",
+			"Google Business Profile": "/google-business-profile",
 			"Web Design": "/web-design",
 			"Web Development": "/web-development"
 		};

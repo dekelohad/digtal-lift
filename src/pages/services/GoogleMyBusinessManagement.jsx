@@ -38,7 +38,7 @@ function GoogleMyBusinessManagement() {
 
 	return (
 		<div className="local-lead-page">
-			<BreadCrumb title="Google My Business Management" />
+			<BreadCrumb title="Google Business Profile Management" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
 					initial={{ opacity: 0 }}
@@ -59,7 +59,7 @@ function GoogleMyBusinessManagement() {
 							transition={{ delay: 0.3, duration: 0.8 }}
 							className="neon-text"
 						>
-							Google My Business
+							Google Business Profile
 						</motion.span>
 						<motion.span
 							initial={{ y: 20, opacity: 0 }}
@@ -73,7 +73,7 @@ function GoogleMyBusinessManagement() {
 
 					<div className="setup-content">
 						<p className="service-description">
-							Our Google My Business management service provides ongoing optimization and maintenance of your business profile. We handle all aspects of your profile's upkeep while continuously implementing strategies to improve your local visibility.
+							Our Google Business Profile management service provides ongoing optimization and maintenance of your business profile. We handle all aspects of your profile's upkeep while continuously implementing strategies to improve your local visibility.
 						</p>
 						<p className="service-description">
 							Let us handle the day-to-day management of your profile while you focus on running your business. Our team ensures your profile stays fresh, engaging, and optimized for maximum local visibility.
@@ -86,11 +86,11 @@ function GoogleMyBusinessManagement() {
 									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Profile Views Growth</h4>
 									<img 
 										src={InsightsViews}
-										alt="Google My Business profile views insights showing growth"
+										alt="Google Business Profile profile views insights showing growth"
 										className="results-image"
 										onClick={() => setSelectedImage({
 											src: InsightsViews,
-											alt: "Google My Business profile views insights showing growth"
+											alt: "Google Business Profile profile views insights showing growth"
 										})}
 										style={{ cursor: 'pointer' }}
 									/>
@@ -99,11 +99,11 @@ function GoogleMyBusinessManagement() {
 									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Search Performance</h4>
 									<img 
 										src={InsightsSearches}
-										alt="Google My Business search performance insights"
+										alt="Google Business Profile search performance insights"
 										className="results-image"
 										onClick={() => setSelectedImage({
 											src: InsightsSearches,
-											alt: "Google My Business search performance insights"
+											alt: "Google Business Profile search performance insights"
 										})}
 										style={{ cursor: 'pointer' }}
 									/>

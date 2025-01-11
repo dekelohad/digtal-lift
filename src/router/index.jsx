@@ -59,19 +59,19 @@ export const router = createBrowserRouter([
 						element: <SearchEngineOptimization />,
 					},
 					{
-						path: "/google-my-business",
+						path: "/google-business-profile",
 						element: <GoogleMyBusiness />,
 					},
 					{
-						path: "/google-my-business/setup",
+						path: "/google-business-profile/setup",
 						element: <GoogleMyBusinessSetup />,
 					},
 					{
-						path: "/google-my-business/optimization",
+						path: "/google-business-profile/optimization",
 						element: <GoogleMyBusinessOptimization />,
 					},
 					{
-						path: "/google-my-business/management",
+						path: "/google-business-profile/management",
 						element: <GoogleMyBusinessManagement />,
 					},
 					{
