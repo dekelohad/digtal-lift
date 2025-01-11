@@ -120,7 +120,7 @@ function LocalLeadGeneration() {
 								<p className="service-description mb-8">
 								Digital Lift specializes in lead generation for contractors, offering comprehensive solutions to connect businesses with potential customers in their local area. Even if you don’t have a website or marketing materials, our team can help you from the ground up, driving real leads that translate into revenue. 
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 								Our proven strategies and techniques have helped numerous contractors boost their revenue and expand their businesses. Partner with Digital Lift and start generating quality leads for your contracting business today.
 								</p>
 							</div>
@@ -135,7 +135,7 @@ function LocalLeadGeneration() {
 								<p className="service-description mb-8">
 								Digital Lift provides targeted local lead generation services for contractors, designed to help you reach your ideal customers in your area. Whether you're just starting out or looking to expand your business, our team can assist you in getting the leads you need to grow. We specialize in driving leads for contractors who may not have their own website or marketing materials, ensuring that you can still reach your target market effectively. 
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 								We understand the unique challenges that contractors face in finding quality leads, which is why our approach is tailored to your specific market and needs. With our expertise, you can focus on delivering your services while we take care of bringing the right customers to you.
 								</p>
 							</div>
@@ -150,7 +150,7 @@ function LocalLeadGeneration() {
 								<p className="service-description mb-8">
 								Digital Lift offers efficient lead generation strategies for contractors, focusing on driving in leads that result in revenue. Our team understands that not every contractor has a website or marketing materials, which is why we specialize in helping you from the ground up. By leveraging our expertise in local lead generation, you can attract the right customers to your business, even without a strong online presence. 
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 								Our goal is to make lead generation easy and effective for contractors, allowing you to focus on what you do best. With Digital Lift, you can count on getting the leads you need to succeed in your market.
 								</p>
 							</div>
@@ -166,7 +166,7 @@ function LocalLeadGeneration() {
 								<p className="service-description mb-8">
 								Digital Lift offers comprehensive lead generation services for contractors, providing everything you need to connect with potential customers in your area. Whether you're a new contractor looking to establish your business or an experienced professional seeking to expand your reach, our team can help. We specialize in driving leads for contractors who may not have their own website or marketing materials, ensuring that you can still compete in today's market. 
 								</p>
-								<p className="service-description mb-12">
+								<p className="service-description mb-12 mt-4">
 								With our proven strategies and dedicated support, you can attract high-quality leads that turn into revenue. Partner with Digital Lift and take your contracting business to the next level with our lead generation services.
 								</p>
 							</div>
