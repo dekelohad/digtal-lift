@@ -185,6 +185,69 @@ function LocalLeadGeneration() {
 					]}
 				/>
 
+			{/* Success Metrics Section */}
+				<div className="success-metrics-section my-20">
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							Creating Success
+						</motion.h2>
+					</div>
+					<motion.h3
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="section-subtitle text-center mb-16"
+					>
+						What makes our local lead generation services so effective?
+					</motion.h3>
+
+					<div className="metrics-grid">
+						<motion.div 
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3 }}
+						>
+							<h3 className="metric-title neon-text">Targeted Approach</h3>
+							<p className="metric-description">
+							Our services focus on reaching potential customers in your specific local area, increasing the chances of conversions by delivering your message to those most likely to be interested.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4 }}
+						>
+							<h3 className="metric-title neon-text">Customized Strategies</h3>
+							<p className="metric-description">
+							We tailor our lead generation strategies to align with your business goals and target audience, ensuring that our efforts are aligned with your unique needs.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="metric-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.5 }}
+						>
+							<h3 className="metric-title neon-text">Data-Driven Decisions</h3>
+							<p className="metric-description">
+							We analyze data and metrics to continually optimize your campaigns, making adjustments based on real-time insights to maximize performance and ROI.
+							</p>
+						</motion.div>
+					</div>
+				</div>
+
+
+
 				{/* Stats Section */}
 				<div className="stats-section my-20">
 					<div className="text-center">
