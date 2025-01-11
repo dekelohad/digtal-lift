@@ -115,12 +115,12 @@ function PaidSearchMarketing() {
 					>
 						<div className="content-section">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Lead Generation Solutions for Contractors</h2>
+								<h2 className="section-title text-left mb-8">Combining search engine marketing with conversion rate optimization</h2>
 								<p className="service-description mb-8">
-                                The secret to a successful SEM campaign is much more than just making your website appear on Google. Other SEM agencies would just set your ads to appear on Google, and leave it there. These campaigns are not performing up to its optimal level. 
+								At Digital Lift, we understand that successful paid search campaigns require more than just driving traffic to your website. While other agencies focus solely on getting your ads to appear on Google, we take a comprehensive approach that combines strategic ad placement with conversion rate optimization.
 								</p>
 								<p className="service-description mb-12 mt-4">
-                                The secret to achieving optimal SEM results lies in the ability to get as many people as possible to call/contact you after they click on your ad and land on your website. For example, your current SEM ads are getting 2% conversion rate on your landing page. That means out of 100 people that visit your page, 2 people contact you. We optimize for results. 
+								Our dual-focused strategy ensures that not only do we get qualified visitors to your website, but we also optimize your landing pages to convert those visitors into leads and customers. By continuously testing and improving both your ads and landing pages, we help you achieve higher conversion rates and better ROI from your ad spend.
 								</p>
 							</div>
 							<div className="image-content">
@@ -132,10 +132,10 @@ function PaidSearchMarketing() {
 							<div className="text-content">
 								<h2 className="section-title text-left mb-8">Real Google Ads professionals</h2>
 								<p className="service-description mb-8">
-                                Get a team of certified Google Adwords / SEM specialists who have a minimum of 2 years experience managing various SEM campaigns locally. We help you create the perfect combination of strategy and implementation to ensure we achieve your goals.
+								At Digital Lift, our team consists of certified Google Ads specialists who bring years of expertise in creating and managing successful paid search campaigns. We don't just manage campaigns; we architect comprehensive strategies that align with your business objectives and maximize your advertising investment.
 								</p>
 								<p className="service-description mb-12 mt-4">
-								Our proven strategies and techniques have helped numerous contractors boost their revenue and expand their businesses. Partner with Dalton Digital and start generating quality leads for your contracting business today.	
+								Our data-driven approach combines advanced targeting capabilities with continuous optimization to ensure your campaigns perform at their peak. Whether you're looking to increase leads, boost sales, or expand your market reach, our team has the expertise to help you achieve measurable results through strategic paid search advertising.
 								</p>
 							</div>
 							<div className="image-content">
@@ -146,6 +146,104 @@ function PaidSearchMarketing() {
 					</motion.div>
 				</motion.div>
 
+				{/* ROI Section */}
+				<div className="success-metrics-section my-20">
+					<div className="text-center">
+						<motion.h2 
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8 }}
+							className="section-title neon-text mx-auto"
+							style={{ textDecoration: 'none', borderBottom: 'none' }}
+						>
+							ROI-Driven paid search optimization
+						</motion.h2>
+					</div>
+					<motion.p
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.2 }}
+						className="section-subtitle text-center mb-16"
+					>
+						Our relationship with you relies on getting results, and paid search marketing results are measured in ROI. Each and every day, our primary focus is building ROI by interpreting real data and creating campaigns that convert.
+					</motion.p>
+
+					<div className="grid-container">
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.3 }}
+						>
+							<h3 className="metric-title neon-text">Keyword and competitor research</h3>
+							<p className="process-description">
+								Deep analysis of high-performing keywords and competitor strategies to position your campaigns for success.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.4 }}
+						>
+							<h3 className="metric-title neon-text">Ads optimized for keywords</h3>
+							<p className="process-description">
+								Strategic ad creation focused on your highest-performing keywords to maximize campaign effectiveness.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.5 }}
+						>
+							<h3 className="metric-title neon-text">Negative keyword pruning</h3>
+							<p className="process-description">
+								Continuous refinement of negative keywords to eliminate wasteful spending and improve campaign efficiency.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.6 }}
+						>
+							<h3 className="metric-title neon-text">Ad copy optimization</h3>
+							<p className="process-description">
+								Data-driven refinement of ad copy to improve click-through rates and conversion performance.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.7 }}
+						>
+							<h3 className="metric-title neon-text">Landing page optimization</h3>
+							<p className="process-description">
+								Continuous testing and improvement of landing pages to maximize conversion rates from ad traffic.
+							</p>
+						</motion.div>
+
+						<motion.div 
+							className="process-box"
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ delay: 0.8 }}
+						>
+							<h3 className="metric-title neon-text">Performance monitoring</h3>
+							<p className="process-description">
+								Comprehensive tracking and analysis of key metrics to ensure optimal campaign performance and ROI.
+							</p>
+						</motion.div>
+					</div>
+				</div>
+
+				{/* Services Steps Section */}
 				<div className="services-steps-section my-20">
 					<motion.h2 
 						initial={{ opacity: 0, y: 20 }}
