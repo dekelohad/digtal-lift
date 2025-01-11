@@ -160,14 +160,17 @@ function PaidSearchMarketing() {
 							ROI-Driven paid search optimization
 						</motion.h2>
 					</div>
-					<motion.p
+				 
+
+                    <motion.h3
 						initial={{ opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
-						className="section-subtitle text-center mb-16"
+						className="section-subtitle text-center mb-16 text-white"
+						style={{ fontSize: '1.5rem', marginTop: '1rem' }}
 					>
 						Our relationship with you relies on getting results, and paid search marketing results are measured in ROI. Each and every day, our primary focus is building ROI by interpreting real data and creating campaigns that convert.
-					</motion.p>
+					</motion.h3>
 
 					<div className="grid-container">
 						<motion.div 

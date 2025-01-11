@@ -183,31 +183,6 @@ function WebDevelopment() {
 					]}
 				/>
 
-				<div className="testimonials-section">
-					<h2 className="section-title text-center">Success Stories</h2>
-					<div className="testimonials-grid">
-						{testimonials.map((testimonial, index) => (
-							<motion.div 
-								key={index}
-								className="testimonial-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
-							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
-
 				<div className="container mx-auto px-6">
 					<div className="text-center max-w-4xl mx-auto mb-16">
 						<h2 className="section-title">Frequently Asked Questions</h2>
@@ -235,6 +210,31 @@ function WebDevelopment() {
 									</div>
 								</div>
 							</div>
+						))}
+					</div>
+				</div>
+
+				<div className="testimonials-section">
+					<h2 className="section-title text-center">Success Stories</h2>
+					<div className="testimonials-grid">
+						{testimonials.map((testimonial, index) => (
+							<motion.div 
+								key={index}
+								className="testimonial-box"
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 0.2 + index * 0.1 }}
+							>
+								<div className="quote-icon">
+									<span className="neon-text">"</span>
+								</div>
+								<p className="testimonial-quote">{testimonial.quote}</p>
+								<div className="testimonial-author">
+									<h4 className="author-name">{testimonial.author}</h4>
+									<p className="author-business">{testimonial.business}</p>
+									<p className="testimonial-results neon-text">{testimonial.results}</p>
+								</div>
+							</motion.div>
 						))}
 					</div>
 				</div>
