@@ -5,6 +5,32 @@ import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import "./WebDevelopment.css";
 
+const PROCESS_STEPS = [
+	{
+		icon: <FaCode />,
+		description: "Build scalable applications using cutting-edge technologies like React, Node.js, and Next.js. Our code is clean, maintainable, and future-proof."
+	},
+	{
+		icon: <FaBolt />,
+		description: "Optimize performance with advanced caching, lazy loading, and server-side rendering. Your application will load blazingly fast on any device."
+	},
+	{
+		icon: <FaDatabase />,
+		description: "Design efficient database architectures and APIs that handle complex data with ease. We ensure your data is secure, organized, and easily accessible."
+	},
+	{
+		icon: <FaShieldAlt />,
+		description: "Implement robust security measures and best practices to protect your application from vulnerabilities. Your users' data stays safe and private."
+	},
+	{
+		icon: <FaTools />,
+		description: "Provide continuous maintenance, updates, and support to keep your application running smoothly. We're here to help you grow and scale."
+	},
+	{
+		icon: <FaCloud />,
+		description: "Deploy your application to the cloud with automated CI/CD pipelines. Ensure high availability and seamless scaling across multiple regions."
+	}
+];
 
 const FAQS = [
 	{
@@ -33,33 +59,6 @@ const FAQS = [
 	}
 ];
 
-const PROCESS_STEPS = [
-	{
-		icon: <FaCode />,
-		description: "Build scalable applications using cutting-edge technologies like React, Node.js, and Next.js. Our code is clean, maintainable, and future-proof."
-	},
-	{
-		icon: <FaBolt />,
-		description: "Optimize performance with advanced caching, lazy loading, and server-side rendering. Your application will load blazingly fast on any device."
-	},
-	{
-		icon: <FaDatabase />,
-		description: "Design efficient database architectures and APIs that handle complex data with ease. We ensure your data is secure, organized, and easily accessible."
-	},
-	{
-		icon: <FaShieldAlt />,
-		description: "Implement robust security measures and best practices to protect your application from vulnerabilities. Your users' data stays safe and private."
-	},
-	{
-		icon: <FaTools />,
-		description: "Provide continuous maintenance, updates, and support to keep your application running smoothly. We're here to help you grow and scale."
-	},
-	{
-		icon: <FaCloud />,
-		description: "Deploy your application to the cloud with automated CI/CD pipelines. Ensure high availability and seamless scaling across multiple regions."
-	}
-];
-
 const TESTIMONIALS = [
 	{
 		quote: "They transformed our legacy system into a modern, high-performance application. The new platform has dramatically improved our operational efficiency and user satisfaction. Their technical expertise and attention to detail were outstanding.",
@@ -79,9 +78,7 @@ function WebDevelopment() {
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
- 
-
+	
 	return (
 		<div className="web-dev-page">
 			<BreadCrumb title="Web Development" />
