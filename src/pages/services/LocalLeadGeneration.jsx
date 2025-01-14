@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaChevronDown } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import leadsImage from "../../assets/images/portfolio/get-leads.jpeg";
@@ -347,7 +347,7 @@ function LocalLeadGeneration() {
 									onClick={() => toggleFaq(faq.id)}
 								>
 									<h3>{faq.question}</h3>
-									<FaChevronDown className="faq-icon" />
+									<FaPlus className="faq-icon" />
 								</div>
 								<motion.div 
 									className="faq-answer"
