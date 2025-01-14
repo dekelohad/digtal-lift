@@ -1,0 +1,19 @@
+body, #root, .about-us-page {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.breadcrumb-container {
+    background-color: #000 !important;
+    margin: 0;
+    padding: 0.75rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.breadcrumbs li span {
+    color: #CCFF00 !important;
+    text-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
+    font-weight: 600;
+} 

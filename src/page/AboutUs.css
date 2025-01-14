@@ -4,16 +4,21 @@
     background-color: #000;
     min-height: 100vh;
     color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body, #root {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 .breadcrumb-wrapper {
-    position: sticky;
-    top: 80px;
-    left: 0;
-    right: 0;
     width: 100%;
     z-index: 5;
-    background-color: rgba(18, 18, 18, 1);
+    margin: 0;
+    padding: 0;
 }
 
 /* Phone Animation Styles */

@@ -41,7 +41,7 @@ const Testimonials = [
     },
     {
         quote: "Working with Digital Lift on our paid search campaigns has been a game-changer. Their expertise in Google Ads and attention to detail helped us reach more homeowners looking for basement renovations and optimize our ad spend effectively.",
-        author: "James Wilson",
+        author: "Michael Brown",
         business: "Wilson Basement Remodeling",
         results: "68% reduction in cost per acquisition"
     }
