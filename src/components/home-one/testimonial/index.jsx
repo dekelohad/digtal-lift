@@ -40,10 +40,22 @@ function Testimonial() {
 				 
 
 				<div className="aximo-section-title center">
-					<h2 style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "20px" }}>
-						<div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "20px", whiteSpace: "nowrap" }}>
+					<h2 className="success-stories-title" style={{ 
+						display: "flex", 
+						flexDirection: "column", 
+						alignItems: "center", 
+						gap: "20px"
+					}}>
+						<div className="success-stories-header" style={{ 
+							display: "flex", 
+							alignItems: "center", 
+							justifyContent: "center", 
+							gap: "20px", 
+							whiteSpace: "nowrap",
+							padding: "0 15px"
+						}}>
 							<FaTrophy
-								className="animated-icon reverse-spin"
+								className="animated-icon reverse-spin trophy-icon"
 								style={{
 									fontSize: "50px",
 									color: "#FFA500",
@@ -51,9 +63,15 @@ function Testimonial() {
 									marginBottom: "-10px"
 								}}
 							/>
-							<span style={{ color: '#fff' }}>Real Success</span>
+							<span className="success-text" style={{ 
+								color: '#fff',
+								fontSize: "36px",
+								fontWeight: "700"
+							}}>
+								Real Success
+							</span>
 							<FaTrophy
-								className="animated-icon"
+								className="animated-icon trophy-icon"
 								style={{
 									fontSize: "50px",
 									color: "#FFA500",
@@ -62,11 +80,13 @@ function Testimonial() {
 								}}
 							/>
 						</div>
-						<div style={{ 
-							fontSize: "inherit", 
+						<div className="stories-text" style={{ 
+							fontSize: "36px",
 							marginTop: "-10px",
 							textAlign: "center",
-							color: '#fff'
+							color: '#fff',
+							fontWeight: "700",
+							padding: "0 15px"
 						}}>
 							Stories
 						</div>
@@ -302,6 +322,26 @@ function Testimonial() {
 
 					.infinite-scroll-wrapper:hover .scroll-text {
 						animation-play-state: paused;
+					}
+
+					@media (max-width: 768px) {
+						.trophy-icon {
+							font-size: 28px !important;
+							margin-bottom: -5px !important;
+						}
+						.success-text {
+							font-size: 24px !important;
+						}
+						.stories-text {
+							font-size: 24px !important;
+							margin-top: -5px !important;
+						}
+						.success-stories-header {
+							gap: 10px !important;
+						}
+						.success-stories-title {
+							gap: 10px !important;
+						}
 					}
 				`}</style>
 			</div>
