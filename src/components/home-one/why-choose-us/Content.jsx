@@ -88,6 +88,14 @@ function Content() {
 					transform: scale(1.2) rotate(-15deg);
 					filter: drop-shadow(0 0 20px rgba(187, 255, 0, 0.8));
 				}
+
+				@media (max-width: 768px) {
+					.magic-container {
+						margin-top: 10px;
+						display: block;
+						text-align: center;
+					}
+				}
 			`}</style>
 			<p>
 				Tired of waiting for leads? We build automated systems that deliver a constant stream of 
