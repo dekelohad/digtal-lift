@@ -1,0 +1,45 @@
+.aximo-call-btn {
+    background: linear-gradient(90deg, #BBFF00 0%, #a3e600 100%);
+    padding: 16px 28px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #000;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    width: 350px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 15px rgba(187, 255, 0, 0.2);
+}
+
+.aximo-call-btn span {
+    flex: 1;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.aximo-call-btn .icon-call {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 32px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.85;
+}
+
+.aximo-call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(187, 255, 0, 0.3);
+    border-color: #BBFF00;
+}
+
+.aximo-call-btn:hover .icon-call {
+    transform: scale(1.1);
+    opacity: 1;
+} 
