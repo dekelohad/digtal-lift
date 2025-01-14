@@ -391,14 +391,14 @@ function PaidSearchMarketing() {
 				</div>
 
 				{/* FAQ Section */}
-				<div className="faq-section my-20">
+				<div className="faq-section">
 					<div className="text-center">
 						<motion.h2 
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8 }}
 							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
+							style={{ textDecoration: 'none', borderBottom: 'none', width: '100%' }}
 						>
 							Frequently Asked Questions
 						</motion.h2>
@@ -412,13 +412,14 @@ function PaidSearchMarketing() {
 								initial={{ opacity: 0, y: 20 }}
 								animate={{ opacity: 1, y: 0 }}
 								transition={{ delay: faq.id * 0.1 }}
+								style={{ width: '100%' }}
 							>
 								<div 
 									className={`faq-question ${activeFaq === faq.id ? 'active' : ''}`}
 									onClick={() => toggleFaq(faq.id)}
 								>
 									<h3>{faq.question}</h3>
-									<FaChevronDown className="faq-icon" />
+									<span className="faq-icon">+</span>
 								</div>
 								<motion.div 
 									className="faq-answer"
@@ -428,6 +429,7 @@ function PaidSearchMarketing() {
 										opacity: activeFaq === faq.id ? 1 : 0
 									}}
 									transition={{ duration: 0.3 }}
+									style={{ width: '100%' }}
 								>
 									<p>{faq.answer}</p>
 								</motion.div>
