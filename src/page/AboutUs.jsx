@@ -44,7 +44,7 @@ function AboutUs() {
 			</div>
 			<About />
 			<Story />
-			<Teams teams={teamsData} />
+			<Teams />
 		</div>
 	);
 }
