@@ -37,13 +37,13 @@ const Testimonials = [
     {
         quote: "Digital Lift's PPC management has transformed our roofing business. Their strategic approach to Google Ads helped us target homeowners in need of roof repairs and replacements. The quality of leads and conversion rates have exceeded our expectations.",
         author: "Michael Roberts",
-        business: "Roberts Premier Roofing",
+        business: "Roberts Roofing",
         results: "247% increase in qualified leads from Google Ads"
     },
     {
         quote: "Working with Digital Lift on our paid search campaigns has been a game-changer. Their expertise in Google Ads and attention to detail helped us reach more homeowners looking for basement renovations and optimize our ad spend effectively.",
         author: "Michael Brown",
-        business: "Wilson Basement Remodeling",
+        business: "Wilson Basement",
         results: "68% reduction in cost per acquisition"
     }
 ];

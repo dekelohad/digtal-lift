@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import {  FaChevronDown } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import WebDesignHero from "../../assets/images/portfolio/Professional-Website-Design.jpeg";
@@ -415,8 +415,8 @@ function WebDesign() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
+							className="section-title neon-text"
+							style={{ marginBottom: '3rem', textTransform: 'uppercase', fontSize: '2rem' }}
 						>
 							Frequently Asked Questions
 						</motion.h2>
@@ -436,7 +436,7 @@ function WebDesign() {
 									onClick={() => toggleFaq(faq.id)}
 								>
 									<h3>{faq.question}</h3>
-									<FaChevronDown className="faq-icon" />
+									<FaPlus className="faq-icon" />
 								</div>
 								<motion.div 
 									className="faq-answer"
