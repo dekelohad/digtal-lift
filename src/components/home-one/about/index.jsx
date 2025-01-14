@@ -206,8 +206,8 @@ function About() {
 
 					.stats-container {
 						flex-direction: column !important;
-						padding: 40px 20px !important;
-						gap: 30px;
+						padding: 30px 20px !important;
+						gap: 25px;
 						margin: 0 15px !important;
 					}
 
@@ -217,16 +217,18 @@ function About() {
 						border-top: 1px solid rgba(255,255,255,0.1) !important;
 						border-bottom: 1px solid rgba(255,255,255,0.1) !important;
 						margin: 0 !important;
-						padding: 30px 0 !important;
+						padding: 25px 0 !important;
 						width: 100% !important;
 					}
 
 					.stat-number {
-						font-size: 3.5rem !important;
+						font-size: 3.2rem !important;
+						margin-bottom: 8px !important;
 					}
 
 					.stat-label {
-						font-size: 0.9rem !important;
+						font-size: 0.85rem !important;
+						letter-spacing: 0.5px !important;
 					}
 
 					p {
@@ -240,8 +242,11 @@ function About() {
 						font-size: 2.8rem !important;
 					}
 					.stats-container {
-						padding: 30px 15px !important;
-						margin: 0 10px !important;
+						padding: 25px 15px !important;
+						gap: 20px;
+					}
+					.stat-divider {
+						padding: 20px 0 !important;
 					}
 					.stat-number {
 						font-size: 3rem !important;
@@ -257,6 +262,7 @@ function About() {
 					}
 					.stat-number {
 						font-size: 2.8rem !important;
+						margin-bottom: 5px !important;
 					}
 					p {
 						font-size: 1rem !important;
