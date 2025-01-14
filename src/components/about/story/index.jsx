@@ -14,44 +14,13 @@ function Story() {
 						transition={{ duration: 0.3 }}
 					>
 						<motion.h2 
-							className="main-title"
+							className="main-title quality-title"
 							initial={{ y: 30 }}
 							whileInView={{ y: 0 }}
 							transition={{ duration: 0.3, delay: 0.1 }}
-							style={{
-								display: 'flex',
-								justifyContent: 'center',
-								gap: '20px',
-								alignItems: 'center'
-							}}
+							style={{ color: '#9FFF00' }}
 						>
-							<motion.span 
-								className="highlight-word"
-								initial={{ x: -30 }}
-								whileInView={{ x: 0 }}
-								transition={{ duration: 0.3, delay: 0.2 }}
-								style={{ marginBottom: 0, color: "#BBFF00" }}
-							>
-								QUALITY
-							</motion.span>
-							<motion.span 
-								className="highlight-word"
-								initial={{ x: -30 }}
-								whileInView={{ x: 0 }}
-								transition={{ duration: 0.3, delay: 0.3 }}
-								style={{ marginBottom: 0, color: "#BBFF00" }}
-							>
-								CALLS
-							</motion.span>
-							<motion.span 
-								className="highlight-word"
-								initial={{ x: -30 }}
-								whileInView={{ x: 0 }}
-								transition={{ duration: 0.3, delay: 0.4 }}
-								style={{ marginBottom: 0, color: "#BBFF00" }}
-							>
-								DAILY
-							</motion.span>
+							QUALITY CALLS DAILY
 						</motion.h2>
 
 						<motion.h3 
