@@ -164,7 +164,7 @@ function GoogleMyBusinessOptimization() {
 				{/* FAQ Section */}
 				<div className="container mx-auto px-6">
 					<div className="text-center max-w-4xl mx-auto mb-16">
-						<h2 className="section-title">Frequently Asked Questions</h2>
+						<h2 className="section-title-mobile neon-text">Frequently Asked Questions</h2>
 					</div>
 					<div className="faq-container">
 						{FAQS.map((faq, index) => (
