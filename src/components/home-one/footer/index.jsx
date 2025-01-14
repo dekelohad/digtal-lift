@@ -13,7 +13,7 @@ function Footer() {
 						</div>
 						<div className="col-lg-5">
 							<div className="aximo-form-wrap">
-								<h4>Send us a message</h4>
+								<h4 style={{ textAlign: "center" }}>Send us a message</h4>
 								<MessageForm />
 							</div>
 						</div>

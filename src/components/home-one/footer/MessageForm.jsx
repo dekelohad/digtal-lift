@@ -112,8 +112,9 @@ function MessageForm() {
 			<div className="aximo-form-field">
 				<div style={{ 
 					fontSize: "14px", 
-					color: "#666",
-					marginBottom: "5px" 
+					color: "#fff",
+					marginBottom: "5px",
+					fontWeight: "700"
 				}}>
 					(Optional)
 				</div>
