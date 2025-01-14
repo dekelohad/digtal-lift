@@ -754,4 +754,36 @@
     .testimonials-section {
         margin: 3rem 0;
     }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title-mobile {
+        font-size: 1.4rem !important;
+        line-height: 1.2;
+        letter-spacing: 0.08em;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title-mobile {
+        font-size: 1.2rem !important;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        letter-spacing: 0.08em;
+    }
 } 

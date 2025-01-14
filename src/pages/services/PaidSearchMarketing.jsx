@@ -104,7 +104,7 @@ function PaidSearchMarketing() {
 					>
 						<div className="content-section">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Marketing + Conversion Optimization</h2>
+								<h2 className="section-title section-title-mobile text-left mb-8">Marketing + Conversion Optimization</h2>
 								<p className="service-description mb-8">
 								At Digital Lift, we understand that successful paid search campaigns require more than just driving traffic to your website. While other agencies focus solely on getting your ads to appear on Google, we take a comprehensive approach that combines strategic ad placement with conversion rate optimization.
 								</p>
@@ -119,7 +119,7 @@ function PaidSearchMarketing() {
 
 						<div className="content-section reverse">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Real Google Ads professionals</h2>
+								<h2 className="section-title section-title-mobile text-left mb-8">Real Google Ads professionals</h2>
 								<p className="service-description mb-8">
 								At Digital Lift, our team consists of certified Google Ads specialists who bring years of expertise in creating and managing successful paid search campaigns. We don't just manage campaigns; we architect comprehensive strategies that align with your business objectives and maximize your advertising investment.
 								</p>
@@ -142,7 +142,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
+							className="section-title section-title-mobile neon-text mx-auto"
 							style={{ textDecoration: 'none', borderBottom: 'none' }}
 						>
 							ROI-Driven paid search optimization
