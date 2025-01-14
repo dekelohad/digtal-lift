@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FaPhoneVolume, FaUserCheck, FaChartLine, FaClock } from "react-icons/fa";
-import { teamsData } from "../../../data/teamsData";
 import "./Story.css";
 
 function Story() {

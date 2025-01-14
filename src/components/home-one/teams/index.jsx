@@ -4,7 +4,7 @@ import "./Teams.css";
 
 function Teams() {
 	return (
-		<div className="team-section">
+		<div className="team-section" style ={{marginBottom:'4em'}}>
 			<motion.div 
 				className="team-title"
 				initial={{ opacity: 0, y: 30 }}
@@ -18,7 +18,7 @@ function Teams() {
 					transition={{ duration: 0.5 }}
 					style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}
 				>
-					<span style={{ color: '#9FFF00', fontSize: '2.5rem' }}>Meet Our Team of</span>
+					<span style={{ color: '#9FFF00', fontSize: '2.5rem',marginTop:'4em' }}>Meet Our Team of</span>
 					<span style={{ letterSpacing: '0.1em' }}>DIGITAL EXPERTS</span>
 				</motion.h2>
 			</motion.div>
