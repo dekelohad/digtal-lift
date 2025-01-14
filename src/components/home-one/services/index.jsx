@@ -8,12 +8,9 @@ function Services({ services }) {
 			<div className="container">
 				<div className="aximo-section-title center">
 					<h2>
-						Elevate Your Business With
-						<span className="aximo-title-animation">
+						<span style={{ color: '#fff' }}>Elevate Your Business With</span>
+						<span className="aximo-title-animation" style={{ color: '#fff' }}>
 							Our Services
-							<span className="aximo-title-icon">
-								<img src={Star2Img} alt="Star2Img" />
-							</span>
 						</span>
 					</h2>
 				</div>

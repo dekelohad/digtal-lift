@@ -22,7 +22,8 @@ function About() {
 						<div style={{ 
 							marginBottom: "10px",
 							whiteSpace: "normal",
-							wordWrap: "break-word"
+							wordWrap: "break-word",
+							color: "#fff"
 						}}>
 							We Make Your Phone
 						</div>

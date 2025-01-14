@@ -1,95 +1,92 @@
-import { FaPhone } from 'react-icons/fa';
+import { FaMagic } from 'react-icons/fa';
 
 function Content() {
 	return (
 		<div className="aximo-default-content">
 			<h2>
-				<span className="aximo-title-animation">
-					Make Your Phone Ring Non-Stop
-					<span className="aximo-title-icon phone-container" style={{ marginLeft: "-50px", marginRight: "0", position: "relative", display: "inline-flex", alignItems: "center", verticalAlign: "middle" }}>
-						<FaPhone className="ringing-phone" style={{ 
-							fontSize: "35px", 
-							color: "#00c664",
-							animation: "ringing 0.8s ease-in-out infinite",
-							transformOrigin: "50% 50%",
+				<span className="aximo-title-animation" style={{ color: "#BBFF00" }}>
+					Transform Clicks Into Clients
+					<span className="magic-container" style={{ 
+						marginLeft: "30px",
+						position: "relative",
+						display: "inline-flex",
+						alignItems: "center",
+						verticalAlign: "middle"
+					}}>
+						<FaMagic className="magic-wand" style={{ 
+							fontSize: "40px", 
+							color: "#BBFF00",
+							animation: "magicWave 2s ease-in-out infinite",
+							transformOrigin: "bottom right",
 							position: "relative",
-							zIndex: 2
+							zIndex: 2,
+							filter: "drop-shadow(0 0 10px rgba(187, 255, 0, 0.5))"
 						}} />
-						<span className="ring-animation"></span>
+						<div className="sparkle-container"></div>
 					</span>
 				</span>
 			</h2>
 			<style jsx>{`
-				@keyframes ringing {
-					0% { transform: rotate(-15deg) scale(1); }
-					25% { transform: rotate(15deg) scale(1.1); }
-					50% { transform: rotate(-15deg) scale(1); }
+				@keyframes magicWave {
+					0% { transform: rotate(0deg) scale(1); }
+					25% { transform: rotate(-15deg) scale(1.1); }
+					50% { transform: rotate(0deg) scale(1); }
 					75% { transform: rotate(15deg) scale(1.1); }
-					100% { transform: rotate(-15deg) scale(1); }
+					100% { transform: rotate(0deg) scale(1); }
 				}
 
-				@keyframes ringWave {
-					0% {
-						transform: scale(1);
-						opacity: 0.8;
-					}
-					100% {
-						transform: scale(2);
-						opacity: 0;
-					}
+				@keyframes sparkle {
+					0%, 100% { transform: scale(0); opacity: 0; }
+					50% { transform: scale(1); opacity: 1; }
 				}
 
-				@keyframes phoneEntrance {
-					0% {
-						opacity: 0;
-						transform: scale(0.5) rotate(-45deg);
-					}
-					100% {
-						opacity: 1;
-						transform: scale(1) rotate(0);
-					}
+				@keyframes float {
+					0%, 100% { transform: translateY(0); }
+					50% { transform: translateY(-10px); }
 				}
 
-				.phone-container {
-					display: inline-block;
-					position: relative;
-					animation: phoneEntrance 0.6s ease-out forwards;
+				.magic-container {
+					animation: float 3s ease-in-out infinite;
 				}
 
-				.ring-animation {
+				.sparkle-container {
 					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					width: 35px;
-					height: 35px;
-					border-radius: 50%;
-					border: 2px solid #00c664;
-					animation: ringWave 1.2s infinite;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
 				}
 
-				.ring-animation::after {
-					content: '';
+				.sparkle-container::before,
+				.sparkle-container::after {
+					content: '✨';
 					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					width: 35px;
-					height: 35px;
-					border-radius: 50%;
-					border: 2px solid #00c664;
-					animation: ringWave 1.2s infinite 0.4s;
+					font-size: 20px;
+					color: #BBFF00;
+					text-shadow: 0 0 10px rgba(187, 255, 0, 0.8);
+					animation: sparkle 2s ease-in-out infinite;
 				}
 
-				.ringing-phone {
+				.sparkle-container::before {
+					top: -10px;
+					left: -10px;
+					animation-delay: 0.3s;
+				}
+
+				.sparkle-container::after {
+					bottom: -10px;
+					right: -10px;
+					animation-delay: 0.6s;
+				}
+
+				.magic-wand {
 					display: inline-block;
 					transition: all 0.3s ease;
-					filter: drop-shadow(0 0 10px rgba(0, 198, 100, 0.5));
 				}
 
-				.ringing-phone:hover {
-					transform: scale(1.2);
-					filter: drop-shadow(0 0 15px rgba(0, 198, 100, 0.8));
+				.magic-wand:hover {
+					transform: scale(1.2) rotate(-15deg);
+					filter: drop-shadow(0 0 20px rgba(187, 255, 0, 0.8));
 				}
 			`}</style>
 			<p>

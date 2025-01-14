@@ -51,7 +51,7 @@ function Testimonial() {
 									marginBottom: "-10px"
 								}}
 							/>
-							<span>Real Success</span>
+							<span style={{ color: '#fff' }}>Real Success</span>
 							<FaTrophy
 								className="animated-icon"
 								style={{
@@ -65,7 +65,8 @@ function Testimonial() {
 						<div style={{ 
 							fontSize: "inherit", 
 							marginTop: "-10px",
-							textAlign: "center"
+							textAlign: "center",
+							color: '#fff'
 						}}>
 							Stories
 						</div>
