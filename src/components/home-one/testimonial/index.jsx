@@ -77,8 +77,8 @@ function Testimonial() {
 						<div className="col-lg-4 mb-4" key={testimonial.id}>
 							<div style={{
 								background: "#fff",
-								borderRadius: "8px",
-								padding: "25px",
+								borderRadius: "12px",
+								padding: "clamp(15px, 4vw, 25px)",
 								height: "100%",
 								boxShadow: "0 2px 15px rgba(0,0,0,0.08)",
 								transition: "transform 0.3s ease, opacity 0.3s ease",
@@ -89,43 +89,57 @@ function Testimonial() {
 							}}>
 								<div style={{
 									display: "flex",
-									alignItems: "center",
-									marginBottom: "15px"
+									marginBottom: "clamp(12px, 3vw, 15px)",
+									gap: "clamp(10px, 3vw, 15px)"
 								}}>
 									<img 
 										src={testimonial.image} 
 										alt={testimonial.name}
 										loading="lazy"
 										style={{
-											width: "50px",
-											height: "50px",
+											width: "clamp(40px, 10vw, 50px)",
+											height: "clamp(40px, 10vw, 50px)",
 											borderRadius: "50%",
-											marginRight: "15px",
-											objectFit: "cover"
+											objectFit: "cover",
+											flexShrink: 0
 										}}
 									/>
-									<div>
-										<h4 style={{
-											fontSize: "1.1rem",
-											fontWeight: "600",
-											marginBottom: "2px"
+									<div style={{
+										display: "grid",
+										gridTemplateColumns: "auto 1fr"
+									}}>
+										<div style={{
+											gridColumn: "1 / -1"
 										}}>
-											{testimonial.name}
-										</h4>
-										<p style={{
-											fontSize: "0.9rem",
-											color: "#666",
-											marginBottom: "0"
-										}}>
-											{testimonial.role}
-										</p>
+											<h4 style={{
+												fontSize: "clamp(1rem, 2.5vw, 1.1rem)",
+												fontWeight: "600",
+												lineHeight: "1.2",
+												margin: 0,
+												color: "#333",
+												marginBottom: "2px"
+											}}>
+												{testimonial.name}
+											</h4>
+											<p className="testimonial-role" style={{
+												fontSize: "clamp(0.8rem, 2vw, 0.85rem)",
+												color: "#666",
+												margin: 0,
+												lineHeight: "1.3",
+												fontWeight: "400",
+											}}>
+												{testimonial.role}
+											</p>
+										</div>
 									</div>
 								</div>
 								
 								<div style={{
 									display: "flex",
 									alignItems: "center",
-									marginBottom: "15px"
+									marginBottom: "clamp(12px, 3vw, 15px)",
+									flexWrap: "wrap",
+									gap: "8px"
 								}}>
 									<div style={{
 										display: "flex",
@@ -142,12 +156,12 @@ function Testimonial() {
 										alt="Google"
 										loading="lazy"
 										style={{
-											height: "20px",
+											height: "clamp(16px, 4vw, 20px)",
 											marginRight: "8px"
 										}}
 									/>
 									<span style={{
-										fontSize: "0.85rem",
+										fontSize: "clamp(0.8rem, 2vw, 0.85rem)",
 										color: "#666"
 									}}>
 										{testimonial.date}
@@ -155,10 +169,10 @@ function Testimonial() {
 								</div>
 
 								<p style={{
-									fontSize: "0.95rem",
+									fontSize: "clamp(0.9rem, 2.2vw, 0.95rem)",
 									lineHeight: "1.6",
 									color: "#333",
-									marginBottom: "15px"
+									marginBottom: "clamp(12px, 3vw, 15px)"
 								}}>
 									{testimonial.text}
 								</p>
@@ -167,14 +181,15 @@ function Testimonial() {
 									<div style={{
 										display: "flex",
 										alignItems: "center",
-										fontSize: "0.85rem",
-										color: "#34a853"
+										fontSize: "clamp(0.8rem, 2vw, 0.85rem)",
+										color: "#34a853",
+										marginTop: "auto"
 									}}>
 										<svg 
 											viewBox="0 0 24 24" 
 											style={{
-												width: "16px",
-												height: "16px",
+												width: "clamp(14px, 3.5vw, 16px)",
+												height: "clamp(14px, 3.5vw, 16px)",
 												marginRight: "4px",
 												fill: "currentColor"
 											}}
@@ -197,6 +212,12 @@ function Testimonial() {
 						to {
 							opacity: 1;
 							transform: translateY(0);
+						}
+					}
+
+					@media (max-width: 768px) {
+						.testimonial-role {
+							margin-left: -20px !important;
 						}
 					}
 
