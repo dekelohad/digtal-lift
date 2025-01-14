@@ -2,7 +2,7 @@ import { FaMagic } from 'react-icons/fa';
 
 function Content() {
 	return (
-		<div className="aximo-default-content">
+		<div className="aximo-default-content" style={{ marginTop: "-80px" }}>
 			<h2>
 				<span className="aximo-title-animation" style={{ color: "#BBFF00" }}>
 					Transform Clicks Into Clients
