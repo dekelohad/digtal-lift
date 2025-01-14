@@ -5,14 +5,8 @@ import Services from "../../components/home-one/services";
 import Teams from "../../components/home-one/teams";
 import Testimonial from "../../components/home-one/testimonial";
 import WhyChooseUs from "../../components/home-one/why-choose-us";
-import ClientsSection from "../../components/home-one/clients";
 import { ServiceIcons } from '../../components/icons/ServiceIcons';
 
-// Teams images
-import Team1Img from "../../assets/images/team/team1.png";
-import Team2Img from "../../assets/images/team/team2.png";
-import Team3Img from "../../assets/images/team/team3.png";
-import Team4Img from "../../assets/images/team/team4.png";
 
 const servicesData = [
 	{

@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { HelmetProvider } from 'react-helmet-async';
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -37,8 +38,10 @@ import { ThemeProvider } from "./context/ThemeContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<ThemeProvider>
-			<RouterProvider router={router} />
-		</ThemeProvider>
+		<HelmetProvider>
+			<ThemeProvider>
+				<RouterProvider router={router} />
+			</ThemeProvider>
+		</HelmetProvider>
 	</React.StrictMode>
 );
