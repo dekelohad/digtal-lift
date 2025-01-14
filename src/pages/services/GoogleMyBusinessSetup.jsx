@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ImageModal from "../../components/common/ImageModal";
 import PhaseIIOptimizations from "../../assets/images/portfolio/phase-ii-google-my-business-optimizations-3.webp";
 import "./GoogleMyBusiness.css";
+import { Helmet } from 'react-helmet-async';
 
 const FAQS = [
 	{
@@ -36,6 +37,13 @@ function GoogleMyBusinessSetup() {
 	}, []);
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>Google Business Profile Setup Service | Get Listed & Start Ranking</title>
+				<meta
+					name="description"
+					content="Launch your local presence with our expert Google Business Profile setup service. We handle verification, optimization, and everything needed to get your business ranking in local searches."
+				/>
+			</Helmet>
 			<BreadCrumb title="Google Business Profile Setup" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

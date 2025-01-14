@@ -6,6 +6,7 @@ import WebDesignHero from "../../assets/images/portfolio/team.jpg";
 import ResponsiveDesign from "../../assets/images/portfolio/google-experts.png";
 import ServicesSection from "../../components/services/ServicesSection";
 import "./PaidSearchMarketing.css";
+import { Helmet } from 'react-helmet-async';
 
 
 const FAQS = [
@@ -63,6 +64,13 @@ function PaidSearchMarketing() {
 
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>PPC & Paid Search Marketing | Convert Clicks into Customers</title>
+				<meta
+					name="description"
+					content="Turn your ad spend into revenue with our data-driven PPC management. Our proven paid search strategies deliver qualified leads and measurable ROI. Get more customers, not just clicks."
+				/>
+			</Helmet>
 			<BreadCrumb title="Paid Search Marketing" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

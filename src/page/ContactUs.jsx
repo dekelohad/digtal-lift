@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import BreadCrumb from "../components/common/Breadcrumb";
 import ContactInfo from "../components/contact/ContactInfo";
 import TwoColumnFaq from "../components/contact/TwoColumnFaq";
- 
+import { Helmet } from 'react-helmet-async';
+
 function ContactUs() {
 	useEffect(() => {
 		const script = document.createElement('script');
@@ -17,6 +18,13 @@ function ContactUs() {
 
 	return (
 		<div className="contact-us-page">
+			<Helmet>
+				<title>Contact Digital Lift | Book Your Free Strategy Call Today</title>
+				<meta
+					name="description"
+					content="Transform your business growth with Digital Lift. Schedule a free 15-minute strategy call and discover how our proven lead generation systems can help you dominate your market."
+				/>
+			</Helmet>
 			<div className="breadcrumb-wrapper">
 				<BreadCrumb title="Contact Us" />
 			</div>

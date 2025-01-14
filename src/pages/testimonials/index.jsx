@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Testimonials from "../../components/home-two/testimonials";
+import { Helmet } from 'react-helmet-async';
 
 function TestimonialsPage() {
     useEffect(() => {
@@ -13,6 +14,13 @@ function TestimonialsPage() {
             display: "flex",
             flexDirection: "column"
         }}>
+            <Helmet>
+                <title>Client Success Stories | Real Results from Digital Lift</title>
+                <meta
+                    name="description"
+                    content="See how businesses achieve 15x ROI with Digital Lift. Read verified success stories from clients who transformed their growth with our proven lead generation systems."
+                />
+            </Helmet>
             {/* Hero Section */}
             <div style={{
                 padding: "120px 0 60px",

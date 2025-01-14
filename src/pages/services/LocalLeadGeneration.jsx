@@ -8,6 +8,7 @@ import LeadGenerationImage from "../../assets/images/portfolio/lead-generation.j
 import LeadMagentImage from "../../assets/images/portfolio/lead-magent.jpeg";
 import TargetedLocalLeadGenerationImage from "../../assets/images/portfolio/target-local-lead.jpeg";
 import "./LocalLeadGeneration.css";
+import { Helmet } from 'react-helmet-async';
 
 const FAQs = [
 	{
@@ -60,6 +61,13 @@ function LocalLeadGeneration() {
 
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>Local Lead Generation | Dominate Your Service Area with Qualified Leads</title>
+				<meta
+					name="description"
+					content="Transform your local presence into a lead-generating machine. Our proven strategies target and capture high-intent customers in your service area, delivering 15x ROI for local businesses."
+				/>
+			</Helmet>
 			<BreadCrumb title="Local Lead Generation" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

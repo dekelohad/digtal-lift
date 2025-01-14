@@ -8,6 +8,7 @@ import ResponsiveDesign from "../../assets/images/portfolio/Responsive-web-devel
 import WebsiteRedesign from "../../assets/images/portfolio/website-redesig-and-optimization.jpeg";
 import CustomDesign from "../../assets/images/portfolio/custom-website-design.jpeg";
 import "./WebDesign.css";
+import { Helmet } from 'react-helmet-async';
 
 const FAQS = [
 	{
@@ -60,6 +61,13 @@ function WebDesign() {
 
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>Web Design Services | Beautiful Websites That Convert Visitors into Customers</title>
+				<meta
+					name="description"
+					content="Transform your online presence with stunning, conversion-focused web design. Our expert team creates beautiful, responsive websites that engage visitors and drive business growth. Get started today!"
+				/>
+			</Helmet>
 			<BreadCrumb title="Web Design" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

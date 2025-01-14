@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import GoogleMapsExample from "../../assets/images/portfolio/pi-attorney-tempe-3-pack.webp";
 import "./GoogleMyBusiness.css";
+import { Helmet } from 'react-helmet-async';
 
 const SERVICES = [
 	{
@@ -33,6 +34,13 @@ function GoogleMyBusiness() {
 
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>Google Business Profile Services | Dominate Local Search Results</title>
+				<meta
+					name="description"
+					content="Boost your local visibility with our expert Google Business Profile services. From setup to optimization and management, we've helped 100s of businesses achieve 10K+ local rankings."
+				/>
+			</Helmet>
 			<BreadCrumb title="Google Business Profile" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

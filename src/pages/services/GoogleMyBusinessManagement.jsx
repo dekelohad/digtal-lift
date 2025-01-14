@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ImageModal from "../../components/common/ImageModal";
 import InsightsSearches from "../../assets/images/portfolio/gmb-insightssearches-2.webp";
 import InsightsViews from "../../assets/images/portfolio/gmb-insightsviews.webp";
 import "./GoogleMyBusiness.css";
+import { Helmet } from 'react-helmet-async';
 
 const FAQS = [
 	{
@@ -38,6 +39,13 @@ function GoogleMyBusinessManagement() {
 
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>Google Business Profile Management Service | Stay Ahead of Competition</title>
+				<meta
+					name="description"
+					content="Keep your Google Business Profile optimized with our ongoing management service. Weekly updates, review monitoring, and continuous optimization to maintain top local rankings."
+				/>
+			</Helmet>
 			<BreadCrumb title="Google Business Profile Management" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

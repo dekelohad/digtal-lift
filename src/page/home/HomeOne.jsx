@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import About from "../../components/home-one/about";
 import AutoSlider from "../../components/home-one/auto-slider";
 import Hero from "../../components/home-one/hero";
@@ -83,11 +84,17 @@ const teamsData = [
 function HomeOne() {
 	return (
 		<>
+			<Helmet>
+				<title>Digital Lift | Make Your Phone Ring Non-Stop with Qualified Leads</title>
+				<meta
+					name="description"
+					content="Stop wasting money on meaningless clicks. We deliver qualified buyers ready to become customers through proven SEO, web design, and lead generation systems. 15x ROI."
+				/>
+			</Helmet>
 			<Hero />
 			<Services services={servicesData} />
 			<About />
 			<WhyChooseUs />
-			{/* <ClientsSection /> */}
 			<Testimonial />
 			<AutoSlider />
 			<Teams teams={teamsData} />

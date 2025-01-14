@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Helmet } from 'react-helmet-async';
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import OnPageSEOCaseStudy from "../../assets/images/portfolio/on-page-seo-case-study.webp";
@@ -35,10 +36,15 @@ const Testimonials = [
 function SearchEngineOptimization() {
 	const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
- 
-
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>SEO Services | Dominate Search Results with Proven Strategies</title>
+				<meta
+					name="description"
+					content="Transform your online visibility with our proven SEO services. Our data-driven approach delivers an average 80% increase in conversions and sustainable organic growth. Get started today!"
+				/>
+			</Helmet>
 			<BreadCrumb title="SEO Services" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div

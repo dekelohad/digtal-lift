@@ -5,6 +5,7 @@ import { SiTailwindcss, SiPostgresql } from "react-icons/si";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import "./WebDevelopment.css";
+import { Helmet } from 'react-helmet-async';
 
 const FAQS = [
 	{
@@ -118,6 +119,13 @@ function WebDevelopment() {
 	
 	return (
 		<div className="web-dev-page">
+			<Helmet>
+				<title>Web Development Services | Full-Stack Solutions That Scale</title>
+				<meta
+					name="description"
+					content="Transform your digital presence with our expert web development services. From React to Node.js, we build high-performance applications that load in under 2 seconds and scale to millions of users."
+				/>
+			</Helmet>
 			<BreadCrumb title="Web Development" />
 			<div className="container mx-auto px-4 pt-80">
 				<motion.div

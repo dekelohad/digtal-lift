@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ImageModal from "../../components/common/ImageModal";
 import BeforeOptimization from "../../assets/images/portfolio/before-gmb-optimization-services-1.webp";
 import AfterOptimization from "../../assets/images/portfolio/after-gmb-optimization-services-2.webp";
 import "./GoogleMyBusiness.css";
+import { Helmet } from 'react-helmet-async';
 
 const FAQS = [
 	{
@@ -39,6 +40,13 @@ function GoogleMyBusinessOptimization() {
 
 	return (
 		<div className="local-lead-page">
+			<Helmet>
+				<title>Google Business Profile Optimization Service | Maximize Local Rankings</title>
+				<meta
+					name="description"
+					content="Supercharge your existing Google Business Profile with our expert optimization service. We implement proven strategies that have helped hundreds of businesses improve their local rankings and visibility."
+				/>
+			</Helmet>
 			<BreadCrumb title="Google Business Profile Optimization" />
 			<div className="container mx-auto px-6 pt-80">
 				<motion.div
