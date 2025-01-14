@@ -38,6 +38,7 @@
     margin-bottom: 20px;
     position: relative;
     z-index: 2;
+    text-align: center;
 }
 
 .aximo-iconbox-icon i {
@@ -54,6 +55,7 @@
     color: #BBFF00;
     transition: all 0.5s ease;
     letter-spacing: -0.5px;
+    text-align: center;
 }
 
 .aximo-iconbox-data p {
@@ -64,10 +66,11 @@
     transition: all 0.5s ease;
     font-weight: 400;
     flex: 1;
+    text-align: center;
 }
 
 .aximo-icon {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     background: #BBFF00;
@@ -77,6 +80,8 @@
     transition: all 0.5s ease;
     position: relative;
     margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .aximo-icon img {
