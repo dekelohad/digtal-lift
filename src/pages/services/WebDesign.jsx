@@ -410,7 +410,7 @@ function WebDesign() {
 
 				{/* FAQ Section */}
 				<div className="faq-section my-20">
-					<div className="text-center">
+					<div>
 						<motion.h2 
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}

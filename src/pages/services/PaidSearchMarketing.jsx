@@ -104,7 +104,7 @@ function PaidSearchMarketing() {
 					>
 						<div className="content-section">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Combining search engine marketing with conversion rate optimization</h2>
+								<h2 className="section-title text-left mb-8">Marketing + Conversion Optimization</h2>
 								<p className="service-description mb-8">
 								At Digital Lift, we understand that successful paid search campaigns require more than just driving traffic to your website. While other agencies focus solely on getting your ads to appear on Google, we take a comprehensive approach that combines strategic ad placement with conversion rate optimization.
 								</p>
