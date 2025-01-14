@@ -49,7 +49,7 @@ function About() {
 						</div>
 					</h2>
 					<p style={{
-						fontSize: "clamp(16px, 2vw, 22px)",
+						fontSize: "clamp(18px, 2vw, 22px)",
 						lineHeight: "1.8",
 						color: "#fff",
 						maxWidth: "900px",
@@ -64,7 +64,7 @@ function About() {
 							fontWeight: "800",
 							display: "block",
 							margin: "20px 0",
-							fontSize: "clamp(20px, 2.5vw, 28px)",
+							fontSize: "clamp(22px, 2.5vw, 28px)",
 							letterSpacing: "0.2px",
 							lineHeight: "1.4"
 						}}>qualified buyers ready to become customers</span>
