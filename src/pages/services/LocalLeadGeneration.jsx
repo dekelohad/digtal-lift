@@ -37,13 +37,13 @@ const TESTIMONIALS = [
 	{
 		quote: "Our local customer base exploded after implementing their strategies. We went from struggling to get leads to having a consistent flow of high-quality local customers.",
 		author: "Sarah Johnson",
-		business: "Riverside Home Services",
+		business: "Riverside Services",
 		results: "385% increase in local leads within 3 months"
 	},
 	{
 		quote: "The lead generation strategies transformed our business. We're now booking more concrete projects than ever before, and our service area has expanded significantly.",
 		author: "Mike Anderson",
-		business: "Anderson Concrete Solutions",
+		business: "Anderson Concrete",
 		results: "Tripled project bookings in 6 months"
 	}
 ];

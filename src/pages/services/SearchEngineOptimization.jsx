@@ -15,8 +15,8 @@ const Testimonials = [
 	},
 	{
 		quote: "In a city full of dentists, standing out seemed impossible. Their SEO expertise changed everything. Now when someone in Boston searches for 'best dentist near me', we're right at the top. The quality of leads is incredible - these are patients actively looking for our services.",
-		author: "Dr. Sarah Martinez",
-		business: "Bright Smile Dental Care",
+		author: "Dr. Martinez",
+		business: "Smile Dental",
 		results: "185% increase in high-value patients"
 	},
 	{
@@ -28,7 +28,7 @@ const Testimonials = [
 	{
 		quote: "In luxury real estate, digital presence is everything. Their SEO mastery has positioned us as THE luxury property experts in Boston. We're not just getting more leads - we're getting clients ready to invest in multi-million dollar properties. The ROI has been absolutely astronomical.",
 		author: "Jennifer Blake",
-		business: "Prestige Properties Boston",
+		business: "Prestige Properties",
 		results: "425% increase in luxury property inquiries"
 	}
 ];
