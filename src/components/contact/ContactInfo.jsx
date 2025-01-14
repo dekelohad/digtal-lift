@@ -106,7 +106,8 @@ function ContactInfo() {
 							marginBottom: "15px",
 							color: "#BBFF00",
 							lineHeight: "1.2",
-							padding: "0 20px"
+							padding: "0 20px",
+							marginTop:'3em',
 						}}>
 							Contact Information
 						</h2>
