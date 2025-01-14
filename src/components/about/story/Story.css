@@ -76,58 +76,131 @@
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin-top: 60px;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 2rem;
 }
 
 .feature-box {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 20px;
-    padding: 30px;
-    position: relative;
+    background: rgba(17, 17, 17, 0.7);
+    border: 1px solid rgba(204, 255, 0, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
     transition: all 0.3s ease;
+    position: relative;
+    box-shadow: 0 0 15px rgba(159, 255, 0, 0.03);
 }
 
 .feature-box::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border-radius: 20px;
-    border: 2px solid #BBFF00;
-    box-shadow: 0 0 20px rgba(187, 255, 0, 0.4),
-                inset 0 0 20px rgba(187, 255, 0, 0.4);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    border: 1px solid rgba(159, 255, 0, 0.2);
+    transition: all 0.3s ease;
+    pointer-events: none;
 }
 
 .feature-box:hover {
-    background: rgba(187, 255, 0, 0.02);
+    transform: translateY(-5px);
+    background: rgba(17, 17, 17, 0.9);
 }
 
 .feature-box:hover::before {
-    /* Remove this block since we don't need hover effects anymore */
+    border-color: rgba(159, 255, 0, 0.4);
+    box-shadow: 0 0 20px rgba(159, 255, 0, 0.1);
 }
 
 .feature-icon {
-    font-size: 2.5rem;
-    color: #BBFF00;
-    margin-bottom: 20px;
-    filter: drop-shadow(0 0 10px rgba(187, 255, 0, 0.3));
+    color: #9FFF00;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(159, 255, 0, 0.3));
+}
+
+.feature-box:hover .feature-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(159, 255, 0, 0.5));
 }
 
 .feature-content h5 {
-    color: #BBFF00;
-    font-size: 1.4rem;
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
     font-weight: 600;
-    margin-bottom: 15px;
 }
 
 .feature-content p {
-    color: #e0e0e0;
+    color: #fff;
     font-size: 1rem;
-    line-height: 1.7;
-    margin: 0;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 1.5rem;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .feature-box {
+        width: 100%;
+        padding: 1.75rem;
+        margin: 0;
+    }
+
+    .feature-icon {
+        font-size: 2.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .feature-content h5 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+        color: #9FFF00;
+    }
+
+    .feature-content p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin: 0;
+        opacity: 0.95;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        padding: 0.75rem;
+        gap: 1rem;
+    }
+
+    .feature-box {
+        padding: 1.5rem;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -147,30 +220,6 @@
 @media (max-width: 992px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .main-title {
-        font-size: 2.5rem;
-    }
-    
-    .subtitle {
-        font-size: 1.5rem;
-    }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .highlight-box {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-    
-    .highlight-box h4 {
-        font-size: 1.3rem;
     }
 }
 
