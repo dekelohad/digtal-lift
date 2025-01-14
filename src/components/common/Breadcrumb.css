@@ -24,7 +24,6 @@
 .breadcrumbs li {
     display: flex;
     align-items: center;
-    color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
 }
 
@@ -45,9 +44,10 @@
     text-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
 }
 
-.breadcrumbs span {
-    color: #CCFF00;
+.breadcrumbs li span {
+    color: #CCFF00 !important;
     text-shadow: 0 0 10px rgba(204, 255, 0, 0.3);
+    font-weight: 600;
 }
 
 @media (max-width: 640px) {
