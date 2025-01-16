@@ -6,7 +6,7 @@ import AboutUs from "../page/AboutUs";
 import ContactUs from "../page/ContactUs";
 import BlogPage from "../page/blog/BlogPage.jsx";
 import HomeOne from "../page/home/HomeOne.jsx";
-import TestimonialsPage from "../pages/testimonials";
+import Testimonials from "../pages/services/Testimonials.jsx";
 import LocalLeadGeneration from "../pages/services/LocalLeadGeneration";
 import PaidSearchMarketing from "../pages/services/PaidSearchMarketing";
 import SearchEngineOptimization from "../pages/services/SearchEngineOptimization";
@@ -44,7 +44,7 @@ export const router = createBrowserRouter([
 					},
 					{
 						path: "/testimonials",
-						element: <TestimonialsPage />,
+						element: <Testimonials />,
 					},
 					{
 						path: "/local-lead-generation",
