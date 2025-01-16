@@ -57,11 +57,36 @@
 	color: #e0e0e0;
 	font-size: 16px;
 	font-weight: 500;
-	padding: 15px;
-	display: block;
-	width: 100%;
-	text-align: left;
+	padding: 8px 16px;
+	position: relative;
 	transition: all 0.3s ease;
+}
+
+.site-menu-main .nav-link-item:not(.contact-btn) {
+	position: relative;
+}
+
+.site-menu-main .nav-link-item:not(.contact-btn)::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: auto;
+	right: 0;
+	height: 2px;
+	width: 0;
+	background-color: #BBFF00;
+	transition: all 0.3s ease;
+	box-shadow: 0 0 10px rgba(187, 255, 0, 0.3);
+}
+
+.site-menu-main .nav-link-item:not(.contact-btn):hover {
+	color: #BBFF00;
+}
+
+.site-menu-main .nav-link-item:not(.contact-btn):hover::after {
+	left: 0;
+	right: auto;
+	width: 100%;
 }
 
 /* Dropdown styles for mobile */
