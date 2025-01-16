@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaPlus } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import leadsImage from "../../assets/images/portfolio/get-leads.jpeg";
@@ -10,6 +9,7 @@ import TargetedLocalLeadGenerationImage from "../../assets/images/portfolio/targ
 import "./LocalLeadGeneration.css";
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../../components/contact/FAQ';
+import Testmionals from '../../components/common/Testimonials';
  
 const FAQS = [
 	{
@@ -315,42 +315,8 @@ function LocalLeadGeneration() {
 				</div>
 
 				<FAQ FAQS ={FAQS}/>
+				<Testmionals TESTIMONIALS = {TESTIMONIALS}/>
 			 
-				{/* Success Stories Section - Now as the final section */}
-				<div className="testimonials-section">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
-						>
-							Success Stories
-						</motion.h2>
-					</div>
-						<div className="testimonials-grid">
-							{TESTIMONIALS.map((testimonial, index) => (
-								<motion.div 
-									key={index}
-									className="testimonial-box"
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 0.2 + index * 0.1 }}
-								>
-									<div className="quote-icon">
-										<span className="neon-text">"</span>
-									</div>
-									<p className="testimonial-quote">{testimonial.quote}</p>
-									<div className="testimonial-author">
-										<h4 className="author-name">{testimonial.author}</h4>
-										<p className="author-business">{testimonial.business}</p>
-										<p className="testimonial-results neon-text">{testimonial.results}</p>
-									</div>
-								</motion.div>
-							))}
-						</div>
-					</div>
 			</div>
 		</div>
 	);

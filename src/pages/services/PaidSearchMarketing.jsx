@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaChevronDown } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import WebDesignHero from "../../assets/images/portfolio/team.jpg";
 import ResponsiveDesign from "../../assets/images/portfolio/google-experts.png";
@@ -8,6 +7,7 @@ import ServicesSection from "../../components/services/ServicesSection";
 import "./PaidSearchMarketing.css";
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../../components/contact/FAQ';
+import Testmionals from '../../components/common/Testimonials';
  
 const FAQS = [
     {
@@ -33,7 +33,7 @@ const FAQS = [
 ];
 
 
-const Testimonials = [
+const TESTIMONIALS = [
     {
         quote: "Digital Lift's PPC management has transformed our roofing business. Their strategic approach to Google Ads helped us target homeowners in need of roof repairs and replacements. The quality of leads and conversion rates have exceeded our expectations.",
         author: "Michael Roberts",
@@ -382,44 +382,8 @@ function PaidSearchMarketing() {
 					</div>
 				</div>
 
-				{/* FAQ Section */}
 				<FAQ FAQS ={FAQS}/>
-
-				{/* Success Stories Section - Now as the final section */}
-				<div className="testimonials-section">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
-						>
-							Success Stories
-						</motion.h2>
-					</div>
-					<div className="testimonials-grid">
-						{Testimonials.map((testimonial, index) => (
-							<motion.div 
-								key={index}
-								className="testimonial-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
-							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
+				<Testmionals TESTIMONIALS ={TESTIMONIALS}/>
 			</div>
 		</div>
 	);

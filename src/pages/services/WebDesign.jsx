@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
@@ -9,6 +9,7 @@ import CustomDesign from "../../assets/images/portfolio/custom-website-design.jp
 import "./WebDesign.css";
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../../components/contact/FAQ';
+import Testmionals from '../../components/common/Testimonials';
  
 const FAQS = [
 	{
@@ -402,43 +403,9 @@ function WebDesign() {
 					</div>
 				</div>
 
-				{/* FAQ Section */}
 				<FAQ FAQS ={FAQS}/>
+				<Testmionals TESTIMONIALS ={TESTIMONIALS}/>
 				
-				<div className="testimonials-section">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
-						>
-							Success Stories
-						</motion.h2>
-					</div>
-					<div className="testimonials-grid">
-						{TESTIMONIALS.map((testimonial, index) => (
-							<motion.div 
-								key={index}
-								className="testimonial-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
-							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
 			</div>
 		</div>
 	);

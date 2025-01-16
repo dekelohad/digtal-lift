@@ -6,8 +6,8 @@ import ServicesSection from "../../components/services/ServicesSection";
 import OnPageSEOCaseStudy from "../../assets/images/portfolio/on-page-seo-case-study.webp";
 import "./SearchEngineOptimization.css";
 import FAQ from '../../components/contact/FAQ';
-
-
+import Testmionals from '../../components/common/Testimonials';
+ 
 const FAQS = [
 	{
 		id: 1,
@@ -41,7 +41,7 @@ const FAQS = [
 	},
 ];
 
-const Testimonials = [
+const TESTIMONIALS = [
 	{
 		quote: "Before their SEO expertise, our epoxy flooring business was invisible online. Now we dominate the commercial and residential flooring searches across Greater Boston. Their strategies helped us land major warehouse contracts and high-end garage projects. The leads coming in are exactly what we wanted – serious property owners ready to invest in quality flooring!",
 		author: "Mark Reynolds",
@@ -293,38 +293,11 @@ function SearchEngineOptimization() {
 								</p>
 							</div>
 						</div>
-
-						{/* FAQ Section */}
-				 
 					</motion.div>
 				</motion.div>
 
 				<FAQ FAQS ={FAQS}/>
-
-				<div className="testimonials-section mx-auto">
-					<h2 className="section-title text-center mb-16 neon-text mx-auto">Success Stories</h2>
-					<div className="testimonials-grid">
-						{Testimonials.map((testimonial, index) => (
-							<motion.div 
-								key={index}
-								className="testimonial-box"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: 0.2 + index * 0.1 }}
-							>
-								<div className="quote-icon">
-									<span className="neon-text">"</span>
-								</div>
-								<p className="testimonial-quote">{testimonial.quote}</p>
-								<div className="testimonial-author">
-									<h4 className="author-name">{testimonial.author}</h4>
-									<p className="author-business">{testimonial.business}</p>
-									<p className="testimonial-results neon-text">{testimonial.results}</p>
-								</div>
-							</motion.div>
-						))}
-					</div>
-				</div>
+				<Testmionals TESTIMONIALS ={TESTIMONIALS}/>
 			</div>
 		</div>
 	);
