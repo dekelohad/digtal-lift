@@ -5,6 +5,7 @@ import Dropdown from "../../common/navigation/desktop-nav/Dropdown";
 import DropdownItem from "../../common/navigation/desktop-nav/DropdownItem";
 import NavItem from "../../common/navigation/desktop-nav/NavItem";
 import HeaderLogo from "./HeaderLogo";
+import { Link } from "react-router-dom";
 
 function Header() {
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,8 +35,8 @@ function Header() {
 							<NavItem url="about-us">About</NavItem>
 							<NavItem url="testimonials">Testimonials</NavItem>
 							<li className="nav-item">
-								<a 
-									href="/contact"
+								<Link 
+									to="/contact-us"
 									className="nav-link-item contact-btn"
 									style={{
 										background: "#BBFF00",
@@ -55,7 +56,7 @@ function Header() {
 									}}
 								>
 									Contact Us
-								</a>
+								</Link>
 							</li>
 						</DesktopNav>
 					</div>

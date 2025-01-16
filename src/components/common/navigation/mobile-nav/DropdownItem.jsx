@@ -33,23 +33,30 @@ const DropdownItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 		},
 	};
 
-	return items.submenu ? (
-		<li className="nav-item sub-menu-item nav-item-has-children" onClick={closeDropdown}>
-			<button type="button" aria-expanded={dropdown ? "true" : "false"} onClick={(e) => toggleDropdown(e)}>
-				{items.title}
+	if (items.submenu) {
+		return (
+			<li className="nav-item sub-menu-item nav-item-has-children" onClick={closeDropdown}>
+				<button type="button" aria-expanded={dropdown ? "true" : "false"} onClick={(e) => toggleDropdown(e)}>
+					{items.title}
+					<motion.i
+						variants={animationVariants}
+						initial="initial"
+						animate="animate"
+						className="fas fa-angle-down"
+					></motion.i>
+				</button>
+				{dropdown && <Dropdown depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />}
+			</li>
+		);
+	}
 
-				<motion.i
-					variants={animationVariants}
-					initial="initial"
-					animate="animate"
-					className="fas fa-angle-down"
-				></motion.i>
-			</button>
-			{dropdown && <Dropdown depthLevel={depthLevel} submenus={items.submenu} dropdown={dropdown} />}
-		</li>
-	) : (
+	const urlFormatted = items.url.startsWith('/') ? items.url : `/${items.url}`;
+
+	return (
 		<li className="nav-item sub-menu-item" onClick={closeDropdown}>
-			<Link to={items.url.startsWith('/') ? items.url : `/${items.url}`}>{items.title}</Link>
+			<Link to={urlFormatted} onClick={closeDropdown}>
+				{items.title}
+			</Link>
 		</li>
 	);
 };

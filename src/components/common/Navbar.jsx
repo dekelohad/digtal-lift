@@ -80,7 +80,7 @@ function Navbar() {
                         </li>
                         
                         <li className="nav-item">
-                            <Link className={`nav-link ${location.pathname === "/contact" ? "active" : ""}`} to="/contact">
+                            <Link className={`nav-link ${location.pathname === "/contact-us" ? "active" : ""}`} to="/contact-us">
                                 Contact
                             </Link>
                         </li>

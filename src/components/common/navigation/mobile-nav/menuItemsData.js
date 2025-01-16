@@ -40,5 +40,9 @@ export const menuItemsData = [
 	{
 		title: "Testimonials",
 		url: "/testimonials",
+	},
+	{
+		title: "Contact Us",
+		url: "/contact-us",
 	}
 ];

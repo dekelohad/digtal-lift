@@ -110,6 +110,6 @@ const MobileNavbar = ({ menuItemsData }) => {
 			></motion.div>
 		</div>
 	);
-}
+};
 
 export default MobileNavbar;
