@@ -7,6 +7,7 @@ import AfterOptimization from "../../assets/images/portfolio/after-gmb-optimizat
 import "./GoogleMyBusiness.css";
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../../components/contact/FAQ';
+import Testmionals from '../../components/common/Testimonials';
  
 const FAQS = [
 	{
@@ -30,6 +31,22 @@ const FAQS = [
 		answer: "Yes! Optimization is especially important in competitive markets. While it may take longer to see results, proper optimization ensures you're competing on an even playing field and maximizing your profile's potential."
 	}
 ];
+
+const TESTIMONIALS = [
+	{
+		quote: "Digital Lift's optimization service transformed our Google Business Profile performance. Their team identified key optimization opportunities we were missing and implemented changes that made a real difference. The detailed monthly reports helped us understand exactly what was working.",
+		author: "Thomas Anderson",
+		business: "Anderson Roofing",
+		results: "300% increase in profile views after 2 months"
+	},
+	{
+		quote: "We were struggling to stand out in local search results until we started working with Digital Lift. Their optimization strategies, especially their approach to photos and posts, completely revitalized our profile. The increase in quality leads has been remarkable.",
+		author: "Michael Reynolds",
+		business: "Reynolds Electrical",
+		results: "85% improvement in local search visibility"
+	}
+];
+
 
 function GoogleMyBusinessOptimization() {
 	const [selectedImage, setSelectedImage] = useState(null);
@@ -161,64 +178,10 @@ function GoogleMyBusinessOptimization() {
 							Each optimization is tailored to your specific business needs and market conditions. We focus on implementing strategies that will have the biggest impact on your local visibility and customer engagement.
 						</p>
 
-				{/* FAQ Section */}
-
 				<FAQ FAQS ={FAQS}/>
-			
-						{/* Success Stories Section */}
-						<div className="testimonials-section">
-							<div className="text-center">
-								<motion.h2 
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.8 }}
-									className="section-title neon-text mx-auto"
-									style={{ textDecoration: 'none', borderBottom: 'none' }}
-								>
-									Success Stories
-								</motion.h2>
-							</div>
-							<div className="testimonials-grid">
-								<motion.div 
-									className="testimonial-box"
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 0.2 }}
-								>
-									<div className="quote-icon">
-										<span className="neon-text">"</span>
-									</div>
-									<p className="testimonial-quote">
-										Digital Lift's optimization service transformed our Google Business Profile performance. Their team identified key optimization opportunities we were missing and implemented changes that made a real difference. The detailed monthly reports helped us understand exactly what was working.
-									</p>
-									<div className="testimonial-author">
-										<h4 className="author-name">Thomas Anderson</h4>
-										<p className="author-business">Anderson Roofing</p>
-										<p className="testimonial-results neon-text">300% increase in profile views after 3 months</p>
-									</div>
-								</motion.div>
-
-								<motion.div 
-									className="testimonial-box"
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 0.3 }}
-								>
-									<div className="quote-icon">
-										<span className="neon-text">"</span>
-									</div>
-									<p className="testimonial-quote">
-										We were struggling to stand out in local search results until we started working with Digital Lift. Their optimization strategies, especially their approach to photos and posts, completely revitalized our profile. The increase in quality leads has been remarkable.
-									</p>
-									<div className="testimonial-author">
-										<h4 className="author-name">Michael Reynolds</h4>
-										<p className="author-business">Reynolds Electrical</p>
-										<p className="testimonial-results neon-text">85% improvement in local search visibility</p>
-									</div>
-								</motion.div>
-							</div>
-						</div>
-					</div>
+				<Testmionals TESTIMONIALS ={TESTIMONIALS}/>
+			 
+				</div>
 				</motion.div>
 			</div>
 		</div>

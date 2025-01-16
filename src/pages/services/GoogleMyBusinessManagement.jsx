@@ -7,6 +7,7 @@ import InsightsViews from "../../assets/images/portfolio/gmb-insightsviews.webp"
 import "./GoogleMyBusiness.css";
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../../components/contact/FAQ';
+import Testmionals from '../../components/common/Testimonials';
  
 const FAQS = [
 	{
@@ -30,6 +31,22 @@ const FAQS = [
 		answer: "We provide detailed monthly reports that include metrics such as profile views, customer actions (calls, direction requests, website visits), photo views, review statistics, and ranking improvements. We also include recommendations for further improvements."
 	}
 ];
+
+const TESTIMONIALS = [
+	{
+		quote: "Digital Lift has been managing our Google Business Profile for over a year now, and the results speak for themselves. Their consistent posting, photo updates, and review management have kept us at the top of local search results. The monthly performance reports are incredibly detailed, showing us exactly how our visibility has improved.",
+		author: "James Sullivan",
+		business: "Sullivan Remodeling",
+		results: "Maintained top 3 position for 12+ months"
+	},
+	{
+		quote: "Having Digital Lift manage our Google Business Profile has been a game-changer. They respond to reviews promptly, keep our photos fresh, and their weekly posts keep our profile engaging. Their proactive approach to profile management has significantly increased our customer engagement and lead quality.",
+		author: "Richard Parker",
+		business: "Parker's Custom Carpentry",
+		results: "110% increase in customer calls year-over-year"
+	}
+];
+
 
 function GoogleMyBusinessManagement() {
 	const [selectedImage, setSelectedImage] = useState(null);
@@ -163,60 +180,7 @@ function GoogleMyBusinessManagement() {
 
 						{/* FAQ Section */}
 						<FAQ FAQS ={FAQS}/>
-				
-						{/* Success Stories Section */}
-						<div className="testimonials-section">
-							<div className="text-center">
-								<motion.h2 
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ duration: 0.8 }}
-									className="section-title neon-text mx-auto"
-									style={{ textDecoration: 'none', borderBottom: 'none' }}
-								>
-									Success Stories
-								</motion.h2>
-							</div>
-							<div className="testimonials-grid">
-								<motion.div 
-									className="testimonial-box"
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 0.2 }}
-								>
-									<div className="quote-icon">
-										<span className="neon-text">"</span>
-									</div>
-									<p className="testimonial-quote">
-										Digital Lift has been managing our Google Business Profile for over a year now, and the results speak for themselves. Their consistent posting, photo updates, and review management have kept us at the top of local search results. The monthly performance reports are incredibly detailed, showing us exactly how our visibility has improved.
-									</p>
-									<div className="testimonial-author">
-										<h4 className="author-name">James Sullivan</h4>
-										<p className="author-business">Sullivan Remodeling</p>
-										<p className="testimonial-results neon-text">Maintained top 3 position for 12+ months</p>
-									</div>
-								</motion.div>
-
-								<motion.div 
-									className="testimonial-box"
-									initial={{ opacity: 0, y: 20 }}
-									animate={{ opacity: 1, y: 0 }}
-									transition={{ delay: 0.3 }}
-								>
-									<div className="quote-icon">
-										<span className="neon-text">"</span>
-									</div>
-									<p className="testimonial-quote">
-										Having Digital Lift manage our Google Business Profile has been a game-changer. They respond to reviews promptly, keep our photos fresh, and their weekly posts keep our profile engaging. Their proactive approach to profile management has significantly increased our customer engagement and lead quality.
-									</p>
-									<div className="testimonial-author">
-										<h4 className="author-name">Richard Parker</h4>
-										<p className="author-business">Parker's Custom Carpentry</p>
-										<p className="testimonial-results neon-text">110% increase in customer calls year-over-year</p>
-									</div>
-								</motion.div>
-							</div>
-						</div>
+						<Testmionals TESTIMONIALS ={TESTIMONIALS}/>
 					</div>
 				</motion.div>
 			</div>
