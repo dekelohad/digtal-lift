@@ -1,0 +1,119 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-role {
+        margin-left: -20px !important;
+    }
+}
+
+.animated-icon {
+    animation: float 3s ease-in-out infinite, 
+             pulse 2s ease-in-out infinite,
+             sparkle 2s ease-in-out infinite;
+    transform-origin: center center;
+}
+
+.reverse-spin {
+    animation: float 3s ease-in-out infinite reverse, 
+             pulse 2s ease-in-out infinite,
+             sparkle 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-6px) rotate(5deg); }
+    50% { transform: translateY(0) rotate(0deg); }
+    75% { transform: translateY(6px) rotate(-5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes sparkle {
+    0% { filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8)); }
+    25% { filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9)); }
+    50% { filter: drop-shadow(0 0 30px rgba(255, 165, 0, 1)); }
+    75% { filter: drop-shadow(0 0 25px rgba(255, 165, 0, 0.9)); }
+    100% { filter: drop-shadow(0 0 20px rgba(255, 165, 0, 0.8)); }
+}
+
+.scroll-text {
+    animation: scroll 30s linear infinite;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.scroll-item {
+    padding: 0 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-item:hover {
+    color: #c5f32c;
+    transform: scale(1.05);
+}
+
+.star {
+    color: #FFA500;
+    display: inline-block;
+    animation: twinkle 1s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .scroll-text {
+        font-size: 0.9rem;
+    }
+}
+
+.infinite-scroll-wrapper:hover .scroll-text {
+    animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .trophy-icon {
+        font-size: 28px !important;
+        margin-bottom: -5px !important;
+    }
+    .success-text {
+        font-size: 24px !important;
+    }
+    .stories-text {
+        font-size: 24px !important;
+        margin-top: -5px !important;
+    }
+    .success-stories-header {
+        gap: 10px !important;
+    }
+    .success-stories-title {
+        gap: 10px !important;
+    }
+} 
