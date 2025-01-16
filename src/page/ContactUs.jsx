@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import BreadCrumb from "../components/common/Breadcrumb";
 import ContactInfo from "../components/contact/ContactInfo";
 import FAQ from "../components/contact/FAQ";
 import { Helmet } from 'react-helmet-async';
-
+import { motion } from 'framer-motion';
+import { FaCalendarAlt } from 'react-icons/fa';
 
 const FAQS = [
 	{
@@ -33,17 +34,6 @@ const FAQS = [
 ];
 
 function ContactUs() {
-	useEffect(() => {
-		const script = document.createElement('script');
-		script.src = 'https://asset-tidycal.b-cdn.net/js/embed.js';
-		script.async = true;
-		document.body.appendChild(script);
-
-		return () => {
-			document.body.removeChild(script);
-		};
-	}, []);
-
 	return (
 		<div className="contact-us-page">
 			<Helmet>
@@ -84,37 +74,70 @@ function ContactUs() {
 							}}>
 								Ready to transform your digital presence? Schedule a 15-minute call with our experts and discover how we can boost your online growth with tailored marketing strategies.
 							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			{/* Calendar Booking Section */}
-			<div className="section" style={{ 
-				padding: "20px 0", 
-				background: "#000",
-				marginBottom: "0"
-			}}>
-				<div className="container">
-					<div className="row justify-content-center">
-						<div className="col-12">
-							<div 
-								className="tidycal-embed" 
-								data-path="digitallift/15-minute-meeting"
-								style={{
-									background: "rgba(255, 255, 255, 0.03)",
-									borderRadius: "15px",
-									padding: "20px"
+							<motion.div
+								whileHover={{ scale: 1.05 }}
+								whileTap={{ scale: 0.95 }}
+								initial={{ opacity: 0, y: 20 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ 
+									type: "spring",
+									stiffness: 300,
+									damping: 15
 								}}
-							></div>
+							>
+								<a 
+									href="https://tidycal.com/digitallift/15-minute-meeting"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="aximo-default-btn pill"
+									style={{
+										fontSize: "20px",
+										padding: "20px 40px",
+										marginTop: "20px",
+										background: "linear-gradient(135deg, #BBFF00 0%, #98CC00 100%)",
+										color: "#000",
+										fontWeight: "600",
+										display: "inline-flex",
+										alignItems: "center",
+										gap: "12px",
+										boxShadow: "0 4px 15px rgba(187, 255, 0, 0.3)",
+										border: "none",
+										position: "relative",
+										overflow: "hidden"
+									}}
+								>
+									<FaCalendarAlt size={24} />
+									<span>Schedule Your Call Now</span>
+									<motion.div
+										style={{
+											position: "absolute",
+											top: 0,
+											left: 0,
+											right: 0,
+											bottom: 0,
+											background: "linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+											zIndex: 1
+										}}
+										animate={{
+											x: ["100%", "-100%"]
+										}}
+										transition={{
+											repeat: Infinity,
+											duration: 1.5,
+											ease: "linear"
+										}}
+									/>
+								</a>
+							</motion.div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<FAQ FAQS ={FAQS}/>
+			<FAQ FAQS={FAQS}/>
 		</div>
 	);
 }
 
 export default ContactUs;
+
