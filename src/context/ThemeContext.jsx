@@ -1,24 +1,34 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useReducer, useEffect, startTransition } from 'react';
 
 const ThemeContext = createContext();
 
+const themeReducer = (state, action) => {
+    switch (action.type) {
+        case 'TOGGLE_THEME':
+            return { isDarkMode: !state.isDarkMode };
+        default:
+            return state;
+    }
+};
+
 export const ThemeProvider = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState(() => {
-        const savedTheme = localStorage.getItem('theme');
-        return savedTheme === 'dark';
+    const [state, dispatch] = useReducer(themeReducer, {
+        isDarkMode: localStorage.getItem('theme') === 'dark'
     });
 
     useEffect(() => {
-        document.body.className = isDarkMode ? 'dark' : 'light';
-        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    }, [isDarkMode]);
+        document.body.className = state.isDarkMode ? 'dark' : 'light';
+        localStorage.setItem('theme', state.isDarkMode ? 'dark' : 'light');
+    }, [state.isDarkMode]);
 
     const toggleTheme = () => {
-        setIsDarkMode(prev => !prev);
+        startTransition(() => {
+            dispatch({ type: 'TOGGLE_THEME' });
+        });
     };
 
     return (
-        <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+        <ThemeContext.Provider value={{ isDarkMode: state.isDarkMode, toggleTheme }}>
             {children}
         </ThemeContext.Provider>
     );

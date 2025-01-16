@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { HelmetProvider } from 'react-helmet-async';
 
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -33,15 +32,14 @@ import "./assets/css/mobile-nav.css";
 import { RouterProvider } from "react-router-dom";
 import { router } from "./router";
 
-// Theme Provider
-import { ThemeProvider } from "./context/ThemeContext";
-
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<React.StrictMode>
-		<HelmetProvider>
-			<ThemeProvider>
-				<RouterProvider router={router} />
-			</ThemeProvider>
-		</HelmetProvider>
+		<RouterProvider 
+			router={router} 
+			future={{
+				v7_startTransition: true,
+				v7_relativeSplatPath: true
+			}}
+		/>
 	</React.StrictMode>
 );

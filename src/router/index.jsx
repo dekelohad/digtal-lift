@@ -16,75 +16,91 @@ import GoogleMyBusinessOptimization from "../pages/services/GoogleMyBusinessOpti
 import GoogleMyBusinessManagement from "../pages/services/GoogleMyBusinessManagement";
 import WebDesign from "../pages/services/WebDesign";
 import WebDevelopment from "../pages/services/WebDevelopment";
+import { ThemeProvider } from "../context/ThemeContext";
+import { HelmetProvider } from 'react-helmet-async';
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+	[
+		{
+			path: "/",
+			element: (
+				<HelmetProvider>
+					<ThemeProvider>
+						<Layout />
+					</ThemeProvider>
+				</HelmetProvider>
+			),
+			children: [
+				{
+					path: "/",
+					element: <LayoutOne />,
+					children: [
+						{
+							path: "/",
+							element: <HomeOne />,
+						},
+						{
+							path: "/about-us",
+							element: <AboutUs />,
+						},
+						{
+							path: "/contact-us",
+							element: <ContactUs />,
+						},
+						{
+							path: "/blog",
+							element: <BlogPage />,
+						},
+						{
+							path: "/testimonials",
+							element: <Testimonials />,
+						},
+						{
+							path: "/local-lead-generation",
+							element: <LocalLeadGeneration />,
+						},
+						{
+							path: "/paid-search-marketing",
+							element: <PaidSearchMarketing />,
+						},
+						{
+							path: "/search-engine-optimization",
+							element: <SearchEngineOptimization />,
+						},
+						{
+							path: "/google-business-profile",
+							element: <GoogleMyBusiness />,
+						},
+						{
+							path: "/google-business-profile/setup",
+							element: <GoogleMyBusinessSetup />,
+						},
+						{
+							path: "/google-business-profile/optimization",
+							element: <GoogleMyBusinessOptimization />,
+						},
+						{
+							path: "/google-business-profile/management",
+							element: <GoogleMyBusinessManagement />,
+						},
+						{
+							path: "/web-design",
+							element: <WebDesign />,
+						},
+						{
+							path: "/web-development",
+							element: <WebDevelopment />,
+						}
+					],
+				},
+			],
+			errorElement: <ErrorPage />,
+		},
+	],
 	{
-		path: "/",
-		element: <Layout />,
-		children: [
-			{
-				path: "/",
-				element: <LayoutOne />,
-				children: [
-					{
-						path: "/",
-						element: <HomeOne />,
-					},
-					{
-						path: "/about-us",
-						element: <AboutUs />,
-					},
-					{
-						path: "/contact-us",
-						element: <ContactUs />,
-					},
-					{
-						path: "/blog",
-						element: <BlogPage />,
-					},
-					{
-						path: "/testimonials",
-						element: <Testimonials />,
-					},
-					{
-						path: "/local-lead-generation",
-						element: <LocalLeadGeneration />,
-					},
-					{
-						path: "/paid-search-marketing",
-						element: <PaidSearchMarketing />,
-					},
-					{
-						path: "/search-engine-optimization",
-						element: <SearchEngineOptimization />,
-					},
-					{
-						path: "/google-business-profile",
-						element: <GoogleMyBusiness />,
-					},
-					{
-						path: "/google-business-profile/setup",
-						element: <GoogleMyBusinessSetup />,
-					},
-					{
-						path: "/google-business-profile/optimization",
-						element: <GoogleMyBusinessOptimization />,
-					},
-					{
-						path: "/google-business-profile/management",
-						element: <GoogleMyBusinessManagement />,
-					},
-					{
-						path: "/web-design",
-						element: <WebDesign />,
-					},
-					{
-						path: "/web-development",
-						element: <WebDevelopment />,
-					}
-				],
-			},
-		],
-		errorElement: <ErrorPage />,
-	},
-]);
+		future: {
+			v7_startTransition: true,
+			v7_relativeSplatPath: true
+		}
+	}
+);
