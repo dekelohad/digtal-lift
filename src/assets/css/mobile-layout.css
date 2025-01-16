@@ -1,0 +1,213 @@
+/* Mobile Layout System */
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* Consistent Section Spacing */
+.section {
+    padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 2.5rem 0;
+    }
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        gap: 1.25rem;
+    }
+}
+
+/* Box Layout */
+.box {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid #7dff00;
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 1.5rem;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        padding: 1.25rem;
+        border-radius: 8px;
+    }
+}
+
+/* Text Alignment */
+.text-center-mobile {
+    text-align: center;
+}
+
+/* Flexbox Utilities */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-column-mobile {
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+    .flex-column-mobile {
+        flex-direction: column;
+    }
+    
+    .mobile-stack > * + * {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Spacing Utilities */
+.mobile-spacing {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-spacing {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .mobile-spacing {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Image Containers */
+.image-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Button Styles */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 0.625rem 1.25rem;
+    }
+}
+
+/* Card Layouts */
+.card {
+    background: rgba(18, 18, 18, 0.5);
+    border: 1px solid #7dff00;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Typography Scale */
+.h1-mobile {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.h2-mobile {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.h3-mobile {
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+    .h1-mobile {
+        font-size: 2rem;
+    }
+    
+    .h2-mobile {
+        font-size: 1.75rem;
+    }
+    
+    .h3-mobile {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1-mobile {
+        font-size: 1.75rem;
+    }
+    
+    .h2-mobile {
+        font-size: 1.5rem;
+    }
+    
+    .h3-mobile {
+        font-size: 1.25rem;
+    }
+} 
