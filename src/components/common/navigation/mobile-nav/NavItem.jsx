@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
+
 const NavItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 	const [dropdown, setDropdown] = useState(false);
 
@@ -25,7 +26,6 @@ const NavItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 				return {
 					rotate: -180,
 					transition: {
-						// delay: 0,
 						duration: 0.25,
 					},
 				};
@@ -49,7 +49,7 @@ const NavItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 		</li>
 	) : (
 		<li className="nav-item" onClick={closeDropdown}>
-			<Link to={items.url}>{items.title}</Link>
+			<Link to={items.url.startsWith('/') ? items.url : `/${items.url}`}>{items.title}</Link>
 		</li>
 	);
 };

@@ -26,7 +26,7 @@ function Footer() {
 								</div>
 								<ul>
 									<li>
-										<Link to="/about">About us</Link>
+										<Link to="/about-us">About us</Link>
 									</li>
 									<li>
 										<Link to="/service">Our services</Link>
@@ -50,7 +50,7 @@ function Footer() {
 								</div>
 								<ul>
 									<li>
-										<Link to="/about">About us</Link>
+										<Link to="/about-us">About us</Link>
 									</li>
 									<li>
 										<Link to="/service">Our services</Link>

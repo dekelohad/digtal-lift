@@ -9,36 +9,36 @@ export const menuItemsData = [
 		submenu: [
 			{
 				title: "Local Lead Generation",
-				url: "local-lead-generation",
+				url: "/local-lead-generation",
 			},
 			{
 				title: "Paid Search Marketing",
-				url: "paid-search-marketing",
+				url: "/paid-search-marketing",
 			},
 			{
 				title: "Search Engine Optimization",
-				url: "search-engine-optimization",
+				url: "/search-engine-optimization",
 			},
 			{
 				title: "Google Business Profile",
-				url: "google-business-profile",
+				url: "/google-business-profile",
 			},
 			{
 				title: "Web Design",
-				url: "web-design",
+				url: "/web-design",
 			},
 			{
 				title: "Web Development",
-				url: "web-development",
+				url: "/web-development",
 			},
 		],
 	},
 	{
 		title: "About",
-		url: "about",
+		url: "/about-us",
 	},
 	{
 		title: "Testimonials",
-		url: "testimonials",
+		url: "/testimonials",
 	}
 ];
