@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { HiPhone } from "react-icons/hi";
+import { FaCalendarAlt } from 'react-icons/fa';
 import ShapeImg from "../../../assets/images/v1/shape1.png";
 import StarImg from "../../../assets/images/v1/star.png";
 import User1Img from "../../../assets/images/v1/user1.png";
@@ -7,6 +8,7 @@ import User2Img from "../../../assets/images/v1/user2.png";
 import User3Img from "../../../assets/images/v1/user3.png";
 import { FadeInStaggerTwo, FadeInStaggerTwoChildren } from "../../animation/FadeInStaggerTwo";
 import "./HeroContent.css";
+import { motion } from 'framer-motion';
 
 function HeroContent() {
 	return (
@@ -120,9 +122,62 @@ function HeroContent() {
 					</div>
 				</FadeInStaggerTwoChildren>
 				<FadeInStaggerTwoChildren>
-					<Link className="aximo-call-btn" to="/contact-us">
-						<span>Book a free consultation</span> <HiPhone className="icon-call" />
-					</Link>
+					<motion.div
+						whileHover={{ scale: 1.05 }}
+						whileTap={{ scale: 0.95 }}
+						initial={{ opacity: 0, y: 20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ 
+							type: "spring",
+							stiffness: 300,
+							damping: 15
+						}}
+						style={{ marginTop: "40px" }}
+					>
+						<a 
+							href="https://tidycal.com/digitallift/15-minute-meeting"
+							target="_blank"
+							rel="noopener noreferrer"
+							style={{
+								fontSize: "20px",
+								padding: "20px 40px",
+								background: "linear-gradient(135deg, #BBFF00 0%, #98CC00 100%)",
+								color: "#000",
+								fontWeight: "600",
+								display: "inline-flex",
+								alignItems: "center",
+								gap: "12px",
+								boxShadow: "0 4px 15px rgba(187, 255, 0, 0.3)",
+								border: "none",
+								position: "relative",
+								overflow: "hidden",
+								borderRadius: "50px",
+								textDecoration: "none"
+							}}
+						>
+							<FaCalendarAlt size={24} />
+							<span>Schedule Your Call Now</span>
+							<motion.div
+								style={{
+									position: "absolute",
+									top: 0,
+									left: 0,
+									right: 0,
+									bottom: 0,
+									background: "linear-gradient(45deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%)",
+									zIndex: 1
+								}}
+								animate={{
+									x: ["100%", "-100%"]
+								}}
+								transition={{
+									repeat: Infinity,
+									duration: 1.5,
+									ease: "linear"
+								}}
+							/>
+						</a>
+					</motion.div>
 				</FadeInStaggerTwoChildren>
 			</FadeInStaggerTwo>
 		</div>
