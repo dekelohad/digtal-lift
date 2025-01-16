@@ -15,11 +15,12 @@ function Services({ services }) {
 								opacity: 0,
 								animation: 'fadeInUp 0.8s ease forwards',
 								textShadow: '0 0 20px rgba(255, 255, 255, 0.2)',
-								fontSize: '4.5rem',
+								fontSize: 'clamp(2.5rem, 5vw, 4.5rem)',
 								fontWeight: '800',
 								lineHeight: '1.2',
 								marginBottom: '30px',
-								whiteSpace: 'nowrap'
+								whiteSpace: 'normal',
+								textAlign: 'center'
 							}}>
 								Elevate Your Business With
 							</div>
@@ -31,13 +32,16 @@ function Services({ services }) {
 								opacity: 0,
 								animation: 'fadeInUp 0.8s ease forwards 0.4s',
 								textShadow: '0 0 30px rgba(187, 255, 0, 0.3)',
-								fontSize: '4rem',
+								fontSize: 'clamp(2rem, 4.5vw, 4rem)',
 								fontWeight: '800',
-								whiteSpace: 'nowrap'
+								whiteSpace: 'normal',
+								textAlign: 'center',
+								flexWrap: 'wrap',
+								justifyContent: 'center'
 							}}>
 								Our Services
 								<FaRocket className="rocket-icon" style={{
-									fontSize: '45px',
+									fontSize: 'clamp(25px, 3vw, 45px)',
 									color: '#BBFF00',
 									filter: 'drop-shadow(0 0 15px rgba(187, 255, 0, 0.5))'
 								}}/>
