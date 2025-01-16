@@ -35,14 +35,10 @@ export const menuItemsData = [
 	},
 	{
 		title: "About",
-		url: "about-us",
+		url: "about",
 	},
 	{
 		title: "Testimonials",
 		url: "testimonials",
-	},
-	{
-		title: "Contact Us",
-		url: "contact-us",
 	}
 ];
