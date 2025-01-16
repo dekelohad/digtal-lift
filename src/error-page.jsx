@@ -20,9 +20,6 @@ export default function ErrorPage() {
 							We can't find the page
 							<span className="aximo-title-animation">
 								you are looking for
-								<span className="aximo-title-icon">
-									<img src={Star2Img} alt="" />
-								</span>
 							</span>
 						</h2>
 					</div>
