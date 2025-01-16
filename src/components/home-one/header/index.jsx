@@ -4,7 +4,6 @@ import DesktopNav from "../../common/navigation/desktop-nav/DesktopNav";
 import Dropdown from "../../common/navigation/desktop-nav/Dropdown";
 import DropdownItem from "../../common/navigation/desktop-nav/DropdownItem";
 import NavItem from "../../common/navigation/desktop-nav/NavItem";
-import { menuItemsData } from "../../common/navigation/mobile-nav/menuItemsData";
 import HeaderLogo from "./HeaderLogo";
 
 function Header() {
