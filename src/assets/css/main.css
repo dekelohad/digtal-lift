@@ -1278,6 +1278,7 @@ a.log-in-btn:hover:after {
 	z-index: 99;
 	cursor: pointer;
 	-webkit-font-smoothing: antialiased;
+	color: #BBFF00;
 }
 .aximo-go-top:before {
 	content: "";
@@ -1288,8 +1289,15 @@ a.log-in-btn:hover:after {
 	height: 40px;
 	border-radius: 3px;
 	position: absolute;
-	background-color: var(--accent-color);
+	background-color: #000000;
+	border: 1px solid rgba(187, 255, 0, 0.2);
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 	transform: translate(-50%, -50%);
+}
+
+.aximo-go-top:hover:before {
+	background-color: rgba(0, 0, 0, 0.9);
+	border-color: rgba(187, 255, 0, 0.4);
 }
 
 /* Mobile menu trigger positioning */
