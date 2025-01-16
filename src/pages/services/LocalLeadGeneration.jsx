@@ -11,7 +11,6 @@ import "./LocalLeadGeneration.css";
 import { Helmet } from 'react-helmet-async';
 import FAQ from '../../components/contact/FAQ';
  
-
 const FAQS = [
 	{
 		id: 1,

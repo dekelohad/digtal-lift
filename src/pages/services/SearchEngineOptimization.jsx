@@ -5,6 +5,41 @@ import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import OnPageSEOCaseStudy from "../../assets/images/portfolio/on-page-seo-case-study.webp";
 import "./SearchEngineOptimization.css";
+import FAQ from '../../components/contact/FAQ';
+
+
+const FAQS = [
+	{
+		id: 1,
+		question:"What is SEO?",
+		answer: "SEO, or Search Engine Optimization, is a set of strategies and practices aimed at improving a website's visibility and ranking on search engine results pages (SERPs). The primary goal of SEO is to increase organic (non-paid) traffic to a website. This is achieved by optimizing various aspects of a website, including its content, structure, and technical elements, to make it more attractive to search engines like Google, Bing, and others.",
+	},
+	{
+		id: 2,
+		question:"What are SEO services?",
+		answer: "Effective SEO involves keyword research, on-page optimization, off-page optimization (such as building high-quality backlinks), technical SEO (improving site speed and mobile-friendliness), and providing valuable content that meets user intent. SEO helps businesses and websites reach a wider audience, attract more visitors, and ultimately increase their online presence and revenue."
+	},
+	{
+		id: 3,
+		question:"How does SEO generate revenue for small businesses?",
+		answer: "SEO generates revenue for small businesses by enhancing online visibility, attracting targeted organic traffic, and optimizing user experience. It fosters trust and credibility through high search engine rankings, resulting in higher conversion rates. Local SEO can drive foot traffic to physical stores, while cost-effective strategies offer a long-term growth approach. Small businesses benefit from SEO's ability to connect them with potential customers actively seeking their products or services, translating into increased revenue and sustained growth."
+	},
+	{
+		id: 4,
+		question:"What should I expect for my business?",
+		answer:"Every business's SEO strategy is inherently unique, and success hinges on the careful tailoring of these strategies to align with specific revenue goals. While the timeline for achieving desired results may vary, business owners can anticipate tangible outcomes within the first 3 to 6 months of consistent SEO implementation. This period is typically marked by noticeable improvements in search engine rankings, increased organic traffic, and enhanced online visibility. By diligently adhering to SEO best practices over time, businesses can ensure their strategies evolve and adapt to changing market dynamics, ultimately driving sustainable growth and revenue generation in a manner that is both customized and effective."
+	},
+	{
+		id: 5,
+		question:"What Does On-page Optimization Include?",
+		answer:"Our optimizations include tracking setup and complete page-level optimization. This includes a deliverable audit, HTML optimization, schema markup, and several other on-page techniques that we like to keep a secret. Think of it as a winning recipe, and we don't want anyone else to know it 🙂"
+	},
+	{
+		id: 6,
+		question:"Do You Provide Reporting?",
+		answer:"Our on-page services are a one-time optimization where we audit and implement our recommendations. We provide you with a dashboard that details monthly reporting (including the impact of our efforts).",
+	},
+];
 
 const Testimonials = [
 	{
@@ -259,142 +294,12 @@ function SearchEngineOptimization() {
 							</div>
 						</div>
 
-						<h2 className="section-title text-center mb-16 neon-text">Frequently Asked Questions</h2>
-						<div className="faq-container">
-							<div className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-1"
-								>
-									What is SEO?
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id="faq-1"
-									className="faq-collapse collapse show"
-									data-bs-parent="#seo-accordion"
-								>
-									<div className="faq-content">
-										SEO, or Search Engine Optimization, is a set of strategies and practices aimed at improving a website's visibility and ranking on search engine results pages (SERPs). The primary goal of SEO is to increase organic (non-paid) traffic to a website. This is achieved by optimizing various aspects of a website, including its content, structure, and technical elements, to make it more attractive to search engines like Google, Bing, and others.
-									</div>
-								</div>
-							</div>
-
-							<div className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-2"
-								>
-									What are SEO services?
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id="faq-2"
-									className="faq-collapse collapse"
-									data-bs-parent="#seo-accordion"
-								>
-									<div className="faq-content">
-										Effective SEO involves keyword research, on-page optimization, off-page optimization (such as building high-quality backlinks), technical SEO (improving site speed and mobile-friendliness), and providing valuable content that meets user intent. SEO helps businesses and websites reach a wider audience, attract more visitors, and ultimately increase their online presence and revenue.
-									</div>
-								</div>
-							</div>
-
-							<div className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-3"
-								>
-									How does SEO generate revenue for small businesses?
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id="faq-3"
-									className="faq-collapse collapse"
-									data-bs-parent="#seo-accordion"
-								>
-									<div className="faq-content">
-										SEO generates revenue for small businesses by enhancing online visibility, attracting targeted organic traffic, and optimizing user experience. It fosters trust and credibility through high search engine rankings, resulting in higher conversion rates. Local SEO can drive foot traffic to physical stores, while cost-effective strategies offer a long-term growth approach. Small businesses benefit from SEO's ability to connect them with potential customers actively seeking their products or services, translating into increased revenue and sustained growth.
-									</div>
-								</div>
-							</div>
-
-							<div className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-4"
-								>
-									What should I expect for my business?
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id="faq-4"
-									className="faq-collapse collapse"
-									data-bs-parent="#seo-accordion"
-								>
-									<div className="faq-content">
-										Every business's SEO strategy is inherently unique, and success hinges on the careful tailoring of these strategies to align with specific revenue goals. While the timeline for achieving desired results may vary, business owners can anticipate tangible outcomes within the first 3 to 6 months of consistent SEO implementation. This period is typically marked by noticeable improvements in search engine rankings, increased organic traffic, and enhanced online visibility. By diligently adhering to SEO best practices over time, businesses can ensure their strategies evolve and adapt to changing market dynamics, ultimately driving sustainable growth and revenue generation in a manner that is both customized and effective.
-									</div>
-								</div>
-							</div>
-
-							<div className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-5"
-								>
-									What Does On-page Optimization Include?
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id="faq-5"
-									className="faq-collapse collapse"
-									data-bs-parent="#seo-accordion"
-								>
-									<div className="faq-content">
-										Our optimizations include tracking setup and complete page-level optimization. This includes a deliverable audit, HTML optimization, schema markup, and several other on-page techniques that we like to keep a secret. Think of it as a winning recipe, and we don't want anyone else to know it 🙂
-									</div>
-								</div>
-							</div>
-
-							<div className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target="#faq-6"
-								>
-									Do You Provide Reporting?
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id="faq-6"
-									className="faq-collapse collapse"
-									data-bs-parent="#seo-accordion"
-								>
-									<div className="faq-content">
-										Our on-page services are a one-time optimization where we audit and implement our recommendations. We provide you with a dashboard that details monthly reporting (including the impact of our efforts).
-									</div>
-								</div>
-							</div>
-						</div>
+						{/* FAQ Section */}
+				 
 					</motion.div>
 				</motion.div>
+
+				<FAQ FAQS ={FAQS}/>
 
 				<div className="testimonials-section mx-auto">
 					<h2 className="section-title text-center mb-16 neon-text mx-auto">Success Stories</h2>
