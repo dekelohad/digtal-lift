@@ -7,8 +7,8 @@ function FooterContent() {
 			<h2>
 				<div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
 					<div className="text-row first">Transform Your</div>
-					<div className="text-row second">Vision Into Digital</div>
-					<div className="text-row third">Reality</div>
+					<div className="text-row second">Vision Into</div>
+					<div className="text-row third">Digital Reality</div>
 				</div>
 			</h2>
 			<p>
