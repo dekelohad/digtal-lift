@@ -2,35 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-function TwoColumnFaq() {
+function FAQ({FAQS}) {
 	const [openIndex, setOpenIndex] = useState(null);
-
-	const faqs = [
-		{
-			question: "How quickly can I expect to see results?",
-			answer: "Most clients start seeing increased lead flow within the first 30-60 days. Our proven systems are designed for rapid implementation and quick wins, while building long-term sustainable growth. We focus on high-intent traffic that's ready to convert."
-		},
-		{
-			question: "What makes your approach unique?",
-			answer: "We focus on immediate results while building long-term assets. While other agencies might take months to show results, our hybrid approach starts driving calls quickly through paid campaigns while simultaneously building your organic presence for sustained growth."
-		},
-		{
-			question: "What services do you offer?",
-			answer: "We offer a complete digital growth suite: Local Lead Generation, Search Engine Optimization (SEO), Paid Search Marketing, Google Business Profile Optimization, Web Design, and Web Development. Each service is strategically designed to increase your lead flow and revenue."
-		},
-		{
-			question: "How do you ensure quality leads?",
-			answer: "We use advanced targeting and qualification systems to ensure you're getting calls from your ideal customers. Our campaigns focus on high-intent keywords and demographics that match your best clients, filtering out time-wasters and unqualified leads."
-		},
-		{
-			question: "Do you offer guarantees?",
-			answer: "Yes! We're so confident in our ability to deliver results that we offer performance guarantees. If we don't hit the agreed-upon KPIs within the specified timeframe, you'll receive free service until we do. We succeed when you succeed."
-		},
-		{
-			question: "What industries do you work with?",
-			answer: "We specialize in working with service-based businesses, professional practices, and local businesses looking to dominate their market. Our strategies are particularly effective for businesses where phone calls lead to high-value clients."
-		}
-	];
 
 	const toggleAccordion = (index) => {
 		setOpenIndex(openIndex === index ? null : index);
@@ -63,7 +36,7 @@ function TwoColumnFaq() {
 							animate={{ opacity: 1 }}
 							transition={{ duration: 0.5, delay: 0.2 }}
 						>
-							{faqs.map((faq, index) => (
+							{FAQS.map((faq, index) => (
 								<motion.div
 									key={index}
 									initial={{ opacity: 0, y: 20 }}
@@ -137,4 +110,4 @@ function TwoColumnFaq() {
 	);
 }
 
-export default TwoColumnFaq;
+export default FAQ;

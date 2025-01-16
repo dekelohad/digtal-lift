@@ -7,8 +7,8 @@ import ResponsiveDesign from "../../assets/images/portfolio/google-experts.png";
 import ServicesSection from "../../components/services/ServicesSection";
 import "./PaidSearchMarketing.css";
 import { Helmet } from 'react-helmet-async';
-
-
+import FAQ from '../../components/contact/FAQ';
+ 
 const FAQS = [
     {
         id: 1,
@@ -49,19 +49,11 @@ const Testimonials = [
 ];
 
 
-
- 
 function PaidSearchMarketing() {
-	const [activeFaq, setActiveFaq] = useState(null);
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
-	const toggleFaq = (id) => {
-		setActiveFaq(activeFaq === id ? null : id);
-	};
-
+	
 	return (
 		<div className="local-lead-page">
 			<Helmet>
@@ -391,52 +383,7 @@ function PaidSearchMarketing() {
 				</div>
 
 				{/* FAQ Section */}
-				<div className="faq-section">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none', width: '100%' }}
-						>
-							Frequently Asked Questions
-						</motion.h2>
-					</div>
-
-					<div className="faq-container">
-						{FAQS.map((faq) => (
-							<motion.div
-								key={faq.id}
-								className="faq-item"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: faq.id * 0.1 }}
-								style={{ width: '100%' }}
-							>
-								<div 
-									className={`faq-question ${activeFaq === faq.id ? 'active' : ''}`}
-									onClick={() => toggleFaq(faq.id)}
-								>
-									<h3>{faq.question}</h3>
-									<span className="faq-icon">+</span>
-								</div>
-								<motion.div 
-									className="faq-answer"
-									initial={false}
-									animate={{ 
-										height: activeFaq === faq.id ? 'auto' : 0,
-										opacity: activeFaq === faq.id ? 1 : 0
-									}}
-									transition={{ duration: 0.3 }}
-									style={{ width: '100%' }}
-								>
-									<p>{faq.answer}</p>
-								</motion.div>
-							</motion.div>
-						))}
-					</div>
-				</div>
+				<FAQ FAQS ={FAQS}/>
 
 				{/* Success Stories Section - Now as the final section */}
 				<div className="testimonials-section">

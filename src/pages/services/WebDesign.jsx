@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FaPlus } from "react-icons/fa";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import WebDesignHero from "../../assets/images/portfolio/Professional-Website-Design.jpeg";
@@ -9,7 +8,8 @@ import WebsiteRedesign from "../../assets/images/portfolio/website-redesig-and-o
 import CustomDesign from "../../assets/images/portfolio/custom-website-design.jpeg";
 import "./WebDesign.css";
 import { Helmet } from 'react-helmet-async';
-
+import FAQ from '../../components/contact/FAQ';
+ 
 const FAQS = [
 	{
 		id: 1,
@@ -49,16 +49,10 @@ const TESTIMONIALS = [
 ];
 
 function WebDesign() {
-	const [activeFaq, setActiveFaq] = useState(null);
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
 	
-	const toggleFaq = (id) => {
-		setActiveFaq(activeFaq === id ? null : id);
-	};
-
 	return (
 		<div className="local-lead-page">
 			<Helmet>
@@ -409,51 +403,8 @@ function WebDesign() {
 				</div>
 
 				{/* FAQ Section */}
-				<div className="faq-section my-20">
-					<div>
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text"
-							style={{ marginBottom: '3rem', textTransform: 'uppercase', fontSize: '2rem' }}
-						>
-							Frequently Asked Questions
-						</motion.h2>
-					</div>
-
-					<div className="faq-container">
-						{FAQS.map((faq) => (
-							<motion.div
-								key={faq.id}
-								className="faq-item"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: faq.id * 0.1 }}
-							>
-								<div 
-									className={`faq-question ${activeFaq === faq.id ? 'active' : ''}`}
-									onClick={() => toggleFaq(faq.id)}
-								>
-									<h3>{faq.question}</h3>
-									<FaPlus className="faq-icon" />
-								</div>
-								<motion.div 
-									className="faq-answer"
-									initial={false}
-									animate={{ 
-										height: activeFaq === faq.id ? 'auto' : 0,
-										opacity: activeFaq === faq.id ? 1 : 0
-									}}
-									transition={{ duration: 0.3 }}
-								>
-									<p>{faq.answer}</p>
-								</motion.div>
-							</motion.div>
-						))}
-					</div>
-				</div>
-
+				<FAQ FAQS ={FAQS}/>
+				
 				<div className="testimonials-section">
 					<div className="text-center">
 						<motion.h2 

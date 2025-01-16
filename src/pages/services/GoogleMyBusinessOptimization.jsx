@@ -6,7 +6,8 @@ import BeforeOptimization from "../../assets/images/portfolio/before-gmb-optimiz
 import AfterOptimization from "../../assets/images/portfolio/after-gmb-optimization-services-2.webp";
 import "./GoogleMyBusiness.css";
 import { Helmet } from 'react-helmet-async';
-
+import FAQ from '../../components/contact/FAQ';
+ 
 const FAQS = [
 	{
 		question: "How long does it take to see results from optimization?",
@@ -31,7 +32,6 @@ const FAQS = [
 ];
 
 function GoogleMyBusinessOptimization() {
-	const [openIndex, setOpenIndex] = useState(null);
 	const [selectedImage, setSelectedImage] = useState(null);
 
 	useEffect(() => {
@@ -162,37 +162,9 @@ function GoogleMyBusinessOptimization() {
 						</p>
 
 				{/* FAQ Section */}
-				<div className="container mx-auto px-6">
-					<div className="text-center max-w-4xl mx-auto mb-16">
-						<h2 className="section-title-mobile neon-text">Frequently Asked Questions</h2>
-					</div>
-					<div className="faq-container">
-						{FAQS.map((faq, index) => (
-							<div key={index} className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target={`#faq-${index}`}
-								>
-									{faq.question}
-									<span className="faq-icon">+</span>
-								</button>
 
-								<div
-									id={`faq-${index}`}
-									className="faq-collapse collapse"
-									data-bs-parent="#web-dev-accordion"
-								>
-									<div className="faq-content">
-										{faq.answer}
-									</div>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>		
-
+				<FAQ FAQS ={FAQS}/>
+			
 						{/* Success Stories Section */}
 						<div className="testimonials-section">
 							<div className="text-center">

@@ -5,6 +5,8 @@ import ImageModal from "../../components/common/ImageModal";
 import PhaseIIOptimizations from "../../assets/images/portfolio/phase-ii-google-my-business-optimizations-3.webp";
 import "./GoogleMyBusiness.css";
 import { Helmet } from 'react-helmet-async';
+import FAQ from '../../components/contact/FAQ';
+ 
 
 const FAQS = [
 	{
@@ -140,37 +142,8 @@ function GoogleMyBusinessSetup() {
 							Google Business Profile optimization is at the core of every Local SEO strategy. Our setup service has been used to increase local visibility, call volume, in-store visits, and revenue for 100s of local businesses.
 						</p>
 
-					<div className="container mx-auto px-6">
-					<div className="text-center max-w-4xl mx-auto mb-16">
-						<h2 className="section-title">Frequently Asked Questions</h2>
-					</div>
-					<div className="faq-container">
-						{FAQS.map((faq, index) => (
-							<div key={index} className="faq-item">
-								<button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target={`#faq-${index}`}
-								>
-									{faq.question}
-									<span className="faq-icon">+</span>
-								</button>
-
-								<div
-									id={`faq-${index}`}
-									className="faq-collapse collapse"
-									data-bs-parent="#web-dev-accordion"
-								>
-									<div className="faq-content">
-										{faq.answer}
-									</div>
-								</div>
-							</div>
-						))}
-					</div>
-				</div>
-
+						<FAQ FAQS = {FAQS}/>
+			 
 						{/* Success Stories Section */}
 						<div className="testimonials-section">
 							<div className="text-center">

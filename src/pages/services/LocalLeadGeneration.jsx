@@ -9,8 +9,10 @@ import LeadMagentImage from "../../assets/images/portfolio/lead-magent.jpeg";
 import TargetedLocalLeadGenerationImage from "../../assets/images/portfolio/target-local-lead.jpeg";
 import "./LocalLeadGeneration.css";
 import { Helmet } from 'react-helmet-async';
+import FAQ from '../../components/contact/FAQ';
+ 
 
-const FAQs = [
+const FAQS = [
 	{
 		id: 1,
 		question: "How quickly can I expect to see results from your local lead generation services?",
@@ -49,15 +51,9 @@ const TESTIMONIALS = [
 ];
 
 function LocalLeadGeneration() {
-	const [activeFaq, setActiveFaq] = useState(null);
-
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
-
-	const toggleFaq = (id) => {
-		setActiveFaq(activeFaq === id ? null : id);
-	};
 
 	return (
 		<div className="local-lead-page">
@@ -319,52 +315,8 @@ function LocalLeadGeneration() {
 					</div>
 				</div>
 
-				{/* FAQ Section */}
-				<div className="faq-section my-20">
-					<div className="text-center">
-						<motion.h2 
-							initial={{ opacity: 0, y: 20 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.8 }}
-							className="section-title neon-text mx-auto"
-							style={{ textDecoration: 'none', borderBottom: 'none' }}
-						>
-							Frequently Asked Questions
-						</motion.h2>
-					</div>
-
-					<div className="faq-container">
-						{FAQs.map((faq) => (
-							<motion.div 
-								key={faq.id}
-								className="faq-item"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: faq.id * 0.1 }}
-							>
-								<div 
-									className={`faq-question ${activeFaq === faq.id ? 'active' : ''}`}
-									onClick={() => toggleFaq(faq.id)}
-								>
-									<h3>{faq.question}</h3>
-									<FaPlus className="faq-icon" />
-								</div>
-								<motion.div 
-									className="faq-answer"
-									initial={false}
-									animate={{ 
-										height: activeFaq === faq.id ? 'auto' : 0,
-										opacity: activeFaq === faq.id ? 1 : 0
-									}}
-									transition={{ duration: 0.3 }}
-								>
-									<p>{faq.answer}</p>
-								</motion.div>
-							</motion.div>
-						))}
-					</div>
-							</div>
-
+				<FAQ FAQS ={FAQS}/>
+			 
 				{/* Success Stories Section - Now as the final section */}
 				<div className="testimonials-section">
 					<div className="text-center">

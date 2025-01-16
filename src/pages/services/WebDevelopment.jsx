@@ -6,7 +6,8 @@ import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
 import "./WebDevelopment.css";
 import { Helmet } from 'react-helmet-async';
-
+import FAQ from '../../components/contact/FAQ';
+ 
 const FAQS = [
 	{
 		question: "What technologies do you use for web development?",
@@ -71,44 +72,6 @@ const item = {
 		}
 	}
 };
-
-const FAQItem = ({ faq, isOpen, onToggle }) => (
-	<motion.div 
-		className="faq-box"
-		initial={{ opacity: 0, y: 20 }}
-		animate={{ opacity: 1, y: 0 }}
-		whileHover={{ 
-			backgroundColor: "rgba(255, 255, 255, 0.05)",
-			backdropFilter: "blur(10px)",
-		}}
-	>
-		<motion.div 
-			className="faq-header cursor-pointer flex justify-between items-center"
-			onClick={onToggle}
-		>
-			<h3 className="faq-question text-xl font-semibold">{faq.question}</h3>
-			<motion.span
-				animate={{ rotate: isOpen ? 180 : 0 }}
-				transition={{ duration: 0.3 }}
-				className="text-2xl"
-			>
-				↓
-			</motion.span>
-		</motion.div>
-		<motion.div
-			initial={false}
-			animate={{ 
-				height: isOpen ? "auto" : 0,
-				opacity: isOpen ? 1 : 0,
-				marginTop: isOpen ? "1rem" : "0"
-			}}
-			transition={{ duration: 0.3, ease: "easeInOut" }}
-			style={{ overflow: "hidden" }}
-		>
-			<p className="faq-answer text-gray-300">{faq.answer}</p>
-		</motion.div>
-	</motion.div>
-);
 
 function WebDevelopment() {
 	const [openFAQIndex, setOpenFAQIndex] = useState(0);
@@ -443,77 +406,7 @@ const App = () => {
 						))}
 					</div>
 				</motion.div>
-
-				<div className="container mx-auto px-6">
-					<div className="text-center max-w-4xl mx-auto mb-16">
-						<motion.h2 
-							className="section-title"
-							initial={{ y: 30, opacity: 0 }}
-							animate={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.8 }}
-						>
-							<motion.span 
-								className="gradient-text"
-								whileHover={{ 
-									scale: 1.1,
-									textShadow: "0 0 8px rgba(255,255,255,0.5)"
-								}}
-							>
-								Frequently Asked Questions
-							</motion.span>
-						</motion.h2>
-					</div>
-					<div className="faq-container">
-						{FAQS.map((faq, index) => (
-							<motion.div 
-								key={index} 
-								className="faq-item"
-								initial={{ opacity: 0, y: 20 }}
-								animate={{ opacity: 1, y: 0 }}
-								transition={{ delay: index * 0.1, duration: 0.5 }}
-							>
-								<motion.button
-									className="faq-button"
-									type="button"
-									data-bs-toggle="collapse"
-									data-bs-target={`#faq-${index}`}
-									onClick={() => setOpenFAQIndex(openFAQIndex === index ? -1 : index)}
-									whileHover={{ 
-										backgroundColor: "rgba(255, 255, 255, 0.05)",
-										transition: { duration: 0.2 }
-									}}
-								>
-									{faq.question}
-									<motion.span 
-										className="faq-icon"
-										animate={{ 
-											rotate: openFAQIndex === index ? 45 : 0,
-											color: openFAQIndex === index ? "#00ff88" : "#ffffff"
-										}}
-										transition={{ duration: 0.3 }}
-									>
-										+
-									</motion.span>
-								</motion.button>
-
-								<motion.div
-									className={`faq-collapse ${openFAQIndex === index ? 'show' : ''}`}
-									initial={false}
-									animate={{ 
-										height: openFAQIndex === index ? "auto" : 0,
-										opacity: openFAQIndex === index ? 1 : 0
-									}}
-									transition={{ duration: 0.3, ease: "easeInOut" }}
-									style={{ overflow: "hidden" }}
-								>
-									<div className="faq-content">
-										{faq.answer}
-									</div>
-								</motion.div>
-							</motion.div>
-						))}
-					</div>
-				</div>
+				<FAQ FAQS = {FAQS}/>
 			</div>
 		</div>
 	);
