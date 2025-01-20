@@ -8,7 +8,7 @@ function ContactInfo() {
 
 	useEffect(() => {
 		const checkMobile = () => {
-			setIsMobile(window.innerWidth <= 768);
+			setIsMobile(window.innerWidth <= 992);
 		};
 		
 		checkMobile();
@@ -77,10 +77,11 @@ function ContactInfo() {
 	};
 
 	const containerVariants = {
-		hidden: { opacity: 0 },
+		hidden: { opacity: isMobile ? 1 : 0 },
 		visible: {
 			opacity: 1,
 			transition: {
+				duration: isMobile ? 0 : 0.3,
 				staggerChildren: isMobile ? 0 : 0.2
 			}
 		}
@@ -88,15 +89,14 @@ function ContactInfo() {
 
 	const itemVariants = {
 		hidden: { 
-			opacity: isMobile ? 1 : 0,
-			y: isMobile ? 0 : 20
+			opacity: 1,
+			y: 0
 		},
 		visible: {
 			opacity: 1,
 			y: 0,
 			transition: {
-				duration: isMobile ? 0 : 0.5,
-				ease: "easeOut"
+				duration: 0
 			}
 		}
 	};
@@ -111,9 +111,9 @@ function ContactInfo() {
 				<div className="row justify-content-center">
 					<motion.div 
 						className="col-12 text-center mb-4"
-						initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+						initial={{ opacity: 1, y: 0 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: isMobile ? 0 : 0.5 }}
+						transition={{ duration: 0 }}
 					>
 						<h2 style={{
 							fontSize: "clamp(32px, 5vw, 48px)",

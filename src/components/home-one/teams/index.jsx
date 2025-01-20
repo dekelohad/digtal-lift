@@ -8,7 +8,7 @@ function Teams() {
 
 	useEffect(() => {
 		const checkMobile = () => {
-			setIsMobile(window.innerWidth <= 768);
+			setIsMobile(window.innerWidth <= 992);
 		};
 		
 		checkMobile();
@@ -17,24 +17,19 @@ function Teams() {
 		return () => window.removeEventListener('resize', checkMobile);
 	}, []);
 
-	const initialAnimation = isMobile ? {
-		initial: { opacity: 1, y: 0 },
-		whileInView: { opacity: 1, y: 0 }
-	} : {
-		initial: { opacity: 0, y: 30 },
-		whileInView: { opacity: 1, y: 0 },
-		transition: { duration: 0.5 }
-	};
-
 	return (
 		<div className="team-section" style={{marginBottom:'4em'}}>
 			<motion.div 
 				className="team-title"
-				{...initialAnimation}
+				initial={{ opacity: isMobile ? 1 : 0, y: isMobile ? 0 : 30 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: isMobile ? 0 : 0.5 }}
 			>
 				<motion.h2 
 					className="main-title"
-					{...initialAnimation}
+					initial={{ opacity: isMobile ? 1 : 0, y: isMobile ? 0 : 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					transition={{ duration: isMobile ? 0 : 0.5 }}
 					style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}
 				>
 					<span style={{ color: '#9FFF00', fontSize: '2.5rem',marginTop:'4em' }}>Meet Our Team of</span>
@@ -47,8 +42,9 @@ function Teams() {
 					<motion.div 
 						key={member.id} 
 						className="team-member"
-						{...initialAnimation}
-						transition={{ duration: 0.5, delay: isMobile ? 0 : index * 0.1 }}
+						initial={{ opacity: isMobile ? 1 : 0, y: isMobile ? 0 : 30 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						transition={{ duration: isMobile ? 0 : 0.5, delay: isMobile ? 0 : index * 0.1 }}
 					>
 						<img 
 							src={member.img} 
