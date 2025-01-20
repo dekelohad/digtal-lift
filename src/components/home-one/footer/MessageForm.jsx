@@ -141,7 +141,8 @@ function MessageForm() {
 				disabled={isLoading}
 				style={{
 					opacity: isLoading ? 0.7 : 1,
-					cursor: isLoading ? 'not-allowed' : 'pointer'
+					cursor: isLoading ? 'not-allowed' : 'pointer',
+					color:'black'
 				}}
 			>
 				{isLoading ? 'Sending...' : 'Send Message'}{" "}
