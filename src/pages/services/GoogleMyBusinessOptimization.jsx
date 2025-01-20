@@ -115,9 +115,9 @@ function GoogleMyBusinessOptimization() {
 
 						<div className="results-image-container">
 							<h3 className="subsection-title">Real Results from Our Optimization Service</h3>
-							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
-								<div>
-									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Before Optimization</h4>
+							<div className="optimization-grid">
+								<div className="optimization-item">
+									<h4 className="optimization-title">Before Optimization</h4>
 									<img 
 										src={BeforeOptimization}
 										alt="Google Business Profile profile before optimization"
@@ -126,11 +126,10 @@ function GoogleMyBusinessOptimization() {
 											src: BeforeOptimization,
 											alt: "Google Business Profile profile before optimization"
 										})}
-										style={{ cursor: 'pointer' }}
 									/>
 								</div>
-								<div>
-									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>After Optimization</h4>
+								<div className="optimization-item">
+									<h4 className="optimization-title">After Optimization</h4>
 									<img 
 										src={AfterOptimization}
 										alt="Google Business Profile profile after optimization"
@@ -139,7 +138,6 @@ function GoogleMyBusinessOptimization() {
 											src: AfterOptimization,
 											alt: "Google Business Profile profile after optimization"
 										})}
-										style={{ cursor: 'pointer' }}
 									/>
 								</div>
 							</div>
