@@ -33,6 +33,7 @@ function Header() {
 								</Dropdown>
 							</NavItem>
 							<NavItem url="about-us">About</NavItem>
+							<NavItem url="about-us">About</NavItem>
 							<NavItem url="testimonials">Testimonials</NavItem>
 							<li className="nav-item">
 								<Link 
