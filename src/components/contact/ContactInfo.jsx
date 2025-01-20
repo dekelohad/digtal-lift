@@ -1,13 +1,27 @@
 import { FaClock, FaEnvelope } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 function ContactInfo() {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+		
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		
+		return () => window.removeEventListener('resize', checkMobile);
+	}, []);
+
 	const boxStyle = {
 		background: "#111",
 		backdropFilter: "blur(10px)",
 		borderRadius: "12px",
-		padding: "25px",
+		padding: isMobile ? "15px" : "25px",
 		display: "flex",
 		flexDirection: "column",
 		alignItems: "center",
@@ -21,23 +35,23 @@ function ContactInfo() {
 	};
 
 	const iconStyle = {
-		width: "50px",
-		height: "50px",
+		width: isMobile ? "40px" : "50px",
+		height: isMobile ? "40px" : "50px",
 		color: "#BBFF00",
-		marginBottom: "15px",
-		fontSize: "50px"
+		marginBottom: isMobile ? "10px" : "15px",
+		fontSize: isMobile ? "40px" : "50px"
 	};
 
 	const titleStyle = {
 		color: "#BBFF00",
-		fontSize: "24px",
-		marginBottom: "12px"
+		fontSize: isMobile ? "20px" : "24px",
+		marginBottom: isMobile ? "8px" : "12px"
 	};
 
 	const textStyle = {
 		color: "#fff",
 		textDecoration: "none",
-		fontSize: "1.5rem",
+		fontSize: isMobile ? "1.2rem" : "1.5rem",
 		lineHeight: "1.6",
 		transition: "color 0.3s ease"
 	};
@@ -45,7 +59,7 @@ function ContactInfo() {
 	const linkStyle = {
 		...textStyle,
 		cursor: "pointer",
-		fontSize: "1.5rem"
+		fontSize: isMobile ? "1.2rem" : "1.5rem"
 	};
 
 	const hoverEffect = (e) => {
@@ -130,7 +144,7 @@ function ContactInfo() {
 							className="contact-grid"
 							style={{ 
 								display: "grid",
-								gap: "20px",
+								gap: isMobile ? "15px" : "20px",
 								padding: "0 10px"
 							}}
 						>
@@ -138,7 +152,7 @@ function ContactInfo() {
 								...boxStyle,
 								
 							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
-								<div style={{ marginBottom: "20px" }}>
+								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
 									<FaEnvelope style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Email us</h3>
@@ -158,10 +172,10 @@ function ContactInfo() {
 
 							<motion.div variants={itemVariants} style={{
 								...boxStyle,
-								minHeight: "250px",
-								padding: "25px 15px"
+								minHeight: isMobile ? "200px" : "250px",
+								padding: isMobile ? "15px" : "25px"
 							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
-								<div style={{ marginBottom: "20px" }}>
+								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
 									<FaClock style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Business Hours</h3>
@@ -178,10 +192,10 @@ function ContactInfo() {
 
 							<motion.div variants={itemVariants} style={{
 								...boxStyle,
-								minHeight: "250px",
-								padding: "25px 15px"
+								minHeight: isMobile ? "200px" : "250px",
+								padding: isMobile ? "15px" : "25px"
 							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
-								<div style={{ marginBottom: "20px" }}>
+								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
 									<FaLocationDot style={iconStyle} />
 								</div>
 								<h3 style={titleStyle}>Office Address</h3>
