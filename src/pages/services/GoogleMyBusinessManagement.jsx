@@ -115,9 +115,14 @@ function GoogleMyBusinessManagement() {
 
 						<div className="results-image-container">
 							<h3 className="subsection-title">Track Your Success with Detailed Insights</h3>
-							<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem', marginBottom: '2rem' }}>
+							<div style={{ 
+								display: 'grid', 
+								gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', 
+								gap: '2rem', 
+								marginBottom: '2rem' 
+							}}>
 								<div>
-									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Profile Views Growth</h4>
+									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.5rem' }}>Profile Views Growth</h4>
 									<img 
 										src={InsightsViews}
 										alt="Google Business Profile profile views insights showing growth"
@@ -130,7 +135,7 @@ function GoogleMyBusinessManagement() {
 									/>
 								</div>
 								<div>
-									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.2rem' }}>Search Performance</h4>
+									<h4 style={{ color: '#BBFF00', marginBottom: '1rem', fontSize: '1.5rem' }}>Search Performance</h4>
 									<img 
 										src={InsightsSearches}
 										alt="Google Business Profile search performance insights"
