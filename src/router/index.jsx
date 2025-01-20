@@ -90,6 +90,10 @@ export const router = createBrowserRouter(
 						{
 							path: "/web-development",
 							element: <WebDevelopment />,
+						},
+						{
+							path: "*",
+							element: <ErrorPage />
 						}
 					],
 				},
