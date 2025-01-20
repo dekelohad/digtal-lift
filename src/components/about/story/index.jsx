@@ -1,8 +1,28 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { FaPhoneVolume, FaUserCheck, FaChartLine, FaClock } from "react-icons/fa";
 import "./Story.css";
 
 function Story() {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+		
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		
+		return () => window.removeEventListener('resize', checkMobile);
+	}, []);
+
+	const featureAnimation = isMobile ? {} : {
+		initial: { opacity: 0 },
+		whileInView: { opacity: 1 },
+		transition: { duration: 0.5 }
+	};
+
 	return (
 		<div className="story-section">
 			<div className="container">
@@ -46,9 +66,12 @@ function Story() {
 					<div className="features-grid">
 						<motion.div 
 							className="feature-box"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							transition={{ duration: 0.5, delay: 0.7 }}
+							{...featureAnimation}
+							transition={{ duration: 0.5, delay: isMobile ? 0 : 0.7 }}
+							style={{
+								willChange: 'transform',
+								transform: 'translateZ(0)'
+							}}
 						>
 							<FaUserCheck className="feature-icon" />
 							<div className="feature-content">
@@ -59,9 +82,12 @@ function Story() {
 
 						<motion.div 
 							className="feature-box"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							transition={{ duration: 0.5, delay: 1.3 }}
+							{...featureAnimation}
+							transition={{ duration: 0.5, delay: isMobile ? 0 : 1.3 }}
+							style={{
+								willChange: 'transform',
+								transform: 'translateZ(0)'
+							}}
 						>
 							<FaChartLine className="feature-icon" />
 							<div className="feature-content">
@@ -72,9 +98,12 @@ function Story() {
 
 						<motion.div 
 							className="feature-box"
-							initial={{ opacity: 0 }}
-							whileInView={{ opacity: 1 }}
-							transition={{ duration: 0.5, delay: 1.9 }}
+							{...featureAnimation}
+							transition={{ duration: 0.5, delay: isMobile ? 0 : 1.9 }}
+							style={{
+								willChange: 'transform',
+								transform: 'translateZ(0)'
+							}}
 						>
 							<FaClock className="feature-icon" />
 							<div className="feature-content">
