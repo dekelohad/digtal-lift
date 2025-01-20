@@ -20,6 +20,12 @@ function Header() {
 				<nav className="navbar site-navbar">
 					<HeaderLogo />
 					<div className={`menu-block-wrapper ${isMobileMenuOpen ? 'active' : ''}`}>
+						<div className="mobile-menu-header">
+							<HeaderLogo />
+							<button className="mobile-menu-close" onClick={toggleMobileMenu}>
+								<span>×</span>
+							</button>
+						</div>
 						<DesktopNav>
 							<NavItem url="/" setIsMobileMenuOpen={setIsMobileMenuOpen}>Home</NavItem>
 							<NavItem dropdown title="Services" setIsMobileMenuOpen={setIsMobileMenuOpen}>
