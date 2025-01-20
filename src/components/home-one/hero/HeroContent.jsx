@@ -16,37 +16,11 @@ function HeroContent() {
 			<FadeInStaggerTwo>
 				<FadeInStaggerTwoChildren>
 					<h1>
-						<span className="aximo-title-animation" style={{
-							fontSize: "clamp(3.5rem, 8vw, 5rem)",
-							color: "#BBFF00",
-							textShadow: "0 0 20px rgba(187, 255, 0, 0.4), 0 0 40px rgba(187, 255, 0, 0.2)",
-							display: "block",
-							lineHeight: "1.1",
-							marginBottom: "10px",
-							fontWeight: "800",
-							letterSpacing: "-1px",
-							animation: "glow 2s ease-in-out infinite alternate",
-							"@keyframes glow": {
-								"from": {
-									textShadow: "0 0 20px rgba(187, 255, 0, 0.4), 0 0 40px rgba(187, 255, 0, 0.2)"
-								},
-								"to": {
-									textShadow: "0 0 25px rgba(187, 255, 0, 0.5), 0 0 50px rgba(187, 255, 0, 0.3)"
-								}
-							}
-						}}>
-							Digital Growth
-						</span>
-						<span style={{
-							fontSize: "clamp(2.5rem, 6vw, 3.5rem)",
-							color: "#fff",
-							display: "block",
-							lineHeight: "1.2",
-							fontWeight: "600",
-							letterSpacing: "1px"
-						}}>
-							Agency
-						</span>
+						<div className="title-wrapper">
+							<span className="word digital">Digital</span>
+							<span className="word growth">Growth</span>
+							<span className="word agency">Agency</span>
+						</div>
 					</h1>
 				</FadeInStaggerTwoChildren>
 				<FadeInStaggerTwoChildren>

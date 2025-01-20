@@ -42,4 +42,73 @@
 .aximo-call-btn:hover .icon-call {
     transform: scale(1.1);
     opacity: 1;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.word {
+    font-size: clamp(3.5rem, 8vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.word.digital {
+    animation: glowDigital 3s infinite;
+}
+
+.word.growth {
+    animation: glowGrowth 3s infinite;
+}
+
+.word.agency {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    animation: glowAgency 3s infinite;
+}
+
+@keyframes glowDigital {
+    0%, 33% {
+        color: #BBFF00;
+        text-shadow: 0 0 20px rgba(187, 255, 0, 0.4),
+                     0 0 40px rgba(187, 255, 0, 0.2);
+    }
+    34%, 100% {
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+@keyframes glowGrowth {
+    0%, 32% {
+        color: #fff;
+        text-shadow: none;
+    }
+    33%, 66% {
+        color: #BBFF00;
+        text-shadow: 0 0 20px rgba(187, 255, 0, 0.4),
+                     0 0 40px rgba(187, 255, 0, 0.2);
+    }
+    67%, 100% {
+        color: #fff;
+        text-shadow: none;
+    }
+}
+
+@keyframes glowAgency {
+    0%, 65% {
+        color: #fff;
+        text-shadow: none;
+    }
+    66%, 100% {
+        color: #BBFF00;
+        text-shadow: 0 0 20px rgba(187, 255, 0, 0.4),
+                     0 0 40px rgba(187, 255, 0, 0.2);
+    }
 } 
