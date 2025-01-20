@@ -81,21 +81,21 @@ function ContactInfo() {
 		visible: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.2
+				staggerChildren: isMobile ? 0 : 0.2
 			}
 		}
 	};
 
 	const itemVariants = {
 		hidden: { 
-			opacity: 0,
-			y: 20
+			opacity: isMobile ? 1 : 0,
+			y: isMobile ? 0 : 20
 		},
 		visible: {
 			opacity: 1,
 			y: 0,
 			transition: {
-				duration: 0.5,
+				duration: isMobile ? 0 : 0.5,
 				ease: "easeOut"
 			}
 		}
@@ -111,9 +111,9 @@ function ContactInfo() {
 				<div className="row justify-content-center">
 					<motion.div 
 						className="col-12 text-center mb-4"
-						initial={{ opacity: 0, y: 20 }}
+						initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5 }}
+						transition={{ duration: isMobile ? 0 : 0.5 }}
 					>
 						<h2 style={{
 							fontSize: "clamp(32px, 5vw, 48px)",
@@ -151,7 +151,7 @@ function ContactInfo() {
 							<motion.div variants={itemVariants} style={{
 								...boxStyle,
 								
-							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+							}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
 								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
 									<FaEnvelope style={iconStyle} />
 								</div>
@@ -174,7 +174,7 @@ function ContactInfo() {
 								...boxStyle,
 								minHeight: isMobile ? "200px" : "250px",
 								padding: isMobile ? "15px" : "25px"
-							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+							}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
 								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
 									<FaClock style={iconStyle} />
 								</div>
@@ -194,7 +194,7 @@ function ContactInfo() {
 								...boxStyle,
 								minHeight: isMobile ? "200px" : "250px",
 								padding: isMobile ? "15px" : "25px"
-							}} onMouseEnter={hoverEffect} onMouseLeave={removeHoverEffect}>
+							}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
 								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
 									<FaLocationDot style={iconStyle} />
 								</div>

@@ -17,27 +17,21 @@ function Story() {
 		return () => window.removeEventListener('resize', checkMobile);
 	}, []);
 
-	const featureAnimation = isMobile ? {} : {
-		initial: { opacity: 0 },
-		whileInView: { opacity: 1 },
-		transition: { duration: 0.5 }
-	};
-
 	return (
 		<div className="story-section">
 			<div className="container">
 				<div className="story-content">
 					<motion.div 
 						className="title-container"
-						initial={{ opacity: 0 }}
+						initial={isMobile ? { opacity: 1 } : { opacity: 0 }}
 						whileInView={{ opacity: 1 }}
-						transition={{ duration: 0.3 }}
+						transition={{ duration: isMobile ? 0 : 0.3 }}
 					>
 						<motion.h2 
 							className="main-title"
-							initial={{ opacity: 0, y: 30 }}
+							initial={isMobile ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
 							whileInView={{ opacity: 1, y: 0 }}
-							transition={{ duration: 0.5 }}
+							transition={{ duration: isMobile ? 0 : 0.5 }}
 							style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}
 						>
 							<span style={{ color: '#9FFF00', fontSize: '2.5rem' }}>Quality calls Daily</span>
@@ -45,18 +39,18 @@ function Story() {
 
 						<motion.h3 
 							className="subtitle"
-							initial={{ y: 20, opacity: 0 }}
+							initial={isMobile ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
-							transition={{ duration: 0.3, delay: 0.5 }}
+							transition={{ duration: isMobile ? 0 : 0.3, delay: isMobile ? 0 : 0.5 }}
 						>
 							FROM READY-TO-BUY CUSTOMERS
 						</motion.h3>
 
 						<motion.div 
 							className="highlight-box"
-							initial={{ scale: 0.9, opacity: 0 }}
+							initial={isMobile ? { scale: 1, opacity: 1 } : { scale: 0.9, opacity: 0 }}
 							whileInView={{ scale: 1, opacity: 1 }}
-							transition={{ duration: 0.3, delay: 0.6 }}
+							transition={{ duration: isMobile ? 0 : 0.3, delay: isMobile ? 0 : 0.6 }}
 						>
 							<FaPhoneVolume className="highlight-icon" />
 							<h4>Every call is a potential high-ticket job.</h4>
@@ -66,8 +60,9 @@ function Story() {
 					<div className="features-grid">
 						<motion.div 
 							className="feature-box"
-							{...featureAnimation}
-							transition={{ duration: 0.5, delay: isMobile ? 0 : 0.7 }}
+							initial={isMobile ? { opacity: 1 } : { opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0, delay: 0 }}
 							style={{
 								willChange: 'transform',
 								transform: 'translateZ(0)'
@@ -82,8 +77,9 @@ function Story() {
 
 						<motion.div 
 							className="feature-box"
-							{...featureAnimation}
-							transition={{ duration: 0.5, delay: isMobile ? 0 : 1.3 }}
+							initial={isMobile ? { opacity: 1 } : { opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0, delay: 0 }}
 							style={{
 								willChange: 'transform',
 								transform: 'translateZ(0)'
@@ -98,8 +94,9 @@ function Story() {
 
 						<motion.div 
 							className="feature-box"
-							{...featureAnimation}
-							transition={{ duration: 0.5, delay: isMobile ? 0 : 1.9 }}
+							initial={isMobile ? { opacity: 1 } : { opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0, delay: 0 }}
 							style={{
 								willChange: 'transform',
 								transform: 'translateZ(0)'
