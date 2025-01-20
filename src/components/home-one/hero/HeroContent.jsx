@@ -52,7 +52,7 @@ function HeroContent() {
 							Digital Growth
 						</span>
 						<span style={{
-							fontSize: "clamp(2.5rem, 6vw, 3.5rem)",
+							fontSize: "clamp(3rem, 7vw, 4rem)",
 							color: "#fff",
 							display: "block",
 							lineHeight: "1.2",
