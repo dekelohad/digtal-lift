@@ -140,7 +140,7 @@ function HeroContent() {
 							rel="noopener noreferrer"
 							style={{
 								fontSize: "20px",
-								padding: "20px 40px",
+								padding: "20px 35px",
 								background: "linear-gradient(135deg, #BBFF00 0%, #98CC00 100%)",
 								color: "#000",
 								fontWeight: "600",

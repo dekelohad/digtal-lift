@@ -144,7 +144,7 @@ function MessageForm() {
 					cursor: isLoading ? 'not-allowed' : 'pointer'
 				}}
 			>
-				{isLoading ? 'Sending...' : 'Send message'}{" "}
+				{isLoading ? 'Sending...' : 'Send Message'}{" "}
 				<span>
 					<img src={ArrowRight3Img} alt="ArrowRight3Img" />
 				</span>
