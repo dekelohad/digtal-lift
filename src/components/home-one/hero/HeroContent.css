@@ -88,4 +88,42 @@
         color: #fff;
         text-shadow: none;
     }
+}
+
+.aximo-hero-thumb {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.aximo-hero-thumb img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .aximo-hero-thumb {
+        max-width: 350px;
+        padding: 15px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aximo-hero-thumb {
+        max-width: 250px;
+        padding: 10px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .aximo-hero-thumb {
+        max-width: 220px;
+        padding: 8px;
+        margin-top: 35px;
+    }
 } 
