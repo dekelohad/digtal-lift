@@ -132,8 +132,8 @@
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .aximo-iconbox-wrap {
-        padding: 30px;
-        min-height: 260px;
+        padding: 25px;
+        min-height: 240px;
     }
     
     .aximo-iconbox-data h3 {
@@ -142,5 +142,22 @@
     
     .aximo-iconbox-data p {
         font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aximo-iconbox-wrap {
+        padding: 20px;
+        min-height: 220px;
+    }
+
+    .aximo-iconbox-data h3 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .aximo-iconbox-data p {
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
 } 
