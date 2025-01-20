@@ -16,7 +16,7 @@ function HeroContent() {
 
 	useEffect(() => {
 		const checkMobile = () => {
-			setIsMobile(window.innerWidth <= 768);
+			setIsMobile(window.innerWidth <= 992);
 		};
 		
 		checkMobile();
@@ -134,7 +134,10 @@ function HeroContent() {
 							stiffness: 300,
 							damping: 15
 						}}
-						style={{ marginTop: "40px" }}
+						style={{ 
+							marginTop: "40px",
+							marginBottom: isMobile ? "40px" : "0"
+						}}
 					>
 						<a 
 							href="https://tidycal.com/digitallift/15-minute-meeting"
