@@ -59,7 +59,9 @@ function FAQ({FAQS}) {
 											alignItems: "center",
 											cursor: "pointer",
 											transition: "all 0.3s ease",
-											background: openIndex === index ? "linear-gradient(145deg, rgba(187, 255, 0, 0.08), rgba(0, 0, 0, 0.1))" : "transparent"
+											background: openIndex === index ? "linear-gradient(145deg, rgba(187, 255, 0, 0.08), rgba(0, 0, 0, 0.1))" : "transparent",
+											minHeight: "72px",
+											width: "100%"
 										}}
 										onMouseEnter={(e) => {
 											e.currentTarget.style.background = "linear-gradient(145deg, rgba(187, 255, 0, 0.05), rgba(0, 0, 0, 0.1))";
@@ -74,14 +76,18 @@ function FAQ({FAQS}) {
 											fontSize: "18px",
 											color: "#fff",
 											margin: 0,
-											fontWeight: "500"
+											fontWeight: "500",
+											flex: 1,
+											paddingRight: "20px"
 										}}>
 											{faq.question}
 										</h3>
-										{openIndex === index ? 
-											<FaMinus style={{ color: "#BBFF00", fontSize: "16px" }} /> : 
-											<FaPlus style={{ color: "#BBFF00", fontSize: "16px" }} />
-										}
+										<div style={{ flexShrink: 0 }}>
+											{openIndex === index ? 
+												<FaMinus style={{ color: "#BBFF00", fontSize: "16px" }} /> : 
+												<FaPlus style={{ color: "#BBFF00", fontSize: "16px" }} />
+											}
+										</div>
 									</div>
 									<AnimatePresence>
 										{openIndex === index && (
