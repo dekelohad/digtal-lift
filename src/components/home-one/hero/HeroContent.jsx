@@ -9,8 +9,22 @@ import User3Img from "../../../assets/images/v1/user3.png";
 import { FadeInStaggerTwo, FadeInStaggerTwoChildren } from "../../animation/FadeInStaggerTwo";
 import "./HeroContent.css";
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 function HeroContent() {
+	const [isMobile, setIsMobile] = useState(false);
+
+	useEffect(() => {
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth <= 768);
+		};
+		
+		checkMobile();
+		window.addEventListener('resize', checkMobile);
+		
+		return () => window.removeEventListener('resize', checkMobile);
+	}, []);
+
 	return (
 		<div className="aximo-hero-content">
 			<FadeInStaggerTwo>
@@ -113,14 +127,14 @@ function HeroContent() {
 							target="_blank"
 							rel="noopener noreferrer"
 							style={{
-								fontSize: "20px",
-								padding: "20px 35px",
+								fontSize: isMobile ? "18px" : "20px",
+								padding: isMobile ? "18px 30px" : "20px 35px",
 								background: "linear-gradient(135deg, #BBFF00 0%, #98CC00 100%)",
 								color: "#000",
 								fontWeight: "600",
 								display: "inline-flex",
 								alignItems: "center",
-								gap: "12px",
+								gap: isMobile ? "10px" : "12px",
 								boxShadow: "0 4px 15px rgba(187, 255, 0, 0.3)",
 								border: "none",
 								position: "relative",
@@ -129,8 +143,8 @@ function HeroContent() {
 								textDecoration: "none"
 							}}
 						>
-							<FaCalendarAlt size={24} />
-							<span>Schedule Your Call Now</span>
+							<FaCalendarAlt size={isMobile ? 22 : 24} />
+							<span>{isMobile ? "Schedule Call" : "Schedule Your Call Now"}</span>
 							<motion.div
 								style={{
 									position: "absolute",
