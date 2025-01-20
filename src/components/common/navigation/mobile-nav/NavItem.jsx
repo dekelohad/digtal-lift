@@ -55,7 +55,7 @@ const NavItem = ({ items, depthLevel, showMenu, setShowMenu }) => {
 	return (
 		<li className="nav-item" onClick={closeDropdown}>
 			<Link to={urlFormatted} onClick={closeDropdown}>
-				{items.title}
+				{/* {items.title} */}
 			</Link>
 		</li>
 	);
