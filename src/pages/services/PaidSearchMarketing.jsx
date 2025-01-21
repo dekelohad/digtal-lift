@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import WebDesignHero from "../../assets/images/portfolio/team.jpg";
@@ -50,6 +50,17 @@ const TESTIMONIALS = [
 
 
 function PaidSearchMarketing() {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -155,17 +166,19 @@ function PaidSearchMarketing() {
 					<div className="grid-container" style={{
 						display: 'grid',
 						gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
-						gap: '2rem',
+						gap: windowWidth <= 480 ? '1rem' : '2rem',
 						width: '100%',
 						maxWidth: '1200px',
 						margin: '3rem auto 0',
-						marginTop: '4rem'
+						marginTop: '4rem',
+						padding: windowWidth <= 480 ? '0.5rem' : '2rem'
 					}}>
 						<motion.div 
 							className="process-box"
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Keyword and competitor research</h3>
 							<p className="process-description">
@@ -178,6 +191,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.4 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Ads optimized for keywords</h3>
 							<p className="process-description">
@@ -190,6 +204,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.5 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Negative keyword pruning</h3>
 							<p className="process-description">
@@ -202,6 +217,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.6 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Ad copy optimization</h3>
 							<p className="process-description">
@@ -214,6 +230,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.7 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Landing page optimization</h3>
 							<p className="process-description">
@@ -226,6 +243,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.8 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Performance monitoring</h3>
 							<p className="process-description">
@@ -290,6 +308,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Match search intent at every touchpoint</h3>
 							<p className="metric-description">
@@ -302,6 +321,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.4 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Experienced PPC management</h3>
 							<p className="metric-description">
@@ -314,6 +334,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.5 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="metric-title neon-text">Google Ads Experts</h3>
 							<p className="metric-description">
@@ -351,6 +372,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ delay: 0.3 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="stat-number">49%</h3>
 							<p className="stat-description">
@@ -365,6 +387,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ delay: 0.4 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="stat-number">100%</h3>
 							<p className="stat-description">
@@ -379,6 +402,7 @@ function PaidSearchMarketing() {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ delay: 0.5 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2.5rem' }}
 						>
 							<h3 className="stat-number">52%</h3>
 							<p className="stat-description">
