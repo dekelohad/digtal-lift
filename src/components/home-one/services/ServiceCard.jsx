@@ -16,7 +16,7 @@ function ServiceCard({ service: { title, description, icon, id } }) {
 	};
 
 	return (
-		<Link to={getServiceRoute(title)} className="aximo-iconbox-wrap" style={{ cursor: 'pointer', display: 'block', textDecoration: 'none' }}>
+		<Link to={getServiceRoute(title)} className="aximo-iconbox-wrap">
 			<div className="aximo-iconbox-icon">
 				<i className={`${icon}`}></i>
 			</div>
