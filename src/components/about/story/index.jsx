@@ -42,6 +42,9 @@ function Story() {
 							initial={isMobile ? { y: 0, opacity: 1 } : { y: 20, opacity: 0 }}
 							whileInView={{ y: 0, opacity: 1 }}
 							transition={{ duration: isMobile ? 0 : 0.3, delay: isMobile ? 0 : 0.5 }}
+							style={{
+								fontSize: window.innerWidth <= 768 ? "1.2rem" : "1.5rem"
+							}}
 						>
 							FROM READY-TO-BUY CUSTOMERS
 						</motion.h3>
@@ -53,7 +56,9 @@ function Story() {
 							transition={{ duration: isMobile ? 0 : 0.3, delay: isMobile ? 0 : 0.6 }}
 						>
 							<FaPhoneVolume className="highlight-icon" />
-							<h4>Every call is a potential high-ticket job.</h4>
+							<h4 style={{
+								fontSize: window.innerWidth <= 768 ? "1.1rem" : "1.4rem"
+							}}>Every call is a potential high-ticket job.</h4>
 						</motion.div>
 					</motion.div>
 
