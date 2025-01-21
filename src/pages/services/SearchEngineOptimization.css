@@ -575,14 +575,19 @@
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
+.stat-number {
+    color: #CCFF00;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 20px rgba(204, 255, 0, 0.4),
+                 0 0 40px rgba(204, 255, 0, 0.2);
+    margin-bottom: 1.5rem !important;
+}
+
+@media (max-width: 480px) {
     .stat-number {
-        font-size: 3.5rem;
+        font-size: 3rem;
+        margin-bottom: 1rem !important;
     }
 }
 
@@ -793,4 +798,65 @@
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
     font-size: 1.1rem;
+}
+
+.section-subtitle {
+    color: #ffffff !important;
+    margin-top: 1rem !important;
+    font-size: 1.4rem !important;
+    line-height: 1.5 !important;
+}
+
+@media (max-width: 480px) {
+    .section-subtitle {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
+        opacity: 0.85 !important;
+        text-transform: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        text-transform: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section-subtitle {
+        font-size: 1.2rem !important;
+        text-transform: none !important;
+    }
+}
+
+/* Override any Tailwind classes */
+.text-3xl.text-white,
+h3.text-3xl {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+    opacity: 0.85 !important;
+}
+
+@media (min-width: 481px) {
+    .text-3xl.text-white,
+    h3.text-3xl {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .text-3xl.text-white,
+    h3.text-3xl {
+        font-size: 1.2rem !important;
+    }
+}
+
+@media (min-width: 1025px) {
+    .text-3xl.text-white,
+    h3.text-3xl {
+        font-size: 1.4rem !important;
+    }
 } 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Helmet } from 'react-helmet-async';
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
@@ -70,6 +70,16 @@ const TESTIMONIALS = [
 
 function SearchEngineOptimization() {
 	const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
 
 	return (
 		<div className="local-lead-page">
@@ -223,6 +233,13 @@ function SearchEngineOptimization() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 						className="section-subtitle text-center mb-16"
+						style={{
+							fontSize: windowWidth <= 480 ? '0.85rem !important' : 
+									windowWidth <= 768 ? '1rem !important' : 
+									windowWidth <= 1024 ? '1.2rem !important' : '1.4rem !important',
+							lineHeight: windowWidth <= 480 ? '1.4 !important' : '1.5 !important',
+							opacity: windowWidth <= 480 ? '0.85 !important' : '1 !important'
+						}}
 					>
 						What makes our search engine optimization services so effective?
 					</motion.h3>
@@ -269,7 +286,21 @@ function SearchEngineOptimization() {
  
 
 						<h2 className="section-title text-center mb-12 neon-text">The proof is in the numbers</h2>
-						<h3 className="text-3xl text-white opacity-90 text-center mb-16">Why powerful SEO can bring in the numbers</h3>
+						<motion.h3
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.8, delay: 0.2 }}
+							className="section-subtitle text-center mb-16"
+							style={{
+								fontSize: windowWidth <= 480 ? '0.85rem !important' : 
+										windowWidth <= 768 ? '1rem !important' : 
+										windowWidth <= 1024 ? '1.2rem !important' : '1.4rem !important',
+								lineHeight: windowWidth <= 480 ? '1.4 !important' : '1.5 !important',
+								opacity: windowWidth <= 480 ? '0.85 !important' : '1 !important'
+							}}
+						>
+							Why powerful SEO can bring in the numbers
+						</motion.h3>
 						
 						<div className="stats-grid grid grid-cols-1 md:grid-cols-3 gap-8 mb-24 max-w-6xl mx-auto px-4">
 							<div className="stat-item">
