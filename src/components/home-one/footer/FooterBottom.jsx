@@ -1,14 +1,19 @@
-import { Link } from "react-router-dom";
-import { FaPhone, FaEnvelope } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+import { Link, useNavigate } from "react-router-dom";
+
 import "./FooterBottom.css";
 
 const FooterLink = ({ to, children }) => {
-	const handleClick = () => {
-		window.scrollTo({
-			top: 0,
-			behavior: 'smooth'
-		});
+	const navigate = useNavigate();
+
+	const handleClick = (e) => {
+		e.preventDefault();
+		navigate(to);
+		setTimeout(() => {
+			window.scrollTo({
+				top: 0,
+				behavior: 'instant'
+			});
+		}, 0);
 	};
 
 	return (
