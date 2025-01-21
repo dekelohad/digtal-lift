@@ -16,11 +16,7 @@ function FooterContent() {
 	return (
 		<div className="aximo-default-content light position-relative">
 			<h2>
-				<div style={{ 
-					display: "flex", 
-					flexDirection: "column", 
-					gap: isMobile ? "15px" : "0px" 
-				}}>
+				<div className="text-rows-container">
 					<div className="text-row first">Transform Your</div>
 					<div className="text-row second">Vision Into</div>
 					<div className="text-row third">Digital Reality</div>
