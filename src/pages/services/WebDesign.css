@@ -564,6 +564,8 @@
     color: #BBFF00;
     margin-bottom: 1rem;
     text-align: center;
+    width: 100%;
+    display: block;
 }
 
 .metric-description {
