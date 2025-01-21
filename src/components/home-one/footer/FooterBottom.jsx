@@ -3,11 +3,20 @@ import { FaPhone, FaEnvelope } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import "./FooterBottom.css";
 
-const FooterLink = ({ to, children }) => (
-	<Link to={to} className="footer-bottom-link">
-		{children}
-	</Link>
-);
+const FooterLink = ({ to, children }) => {
+	const handleClick = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	};
+
+	return (
+		<Link to={to} className="footer-bottom-link" onClick={handleClick}>
+			{children}
+		</Link>
+	);
+};
 
 function FooterBottom() {
 	const currentYear = new Date().getFullYear();
