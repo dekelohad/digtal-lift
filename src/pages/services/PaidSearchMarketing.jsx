@@ -158,7 +158,14 @@ function PaidSearchMarketing() {
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.8, delay: 0.2 }}
 						className="section-subtitle text-center mb-16 text-white"
-						style={{ fontSize: '1.5rem', marginTop: '1rem' }}
+						style={{ 
+							fontSize: `${windowWidth <= 480 ? '0.85rem' : 
+										windowWidth <= 768 ? '1rem' : 
+										windowWidth <= 1024 ? '1.2rem' : '1.4rem'} !important`,
+							marginTop: '1rem !important',
+							lineHeight: `${windowWidth <= 480 ? '1.4' : '1.5'} !important`,
+							opacity: windowWidth <= 480 ? '0.85 !important' : '1 !important'
+						}}
 					>
 						Our relationship with you relies on getting results, and paid search marketing results are measured in ROI. Each and every day, our primary focus is building ROI by interpreting real data and creating campaigns that convert.
 					</motion.h3>
