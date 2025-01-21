@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import BreadCrumb from "../../components/common/Breadcrumb";
 import ServicesSection from "../../components/services/ServicesSection";
@@ -50,6 +50,17 @@ const TESTIMONIALS = [
 ];
 
 function LocalLeadGeneration() {
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, []);
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -98,7 +109,7 @@ function LocalLeadGeneration() {
 							<div className="text-content">
 								<h2 className="section-title text-left mb-8">Lead Generation Solutions for Contractors</h2>
 								<p className="service-description mb-8">
-								Digital Lift specializes in lead generation for contractors, offering comprehensive solutions to connect businesses with potential customers in their local area. Even if you don’t have a website or marketing materials, our team can help you from the ground up, driving real leads that translate into revenue. 
+								Digital Lift specializes in lead generation for contractors, offering comprehensive solutions to connect businesses with potential customers in their local area. Even if you don't have a website or marketing materials, our team can help you from the ground up, driving real leads that translate into revenue. 
 								</p>
 								<p className="service-description mb-12 mt-4">
 								We understand the unique challenges that contractors face in finding quality leads, which is why our approach is tailored to your specific market and needs. With our expertise, you can focus on delivering your services while we take care of bringing the right customers to you.
@@ -179,7 +190,7 @@ function LocalLeadGeneration() {
 						{
 							id: 4,
 							title: "Ongoing Support and Reporting",
-							description: "We believe in full transparency and accountability, which is why we provide ongoing support and detailed reporting throughout your campaign. Our team is always available to answer any questions you may have and provide guidance on how to optimize your campaigns for better results. We also provide regular reports that give you a clear view of your campaign's performance, including key metrics such as lead volume, conversion rates, and return on investment. With our support and reporting services, you’ll always be in the loop and able to make informed decisions about your lead generation strategy."
+							description: "We believe in full transparency and accountability, which is why we provide ongoing support and detailed reporting throughout your campaign. Our team is always available to answer any questions you may have and provide guidance on how to optimize your campaigns for better results. We also provide regular reports that give you a clear view of your campaign's performance, including key metrics such as lead volume, conversion rates, and return on investment. With our support and reporting services, you'll always be in the loop and able to make informed decisions about your lead generation strategy."
 						}
 					]}
 				/>
@@ -212,6 +223,7 @@ function LocalLeadGeneration() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.3 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2rem' }}
 						>
 							<h3 className="metric-title neon-text">Targeted Approach</h3>
 							<p className="metric-description">
@@ -224,6 +236,7 @@ function LocalLeadGeneration() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.4 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2rem' }}
 						>
 							<h3 className="metric-title neon-text">Customized Strategies</h3>
 							<p className="metric-description">
@@ -236,6 +249,7 @@ function LocalLeadGeneration() {
 							initial={{ opacity: 0, y: 20 }}
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 0.5 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2rem' }}
 						>
 							<h3 className="metric-title neon-text">Data-Driven Decisions</h3>
 							<p className="metric-description">
@@ -275,6 +289,7 @@ function LocalLeadGeneration() {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ delay: 0.3 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2rem' }}
 						>
 							<h3 className="stat-number">67%</h3>
 							<p className="stat-description">
@@ -289,6 +304,7 @@ function LocalLeadGeneration() {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ delay: 0.4 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2rem' }}
 						>
 							<h3 className="stat-number">21%</h3>
 							<p className="stat-description">
@@ -303,6 +319,7 @@ function LocalLeadGeneration() {
 							initial={{ opacity: 0, scale: 0.9 }}
 							animate={{ opacity: 1, scale: 1 }}
 							transition={{ delay: 0.5 }}
+							style={{ padding: windowWidth <= 480 ? '1rem' : windowWidth <= 768 ? '1.5rem' : '2rem' }}
 						>
 							<h3 className="stat-number">80%</h3>
 							<p className="stat-description">
