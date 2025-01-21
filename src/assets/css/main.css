@@ -1417,6 +1417,7 @@ a.log-in-btn:hover:after {
 	transition: all 0.3s ease;
 	opacity: 0;
 	animation: fadeInScale 0.3s ease forwards 0.1s;
+	margin-top: 20px !important;
 }
 
 .mobile-menu-close:hover {
