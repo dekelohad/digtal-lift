@@ -81,7 +81,7 @@ const teamsData = [
 	},
 ];
 
-function HomeOne() {
+function HomePage() {
 	return (
 		<>
 			<Helmet>
@@ -102,4 +102,4 @@ function HomeOne() {
 	);
 }
 
-export default HomeOne;
+export default HomePage;

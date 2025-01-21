@@ -4,7 +4,7 @@ import LayoutOne from "../components/layout/LayoutOne.jsx";
 import ErrorPage from "../error-page";
 import AboutUs from "../page/AboutUs";
 import ContactUs from "../page/ContactUs";
-import HomeOne from "../page/home/HomeOne.jsx";
+import HomePage from "../page/home/HomePage.jsx";
 import Testimonials from "../pages/services/Testimonials.jsx";
 import LocalLeadGeneration from "../pages/services/LocalLeadGeneration";
 import PaidSearchMarketing from "../pages/services/PaidSearchMarketing";
@@ -36,7 +36,7 @@ export const router = createBrowserRouter(
 					children: [
 						{
 							path: "/",
-							element: <HomeOne />,
+							element: <HomePage />,
 						},
 						{
 							path: "/about-us",
