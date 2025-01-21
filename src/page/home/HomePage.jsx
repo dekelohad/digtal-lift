@@ -1,13 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import About from "../../components/home-one/about";
-import AutoSlider from "../../components/home-one/auto-slider";
 import Hero from "../../components/home-one/hero";
 import Services from "../../components/home-one/services";
 import Teams from "../../components/home-one/teams";
 import Testimonial from "../../components/home-one/testimonial";
 import WhyChooseUs from "../../components/home-one/why-choose-us";
 import { ServiceIcons } from '../../components/icons/ServiceIcons';
-
+import Companies from '../../components/common/Companies/Companies';
 
 const servicesData = [
 	{
@@ -96,7 +95,7 @@ function HomePage() {
 			<About />
 			<WhyChooseUs />
 			<Testimonial />
-			<AutoSlider />
+			<Companies/>
 			<Teams teams={teamsData} />
 		</>
 	);
