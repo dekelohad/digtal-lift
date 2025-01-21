@@ -18,10 +18,14 @@ function Header() {
 		<header className="site-header aximo-header-section aximo-header1 dark-bg" id="sticky-menu">
 			<div className="container">
 				<nav className="navbar site-navbar">
-					<HeaderLogo />
+					<div className={`main-logo ${isMobileMenuOpen ? 'hidden' : ''}`}>
+						<HeaderLogo />
+					</div>
 					<div className={`menu-block-wrapper ${isMobileMenuOpen ? 'active' : ''}`}>
 						<div className="mobile-menu-header">
-							<HeaderLogo />
+							<div className="mobile-logo">
+								<HeaderLogo />
+							</div>
 							<button className="mobile-menu-close" onClick={toggleMobileMenu}>
 								<span>×</span>
 							</button>

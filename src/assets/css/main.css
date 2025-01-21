@@ -877,7 +877,7 @@
 		height: 100vh;
 		background: #000;
 		z-index: 999;
-		padding: 80px 30px 30px;
+		padding: 100px 30px 30px;
 		transition: 0.4s;
 		overflow-y: auto;
 	}
@@ -892,7 +892,29 @@
 
 	.site-menu-main .nav-item {
 		margin: 0;
+		padding: 15px 0;
+		border-bottom: 1px solid rgba(187, 255, 0, 0.1);
+	}
+
+	.site-menu-main .nav-link-item {
+		font-size: 18px;
 		padding: 10px 0;
+		display: block;
+	}
+
+	/* Logo positioning */
+	.brand-logo,
+	.default-logo,
+	.responsive-logo {
+		max-width: 120px;
+		z-index: 1000;
+		position: relative;
+	}
+
+	/* Hamburger menu positioning */
+	.mobile-menu-trigger {
+		z-index: 1000;
+		margin-right: 15px;
 	}
 
 	/* Make dropdown menu always visible on mobile */
@@ -955,6 +977,66 @@
 		position: relative;
 		cursor: pointer;
 		z-index: 1000;
+	}
+
+	/* Main logo visibility */
+	.navbar-brand {
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+	}
+
+	/* Hide main logo when mobile menu is active */
+	.menu-block-wrapper.active ~ .navbar-brand,
+	.menu-block-wrapper.active ~ * .navbar-brand {
+		opacity: 0;
+		visibility: hidden;
+		display: none;
+	}
+
+	/* Mobile menu header */
+	.mobile-menu-header {
+		display: none;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/* Show mobile header when menu is active */
+	.menu-block-wrapper.active .mobile-menu-header {
+		display: flex;
+	}
+
+	/* Mobile menu logo */
+	.mobile-menu-header .brand-logo {
+		margin: 0;
+		transform: scale(0.9);
+		opacity: 0;
+		display: none;
+	}
+
+	/* Show mobile logo only when menu is active */
+	.menu-block-wrapper.active .mobile-menu-header .brand-logo {
+		display: block;
+		animation: fadeInScale 0.3s ease forwards;
+	}
+
+	.mobile-menu-close {
+		background: transparent;
+		border: none;
+		color: #BBFF00;
+		font-size: 32px;
+		width: 40px;
+		height: 40px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		border-radius: 50%;
+		transition: all 0.3s ease;
+		opacity: 0;
+		animation: fadeInScale 0.3s ease forwards 0.1s;
+	}
+
+	.menu-block-wrapper {
+		padding-top: 80px !important;
 	}
 }
 
@@ -1432,6 +1514,13 @@ a.log-in-btn:hover:after {
 		align-items: center;
 	}
 
+	/* Hide the main logo when mobile menu is active */
+	.menu-block-wrapper.active + .navbar-brand {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	/* Mobile menu logo */
 	.mobile-menu-header .brand-logo {
 		margin: 0;
 		transform: scale(0.9);
@@ -1463,6 +1552,53 @@ a.log-in-btn:hover:after {
 
 	.menu-block-wrapper {
 		padding-top: 80px !important;
+	}
+}
+
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.main-logo {
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.main-logo.hidden {
+	opacity: 0;
+	visibility: hidden;
+	display: none;
+}
+
+.mobile-logo {
+	display: none;
+}
+
+@media (max-width: 991px) {
+	.menu-block-wrapper.active .mobile-logo {
+		display: block;
+		animation: fadeInScale 0.3s ease forwards;
+	}
+
+	.mobile-menu-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 20px;
+		border-bottom: 1px solid rgba(187, 255, 0, 0.1);
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background: rgba(0, 0, 0, 0.95);
+		backdrop-filter: blur(8px);
+		z-index: 1000;
 	}
 }
 
