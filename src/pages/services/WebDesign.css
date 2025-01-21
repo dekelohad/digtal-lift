@@ -330,6 +330,18 @@
     transition: transform 0.3s ease;
 }
 
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #BBFF00;
+    text-align: center !important;
+}
+
+.service-description {
+    text-align: left;
+}
+
 @media (max-width: 1024px) {
     .content-section {
         gap: 3rem;

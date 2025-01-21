@@ -92,11 +92,11 @@ function WebDesign() {
 						initial={{ y: 30, opacity: 0 }}
 						animate={{ y: 0, opacity: 1 }}
 						transition={{ delay: 0.5, duration: 0.8 }}
-						className="text-left mb-20 max-w-4xl mx-auto"
+						className="max-w-4xl mx-auto"
 					>
 						<div className="content-section">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Professional Website Design</h2>
+								<h2 className="section-title">Professional Website Design</h2>
 								<p className="service-description mb-8">
 									Elevate your small business with Digital Lift's professional website design services. Our team of experienced designers and developers works closely with you to create a visually appealing, user-friendly, and conversion-focused website that represents your brand with precision. We believe that a well-crafted website is a powerful tool for attracting and retaining customers.
 								</p>
@@ -111,7 +111,7 @@ function WebDesign() {
 
 						<div className="content-section reverse">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Responsive Web Development</h2>
+								<h2 className="section-title">Responsive Web Development</h2>
 								<p className="service-description mb-8">
 									In today's mobile-first world, it's essential to have a website that adapts seamlessly to various screen sizes and devices. Digital Lift specializes in responsive web development, ensuring that your website looks and functions flawlessly on desktops, tablets, and smartphones. Our skilled developers use the latest technologies and best practices to create a responsive design that enhances the user experience and helps you reach a broader audience.
 								</p>
@@ -126,12 +126,12 @@ function WebDesign() {
 
 						<div className="content-section">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Website Redesign and Optimization</h2>
+								<h2 className="section-title">Website Redesign and Optimization</h2>
 								<p className="service-description mb-8">
-								Is your current website falling short of expectations or in need of a modern makeover? Dalton Digital’s website redesign and optimization services can breathe new life into your online presence. We analyze your existing website’s performance, identifying areas for improvement in terms of design, functionality, and user experience. Our team then meticulously redesigns and optimizes your website, focusing on aesthetics, navigation, and speed. The result is a refreshed and highly efficient website that not only looks great but also drives better engagement and conversions.
+								Is your current website falling short of expectations or in need of a modern makeover? Dalton Digital's website redesign and optimization services can breathe new life into your online presence. We analyze your existing website's performance, identifying areas for improvement in terms of design, functionality, and user experience. Our team then meticulously redesigns and optimizes your website, focusing on aesthetics, navigation, and speed. The result is a refreshed and highly efficient website that not only looks great but also drives better engagement and conversions.
 								</p>
 								<p className="service-description mb-12 mt-4">
-								Whether you want to enhance your site’s aesthetics, improve user experience, or boost its search engine rankings, our experts have you covered. Let us transform your website into a powerful digital asset that yields tangible results.
+								Whether you want to enhance your site's aesthetics, improve user experience, or boost its search engine rankings, our experts have you covered. Let us transform your website into a powerful digital asset that yields tangible results.
 								</p>
 							</div>
 							<div className="image-content">
@@ -141,7 +141,7 @@ function WebDesign() {
 
 						<div className="content-section reverse">
 							<div className="text-content">
-								<h2 className="section-title text-left mb-8">Custom Website Design</h2>
+								<h2 className="section-title">Custom Website Design</h2>
 								<p className="service-description mb-8">
 									At Digital Lift, we recognize that every business is unique, and your website should reflect that individuality. Our custom website design services are crafted to align with your brand's identity and goals. We start by understanding your business, target audience, and objectives, allowing us to create a bespoke online presence that stands out in a crowded digital landscape.
 								</p>
