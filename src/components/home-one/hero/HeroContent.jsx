@@ -63,12 +63,13 @@ function HeroContent() {
 					}}>
 						We help businesses grow through strategic digital marketing and innovative solutions.
 					</p>
-					<p style={{
-						fontSize: "clamp(1.5rem, 3vw, 1.7rem)",
+					<p className="dominate-text" style={{
+						fontSize: isMobile ? "2.5rem !important" : "1.7rem",
 						color: "#BBFF00",
 						fontWeight: "600",
 						marginBottom: "25px",
-						letterSpacing: "0.5px"
+						letterSpacing: "0.5px",
+						lineHeight: "1.2"
 					}}>
 						Ready to dominate your market?
 					</p>
