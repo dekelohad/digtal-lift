@@ -595,7 +595,7 @@
     background: rgba(18, 18, 18, 0.5);
     border: 1px solid #BBFF00;
     border-radius: 20px;
-    padding: 2.5rem;
+    padding: 2.5rem !important;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 0 20px rgba(187, 255, 0, 0.15);
@@ -659,6 +659,16 @@
     .metric-description,
     .stat-description {
         font-size: 1.3rem;
+    }
+
+    .stat-box {
+        padding: 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-box {
+        padding: 1rem !important;
     }
 }
 
