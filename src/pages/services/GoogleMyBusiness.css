@@ -9,7 +9,7 @@
 }
 
 .hero-title {
-    font-size: clamp(24px, 4vw, 48px);
+    font-size: 36px !important;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.5px;
@@ -102,9 +102,18 @@
 
 .section-title {
     color: #BBFF00;
-    font-size: 2.8rem;
+    font-size: 36px !important;
     font-weight: 700;
     margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(187, 255, 0, 0.3);
+}
+
+.services-section-title {
+    font-size: 36px !important;
+    font-weight: 700;
+    color: #BBFF00;
+    text-align: center;
+    margin: 3rem 0 2rem;
     text-shadow: 0 0 20px rgba(187, 255, 0, 0.3);
 }
 
@@ -236,7 +245,7 @@
 
 @media (max-width: 1024px) {
     .hero-title {
-        font-size: 42px;
+        font-size: 32px !important;
     }
     
     .grid-container {
@@ -246,15 +255,17 @@
     .testimonials-grid {
         grid-template-columns: 1fr;
     }
+
+    .section-title,
+    .services-section-title {
+        font-size: 32px !important;
+    }
 }
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: clamp(22px, 3.5vw, 32px);
-        gap: 0.25em;
-        line-height: 1.2;
-        margin-bottom: 2rem;
-        padding: 0 1rem;
+        font-size: 24px !important;
+        gap: 0.6rem !important;
     }
 
     .hero-title .title-line {
@@ -271,8 +282,9 @@
         padding: 0 20px;
     }
     
-    .section-title {
-        font-size: 1.75rem;
+    .section-title,
+    .services-section-title {
+        font-size: 24px !important;
         padding: 0 20px;
         margin-top: 2rem;
     }
@@ -305,7 +317,8 @@
         grid-template-columns: 1fr;
     }
     
-    .section-title {
+    .section-title,
+    .services-section-title {
         font-size: 36px;
     }
 
@@ -317,25 +330,26 @@
 
 @media (max-width: 480px) {
     .hero-title {
-        font-size: clamp(20px, 3.5vw, 28px);
-        gap: 0.2em;
-        line-height: 1.2;
-        margin-bottom: 1.5rem;
-        padding: 0 0.8rem;
-        letter-spacing: 0;
+        font-size: 20px !important;
+        gap: 0.4rem !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    .section-title,
+    .services-section-title {
+        font-size: 20px !important;
     }
 
-    .hero-title .title-line {
-        line-height: 1.1;
+    .hero-description {
+        font-size: 16px !important;
+        margin: 1.5rem auto 3rem !important;
     }
+}
 
-    .hero-title .neon-text {
-        gap: 0.2em;
-        padding: 0.1em 0;
-    }
-
-    .google-maps-example {
-        max-width: 100%;
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 32px !important;
+        gap: 0.6rem !important;
     }
 }
 
@@ -705,15 +719,6 @@
     .contact-grid {
         grid-template-columns: 1fr !important;
     }
-}
-
-.services-section-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #BBFF00;
-    text-align: center;
-    margin: 3rem 0 2rem;
-    text-shadow: 0 0 20px rgba(187, 255, 0, 0.3);
 }
 
 .services-section-subtitle {
