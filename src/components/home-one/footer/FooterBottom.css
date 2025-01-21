@@ -51,11 +51,9 @@
     color: #e0e0e0;
     font-size: 1.25rem;
     line-height: 1.8;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: left;
-    max-width: 800px;
+    text-align: left !important;
     margin: 0;
+    max-width: 100% !important;
 }
 
 .footer-heading {
@@ -188,8 +186,9 @@
     .contact-link,
     .contact-text,
     .contact-label,
-    .footer-bottom-link {
-        font-size: 1.1rem;
+    .footer-bottom-link,
+    .footer-description {
+        font-size: 1.1rem !important;
     }
     
     .contact-item {
@@ -201,6 +200,11 @@
     .footer-heading {
         font-size: 1.5rem;
     }
+
+    .footer-description {
+        padding: 0 !important;
+        margin: 1rem 0 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -211,5 +215,12 @@
     
     .footer-list {
         margin-bottom: 20px;
+    }
+
+    .footer-description {
+        padding: 0 !important;
+        margin: 1rem 0 !important;
+        text-align: left !important;
+        max-width: 100% !important;
     }
 } 
