@@ -152,7 +152,15 @@ function PaidSearchMarketing() {
 						Our relationship with you relies on getting results, and paid search marketing results are measured in ROI. Each and every day, our primary focus is building ROI by interpreting real data and creating campaigns that convert.
 					</motion.h3>
 
-					<div className="grid-container">
+					<div className="grid-container" style={{
+						display: 'grid',
+						gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))',
+						gap: '2rem',
+						width: '100%',
+						maxWidth: '1200px',
+						margin: '3rem auto 0',
+						marginTop: '4rem'
+					}}>
 						<motion.div 
 							className="process-box"
 							initial={{ opacity: 0, y: 20 }}
