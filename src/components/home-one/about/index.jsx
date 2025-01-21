@@ -76,7 +76,7 @@ function About() {
 					<div className="stats-container" style={{
 						background: "#111111",
 						borderRadius: "30px",
-						padding: "60px 80px",
+						padding: window.innerWidth <= 480 ? "30px 20px" : window.innerWidth <= 768 ? "40px 30px" : "60px 80px",
 						display: "flex",
 						justifyContent: "space-between",
 						alignItems: "center",
@@ -86,17 +86,17 @@ function About() {
 					}}>
 						<div style={{ flex: 1, textAlign: "center" }}>
 							<div className="stat-number" style={{
-								fontSize: "5rem",
+								fontSize: window.innerWidth <= 480 ? "3rem" : window.innerWidth <= 768 ? "4rem" : "5rem",
 								fontWeight: "800",
 								color: "#BBFF00",
-								marginBottom: "10px",
+								marginBottom: window.innerWidth <= 480 ? "5px" : "10px",
 								fontFamily: "'Anybody', sans-serif",
 								lineHeight: "1"
 							}}>
 								<CountUp end={30} duration={3} enableScrollSpy />k+
 							</div>
 							<div className="stat-label" style={{
-								fontSize: "1rem",
+								fontSize: window.innerWidth <= 480 ? "0.85rem" : "1rem",
 								color: "#fff",
 								textTransform: "uppercase",
 								letterSpacing: "1px"
@@ -107,22 +107,22 @@ function About() {
 							textAlign: "center",
 							borderLeft: "1px solid rgba(255,255,255,0.1)",
 							borderRight: "1px solid rgba(255,255,255,0.1)",
-							margin: "0 60px",
-							paddingLeft: "60px",
-							paddingRight: "60px"
+							margin: window.innerWidth <= 480 ? "0 20px" : "0 60px",
+							paddingLeft: window.innerWidth <= 480 ? "20px" : "60px",
+							paddingRight: window.innerWidth <= 480 ? "20px" : "60px"
 						}}>
 							<div className="stat-number" style={{
-								fontSize: "5rem",
+								fontSize: window.innerWidth <= 480 ? "3rem" : window.innerWidth <= 768 ? "4rem" : "5rem",
 								fontWeight: "800",
 								color: "#BBFF00",
-								marginBottom: "10px",
+								marginBottom: window.innerWidth <= 480 ? "5px" : "10px",
 								fontFamily: "'Anybody', sans-serif",
 								lineHeight: "1"
 							}}>
 								<CountUp end={92} duration={3} enableScrollSpy />%
 							</div>
 							<div className="stat-label" style={{
-								fontSize: "1rem",
+								fontSize: window.innerWidth <= 480 ? "0.85rem" : "1rem",
 								color: "#fff",
 								textTransform: "uppercase",
 								letterSpacing: "1px"
@@ -130,17 +130,17 @@ function About() {
 						</div>
 						<div style={{ flex: 1, textAlign: "center" }}>
 							<div className="stat-number" style={{
-								fontSize: "5rem",
+								fontSize: window.innerWidth <= 480 ? "3rem" : window.innerWidth <= 768 ? "4rem" : "5rem",
 								fontWeight: "800",
 								color: "#BBFF00",
-								marginBottom: "10px",
+								marginBottom: window.innerWidth <= 480 ? "5px" : "10px",
 								fontFamily: "'Anybody', sans-serif",
 								lineHeight: "1"
 							}}>
 								<CountUp end={15} duration={3} enableScrollSpy />x
 							</div>
 							<div className="stat-label" style={{
-								fontSize: "1rem",
+								fontSize: window.innerWidth <= 480 ? "0.85rem" : "1rem",
 								color: "#fff",
 								textTransform: "uppercase",
 								letterSpacing: "1px"
