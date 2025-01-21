@@ -26,9 +26,7 @@ function FooterContent() {
 					</ul>
 				</div>
 			</div>
-			<div className="aximo-hero-shape aximo-footer-shape">
-				<img src={Shape1Img} alt="Shape1Img" />
-			</div>
+			 
 		</div>
 	);
 }
