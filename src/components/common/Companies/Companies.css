@@ -12,16 +12,17 @@
 }
 
 .companies-title {
-    font-size: 1rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #BBFF00;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     letter-spacing: 1px;
     text-shadow: 0 0 10px rgba(187, 255, 0, 0.5);
+    font-weight: 600;
 }
 
 .companies-subtitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 3rem;
@@ -126,8 +127,12 @@
 }
 
 @media (max-width: 768px) {
+    .companies-title {
+        font-size: 1.75rem;
+    }
+    
     .companies-subtitle {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .company-item {
@@ -156,8 +161,12 @@
 }
 
 @media (max-width: 480px) {
+    .companies-title {
+        font-size: 1.5rem;
+    }
+    
     .companies-subtitle {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
     .companies-section {
