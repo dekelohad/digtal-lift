@@ -1,5 +1,5 @@
-import StarImg from "../../../assets/images/v2/star.svg";
 import { useState } from 'react';
+import StarImg from "../../../assets/images/v2/star.svg";
 
 function TestimonialCard({ testimonial: { rating, content, author, designation, img } }) {
 	const [isHovered, setIsHovered] = useState(false);

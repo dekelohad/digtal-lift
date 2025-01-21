@@ -1,40 +1,6 @@
 import { useEffect, useState } from "react";
 import { useInView } from 'react-intersection-observer';
-import Thumb1Img from "../../../assets/images/v1/t_thumb1.png";
-import Thumb2Img from "../../../assets/images/v1/t_thumb2.png";
-import Thumb3Img from "../../../assets/images/v1/t_thumb3.png";
-import TestimonialCard from "./TestimonialCard";
 import BreadCrumb from "../../common/Breadcrumb";
-
-const testimonialsData = [
-	{
-		id: crypto.randomUUID(),
-		rating: 5,
-		content:
-			"I am impressed with their innovative ideas and forward-thinking approach. They have helped us embrace digital transformation.",
-		author: "Smith Align",
-		designation: "Businessman",
-		img: Thumb1Img,
-	},
-	{
-		id: crypto.randomUUID(),
-		rating: 5,
-		content:
-			"Digital Lift has been a game-changer for our startup. Their team guided us through the development of a custom software solution perfectly suited us.",
-		author: "Willium Joe",
-		designation: "VP of Marketing",
-		img: Thumb2Img,
-	},
-	{
-		id: crypto.randomUUID(),
-		rating: 5,
-		content:
-			"Their ability to understand our unique needs and provide tailored solutions. Their team is friendly, approachable & always ready to go the extra mile.",
-		author: "Adrew Maslo",
-		designation: "Head of X company",
-		img: Thumb3Img,
-	},
-];
 
 function Testimonials() {
 	const testimonials = [
