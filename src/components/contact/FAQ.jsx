@@ -11,8 +11,7 @@ function FAQ({FAQS}) {
 
 	return (
 		<div className="section" style={{ 
-			padding: "40px 0",
-			background: "#000"
+			padding: "40px 0"
 		}}>
 			<div className="container">
 				<motion.h2 
@@ -44,7 +43,6 @@ function FAQ({FAQS}) {
 									transition={{ duration: 0.5, delay: index * 0.1 }}
 									style={{
 										marginBottom: "15px",
-										background: "#111",
 										borderRadius: "15px",
 										border: "1px solid rgba(187, 255, 0, 0.1)",
 										overflow: "hidden"
@@ -59,12 +57,12 @@ function FAQ({FAQS}) {
 											alignItems: "center",
 											cursor: "pointer",
 											transition: "all 0.3s ease",
-											background: openIndex === index ? "linear-gradient(145deg, rgba(187, 255, 0, 0.08), rgba(0, 0, 0, 0.1))" : "transparent",
+											background: openIndex === index ? "linear-gradient(145deg, rgba(187, 255, 0, 0.08), rgba(0, 0, 0, 0))" : "transparent",
 											minHeight: "72px",
 											width: "100%"
 										}}
 										onMouseEnter={(e) => {
-											e.currentTarget.style.background = "linear-gradient(145deg, rgba(187, 255, 0, 0.05), rgba(0, 0, 0, 0.1))";
+											e.currentTarget.style.background = "linear-gradient(145deg, rgba(187, 255, 0, 0.05), rgba(0, 0, 0, 0))";
 										}}
 										onMouseLeave={(e) => {
 											if (openIndex !== index) {
