@@ -110,15 +110,17 @@ function ContactUs() {
 										background: "linear-gradient(135deg, #BBFF00 0%, #98CC00 100%)",
 										color: "#000",
 										fontWeight: "600",
-										display: "inline-flex",
+										display: isMobile ? "flex" : "inline-flex",
 										alignItems: "center",
+										justifyContent: "center",
 										gap: isMobile ? "10px" : "12px",
 										boxShadow: "0 4px 15px rgba(187, 255, 0, 0.3)",
 										border: "none",
 										position: "relative",
 										overflow: "hidden",
-										width: isMobile ? "auto" : "auto",
-										maxWidth: "100%",
+										width: isMobile ? "90%" : "auto",
+										maxWidth: isMobile ? "300px" : "none",
+										margin: isMobile ? "0 auto" : "auto",
 										borderRadius: "50px"
 									}}
 								>
