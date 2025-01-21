@@ -4,7 +4,6 @@ import LayoutOne from "../components/layout/LayoutOne.jsx";
 import ErrorPage from "../error-page";
 import AboutUs from "../page/AboutUs";
 import ContactUs from "../page/ContactUs";
-import BlogPage from "../page/blog/BlogPage.jsx";
 import HomeOne from "../page/home/HomeOne.jsx";
 import Testimonials from "../pages/services/Testimonials.jsx";
 import LocalLeadGeneration from "../pages/services/LocalLeadGeneration";
@@ -46,10 +45,6 @@ export const router = createBrowserRouter(
 						{
 							path: "/contact-us",
 							element: <ContactUs />,
-						},
-						{
-							path: "/blog",
-							element: <BlogPage />,
 						},
 						{
 							path: "/testimonials",
