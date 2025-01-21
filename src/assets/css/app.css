@@ -5349,6 +5349,10 @@ a.aximo-service-icon:hover {
 	font-weight: 700;
 	color: var(--heading-color);
 	padding: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
 }
 .aximo-accordion-wrap .accordion-body {
 	padding: 0;
@@ -5369,6 +5373,8 @@ a.aximo-service-icon:hover {
 	box-shadow: 3px 3px 0 0 var(--dark-bg);
 }
 .aximo-accordion-wrap .accordion-button::after {
+	position: relative;
+	margin-left: 15px;
 	background-image: url(../images/v1/accordion-inactive.svg);
 }
 
@@ -5413,6 +5419,10 @@ a.aximo-service-icon:hover {
 	font-weight: 700;
 	color: var(--heading-color);
 	padding: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
 }
 .aximo-accordion-wrap2 .accordion-body {
 	padding: 0;
@@ -5432,6 +5442,8 @@ a.aximo-service-icon:hover {
 	background-color: var(--accent-bg);
 } */
 .aximo-accordion-wrap2 .accordion-button::after {
+	position: relative;
+	margin-left: 15px;
 	background-image: url(../images/v1/accordion-inactive.svg);
 }
 /* bootstrap accordion overwrite end */

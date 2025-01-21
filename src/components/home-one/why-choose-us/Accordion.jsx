@@ -1,4 +1,5 @@
 import { FadeInStaggerTwo, FadeInStaggerTwoChildren } from "../../animation/FadeInStaggerTwo";
+import "./Accordion.css";
 
 function Accordion() {
 	return (
@@ -6,7 +7,7 @@ function Accordion() {
 			<FadeInStaggerTwoChildren className="accordion-item">
 				<h3 className="accordion-header">
 					<button
-						className="accordion-button"
+						className="accordion-button custom-accordion-button"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseOne"
@@ -25,7 +26,7 @@ function Accordion() {
 			<FadeInStaggerTwoChildren className="accordion-item">
 				<h3 className="accordion-header" id="headingOne">
 					<button
-						className="accordion-button"
+						className="accordion-button custom-accordion-button"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseTwo"
@@ -44,7 +45,7 @@ function Accordion() {
 			<FadeInStaggerTwoChildren className="accordion-item">
 				<h3 className="accordion-header">
 					<button
-						className="accordion-button collapsed"
+						className="accordion-button collapsed custom-accordion-button"
 						type="button"
 						data-bs-toggle="collapse"
 						data-bs-target="#collapseThree"
