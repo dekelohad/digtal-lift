@@ -149,13 +149,14 @@ function Calculator() {
                     </ul>
                     <div className="cta-section">
                         <h4>Want to Never Miss a Call Again?</h4>
-                        <Link 
-                            to="/contact-us" 
+                        <a 
+                            href="https://tidycal.com/digitallift/15-minute-meeting"
                             className="schedule-call-btn"
-                            onClick={() => window.scrollTo(0, 0)}
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
                             Schedule Your Call Now
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
