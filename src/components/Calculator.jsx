@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Calculator.css';
+import { Link } from 'react-router-dom';
 
 function Calculator() {
     const [formData, setFormData] = useState({
@@ -9,6 +10,7 @@ function Calculator() {
     });
 
     const [results, setResults] = useState(null);
+    const [showResults, setShowResults] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -70,6 +72,8 @@ function Calculator() {
                 minimumFractionDigits: 2
             })
         });
+
+        setShowResults(true);
     };
 
     return (
@@ -123,22 +127,13 @@ function Calculator() {
                             <button type="submit" className="calculate-btn">Calculate ROI</button>
                         </form>
 
-                        {results && (
+                        {showResults && (
                             <div className="results-section">
-                                <h3>Results:</h3>
-                                <div className="results-grid">
-                                    <div className="result-item">
-                                        <p>Monthly $$$ Left on Table:</p>
-                                        <h4>${results.monthlyValue}</h4>
-                                    </div>
-                                    <div className="result-item">
-                                        <p>We Charge (per month):</p>
-                                        <h4>${results.monthlyCharge}</h4>
-                                    </div>
-                                    <div className="result-item">
-                                        <p>ROI:</p>
-                                        <h4>{results.roi}%</h4>
-                                    </div>
+                                <h3>Potential Lost Revenue</h3>
+                                <div className="result-item">
+                                    <p>Monthly Revenue Left on Table:</p>
+                                    <h4>${results.monthlyValue}</h4>
+                                    <div className="subtitle">This represents potential missed opportunities from unanswered calls</div>
                                 </div>
                             </div>
                         )}
@@ -152,6 +147,16 @@ function Calculator() {
                         <li>Enter the rate at which you close new sales</li>
                         <li>Hit Calculate and we'll show you how much money we can make you!</li>
                     </ul>
+                    <div className="cta-section">
+                        <h4>Want to Never Miss a Call Again?</h4>
+                        <Link 
+                            to="/contact-us" 
+                            className="schedule-call-btn"
+                            onClick={() => window.scrollTo(0, 0)}
+                        >
+                            Schedule Your Call Now
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>
