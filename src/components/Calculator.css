@@ -4,7 +4,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 8rem 2rem;
     background-color: #121212;
 }
 
@@ -14,16 +14,17 @@
     display: flex;
     align-items: flex-start;
     gap: 4rem;
+    margin: 2rem 0;
 }
 
 .calculator-wrapper {
     flex: 1;
     max-width: 600px;
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(187, 255, 0, 0.2);
+    border: 1px solid rgba(187, 255, 0, 0.3);
     border-radius: 20px;
-    padding: 2.5rem;
-    box-shadow: 0 0 20px rgba(187, 255, 0, 0.1);
+    padding: 3rem;
+    box-shadow: 0 0 30px rgba(187, 255, 0, 0.15);
     backdrop-filter: blur(10px);
 }
 
@@ -90,7 +91,7 @@
 input {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(187, 255, 0, 0.2);
     border-radius: 10px;
     color: #fff;
@@ -100,12 +101,12 @@ input {
 
 /* Add specific padding for inputs with currency/percentage symbols */
 input[name="averageClientValue"] {
-    padding-left: 2.5rem;
+    padding-left: 2.8rem;
     padding-right: 1rem;
 }
 
 input[name="closeRate"] {
-    padding-right: 2.5rem;
+    padding-right: 2.8rem;
     padding-left: 1rem;
 }
 
@@ -139,12 +140,12 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .percentage-symbol {
-    right: 1.2rem;
+    right: 1rem;
 }
 
 .calculate-btn {
     width: 100%;
-    padding: 1rem;
+    padding: 1.2rem;
     background: linear-gradient(135deg, #BBFF00 0%, #98CC00 100%);
     border: none;
     border-radius: 10px;
@@ -153,7 +154,7 @@ input[type="number"]::-webkit-inner-spin-button {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     box-shadow: 0 0 20px rgba(187, 255, 0, 0.2);
 }
 
@@ -215,6 +216,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* Mobile Responsiveness */
 @media (max-width: 1024px) {
+    .calculator-container {
+        padding: 6rem 2rem;
+    }
+
     .calculator-content-wrapper {
         flex-direction: column;
         align-items: center;
@@ -229,11 +234,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 @media (max-width: 768px) {
     .calculator-container {
-        padding: 2rem 1.5rem;
+        padding: 4rem 1.5rem;
     }
 
     .calculator-wrapper {
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     .calculator-content h2 {
@@ -264,11 +269,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 @media (max-width: 480px) {
     .calculator-container {
-        padding: 1rem;
+        padding: 3rem 1rem;
     }
 
     .calculator-wrapper {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .calculator-content h2 {

@@ -56,6 +56,9 @@ function FooterBottom() {
 							<FooterLink to="/about-us">About</FooterLink>
 						</li>
 						<li className="footer-item">
+							<FooterLink to="/calculator">ROI Calculator</FooterLink>
+						</li>
+						<li className="footer-item">
 							<FooterLink to="/testimonials">Testimonials</FooterLink>
 						</li>
 						<li className="footer-item">

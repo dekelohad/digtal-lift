@@ -34,15 +34,16 @@ function Header() {
 							<NavItem url="/" setIsMobileMenuOpen={setIsMobileMenuOpen}>Home</NavItem>
 							<NavItem dropdown title="Services" setIsMobileMenuOpen={setIsMobileMenuOpen}>
 								<Dropdown>
-									<DropdownItem url="local-lead-generation" setIsMobileMenuOpen={setIsMobileMenuOpen}>Local Lead Generation</DropdownItem>
-									<DropdownItem url="paid-search-marketing" setIsMobileMenuOpen={setIsMobileMenuOpen}>Paid Search Marketing</DropdownItem>
-									<DropdownItem url="search-engine-optimization" setIsMobileMenuOpen={setIsMobileMenuOpen}>Search Engine Optimization</DropdownItem>
-									<DropdownItem url="google-business-profile" setIsMobileMenuOpen={setIsMobileMenuOpen}>Google Business Profile</DropdownItem>
-									<DropdownItem url="web-design" setIsMobileMenuOpen={setIsMobileMenuOpen}>Web Design</DropdownItem>
-									<DropdownItem url="web-development" setIsMobileMenuOpen={setIsMobileMenuOpen}>Web Development</DropdownItem>
+									<DropdownItem url="/local-lead-generation" setIsMobileMenuOpen={setIsMobileMenuOpen}>Local Lead Generation</DropdownItem>
+									<DropdownItem url="/paid-search-marketing" setIsMobileMenuOpen={setIsMobileMenuOpen}>Paid Search Marketing</DropdownItem>
+									<DropdownItem url="/search-engine-optimization" setIsMobileMenuOpen={setIsMobileMenuOpen}>Search Engine Optimization</DropdownItem>
+									<DropdownItem url="/google-business-profile" setIsMobileMenuOpen={setIsMobileMenuOpen}>Google Business Profile</DropdownItem>
+									<DropdownItem url="/web-design" setIsMobileMenuOpen={setIsMobileMenuOpen}>Web Design</DropdownItem>
+									<DropdownItem url="/web-development" setIsMobileMenuOpen={setIsMobileMenuOpen}>Web Development</DropdownItem>
 								</Dropdown>
 							</NavItem>
 							<NavItem url="about-us" setIsMobileMenuOpen={setIsMobileMenuOpen}>About</NavItem>
+							<NavItem url="calculator" setIsMobileMenuOpen={setIsMobileMenuOpen}>ROI Calculator</NavItem>
 							<NavItem url="testimonials" setIsMobileMenuOpen={setIsMobileMenuOpen}>Testimonials</NavItem>
 							<li className="nav-item">
 								<Link 
