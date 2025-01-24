@@ -26,12 +26,14 @@
     padding: 3rem;
     box-shadow: 0 0 30px rgba(187, 255, 0, 0.15);
     backdrop-filter: blur(10px);
+    order: 2;
 }
 
 .calculator-instructions {
     flex: 1;
     max-width: 500px;
     padding: 2rem;
+    order: 1;
 }
 
 .calculator-instructions h3 {
@@ -239,6 +241,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
     .calculator-wrapper {
         padding: 2rem;
+        order: 2;
+    }
+
+    .calculator-instructions {
+        order: 1;
     }
 
     .calculator-content h2 {
