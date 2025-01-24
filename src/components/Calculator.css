@@ -322,7 +322,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 @media (max-width: 480px) {
     .calculator-container {
-        padding: 3rem 1rem;
+        padding: 1.5rem 1rem;
     }
 
     .calculator-wrapper {
@@ -337,6 +337,7 @@ input[type="number"]::-webkit-inner-spin-button {
     .calculator-instructions h3 {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
+        padding-top: 0;
     }
 
     input {
