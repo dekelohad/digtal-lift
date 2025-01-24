@@ -43,6 +43,9 @@ function Header() {
 								</Dropdown>
 							</NavItem>
 							<NavItem url="about-us" setIsMobileMenuOpen={setIsMobileMenuOpen}>About</NavItem>
+							{isMobileMenuOpen && (
+								<NavItem url="calculator" setIsMobileMenuOpen={setIsMobileMenuOpen}>ROI Calculator</NavItem>
+							)}
 							<NavItem url="testimonials" setIsMobileMenuOpen={setIsMobileMenuOpen}>Testimonials</NavItem>
 							<li className="nav-item">
 								<Link 
