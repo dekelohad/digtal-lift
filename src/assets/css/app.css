@@ -3403,12 +3403,12 @@ h1.post__title {
 }
 @media (max-width: 767px) {
 	.aximo-hero-section {
-		padding: 170px 0 80px;
+		padding: 130px 0 50px; 
 	}
 }
 @media (max-width: 575px) {
 	.aximo-hero-section {
-		padding: 130px 0 80px;
+		padding: 110px 0 80px;
 	}
 }
 .aximo-hero-thumb {
