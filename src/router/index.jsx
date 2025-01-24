@@ -15,6 +15,7 @@ import GoogleMyBusinessOptimization from "../pages/services/GoogleMyBusinessOpti
 import GoogleMyBusinessManagement from "../pages/services/GoogleMyBusinessManagement";
 import WebDesign from "../pages/services/WebDesign";
 import WebDevelopment from "../pages/services/WebDevelopment";
+import CalculatorPage from "../page/CalculatorPage";
 import { ThemeProvider } from "../context/ThemeContext";
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -85,6 +86,10 @@ export const router = createBrowserRouter(
 						{
 							path: "/web-development",
 							element: <WebDevelopment />,
+						},
+						{
+							path: "/calculator",
+							element: <CalculatorPage />,
 						},
 						{
 							path: "*",
