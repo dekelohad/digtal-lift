@@ -7,6 +7,8 @@ import Testimonial from "../../components/home-one/testimonial";
 import WhyChooseUs from "../../components/home-one/why-choose-us";
 import { ServiceIcons } from '../../components/icons/ServiceIcons';
 import Companies from '../../components/common/Companies/Companies';
+import JonathanImg from '../../assets/images/team/Jonathan.jpg';
+import AronImg from '../../assets/images/team/Aron.jpg';
 
 const servicesData = [
 	{
@@ -58,13 +60,13 @@ const teamsData = [
 		id: crypto.randomUUID(),
 		name: "Jonathan Dekel",
 		designation: "CEO & Technical SEO Director",
-		img: "/src/assets/images/team/Jonathan.jpg",
+		img: JonathanImg,
 	},
 	{
 		id: crypto.randomUUID(),
 		name: "Aron Terracina",
 		designation: "Director of Sales & Client Success",
-		img: "/src/assets/images/team/Aron.jpg",
+		img: AronImg,
 	},
 ];
 
