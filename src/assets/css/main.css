@@ -19,6 +19,24 @@
 	margin-right: 35px;
 }
 
+@media (max-width: 576px) {
+	.brand-logo,
+	.default-logo,
+	.responsive-logo {
+		max-width: 90px;
+		margin-right: 15px;
+	}
+}
+
+@media (max-width: 375px) {
+	.brand-logo,
+	.default-logo,
+	.responsive-logo {
+		max-width: 80px;
+		margin-right: 10px;
+	}
+}
+
 @media (min-width: 576px) {
 	.site-navbar {
 		padding-top: 0px;
