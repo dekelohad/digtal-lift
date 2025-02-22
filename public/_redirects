@@ -1,2 +1,2 @@
-/niche/*  https://niche-finder.netlify.app/:splat  200!
-/* /index.html 200 
+/niche/*  https://niche-finder.netlify.app/:splat  301
+/*  /index.html  200 
