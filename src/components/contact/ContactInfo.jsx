@@ -157,7 +157,7 @@ function ContactInfo() {
 								</div>
 								<h3 style={titleStyle}>Email us</h3>
 								<a 
-									href="mailto:info@digitalLift.com"
+									href="mailto:info@digitalLift.io"
 									style={{
 										...linkStyle,
 										wordBreak: "break-word",
@@ -166,7 +166,7 @@ function ContactInfo() {
 									onMouseEnter={(e) => e.currentTarget.style.color = "#BBFF00"}
 									onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
 								>
-									info@digitalLift.com
+									info@digitalLift.io
 								</a>
 							</motion.div>
 

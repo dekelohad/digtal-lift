@@ -25,7 +25,7 @@ const FooterLink = ({ to, children }) => {
 
 function FooterBottom() {
 	const currentYear = new Date().getFullYear();
-	const email = "info@digitalLift.com";
+	const email = "info@digitalLift.io";
 
 	return (
 		<div className="footer-wrapper">

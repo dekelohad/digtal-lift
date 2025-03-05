@@ -32,7 +32,7 @@ function FooterContent() {
 					<ul>
 						<li>Send us an email:</li>
 						<li>
-							<a href="mailto:info@digitalLift.com" target="_blank" rel="noopener noreferrer">info@digitalLift.com</a>
+							<a href="mailto:info@digitalLift.io" target="_blank" rel="noopener noreferrer">info@digitalLift.io</a>
 						</li>
 					</ul>
 				</div>
