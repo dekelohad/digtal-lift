@@ -1,29 +1,82 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Calculator.css';
-import { Link } from 'react-router-dom';
 
 function Calculator() {
     const [formData, setFormData] = useState({
         averageClientValue: '',
-        missedCallsPerWeek: '',
+        monthlyLeads: '',
+        profitMargin: '',
         closeRate: ''
     });
 
-    const [results, setResults] = useState(null);
-    const [showResults, setShowResults] = useState(false);
+    useEffect(() => {
+        const firstInput = document.querySelector('input[name="averageClientValue"]');
+        if (firstInput) {
+            firstInput.focus();
+        }
+    }, []);
+
+    const calculateResults = (data) => {
+        const clientValue = Number(data.averageClientValue) || 0;
+        const monthlyLeads = Number(data.monthlyLeads) || 0;
+        const profitMargin = Number(data.profitMargin) || 0;
+        const closeRate = Number(data.closeRate) || 0;
+
+        // Check if ALL inputs have been provided
+        const hasAllInputs = clientValue > 0 && monthlyLeads > 0 && profitMargin > 0 && closeRate > 0;
+
+        const monthlyValue = monthlyLeads * clientValue * (closeRate / 100);
+        const monthlyProfit = monthlyValue * (profitMargin / 100);
+        const monthlyCharge = hasAllInputs ? Math.min(monthlyProfit * 0.10, 1500) : 0; // Cap at $1500 maximum
+        const netProfit = hasAllInputs ? monthlyProfit - monthlyCharge : 0; // Show 0 until all inputs filled
+        const newCustomers = Math.round(monthlyLeads * (closeRate / 100));
+
+        return {
+            monthlyValue: monthlyValue.toLocaleString('en-US', {
+                style: 'decimal',
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2
+            }),
+            monthlyProfit: monthlyProfit.toLocaleString('en-US', {
+                style: 'decimal',
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2
+            }),
+            netProfit: netProfit.toLocaleString('en-US', {
+                style: 'decimal',
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2
+            }),
+            monthlyCharge: monthlyCharge.toLocaleString('en-US', {
+                style: 'decimal',
+                maximumFractionDigits: 2,
+                minimumFractionDigits: 2
+            }),
+            newCustomers: newCustomers
+        };
+    };
+
+    const [results, setResults] = useState(() => calculateResults({
+        averageClientValue: 0,
+        monthlyLeads: 0,
+        profitMargin: 0,
+        closeRate: 0
+    }));
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         
-        // Silent validation for extremely large numbers
         let validatedValue = value;
-        if (value !== '') {  // Only validate if there's a value
+        if (value !== '') {
             switch(name) {
                 case 'averageClientValue':
                     validatedValue = Math.max(0, Math.min(Number(value), 999999999));
                     break;
-                case 'missedCallsPerWeek':
+                case 'monthlyLeads':
                     validatedValue = Math.max(0, Math.min(Number(value), 99999));
+                    break;
+                case 'profitMargin':
+                    validatedValue = Math.max(0, Math.min(Number(value), 100));
                     break;
                 case 'closeRate':
                     validatedValue = Math.max(0, Math.min(Number(value), 100));
@@ -33,131 +86,127 @@ function Calculator() {
             }
         }
 
-        setFormData(prev => ({
-            ...prev,
+        const newFormData = {
+            ...formData,
             [name]: validatedValue
-        }));
-    };
-
-    const calculateROI = (e) => {
-        e.preventDefault();
+        };
         
-        // Convert string inputs to numbers
-        const clientValue = Number(formData.averageClientValue);
-        const weeklyMissedCalls = Number(formData.missedCallsPerWeek);
-        const closeRate = Number(formData.closeRate);
-        const monthlyCharge = 297;
-
-        // Calculate monthly missed calls (weekly * 4)
-        const monthlyMissedCalls = weeklyMissedCalls * 4;
-
-        // Calculate potential monthly revenue
-        // Monthly calls * client value * close rate percentage
-        const monthlyValue = monthlyMissedCalls * clientValue * (closeRate / 100);
-
-        // Calculate ROI percentage
-        // ((Revenue - Cost) / Cost) * 100
-        const roi = ((monthlyValue - monthlyCharge) / monthlyCharge) * 100;
-
-        setResults({
-            monthlyValue: monthlyValue.toLocaleString('en-US', {
-                style: 'decimal',
-                maximumFractionDigits: 2,
-                minimumFractionDigits: 2
-            }),
-            monthlyCharge,
-            roi: roi.toLocaleString('en-US', {
-                style: 'decimal',
-                maximumFractionDigits: 2,
-                minimumFractionDigits: 2
-            })
-        });
-
-        setShowResults(true);
+        setFormData(newFormData);
+        setResults(calculateResults(newFormData));
     };
 
     return (
         <div className="calculator-container">
+            <div className="calculator-header">
+                <h1 className="calculator-title">ROI Calculator</h1>
+                <h2 className="calculator-subtitle">Calculate your potential return on investment</h2>
+            </div>
+            
             <div className="calculator-content-wrapper">
-                <div className="calculator-wrapper">
-                    <div className="calculator-content">
-                        <h2>ROI Calculator</h2>
-                        <form onSubmit={calculateROI}>
-                            <div className="input-group">
-                                <label>Average Client Value:</label>
+                <div className="calculator-form-section">
+                    <div className="form-header">
+                        <h2>Business Details</h2>
+                    </div>
+                    <div className="calculator-form-container">
+                        <div className="input-group">
+                            <label>Average Client Value ($)</label>
+                            <div className="input-wrapper">
+                                <span className="currency-symbol">$</span>
                                 <input
                                     type="number"
                                     name="averageClientValue"
                                     value={formData.averageClientValue}
                                     onChange={handleInputChange}
-                                    placeholder="200"
+                                    placeholder="0"
                                     min="0"
-                                    required
                                 />
-                                <span className="currency-symbol">$</span>
                             </div>
+                        </div>
 
-                            <div className="input-group">
-                                <label>Missed Calls per Week:</label>
+                        <div className="input-group">
+                            <label>Number of Leads per Month</label>
+                            <div className="input-wrapper">
                                 <input
                                     type="number"
-                                    name="missedCallsPerWeek"
-                                    value={formData.missedCallsPerWeek}
+                                    name="monthlyLeads"
+                                    value={formData.monthlyLeads}
                                     onChange={handleInputChange}
-                                    placeholder="10"
+                                    placeholder="0"
                                     min="0"
-                                    required
                                 />
                             </div>
+                        </div>
 
-                            <div className="input-group">
-                                <label>Average Close Rate (%):</label>
+                        <div className="input-group">
+                            <label>Profit Margin (%)</label>
+                            <div className="input-wrapper">
+                                <input
+                                    type="number"
+                                    name="profitMargin"
+                                    value={formData.profitMargin}
+                                    onChange={handleInputChange}
+                                    placeholder="0"
+                                    min="0"
+                                    max="100"
+                                />
+                                <span className="percentage-symbol">%</span>
+                            </div>
+                        </div>
+
+                        <div className="input-group">
+                            <label>Close Rate (%)</label>
+                            <div className="input-wrapper">
                                 <input
                                     type="number"
                                     name="closeRate"
                                     value={formData.closeRate}
                                     onChange={handleInputChange}
-                                    placeholder="111"
+                                    placeholder="0"
                                     min="0"
-                                    required
+                                    max="100"
                                 />
                                 <span className="percentage-symbol">%</span>
                             </div>
-
-                            <button type="submit" className="calculate-btn">Calculate ROI</button>
-                        </form>
-
-                        {showResults && (
-                            <div className="results-section">
-                                <h3>Potential Lost Revenue</h3>
-                                <div className="result-item">
-                                    <p>Monthly Revenue Left on Table:</p>
-                                    <h4>${results.monthlyValue}</h4>
-                                    <div className="subtitle">This represents potential missed opportunities from unanswered calls</div>
-                                </div>
-                            </div>
-                        )}
+                        </div>
                     </div>
                 </div>
-                <div className="calculator-instructions">
-                    <h3>Get An Estimate Of How Much Your Missed Calls Are Costing You</h3>
-                    <ul>
-                        <li>Enter the average lifetime value of a customer</li>
-                        <li>Enter an estimate of how many calls you miss per month</li>
-                        <li>Enter the rate at which you close new sales</li>
-                        <li>Hit Calculate and we'll show you how much money we can make you!</li>
-                    </ul>
-                    <div className="cta-section">
-                        <h4>Want to Never Miss a Call Again?</h4>
+
+                <div className="calculator-results-section">
+                    <div className="results-header">
+                        <h2 style={{ color: 'white' }}>Potential Revenue</h2>
+                    </div>
+                    <div className="results-grid">
+                        <div className="result-card">
+                            <h3>Total New Customers</h3>
+                            <div className="result-value">{results.newCustomers}</div>
+                        </div>
+                        <div className="result-card">
+                            <h3>Monthly Revenue Potential</h3>
+                            <div className="result-value">${results.monthlyValue}</div>
+                        </div>
+                        <div className="result-card">
+                            <h3>Gross Monthly Profit</h3>
+                            <div className="result-value">${results.monthlyProfit}</div>
+                        </div>
+                        <div className="result-card">
+                            <h3>Monthly Investment</h3>
+                            <div className="result-value">${results.monthlyCharge}</div>
+                        </div>
+                        <div className="result-card highlight">
+                            <h3>Net Monthly Profit</h3>
+                            <div className="result-value">${results.netProfit}</div>
+                        </div>
+                    </div>
+                    {/* <div className="results-cta">
                         <a 
-                            href="https://tidycal.com/digitallift/15-minute-meeting"
+                            href="https://tidycal.com/digitallift/15-minute-meeting" 
                             className="schedule-call-btn"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            Schedule Your Call Now
+                            Schedule a Call
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
