@@ -95,6 +95,12 @@ function FooterBottom() {
 					<h4 className="footer-heading">Contact Info</h4>
 					<ul className="footer-list">
 						<li className="contact-item">
+							<span className="contact-label">Phone: </span>
+							<a href="tel:+17379376612" className="contact-link">
+								+1 (737) 937-6612
+							</a>
+						</li>
+						<li className="contact-item">
 							<span className="contact-label">Email: </span>
 							<a href={`mailto:${email}`} className="contact-link">
 								{email}

@@ -1,4 +1,4 @@
-import { FaClock, FaEnvelope } from 'react-icons/fa';
+import { FaClock, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -137,78 +137,122 @@ function ContactInfo() {
 						</p>
 					</motion.div>
 					<div className="col-lg-10 col-md-10 col-11">
-						<motion.div 
-							variants={containerVariants}
-							initial="hidden"
-							animate="visible"
-							className="contact-grid"
-							style={{ 
-								display: "grid",
+						<div style={{ maxWidth: "600px", margin: "0 auto", width: "100%" }}>
+							{/* Row 1: Phone + Email */}
+							<div style={{
+								display: "flex",
+								flexDirection: isMobile ? "column" : "row",
 								gap: isMobile ? "15px" : "20px",
-								padding: "0 10px"
-							}}
-						>
-							<motion.div variants={itemVariants} style={{
-								...boxStyle,
-								
-							}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
-								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
-									<FaEnvelope style={iconStyle} />
-								</div>
-								<h3 style={titleStyle}>Email us</h3>
-								<a 
-									href="mailto:info@digitalLift.io"
-									style={{
-										...linkStyle,
-										wordBreak: "break-word",
+								marginBottom: isMobile ? "15px" : "20px"
+							}}>
+								<motion.div variants={itemVariants} style={{
+									...boxStyle,
+									minHeight: isMobile ? "200px" : "250px",
+									padding: isMobile ? "15px" : "25px",
+									flex: 1
+								}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
+									<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
+										<FaPhoneAlt style={iconStyle} />
+									</div>
+									<h3 style={titleStyle}>Call us</h3>
+									<a 
+										href="tel:+17379376612"
+										style={{
+											...linkStyle,
+											wordBreak: "break-word",
+											padding: "0 10px",
+											transition: "color 0.3s, transform 0.2s"
+										}}
+										onMouseEnter={e => {
+											e.currentTarget.style.color = "#BBFF00";
+											e.currentTarget.style.transform = "scale(1.05)";
+										}}
+										onMouseLeave={e => {
+											e.currentTarget.style.color = "#fff";
+											e.currentTarget.style.transform = "scale(1)";
+										}}
+									>
+										+1 (737) 937-6612
+									</a>
+								</motion.div>
+								<motion.div variants={itemVariants} style={{
+									...boxStyle,
+									minHeight: isMobile ? "200px" : "250px",
+									padding: isMobile ? "15px" : "25px",
+									flex: 1
+								}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
+									<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
+										<FaEnvelope style={iconStyle} />
+									</div>
+									<h3 style={titleStyle}>Email us</h3>
+									<a 
+										href="mailto:info@digitalLift.io"
+										style={{
+											...linkStyle,
+											wordBreak: "break-word",
+											padding: "0 10px",
+											transition: "color 0.3s, transform 0.2s"
+										}}
+										onMouseEnter={e => {
+											e.currentTarget.style.color = "#BBFF00";
+											e.currentTarget.style.transform = "scale(1.05)";
+										}}
+										onMouseLeave={e => {
+											e.currentTarget.style.color = "#fff";
+											e.currentTarget.style.transform = "scale(1)";
+										}}
+									>
+										info@digitalLift.io
+									</a>
+								</motion.div>
+							</div>
+							{/* Row 2: Business Hours + Office Address */}
+							<div style={{
+								display: "flex",
+								flexDirection: isMobile ? "column" : "row",
+								gap: isMobile ? "15px" : "20px"
+							}}>
+								<motion.div variants={itemVariants} style={{
+									...boxStyle,
+									minHeight: isMobile ? "200px" : "250px",
+									padding: isMobile ? "15px" : "25px",
+									flex: 1
+								}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
+									<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
+										<FaClock style={iconStyle} />
+									</div>
+									<h3 style={titleStyle}>Business Hours</h3>
+									<p style={{ 
+										...textStyle, 
+										lineHeight: "1.5", 
+										margin: 0,
 										padding: "0 10px"
-									}}
-									onMouseEnter={(e) => e.currentTarget.style.color = "#BBFF00"}
-									onMouseLeave={(e) => e.currentTarget.style.color = "#fff"}
-								>
-									info@digitalLift.io
-								</a>
-							</motion.div>
-
-							<motion.div variants={itemVariants} style={{
-								...boxStyle,
-								minHeight: isMobile ? "200px" : "250px",
-								padding: isMobile ? "15px" : "25px"
-							}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
-								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
-									<FaClock style={iconStyle} />
-								</div>
-								<h3 style={titleStyle}>Business Hours</h3>
-								<p style={{ 
-									...textStyle, 
-									lineHeight: "1.5", 
-									margin: 0,
-									padding: "0 10px"
-								}}>
-									Sunday - Saturday<br />
-									9:00 AM - 6:00 PM (CST)
-								</p>
-							</motion.div>
-
-							<motion.div variants={itemVariants} style={{
-								...boxStyle,
-								minHeight: isMobile ? "200px" : "250px",
-								padding: isMobile ? "15px" : "25px"
-							}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
-								<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
-									<FaLocationDot style={iconStyle} />
-								</div>
-								<h3 style={titleStyle}>Office Address</h3>
-								<p style={{ 
-									...textStyle, 
-									margin: 0,
-									padding: "0 10px"
-								}}>
-									11801 Domain Blvd, Suite W350<br />
-									Austin, TX 78758
-								</p>
-							</motion.div>
-						</motion.div>
+									}}>
+										Sunday - Saturday<br />
+										9:00 AM - 6:00 PM (CST)
+									</p>
+								</motion.div>
+								<motion.div variants={itemVariants} style={{
+									...boxStyle,
+									minHeight: isMobile ? "200px" : "250px",
+									padding: isMobile ? "15px" : "25px",
+									flex: 1
+								}} onMouseEnter={!isMobile ? hoverEffect : undefined} onMouseLeave={!isMobile ? removeHoverEffect : undefined}>
+									<div style={{ marginBottom: isMobile ? "15px" : "20px" }}>
+										<FaLocationDot style={iconStyle} />
+									</div>
+									<h3 style={titleStyle}>Office Address</h3>
+									<p style={{ 
+										...textStyle, 
+										margin: 0,
+										padding: "0 10px"
+									}}>
+										11801 Domain Blvd, Suite W350<br />
+										Austin, TX 78758
+									</p>
+								</motion.div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
